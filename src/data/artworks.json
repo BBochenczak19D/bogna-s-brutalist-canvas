@@ -1,0 +1,76 @@
+{
+  "collections": [
+    {
+      "id": "iii-materia",
+      "title": "III Materia",
+      "description": "Eksploracja materialności i tekstury w kontekście współczesnego malarstwa.",
+      "year": "2024",
+      "artworks": [
+        {
+          "id": "materia-01",
+          "title": "Materia I",
+          "medium": "Olej na płótnie",
+          "dimensions": "100 x 120 cm",
+          "year": "2024",
+          "image": "/artworks/collections/iii-materia/materia-01.jpg"
+        },
+        {
+          "id": "materia-02",
+          "title": "Materia II",
+          "medium": "Olej na płótnie",
+          "dimensions": "100 x 120 cm",
+          "year": "2024",
+          "image": "/artworks/collections/iii-materia/materia-02.jpg"
+        }
+      ]
+    }
+  ],
+  "obrazy": [
+    {
+      "id": "obraz-01",
+      "title": "Bez tytułu I",
+      "medium": "Olej na płótnie",
+      "dimensions": "80 x 100 cm",
+      "year": "2023",
+      "image": "/artworks/obrazy/obraz-01.jpg"
+    },
+    {
+      "id": "obraz-02",
+      "title": "Bez tytułu II",
+      "medium": "Olej na płótnie",
+      "dimensions": "80 x 100 cm",
+      "year": "2023",
+      "image": "/artworks/obrazy/obraz-02.jpg"
+    }
+  ],
+  "artefakty": [
+    {
+      "id": "artefakt-01",
+      "title": "Artefakt I",
+      "medium": "Technika mieszana",
+      "dimensions": "30 x 40 cm",
+      "year": "2023",
+      "image": "/artworks/artefakty/artefakt-01.jpg"
+    }
+  ],
+  "rysunki": [
+    {
+      "id": "rysunek-01",
+      "title": "Szkic I",
+      "medium": "Tusz na papierze",
+      "dimensions": "21 x 29.7 cm",
+      "year": "2022",
+      "image": "/artworks/rysunki/rysunek-01.jpg"
+    }
+  ],
+  "instalacje": [
+    {
+      "id": "instalacja-01",
+      "title": "Przestrzeń I",
+      "medium": "Instalacja przestrzenna",
+      "dimensions": "Wymiary zmienne",
+      "year": "2023",
+      "image": "/artworks/instalacje/instalacja-01.jpg"
+    }
+  ]
+}
