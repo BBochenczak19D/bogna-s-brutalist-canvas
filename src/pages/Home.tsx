@@ -2,23 +2,16 @@ import CornerBracket from "@/components/CornerBracket";
 import ArrowLink from "@/components/ArrowLink";
 import artworksData from "@/data/artworks.json";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
-
 const Home = () => {
   const iiiMateriaCollection = artworksData.collections.find(c => c.id === "iii-materia");
   const artworks = iiiMateriaCollection?.artworks || [];
   const rysunki = artworksData.rysunki || [];
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Hero Bio Section */}
       <section className="max-w-[1648px] mx-auto px-9 py-0">
         <div className="flex items-start gap-6 max-w-[574px]">
           <CornerBracket />
-          <img 
-            src="/artworks/profile.jpg" 
-            alt="Bogna Bartkowiak" 
-            className="w-[114px] h-[174px] object-cover flex-shrink-0"
-          />
+          <img src="/artworks/profile.jpg" alt="Bogna Bartkowiak" className="w-[114px] h-[174px] object-cover flex-shrink-0" />
           <p className="flex-1 text-sm font-normal leading-[125%] uppercase">
             Jestem absolwentką Akademii Sztuk Pięknych w Katowicach i lekarzem, która w swoich obrazach bada niewidzialne warstwy istnienia, łącząc doświadczenie medyczne, artystyczną intuicję i Trzecią Materię.
           </p>
@@ -44,25 +37,15 @@ const Home = () => {
         </div>
         
         {/* Draggable Carousel Gallery */}
-        <Carousel
-          opts={{
-            align: "start",
-            loop: false,
-            dragFree: true,
-          }}
-          className="w-full"
-        >
+        <Carousel opts={{
+        align: "start",
+        loop: false,
+        dragFree: true
+      }} className="w-full">
           <CarouselContent className="px-9 gap-1">
-            {artworks.map((artwork) => (
-              <CarouselItem key={artwork.id} className="basis-auto pl-0">
-                <img 
-                  src={artwork.image}
-                  alt={artwork.title}
-                  className="w-[404px] h-[539px] object-cover"
-                  draggable={false}
-                />
-              </CarouselItem>
-            ))}
+            {artworks.map(artwork => <CarouselItem key={artwork.id} className="basis-auto pl-0">
+                <img src={artwork.image} alt={artwork.title} className="w-[404px] h-[539px] object-cover" draggable={false} />
+              </CarouselItem>)}
           </CarouselContent>
         </Carousel>
 
@@ -111,21 +94,13 @@ const Home = () => {
         {/* Two Column Images */}
         <div className="flex gap-16 mb-9">
           <div className="flex-1 flex flex-col gap-6">
-            <img 
-              src={artworks[0]?.image || "/placeholder.svg"}
-              alt={artworks[0]?.title || "Materia I"}
-              className="w-full aspect-[756/894] object-cover"
-            />
+            <img src={artworks[0]?.image || "/placeholder.svg"} alt={artworks[0]?.title || "Materia I"} className="w-full aspect-[756/894] object-cover" />
             <p className="text-2xl font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground text-center">
               [cz. I | 2023]
             </p>
           </div>
           <div className="flex-1 flex flex-col gap-6">
-            <img 
-              src={artworks[1]?.image || "/placeholder.svg"}
-              alt={artworks[1]?.title || "Materia II"}
-              className="w-full aspect-[756/820] object-cover"
-            />
+            <img src={artworks[1]?.image || "/placeholder.svg"} alt={artworks[1]?.title || "Materia II"} className="w-full aspect-[756/820] object-cover" />
             <p className="text-2xl font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground text-center">
               [cz. II | 2023]
             </p>
@@ -151,11 +126,7 @@ const Home = () => {
         </div>
 
         <div className="flex gap-16">
-          <img 
-            src={artworks[2]?.image || "/placeholder.svg"}
-            alt={artworks[2]?.title || "Materia III"}
-            className="w-[743px] h-[743px] object-cover flex-shrink-0"
-          />
+          <img src={artworks[2]?.image || "/placeholder.svg"} alt={artworks[2]?.title || "Materia III"} className="w-[743px] h-[743px] object-cover flex-shrink-0" />
           <div className="flex flex-col justify-center gap-3">
             <p className="text-2xl font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground">
               [cz. III]
@@ -198,59 +169,13 @@ const Home = () => {
 
           {/* Horizontal Gallery */}
           <div className="flex gap-3">
-            {rysunki.slice(0, 6).map((artwork) => (
-              <img 
-                key={artwork.id}
-                src={artwork.image}
-                alt={artwork.title}
-                className="flex-1 aspect-[253/283] object-cover"
-              />
-            ))}
+            {rysunki.slice(0, 6).map(artwork => <img key={artwork.id} src={artwork.image} alt={artwork.title} className="flex-1 aspect-[253/283] object-cover" />)}
           </div>
         </div>
       </section>
 
       {/* Final Philosophy Sections */}
-      <section className="max-w-[1648px] mx-auto px-9 py-[100px]">
-        <div className="flex justify-end mb-9">
-          <div className="flex justify-between flex-1">
-            <CornerBracket />
-            <p className="max-w-[579px] text-2xl font-medium leading-[110%] tracking-[-0.02em] uppercase">
-              To nie jest opowieść o mistyce. To opowieść o strukturze istnienia, która nie mieści się w ciele ani w myśli, a mimo to kieruje jednym i drugim.
-            </p>
-          </div>
-        </div>
-
-        <div className="flex gap-[42px]">
-          <div className="flex-1 flex flex-col gap-6">
-            <img 
-              src={artworks[3]?.image || "/placeholder.svg"}
-              alt={artworks[3]?.title || "Materia IV"}
-              className="w-full aspect-[767/907] object-cover"
-            />
-            <p className="text-2xl font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground text-center">
-              [cz. IV | 2023]
-            </p>
-          </div>
-          <div className="flex-1 flex flex-col gap-6">
-            <img 
-              src={artworks[4]?.image || "/placeholder.svg"}
-              alt={artworks[4]?.title || "Materia V"}
-              className="w-full aspect-[767/832] object-cover"
-            />
-            <p className="text-2xl font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground text-center">
-              [cz. V | 2023]
-            </p>
-          </div>
-        </div>
-
-        <div className="flex justify-between mt-9">
-          <CornerBracket />
-          <CornerBracket />
-        </div>
-      </section>
-    </div>
-  );
+      
+    </div>;
 };
-
 export default Home;
