@@ -384,6 +384,57 @@ const Home = () => {
           </svg>
         </div>
       </section>
+
+      {/* Section IX & X - cz9 & cz10 */}
+      <section className="max-w-[1648px] mx-auto py-[100px] flex flex-col items-start gap-9">
+        <div className="flex px-9 justify-end items-center self-stretch">
+          <div className="flex justify-between items-start flex-1">
+            <p className="w-[579px] text-2xl font-normal leading-[110%] tracking-[-0.48px] uppercase">
+              <span className="font-medium">Trzecia Materia jest w każdym z nas. Pulsuje, porusza, prowadzi.{'\n'}</span>
+              <span className="opacity-50">Jest początkiem i echem.{'\n'}</span>
+              <span className="font-medium">Mostem między światłem a ciemnością. Naszą własną, ukrytą nieskończonością.</span>
+            </p>
+            <CornerBracket />
+          </div>
+        </div>
+
+        <div className="flex px-9 items-start gap-[42px] self-stretch">
+          <div className="flex flex-col justify-center items-start gap-6 flex-1">
+            <img 
+              src="/artworks/collections/iii-materia/materia-09.jpg" 
+              alt="Materia IX" 
+              className="h-[654.14px] self-stretch aspect-[767/654.14] object-cover" 
+            />
+            <div className="flex items-center gap-3">
+              <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
+                [cz. IX | 2023]
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col items-start gap-6 flex-1">
+            <img 
+              src="/artworks/collections/iii-materia/materia-10.jpg" 
+              alt="Materia X" 
+              className="h-[958.75px] self-stretch aspect-[767/958.75] object-cover" 
+            />
+            <div className="flex items-center gap-3">
+              <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
+                [cz. x | 2023]
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex px-9 items-center self-stretch">
+          <svg width="1208" height="23" viewBox="0 0 1208 23" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex w-[1208px] justify-between items-start self-stretch">
+            <path d="M21.6 2.4H0V0H21.6V2.4Z" fill="currentColor" />
+            <path d="M19.184 22.12V0.519999H21.584V22.12H19.184Z" fill="currentColor" />
+            <path d="M1208 2.4H1186.4V0H1208V2.4Z" fill="currentColor" />
+            <path d="M1205.58 22.12V0.519999H1207.98V22.12H1205.58Z" fill="currentColor" />
+          </svg>
+        </div>
+      </section>
     </div>;
 };
 export default Home;
