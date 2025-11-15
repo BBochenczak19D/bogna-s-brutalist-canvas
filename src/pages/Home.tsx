@@ -1,72 +1,207 @@
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import CornerBracket from "@/components/CornerBracket";
+import ArrowLink from "@/components/ArrowLink";
 
 const Home = () => {
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="container mx-auto px-4 py-20 md:py-32">
-        <div className="max-w-5xl">
-          <h1 className="mb-8">
-            BOGNA<br />
-            BARTKOWIAK
+    <div className="min-h-screen bg-background">
+      {/* Hero Bio Section */}
+      <section className="max-w-[1648px] mx-auto px-9 py-0">
+        <div className="flex items-start gap-6 max-w-[574px]">
+          <CornerBracket />
+          <img 
+            src="/placeholder.svg" 
+            alt="Bogna Bartkowiak" 
+            className="w-[114px] h-[174px] object-cover flex-shrink-0"
+          />
+          <p className="flex-1 text-sm font-normal leading-[125%] uppercase">
+            Jestem absolwentką Akademii Sztuk Pięknych w Katowicach i lekarzem, która w swoich obrazach bada niewidzialne warstwy istnienia, łącząc doświadczenie medyczne, artystyczną intuicję i Trzecią Materię.
+          </p>
+          <CornerBracket />
+        </div>
+      </section>
+
+      {/* Main Hero Text */}
+      <section className="max-w-[1648px] mx-auto px-9 py-0 mt-[42px]">
+        <div className="flex flex-col gap-8">
+          <h1 className="text-[72px] font-medium leading-[100%] tracking-[-0.02em] uppercase max-w-none">
+            Co sprawia, że jesteśmy ożywieni? Co kieruje naszym istnieniem, jeśli wykraczamy poza myśli i widzialną materię?
           </h1>
-          <div className="brutalist-border-medium inline-block">
-            <p className="text-xl md:text-2xl font-bold p-6 max-w-2xl">
-              Malarka, artystka wizualna eksplorująca granice materiału, formy i przestrzeni
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="max-w-[1648px] mx-auto mt-[100px] mb-8">
+        <div className="flex justify-end px-9 mb-6">
+          <ArrowLink to="/collections/iii-materia">
+            Przejdź do pełnej kolekcji
+          </ArrowLink>
+        </div>
+        
+        {/* Horizontal Scroll Gallery */}
+        <div className="overflow-x-auto px-9 pb-4">
+          <div className="flex gap-1 min-w-min">
+            {[1, 2, 3, 4, 5, 6, 7].map((i) => (
+              <div key={i} className="w-[404px] h-[539px] bg-muted flex-shrink-0"></div>
+            ))}
+          </div>
+        </div>
+
+        {/* Description Section */}
+        <div className="px-9 pt-9 pb-[78px] flex items-start gap-16">
+          <CornerBracket />
+          <p className="flex-1 text-base font-light leading-[125%] tracking-[-0.02em] text-foreground/90">
+            Moja praca zaczyna się tam, gdzie kończy się język. Od zawsze fascynowało mnie to, czego nie da się nazwać: momenty pomiędzy oddechami, przestrzenie wewnątrz ciała, ciche impulsy świadomości. Jako lekarka przez lata uczyłam się patrzeć na człowieka przez pryzmat anatomii i nauki. Jako malarka — przez pryzmat intuicji, symbolu i doświadczenia.
+          </p>
+          <CornerBracket />
+          <p className="flex-1 text-base font-light leading-[125%] tracking-[-0.02em] text-foreground/90">
+            Kolekcja Trzeciej Materii powstała z potrzeby zrozumienia tego, co niewidzialne, a jednak fundamentalne. To mój osobisty sposób badania energii, która kieruje nami, zanim pojawi się myśl, ruch czy decyzja. Interesuje mnie stan pomiędzy materią a świadomością, wszędzie tam, gdzie ciało przestaje być tylko biologią, a staje się nośnikiem czegoś znacznie subtelniejszego.
+          </p>
+          <CornerBracket />
+          <p className="flex-1 text-base font-light leading-[125%] tracking-[-0.02em] text-foreground/90">
+            Malując, szukam drżeń, napięć, pęknięć i światła — nie w świecie zewnętrznym, ale w tych głębokich, wewnętrznych przestrzeniach, które każdy z nas nosi w sobie. Moje obrazy są śladami własnych poszukiwań. Mapami, które nie prowadzą do jednego celu, lecz do momentu spotkania ze sobą.
+          </p>
+        </div>
+      </section>
+
+      {/* Collection Title */}
+      <section className="max-w-[1648px] mx-auto px-9">
+        <div className="flex items-start gap-2 justify-between">
+          <div>
+            <h2 className="text-[64px] font-normal leading-[110%] tracking-[-0.02em] uppercase">
+              [III MATERIA]
+            </h2>
+          </div>
+          <p className="text-2xl font-light leading-[110%] tracking-[-0.04em] uppercase">
+            2023
+          </p>
+        </div>
+      </section>
+
+      {/* Philosophy Section */}
+      <section className="max-w-[1648px] mx-auto px-9 py-[100px]">
+        <div className="flex justify-between items-start mb-9">
+          <p className="max-w-[579px] text-2xl leading-[110%] tracking-[-0.04em] uppercase">
+            <span className="font-medium">Trzecia Materia istnieje.</span>
+            <span className="opacity-50"> Nie jest ciałem. Nie jest myślą.</span>
+            <span className="font-medium"> To to, co sprawia, że jesteśmy.</span>
+          </p>
+          <CornerBracket />
+        </div>
+
+        {/* Two Column Images */}
+        <div className="flex gap-16 mb-9">
+          <div className="flex-1 flex flex-col gap-6">
+            <div className="w-full aspect-[756/894] bg-muted"></div>
+            <p className="text-2xl font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground text-center">
+              [cz. I | 2023]
             </p>
+          </div>
+          <div className="flex-1 flex flex-col gap-6">
+            <div className="w-full aspect-[756/820] bg-muted"></div>
+            <p className="text-2xl font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground text-center">
+              [cz. II | 2023]
+            </p>
+          </div>
+        </div>
+
+        {/* Decorative Brackets */}
+        <div className="flex justify-between">
+          <CornerBracket />
+          <CornerBracket />
+        </div>
+      </section>
+
+      {/* Section III */}
+      <section className="max-w-[1648px] mx-auto px-9 py-[100px]">
+        <div className="flex items-start gap-8 mb-9">
+          <p className="text-2xl leading-[110%] tracking-[-0.04em] uppercase">
+            <span className="font-medium">Pojawia się w momentach, których nie potrafimy uchwycić —</span>
+            <span className="opacity-50"> w bezdechu między jednym a drugim impulsem.</span>
+            <span className="font-medium"> W cichym pulsie, który nie należy do fizjologii. W świetle, które rozprasza logikę.</span>
+          </p>
+          <CornerBracket />
+        </div>
+
+        <div className="flex gap-16">
+          <div className="w-[743px] h-[743px] bg-muted flex-shrink-0"></div>
+          <div className="flex flex-col justify-center gap-3">
+            <p className="text-2xl font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground">
+              [cz. III]
+            </p>
+            <ArrowLink to="/collections/iii-materia">
+              Przejdź do pełnej kolekcji
+            </ArrowLink>
+          </div>
+        </div>
+
+        <div className="flex justify-between mt-9">
+          <CornerBracket />
+          <CornerBracket />
+        </div>
+      </section>
+
+      {/* Dark Section - Other Works */}
+      <section className="max-w-[1648px] mx-auto">
+        <div className="bg-secondary px-9 pt-[30px] pb-9 flex flex-col gap-16">
+          <div className="flex flex-col gap-3">
+            <div className="flex items-center gap-6 pl-16">
+              <h2 className="text-[64px] font-medium leading-[110%] tracking-[-0.04em] uppercase text-secondary-foreground">
+                [GRAFIKI]
+              </h2>
+              <ArrowLink to="/tworczość/rysunki" className="text-white">
+                Przejdź do pełnej kolekcji
+              </ArrowLink>
+            </div>
+            <div className="flex justify-center opacity-50">
+              <h3 className="text-[64px] font-medium leading-[110%] tracking-[-0.04em] uppercase text-secondary-foreground">
+                [ARTEFAKTY]
+              </h3>
+            </div>
+            <div className="flex justify-center opacity-50">
+              <h3 className="text-[64px] font-medium leading-[110%] tracking-[-0.04em] uppercase text-secondary-foreground">
+                [INSTALACJE]
+              </h3>
+            </div>
+          </div>
+
+          {/* Horizontal Gallery */}
+          <div className="flex gap-3">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
+              <div key={i} className="flex-1 aspect-[253/283] bg-muted"></div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Featured Collections */}
-      <section className="container mx-auto px-4 py-20 brutalist-border-medium bg-muted">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="mb-12">NAJNOWSZA KOLEKCJA</h2>
-          
-          <Link 
-            to="/collections/iii-materia"
-            className="block group"
-          >
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="brutalist-border-medium overflow-hidden">
-                <div className="aspect-square bg-background"></div>
-              </div>
-              <div>
-                <h3 className="mb-4 group-hover:underline underline-offset-8 decoration-4">
-                  III MATERIA
-                </h3>
-                <p className="text-lg mb-6 leading-relaxed">
-                  Eksploracja materialności i tekstury w kontekście współczesnego malarstwa. 
-                  Seria prac badających relację między powierzchnią a głębią.
-                </p>
-                <div className="brutalist-border-medium inline-flex items-center gap-2 px-6 py-3 font-bold uppercase hover:bg-foreground hover:text-background transition-colors">
-                  Zobacz kolekcję
-                  <ArrowRight size={20} />
-                </div>
-              </div>
-            </div>
-          </Link>
+      {/* Final Philosophy Sections */}
+      <section className="max-w-[1648px] mx-auto px-9 py-[100px]">
+        <div className="flex justify-end mb-9">
+          <div className="flex justify-between flex-1">
+            <CornerBracket />
+            <p className="max-w-[579px] text-2xl font-medium leading-[110%] tracking-[-0.02em] uppercase">
+              To nie jest opowieść o mistyce. To opowieść o strukturze istnienia, która nie mieści się w ciele ani w myśli, a mimo to kieruje jednym i drugim.
+            </p>
+          </div>
         </div>
-      </section>
 
-      {/* Quick Links */}
-      <section className="container mx-auto px-4 py-20">
-        <div className="grid md:grid-cols-4 gap-4">
-          {[
-            { title: "OBRAZY", path: "/tworczość/obrazy" },
-            { title: "ARTEFAKTY", path: "/tworczość/artefakty" },
-            { title: "RYSUNKI", path: "/tworczość/rysunki" },
-            { title: "INSTALACJE", path: "/tworczość/instalacje" }
-          ].map((link) => (
-            <Link
-              key={link.path}
-              to={link.path}
-              className="brutalist-border-medium aspect-square flex items-center justify-center text-center hover:bg-foreground hover:text-background transition-colors group"
-            >
-              <h3 className="text-2xl">{link.title}</h3>
-            </Link>
-          ))}
+        <div className="flex gap-[42px]">
+          <div className="flex-1 flex flex-col gap-6">
+            <div className="w-full aspect-[767/907] bg-muted"></div>
+            <p className="text-2xl font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground text-center">
+              [cz. IV | 2023]
+            </p>
+          </div>
+          <div className="flex-1 flex flex-col gap-6">
+            <div className="w-full aspect-[767/832] bg-muted"></div>
+            <p className="text-2xl font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground text-center">
+              [cz. V | 2023]
+            </p>
+          </div>
+        </div>
+
+        <div className="flex justify-between mt-9">
+          <CornerBracket />
+          <CornerBracket />
         </div>
       </section>
     </div>
