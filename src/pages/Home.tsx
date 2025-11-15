@@ -133,8 +133,8 @@ const Home = () => {
           </div>
           <div className="flex-1 flex flex-col gap-6">
             <img
-              src={artworks[1]?.image || "/placeholder.svg"}
-              alt={artworks[1]?.title || "Materia II"}
+              src="/artworks/collections/iii-materia/materia-02.jpg"
+              alt="Materia II"
               className="w-full aspect-[756/820] object-cover"
             />
             <p className="text-2xl font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground text-center">
