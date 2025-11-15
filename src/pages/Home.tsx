@@ -1,8 +1,16 @@
+import { useState } from "react";
 import CornerBracket from "@/components/CornerBracket";
 import ArrowLink from "@/components/ArrowLink";
 import artworksData from "@/data/artworks.json";
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselApi } from "@/components/ui/carousel";
+import { useParallaxCarousel } from "@/hooks/useParallaxCarousel";
+
 const Home = () => {
+  const [carouselApi, setCarouselApi] = useState<CarouselApi>();
+  const [darkCarouselApi, setDarkCarouselApi] = useState<CarouselApi>();
+  const carouselRef = useParallaxCarousel(carouselApi);
+  const darkCarouselRef = useParallaxCarousel(darkCarouselApi);
+  
   const iiiMateriaCollection = artworksData.collections.find((c) => c.id === "iii-materia");
   const artworks = iiiMateriaCollection?.artworks || [];
   const rysunki = artworksData.rysunki || [];
@@ -36,13 +44,14 @@ const Home = () => {
       </section>
 
       {/* Gallery Section */}
-      <section className="max-w-[1648px] mx-auto mt-[100px] mb-8">
+      <section ref={carouselRef} className="max-w-[1648px] mx-auto mt-[100px] mb-8">
         <div className="flex justify-end px-9 mb-6">
           <ArrowLink to="/collections/iii-materia">Przejdź do pełnej kolekcji</ArrowLink>
         </div>
 
         {/* Draggable Carousel Gallery */}
         <Carousel
+          setApi={setCarouselApi}
           opts={{
             align: "start",
             loop: false,
@@ -261,7 +270,7 @@ const Home = () => {
       </section>
 
       {/* Dark Section - Other Works */}
-      <section className="max-w-[1648px] mx-auto">
+      <section ref={darkCarouselRef} className="max-w-[1648px] mx-auto">
         <div className="bg-secondary px-9 pt-[30px] pb-9 flex flex-col gap-16">
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-6 pl-16">
@@ -286,6 +295,7 @@ const Home = () => {
 
           {/* Horizontal Carousel Gallery */}
           <Carousel
+            setApi={setDarkCarouselApi}
             opts={{
               align: "start",
               loop: false,
