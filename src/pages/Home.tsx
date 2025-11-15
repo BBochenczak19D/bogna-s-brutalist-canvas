@@ -337,11 +337,13 @@ const Home = () => {
       <section className="max-w-[1648px] mx-auto px-0 py-[100px] flex flex-col items-start gap-9">
         <div className="flex px-9 items-center self-stretch">
           <div className="flex flex-col justify-center items-center gap-8 flex-1">
-            <p className="self-stretch text-2xl font-medium leading-[110%] tracking-[-0.96px] uppercase text-center">
-              Pod skórą miesza się kosmos.
-              {"\n"}W strukturze komórek drga echo tego,
-              {"\n"}co tworzy galaktyki i zapadające się gwiazdy.
-            </p>
+          <p className="self-stretch text-2xl font-medium leading-[110%] tracking-[-0.96px] uppercase text-center">
+            Pod skórą miesza się kosmos.
+            {"\n"}
+            {"\n"}W strukturze komórek drga echo tego,
+            {"\n"}
+            {"\n"}co tworzy galaktyki i zapadające się gwiazdy.
+          </p>
           </div>
         </div>
 
