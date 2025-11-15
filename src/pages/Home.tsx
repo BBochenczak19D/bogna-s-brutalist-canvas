@@ -1,7 +1,12 @@
 import CornerBracket from "@/components/CornerBracket";
 import ArrowLink from "@/components/ArrowLink";
+import artworksData from "@/data/artworks.json";
 
 const Home = () => {
+  const iiiMateriaCollection = artworksData.collections.find(c => c.id === "iii-materia");
+  const artworks = iiiMateriaCollection?.artworks || [];
+  const rysunki = artworksData.rysunki || [];
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Bio Section */}
@@ -9,7 +14,7 @@ const Home = () => {
         <div className="flex items-start gap-6 max-w-[574px]">
           <CornerBracket />
           <img 
-            src="/placeholder.svg" 
+            src="/artworks/profile.jpg" 
             alt="Bogna Bartkowiak" 
             className="w-[114px] h-[174px] object-cover flex-shrink-0"
           />
@@ -40,8 +45,13 @@ const Home = () => {
         {/* Horizontal Scroll Gallery */}
         <div className="overflow-x-auto px-9 pb-4">
           <div className="flex gap-1 min-w-min">
-            {[1, 2, 3, 4, 5, 6, 7].map((i) => (
-              <div key={i} className="w-[404px] h-[539px] bg-muted flex-shrink-0"></div>
+            {artworks.map((artwork) => (
+              <img 
+                key={artwork.id}
+                src={artwork.image}
+                alt={artwork.title}
+                className="w-[404px] h-[539px] object-cover flex-shrink-0"
+              />
             ))}
           </div>
         </div>
@@ -91,13 +101,21 @@ const Home = () => {
         {/* Two Column Images */}
         <div className="flex gap-16 mb-9">
           <div className="flex-1 flex flex-col gap-6">
-            <div className="w-full aspect-[756/894] bg-muted"></div>
+            <img 
+              src={artworks[0]?.image || "/placeholder.svg"}
+              alt={artworks[0]?.title || "Materia I"}
+              className="w-full aspect-[756/894] object-cover"
+            />
             <p className="text-2xl font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground text-center">
               [cz. I | 2023]
             </p>
           </div>
           <div className="flex-1 flex flex-col gap-6">
-            <div className="w-full aspect-[756/820] bg-muted"></div>
+            <img 
+              src={artworks[1]?.image || "/placeholder.svg"}
+              alt={artworks[1]?.title || "Materia II"}
+              className="w-full aspect-[756/820] object-cover"
+            />
             <p className="text-2xl font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground text-center">
               [cz. II | 2023]
             </p>
@@ -123,7 +141,11 @@ const Home = () => {
         </div>
 
         <div className="flex gap-16">
-          <div className="w-[743px] h-[743px] bg-muted flex-shrink-0"></div>
+          <img 
+            src={artworks[2]?.image || "/placeholder.svg"}
+            alt={artworks[2]?.title || "Materia III"}
+            className="w-[743px] h-[743px] object-cover flex-shrink-0"
+          />
           <div className="flex flex-col justify-center gap-3">
             <p className="text-2xl font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground">
               [cz. III]
@@ -166,8 +188,13 @@ const Home = () => {
 
           {/* Horizontal Gallery */}
           <div className="flex gap-3">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <div key={i} className="flex-1 aspect-[253/283] bg-muted"></div>
+            {rysunki.slice(0, 6).map((artwork) => (
+              <img 
+                key={artwork.id}
+                src={artwork.image}
+                alt={artwork.title}
+                className="flex-1 aspect-[253/283] object-cover"
+              />
             ))}
           </div>
         </div>
@@ -186,13 +213,21 @@ const Home = () => {
 
         <div className="flex gap-[42px]">
           <div className="flex-1 flex flex-col gap-6">
-            <div className="w-full aspect-[767/907] bg-muted"></div>
+            <img 
+              src={artworks[3]?.image || "/placeholder.svg"}
+              alt={artworks[3]?.title || "Materia IV"}
+              className="w-full aspect-[767/907] object-cover"
+            />
             <p className="text-2xl font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground text-center">
               [cz. IV | 2023]
             </p>
           </div>
           <div className="flex-1 flex flex-col gap-6">
-            <div className="w-full aspect-[767/832] bg-muted"></div>
+            <img 
+              src={artworks[4]?.image || "/placeholder.svg"}
+              alt={artworks[4]?.title || "Materia V"}
+              className="w-full aspect-[767/832] object-cover"
+            />
             <p className="text-2xl font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground text-center">
               [cz. V | 2023]
             </p>
