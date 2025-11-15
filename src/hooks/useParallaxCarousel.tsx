@@ -16,7 +16,10 @@ export const useParallaxCarousel = (api: CarouselApi | undefined) => {
       if (!section) return;
 
       const rect = section.getBoundingClientRect();
-      const isInView = rect.top <= 100 && rect.bottom >= window.innerHeight * 0.5;
+      const viewportHeight = window.innerHeight;
+      
+      // Only activate when section is centered in viewport
+      const isInView = rect.top < viewportHeight * 0.3 && rect.bottom > viewportHeight * 0.7;
 
       if (!isInView) {
         isScrollingCarousel.current = false;
