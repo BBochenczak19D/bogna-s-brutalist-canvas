@@ -7,6 +7,22 @@
       "year": "2024",
       "artworks": [
         {
+          "id": "materia-01",
+          "title": "Materia III",
+          "medium": "Olej na płótnie",
+          "dimensions": "100 x 120 cm",
+          "year": "2024",
+          "image": "/artworks/collections/iii-materia/materia-01.jpg"
+        },
+        {
+          "id": "materia-02",
+          "title": "Materia III",
+          "medium": "Olej na płótnie",
+          "dimensions": "100 x 120 cm",
+          "year": "2024",
+          "image": "/artworks/collections/iii-materia/materia-02.jpg"
+        },
+        {
           "id": "materia-03",
           "title": "Materia III",
           "medium": "Olej na płótnie",
