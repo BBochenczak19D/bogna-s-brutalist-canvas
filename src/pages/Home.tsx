@@ -213,6 +213,46 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* CZ VII Section */}
+      <section className="flex py-[100px] flex-col items-start gap-9 self-stretch">
+        <div className="flex px-9 flex-col items-start gap-6 self-stretch">
+          <div className="flex flex-col justify-center items-start gap-8 self-stretch">
+            <p className="self-stretch text-2xl font-medium leading-[110%] tracking-[-0.96px] uppercase text-foreground">
+              To energia, która nie domaga się dowodu. Odsłania się tylko tym, którzy potrafią słuchać inaczej.
+            </p>
+          </div>
+          <div className="flex justify-between items-center self-stretch">
+            <div className="flex items-center gap-3">
+              <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
+                [cz. VII | 2023]
+              </p>
+            </div>
+            <ArrowLink to="/collections">
+              PRzejdź do pełnej kolekcji
+            </ArrowLink>
+          </div>
+        </div>
+
+        <div className="flex px-9 flex-col justify-end items-start gap-16 self-stretch">
+          <img src="/artworks/collections/iii-materia/materia-07.jpg" alt="Materia VII" className="h-[788px] self-stretch aspect-[2/1] object-cover" />
+        </div>
+
+        <div className="flex px-9 justify-between items-end self-stretch">
+          <div className="flex flex-col justify-center items-start gap-8 flex-1">
+            <p className="self-stretch text-2xl font-medium leading-[110%] tracking-[-0.96px] uppercase text-foreground">
+              Jesteśmy zbudowani z tkanek, emocji i wspomnień, a jednak każdy z nas nosi w sobie coś, czego nie da się nazwać.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex px-9 items-center self-stretch">
+          <div className="flex w-[1208px] justify-between items-start self-stretch">
+            <CornerBracket />
+            <CornerBracket />
+          </div>
+        </div>
+      </section>
       
     </div>;
 };
