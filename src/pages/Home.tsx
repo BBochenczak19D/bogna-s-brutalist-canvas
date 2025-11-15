@@ -176,6 +176,43 @@ const Home = () => {
       </section>
 
       {/* Final Philosophy Sections */}
+      <section className="max-w-[1648px] mx-auto px-9 py-[100px] flex flex-col items-start gap-9">
+        <div className="flex px-0 items-center self-stretch">
+          <div className="flex justify-between items-start flex-1">
+            <CornerBracket />
+            <p className="w-[579px] text-2xl font-medium leading-[110%] tracking-[-0.48px] uppercase">
+              To nie jest opowieść o mistyce. To opowieść o strukturze istnienia, która nie mieści się w ciele ani w myśli, a mimo to kieruje jednym i drugim.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex px-0 items-start gap-[42px] self-stretch">
+          <div className="flex flex-col items-start gap-6 flex-1">
+            <img src="/artworks/collections/iii-materia/materia-05.jpg" alt="Materia V" className="h-[832px] self-stretch object-cover" />
+            <div className="flex items-center gap-3">
+              <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
+                [cz. V | 2023]
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col justify-center items-start gap-6 flex-1">
+            <img src="/artworks/collections/iii-materia/materia-03.jpg" alt="Materia VI" className="h-[907px] self-stretch object-cover" />
+            <div className="flex items-center gap-3">
+              <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
+                [cz. VI | 2023]
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex px-0 items-center self-stretch">
+          <div className="flex w-[1208px] justify-between items-start self-stretch">
+            <CornerBracket />
+            <CornerBracket />
+          </div>
+        </div>
+      </section>
       
     </div>;
 };
