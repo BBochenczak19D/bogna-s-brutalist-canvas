@@ -33,7 +33,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="w-full px-8 py-[30px] bg-background">
+    <nav className="w-full px-8 py-[30px] bg-white fixed top-0 left-0 right-0 z-50">
       <div className="flex justify-between items-start max-w-[1920px] mx-auto">
         {/* Logo */}
         <Link to="/" className="text-2xl font-normal uppercase leading-[100%] tracking-normal">
