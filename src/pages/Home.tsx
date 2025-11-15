@@ -115,29 +115,30 @@ const Home = () => {
       </section>
 
       {/* Section III */}
-      <section className="max-w-[1648px] mx-auto px-9 py-[100px]">
-        <div className="flex items-start gap-8 mb-9">
-          <p className="text-2xl leading-[110%] tracking-[-0.04em] uppercase">
-            <span className="font-medium">Pojawia się w momentach, których nie potrafimy uchwycić —</span>
-            <span className="opacity-50"> w bezdechu między jednym a drugim impulsem.</span>
-            <span className="font-medium"> W cichym pulsie, który nie należy do fizjologii. W świetle, które rozprasza logikę.</span>
-          </p>
-          <CornerBracket />
-        </div>
-
-        <div className="flex gap-16">
-          <img src={artworks[2]?.image || "/placeholder.svg"} alt={artworks[2]?.title || "Materia III"} className="w-[743px] h-[743px] object-cover flex-shrink-0" />
-          <div className="flex flex-col justify-center gap-3">
-            <p className="text-2xl font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground">
-              [cz. III]
+      <section className="max-w-[1648px] mx-auto px-9 py-[100px] flex flex-col items-start gap-6">
+        <div className="flex px-0 items-center self-stretch">
+          <div className="flex flex-col justify-center items-end gap-8 flex-1">
+            <p className="w-[599px] text-2xl font-normal leading-[110%] tracking-[-0.48px] uppercase">
+              <span className="text-foreground">Wejście w Trzecią Materię nie wymaga wiary.{'\n'}Wymaga uważności. </span>
+              <span className="opacity-45">Ciszy.{'\n'}{'\n'}</span>
+              <span className="text-foreground">Zgody na to, że rzeczywistość jest większa niż to, czego dotykamy.</span>
             </p>
-            <ArrowLink to="/collections/iii-materia">
-              Przejdź do pełnej kolekcji
-            </ArrowLink>
           </div>
         </div>
 
-        <div className="flex justify-between mt-9">
+        <div className="flex px-0 justify-end items-center gap-16 self-stretch">
+          <div className="flex flex-col justify-center items-start gap-3">
+            <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
+              [cz. IV | 2023]
+            </p>
+            <ArrowLink to="/collections/iii-materia">
+              PRzejdź do pełnej kolekcji
+            </ArrowLink>
+          </div>
+          <img src="/artworks/collections/iii-materia/materia-06.jpg" alt="Materia IV" className="w-[640px] h-[698px] object-cover" />
+        </div>
+
+        <div className="flex px-0 justify-between items-center self-stretch">
           <CornerBracket />
           <CornerBracket />
         </div>
