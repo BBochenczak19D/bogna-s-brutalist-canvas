@@ -295,7 +295,49 @@ const Home = () => {
       </section>
 
       {/* CZ VII Section */}
-      
+      <section className="max-w-[1648px] mx-auto py-[100px] flex flex-col items-start gap-9">
+        <div className="flex px-9 flex-col items-start gap-6 self-stretch">
+          <div className="flex flex-col justify-center items-start gap-8 self-stretch">
+            <p className="self-stretch text-2xl font-medium leading-[110%] tracking-[-0.96px] uppercase">
+              To energia, która nie domaga się dowodu. Odsłania się tylko tym, którzy potrafią słuchać inaczej.
+            </p>
+          </div>
+          <div className="flex justify-between items-center self-stretch">
+            <div className="flex items-center gap-3">
+              <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
+                [cz. VII | 2023]
+              </p>
+            </div>
+            <ArrowLink to="/collections/iii-materia">PRzejdź do pełnej kolekcji</ArrowLink>
+          </div>
+        </div>
+
+        <div className="flex px-9 flex-col justify-end items-start gap-16 self-stretch">
+          <img 
+            src="/artworks/collections/iii-materia/materia-07.jpg" 
+            alt="Materia VII" 
+            className="h-[788px] self-stretch aspect-[2/1] object-cover" 
+          />
+        </div>
+
+        <div className="flex px-9 justify-between items-end self-stretch">
+          <div className="flex flex-col justify-center items-start gap-8 flex-1">
+            <p className="self-stretch text-2xl font-medium leading-[110%] tracking-[-0.96px] uppercase">
+              Jesteśmy zbudowani z tkanek, emocji i wspomnień, a jednak każdy z nas nosi w sobie coś, czego nie da się nazwać.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex px-9 justify-between items-center self-stretch">
+          <svg width="1576" height="23" viewBox="0 0 1576 23" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex justify-between items-start flex-1 self-stretch">
+            <path d="M21.6 2.4H0V0H21.6V2.4Z" fill="currentColor" />
+            <path d="M19.184 22.12V0.519999H21.584V22.12H19.184Z" fill="currentColor" />
+            <path d="M1576 2.4H1554.4V0H1576V2.4Z" fill="currentColor" />
+            <path d="M1573.58 22.12V0.519999H1575.98V22.12H1573.58Z" fill="currentColor" />
+          </svg>
+        </div>
+      </section>
+
 
       {/* Section VIII - cz8 */}
       <section className="max-w-[1648px] mx-auto px-0 py-[100px] flex flex-col items-start gap-9">
