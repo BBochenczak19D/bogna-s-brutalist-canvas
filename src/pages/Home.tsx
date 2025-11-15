@@ -114,7 +114,42 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Section III */}
+      {/* Section III - cz3 */}
+      <section className="max-w-[1648px] mx-auto px-9 py-[100px] flex flex-col items-start gap-9">
+        <div className="flex px-0 items-center self-stretch">
+          <div className="flex flex-col justify-center items-start gap-8 flex-1">
+            <div className="flex items-start gap-8 self-stretch">
+              <p className="text-2xl font-normal leading-[110%] tracking-[-0.96px] uppercase">
+                <span className="font-medium">Pojawia się w momentach, których nie potrafimy uchwycić —
+{'\n'}
+{'\n'}</span>
+                <span className="opacity-49">w bezdechu między jednym a drugim impulsem.</span>
+                <span className="font-medium"> W cichym pulsie, który nie należy do fizjologii. W świetle, które rozprasza logikę.</span>
+              </p>
+              <CornerBracket />
+            </div>
+          </div>
+        </div>
+
+        <div className="flex px-0 items-center gap-16 self-stretch">
+          <img src="/artworks/collections/iii-materia/materia-03.jpg" alt="Materia III" className="w-[743px] h-[743px] aspect-square object-cover" />
+          <div className="flex flex-col justify-center items-start gap-3">
+            <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
+              [cz. III]
+            </p>
+            <ArrowLink to="/collections/iii-materia">
+              PRzejdź do pełnej kolekcji
+            </ArrowLink>
+          </div>
+        </div>
+
+        <div className="flex px-0 justify-between items-center self-stretch">
+          <CornerBracket />
+          <CornerBracket />
+        </div>
+      </section>
+
+      {/* Section IV */}
       <section className="max-w-[1648px] mx-auto px-9 py-[100px] flex flex-col items-start gap-6">
         <div className="flex px-0 items-center self-stretch">
           <div className="flex flex-col justify-center items-end gap-8 flex-1">
