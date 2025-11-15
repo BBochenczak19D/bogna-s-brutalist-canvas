@@ -87,7 +87,8 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply text-foreground antialiased;
+    background-color: #F0EEDE;
     font-family: 'Outfit', -apple-system, Roboto, Helvetica, sans-serif;
   }
 
