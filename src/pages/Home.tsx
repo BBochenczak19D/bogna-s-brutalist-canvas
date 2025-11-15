@@ -8,7 +8,7 @@ const Home = () => {
   const rysunki = artworksData.rysunki || [];
   return <div className="min-h-screen bg-background">
       {/* Hero Bio Section */}
-      <section className="max-w-[1648px] mx-auto px-9 py-0">
+      <section className="max-w-[1648px] mx-auto px-9 py-0 pt-32">
         <div className="flex items-start gap-6 max-w-[574px]">
           <CornerBracket />
           <img src="/artworks/profile.jpg" alt="Bogna Bartkowiak" className="w-[114px] h-[174px] object-cover flex-shrink-0" />
