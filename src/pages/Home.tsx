@@ -214,6 +214,50 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Section VIII - cz8 */}
+      <section className="max-w-[1648px] mx-auto px-0 py-[100px] flex flex-col items-start gap-9">
+        <div className="flex px-9 items-center self-stretch">
+          <div className="flex flex-col justify-center items-center gap-8 flex-1">
+            <p className="self-stretch text-2xl font-medium leading-[110%] tracking-[-0.96px] uppercase text-center">
+              Pod skórą miesza się kosmos.
+{'\n'}W strukturze komórek drga echo tego,
+{'\n'}co tworzy galaktyki i zapadające się gwiazdy.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex px-9 items-center self-stretch">
+          <div className="flex justify-center items-center flex-1">
+            <div className="flex items-center gap-3">
+              <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
+                [cz. VIII | 2023]
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex px-9 flex-col justify-center items-center gap-16 self-stretch">
+          <img src="/artworks/collections/iii-materia/materia-08.jpg" alt="Materia VIII" className="w-[1051px] h-[788px] aspect-[1051/788] object-cover" />
+        </div>
+
+        <div className="flex px-9 items-center self-stretch">
+          <div className="flex flex-col justify-center items-center gap-8 flex-1">
+            <p className="text-base font-normal leading-[110%] tracking-[-0.32px] uppercase text-center">
+              Mikro i makro nie są przeciwieństwami.Są tą samą historią, opowiedzianą innym językiem.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex px-9 items-center self-stretch">
+          <svg width="1208" height="23" viewBox="0 0 1208 23" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex w-full justify-between items-start self-stretch">
+            <path d="M21.6 2.4H0V0H21.6V2.4Z" fill="currentColor"/>
+            <path d="M19.184 22.12V0.519999H21.584V22.12H19.184Z" fill="currentColor"/>
+            <path d="M1208 2.4H1186.4V0H1208V2.4Z" fill="currentColor"/>
+            <path d="M1205.58 22.12V0.519999H1207.98V22.12H1205.58Z" fill="currentColor"/>
+          </svg>
+        </div>
+      </section>
+
       {/* Dark Section - Other Works */}
       <section className="max-w-[1648px] mx-auto">
         <div className="bg-secondary px-9 pt-[30px] pb-9 flex flex-col gap-16">
