@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { NavLink } from "./NavLink";
@@ -6,7 +6,31 @@ import { NavLink } from "./NavLink";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY < lastScrollY) {
+        // Scrolling up
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down and past 100px
+        setIsVisible(false);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollY]);
 
   const navItems = [
     { path: "/collections", label: "Kolekcje" },
@@ -33,7 +57,9 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="w-full px-8 py-[30px] bg-white fixed top-0 left-0 right-0 z-50">
+    <nav className={`w-full px-8 py-4 bg-white fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${
+      isVisible ? 'translate-y-0' : '-translate-y-full'
+    }`}>
       <div className="flex justify-between items-start max-w-[1920px] mx-auto">
         {/* Logo */}
         <Link to="/" className="text-2xl font-normal uppercase leading-[100%] tracking-normal">
