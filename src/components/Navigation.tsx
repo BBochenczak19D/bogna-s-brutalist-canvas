@@ -95,26 +95,41 @@ const Navigation = () => {
                 className="flex flex-col items-end gap-2.5"
                 onMouseEnter={() => setHoveredItem(item.path)}
                 onMouseLeave={() => setHoveredItem(null)}
-                onClick={() => {
-                  if (hasSubItems) {
-                    setClickedItem(clickedItem === item.path ? null : item.path);
-                  }
-                }}
               >
-                <NavLink
-                  to={item.path}
-                  className={`flex items-center gap-1 px-[5px] py-[3px] transition-all duration-300 ${
-                    isActive ? 'text-white' : 'hover:opacity-70'
-                  }`}
-                >
-                  <span className="font-nats text-2xl leading-[100%] uppercase">[</span>
-                  <span className={`text-xl font-normal uppercase leading-[100%] tracking-normal transition-all duration-300 ${
-                    isActive ? 'underline decoration-solid' : ''
-                  }`}>
-                    {item.label}
-                  </span>
-                  <span className="font-nats text-2xl leading-[100%] uppercase">]</span>
-                </NavLink>
+                {hasSubItems ? (
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setClickedItem(clickedItem === item.path ? null : item.path);
+                    }}
+                    className={`flex items-center gap-1 px-[5px] py-[3px] transition-all duration-300 ${
+                      isActive ? 'text-white' : 'hover:opacity-70'
+                    }`}
+                  >
+                    <span className="font-nats text-2xl leading-[100%] uppercase">[</span>
+                    <span className={`text-xl font-normal uppercase leading-[100%] tracking-normal transition-all duration-300 ${
+                      isActive ? 'underline decoration-solid' : ''
+                    }`}>
+                      {item.label}
+                    </span>
+                    <span className="font-nats text-2xl leading-[100%] uppercase">]</span>
+                  </button>
+                ) : (
+                  <NavLink
+                    to={item.path}
+                    className={`flex items-center gap-1 px-[5px] py-[3px] transition-all duration-300 ${
+                      isActive ? 'text-white' : 'hover:opacity-70'
+                    }`}
+                  >
+                    <span className="font-nats text-2xl leading-[100%] uppercase">[</span>
+                    <span className={`text-xl font-normal uppercase leading-[100%] tracking-normal transition-all duration-300 ${
+                      isActive ? 'underline decoration-solid' : ''
+                    }`}>
+                      {item.label}
+                    </span>
+                    <span className="font-nats text-2xl leading-[100%] uppercase">]</span>
+                  </NavLink>
+                )}
 
                 {/* Sub-items with smooth animation */}
                 {hasSubItems && (
