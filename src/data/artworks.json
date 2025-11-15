@@ -37,6 +37,14 @@
           "dimensions": "100 x 120 cm",
           "year": "2024",
           "image": "/artworks/collections/iii-materia/materia-06.jpg"
+        },
+        {
+          "id": "materia-07",
+          "title": "Materia VII",
+          "medium": "Olej na płótnie",
+          "dimensions": "100 x 120 cm",
+          "year": "2024",
+          "image": "/artworks/collections/iii-materia/materia-07.jpg"
         }
       ]
     }
