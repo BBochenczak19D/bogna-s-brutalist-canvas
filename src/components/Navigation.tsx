@@ -5,6 +5,7 @@ import { NavLink } from "./NavLink";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const location = useLocation();
 
   const navItems = [
@@ -44,9 +45,16 @@ const Navigation = () => {
           {navItems.map((item) => {
             const isActive = isActiveParent(item);
             const hasSubItems = 'subItems' in item && item.subItems;
+            const isHovered = hoveredItem === item.path;
+            const shouldShowSubItems = isActive || isHovered;
             
             return (
-              <div key={item.path} className="flex flex-col items-end gap-2.5">
+              <div 
+                key={item.path} 
+                className="flex flex-col items-end gap-2.5"
+                onMouseEnter={() => setHoveredItem(item.path)}
+                onMouseLeave={() => setHoveredItem(null)}
+              >
                 <NavLink
                   to={item.path}
                   className={`flex items-center gap-1 px-[5px] py-[3px] transition-all duration-300 ${
@@ -65,7 +73,7 @@ const Navigation = () => {
                 {/* Sub-items with smooth animation */}
                 {hasSubItems && (
                   <div className={`flex flex-col items-end gap-2.5 overflow-hidden transition-all duration-500 ease-in-out ${
-                    isActive ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                    shouldShowSubItems ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                   }`}>
                     {item.subItems.map((subItem) => (
                       <NavLink
