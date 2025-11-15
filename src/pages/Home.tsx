@@ -218,7 +218,7 @@ const Home = () => {
             <ArrowLink to="/collections/iii-materia">PRzejdź do pełnej kolekcji</ArrowLink>
           </div>
           <img
-            src="/artworks/collections/iii-materia/materia-06.jpg"
+            src="/artworks/collections/iii-materia/materia-04.jpg"
             alt="Materia IV"
             className="w-[640px] h-[698px] object-cover"
           />
@@ -354,7 +354,7 @@ const Home = () => {
 
           <div className="flex flex-col justify-center items-start gap-6 flex-1">
             <img
-              src="/artworks/collections/iii-materia/materia-03.jpg"
+              src="/artworks/collections/iii-materia/materia-06.jpg"
               alt="Materia VI"
               className="h-[907px] self-stretch object-cover"
             />
