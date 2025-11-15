@@ -284,7 +284,82 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Horizontal Gallery */}
+          {/* Horizontal Carousel Gallery */}
+          <Carousel
+            opts={{
+              align: "start",
+              loop: false,
+              dragFree: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="gap-1">
+              {/* Rysunki */}
+              {rysunki.map((artwork) => (
+                <CarouselItem key={artwork.id} className="basis-auto pl-0">
+                  <div className="relative">
+                    <img
+                      src={artwork.image}
+                      alt={artwork.title}
+                      className="w-[404px] h-[539px] object-cover"
+                      draggable={false}
+                    />
+                    <div className="absolute bottom-4 left-4 text-white/80 text-sm">
+                      {artwork.title}
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+              {/* Artefakty */}
+              {artworksData.artefakty.map((artwork) => (
+                <CarouselItem key={artwork.id} className="basis-auto pl-0">
+                  <div className="relative">
+                    <img
+                      src={artwork.image}
+                      alt={artwork.title}
+                      className="w-[404px] h-[539px] object-cover"
+                      draggable={false}
+                    />
+                    <div className="absolute bottom-4 left-4 text-white/80 text-sm">
+                      {artwork.title}
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+              {/* Instalacje */}
+              {artworksData.instalacje.map((artwork) => (
+                <CarouselItem key={artwork.id} className="basis-auto pl-0">
+                  <div className="relative">
+                    <img
+                      src={artwork.image}
+                      alt={artwork.title}
+                      className="w-[404px] h-[539px] object-cover"
+                      draggable={false}
+                    />
+                    <div className="absolute bottom-4 left-4 text-white/80 text-sm">
+                      {artwork.title}
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+              {/* Obrazy */}
+              {artworksData.obrazy.map((artwork) => (
+                <CarouselItem key={artwork.id} className="basis-auto pl-0">
+                  <div className="relative">
+                    <img
+                      src={artwork.image}
+                      alt={artwork.title}
+                      className="w-[404px] h-[539px] object-cover"
+                      draggable={false}
+                    />
+                    <div className="absolute bottom-4 left-4 text-white/80 text-sm">
+                      {artwork.title}
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </div>
       </section>
 
