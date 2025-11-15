@@ -149,6 +149,41 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Section V - cz5 */}
+      <section className="max-w-[1648px] mx-auto px-9 py-[100px] flex flex-col items-start gap-9">
+        <div className="flex px-0 items-center self-stretch">
+          <div className="flex flex-col justify-center items-end gap-8 flex-1">
+            <div className="flex items-start gap-8 self-stretch justify-end">
+              <CornerBracket />
+              <p className="text-2xl font-normal leading-[110%] tracking-[-0.96px] uppercase text-right">
+                <span className="font-medium">Energia, która przepływa przez nas, nie jest abstrakcją.
+{'\n'}
+{'\n'}</span>
+                <span className="opacity-49">To coś, co możemy wyczuć w ciele, w dłoniach, w sercu.</span>
+                <span className="font-medium"> To coś, co łączy nas ze sobą i ze światem.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex px-0 justify-end items-center gap-16 self-stretch">
+          <div className="flex flex-col justify-center items-start gap-3">
+            <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
+              [cz. V]
+            </p>
+            <ArrowLink to="/collections/iii-materia">
+              PRzejdź do pełnej kolekcji
+            </ArrowLink>
+          </div>
+          <img src="/artworks/collections/iii-materia/materia-05.jpg" alt="Materia V" className="w-[743px] h-[743px] aspect-square object-cover" />
+        </div>
+
+        <div className="flex px-0 justify-between items-center self-stretch">
+          <CornerBracket />
+          <CornerBracket />
+        </div>
+      </section>
+
       {/* Section IV */}
       <section className="max-w-[1648px] mx-auto px-9 py-[100px] flex flex-col items-start gap-6">
         <div className="flex px-0 items-center self-stretch">
