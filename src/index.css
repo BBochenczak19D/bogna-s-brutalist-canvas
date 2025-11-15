@@ -8,24 +8,24 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Brutalist black & white design system */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
+    /* Cream & Black design system */
+    --background: 43 29% 91%; /* #F0EEDE cream */
+    --foreground: 0 0% 0%; /* black */
 
-    --card: 0 0% 100%;
+    --card: 43 29% 91%;
     --card-foreground: 0 0% 0%;
 
-    --popover: 0 0% 100%;
+    --popover: 43 29% 91%;
     --popover-foreground: 0 0% 0%;
 
     --primary: 0 0% 0%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 95%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 24 86% 2%; /* #0D0401 dark brown/black */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 90%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 43 29% 85%;
+    --muted-foreground: 220 9% 55%; /* #767B8E */
 
     --accent: 0 0% 0%;
     --accent-foreground: 0 0% 100%;
@@ -39,37 +39,35 @@ All colors MUST be HSL.
 
     --radius: 0rem;
 
-    /* Brutalist spacing */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 2rem;
     --spacing-lg: 4rem;
     --spacing-xl: 6rem;
 
-    /* Brutalist borders */
     --border-thick: 4px;
     --border-medium: 2px;
     --border-thin: 1px;
   }
 
   .dark {
-    --background: 0 0% 0%;
+    --background: 24 86% 2%;
     --foreground: 0 0% 100%;
 
-    --card: 0 0% 0%;
+    --card: 24 86% 2%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 0%;
+    --popover: 24 86% 2%;
     --popover-foreground: 0 0% 100%;
 
     --primary: 0 0% 100%;
     --primary-foreground: 0 0% 0%;
 
-    --secondary: 0 0% 10%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 43 29% 91%;
+    --secondary-foreground: 0 0% 0%;
 
     --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
+    --muted-foreground: 220 9% 55%;
 
     --accent: 0 0% 100%;
     --accent-foreground: 0 0% 0%;
@@ -89,46 +87,35 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
-    font-feature-settings: "kern" 1;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Outfit', -apple-system, Roboto, Helvetica, sans-serif;
   }
 
-  /* Brutalist typography */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold tracking-tight;
+    @apply font-medium tracking-tight;
+    font-family: 'Outfit', -apple-system, Roboto, Helvetica, sans-serif;
   }
 
   h1 {
-    @apply text-5xl md:text-7xl lg:text-8xl;
-    line-height: 0.9;
+    @apply text-5xl md:text-6xl lg:text-7xl;
+    line-height: 1;
+    letter-spacing: -0.02em;
   }
 
   h2 {
     @apply text-4xl md:text-5xl lg:text-6xl;
-    line-height: 0.95;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
   }
 
   h3 {
     @apply text-2xl md:text-3xl lg:text-4xl;
-    line-height: 1;
-  }
-
-  /* Brutalist links */
-  a {
-    @apply transition-colors duration-200;
+    line-height: 1.1;
   }
 }
 
 @layer utilities {
-  .brutalist-border {
-    border: var(--border-thick) solid hsl(var(--border));
-  }
-
-  .brutalist-border-medium {
-    border: var(--border-medium) solid hsl(var(--border));
-  }
-
-  .brutalist-border-thin {
-    border: var(--border-thin) solid hsl(var(--border));
+  .font-nats {
+    font-family: 'NATS', -apple-system, Roboto, Helvetica, sans-serif;
   }
 }
