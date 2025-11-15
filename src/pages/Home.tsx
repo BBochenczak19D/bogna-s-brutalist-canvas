@@ -4,27 +4,20 @@ import ArrowLink from "@/components/ArrowLink";
 import artworksData from "@/data/artworks.json";
 import { Carousel, CarouselContent, CarouselItem, CarouselApi } from "@/components/ui/carousel";
 import { useParallaxCarousel } from "@/hooks/useParallaxCarousel";
-
 const Home = () => {
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
   const [darkCarouselApi, setDarkCarouselApi] = useState<CarouselApi>();
   const carouselRef = useParallaxCarousel(carouselApi);
   const darkCarouselRef = useParallaxCarousel(darkCarouselApi);
-  
-  const iiiMateriaCollection = artworksData.collections.find((c) => c.id === "iii-materia");
+  const iiiMateriaCollection = artworksData.collections.find(c => c.id === "iii-materia");
   const artworks = iiiMateriaCollection?.artworks || [];
   const rysunki = artworksData.rysunki || [];
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Hero Bio Section */}
       <section className="max-w-[1648px] mx-auto px-9 py-0 pt-32">
         <div className="flex items-start gap-6 max-w-[574px]">
           <CornerBracket />
-          <img
-            src="/artworks/profile.jpg"
-            alt="Bogna Bartkowiak"
-            className="w-[114px] h-[174px] object-cover flex-shrink-0"
-          />
+          <img src="/artworks/profile.jpg" alt="Bogna Bartkowiak" className="w-[114px] h-[174px] object-cover flex-shrink-0" />
           <p className="flex-1 text-sm font-normal leading-[125%] uppercase">
             Jestem absolwentką Akademii Sztuk Pięknych w Katowicach i lekarzem, która w swoich obrazach bada
             niewidzialne warstwy istnienia, łącząc doświadczenie medyczne, artystyczną intuicję i Trzecią Materię.
@@ -50,26 +43,15 @@ const Home = () => {
         </div>
 
         {/* Draggable Carousel Gallery */}
-        <Carousel
-          setApi={setCarouselApi}
-          opts={{
-            align: "start",
-            loop: false,
-            dragFree: true,
-          }}
-          className="w-full"
-        >
+        <Carousel setApi={setCarouselApi} opts={{
+        align: "start",
+        loop: false,
+        dragFree: true
+      }} className="w-full">
           <CarouselContent className="px-9 gap-1">
-            {artworks.map((artwork) => (
-              <CarouselItem key={artwork.id} className="basis-auto pl-0">
-                <img
-                  src={artwork.image}
-                  alt={artwork.title}
-                  className="w-[404px] h-[539px] object-cover"
-                  draggable={false}
-                />
-              </CarouselItem>
-            ))}
+            {artworks.map(artwork => <CarouselItem key={artwork.id} className="basis-auto pl-0">
+                <img src={artwork.image} alt={artwork.title} className="w-[404px] h-[539px] object-cover" draggable={false} />
+              </CarouselItem>)}
           </CarouselContent>
         </Carousel>
 
@@ -122,21 +104,13 @@ const Home = () => {
         {/* Two Column Images */}
         <div className="flex gap-16 mb-9">
           <div className="flex-1 flex flex-col gap-6">
-            <img
-              src={artworks[0]?.image || "/placeholder.svg"}
-              alt={artworks[0]?.title || "Materia I"}
-              className="w-full aspect-[756/894] object-cover"
-            />
+            <img src={artworks[0]?.image || "/placeholder.svg"} alt={artworks[0]?.title || "Materia I"} className="w-full aspect-[756/894] object-cover" />
             <p className="text-2xl font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground text-center">
               [cz. I | 2023]
             </p>
           </div>
           <div className="flex-1 flex flex-col gap-6">
-            <img
-              src={artworks[1]?.image || "/placeholder.svg"}
-              alt={artworks[1]?.title || "Materia II"}
-              className="w-full aspect-[756/820] object-cover"
-            />
+            <img src={artworks[1]?.image || "/placeholder.svg"} alt={artworks[1]?.title || "Materia II"} className="w-full aspect-[756/820] object-cover" />
             <p className="text-2xl font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground text-center">
               [cz. II | 2023]
             </p>
@@ -172,11 +146,7 @@ const Home = () => {
         </div>
 
         <div className="flex px-0 items-center gap-16 self-stretch">
-          <img
-            src="/artworks/collections/iii-materia/materia-03.jpg"
-            alt="Materia III"
-            className="w-[743px] h-[743px] aspect-square object-cover"
-          />
+          <img src="/artworks/collections/iii-materia/materia-03.jpg" alt="Materia III" className="w-[743px] h-[743px] aspect-square object-cover" />
           <div className="flex flex-col justify-center items-start gap-3">
             <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
               [cz. III]
@@ -192,43 +162,7 @@ const Home = () => {
       </section>
 
       {/* Section V - cz5 */}
-      <section className="max-w-[1648px] mx-auto px-9 py-[100px] flex flex-col items-start gap-9">
-        <div className="flex px-0 items-center self-stretch">
-          <div className="flex flex-col justify-center items-end gap-8 flex-1">
-            <div className="flex items-start gap-8 self-stretch justify-end">
-              <CornerBracket />
-              <p className="text-2xl font-normal leading-[110%] tracking-[-0.96px] uppercase text-right">
-                <span className="font-medium">
-                  Energia, która przepływa przez nas, nie jest abstrakcją.
-                  {"\n"}
-                  {"\n"}
-                </span>
-                <span className="opacity-49">To coś, co możemy wyczuć w ciele, w dłoniach, w sercu.</span>
-                <span className="font-medium"> To coś, co łączy nas ze sobą i ze światem.</span>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex px-0 justify-end items-center gap-16 self-stretch">
-          <div className="flex flex-col justify-center items-start gap-3">
-            <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
-              [cz. V]
-            </p>
-            <ArrowLink to="/collections/iii-materia">PRzejdź do pełnej kolekcji</ArrowLink>
-          </div>
-          <img
-            src="/artworks/collections/iii-materia/materia-05.jpg"
-            alt="Materia V"
-            className="w-[743px] h-[743px] aspect-square object-cover"
-          />
-        </div>
-
-        <div className="flex px-0 justify-between items-center self-stretch">
-          <CornerBracket />
-          <CornerBracket />
-        </div>
-      </section>
+      
 
       {/* Section IV */}
       <section className="max-w-[1648px] mx-auto px-9 py-[100px] flex flex-col items-start gap-6">
@@ -256,11 +190,7 @@ const Home = () => {
             </p>
             <ArrowLink to="/collections/iii-materia">PRzejdź do pełnej kolekcji</ArrowLink>
           </div>
-          <img
-            src="/artworks/collections/iii-materia/materia-06.jpg"
-            alt="Materia IV"
-            className="w-[640px] h-[698px] object-cover"
-          />
+          <img src="/artworks/collections/iii-materia/materia-06.jpg" alt="Materia IV" className="w-[640px] h-[698px] object-cover" />
         </div>
 
         <div className="flex px-0 justify-between items-center self-stretch">
@@ -294,80 +224,48 @@ const Home = () => {
           </div>
 
           {/* Horizontal Carousel Gallery */}
-          <Carousel
-            setApi={setDarkCarouselApi}
-            opts={{
-              align: "start",
-              loop: false,
-              dragFree: true,
-            }}
-            className="w-full"
-          >
+          <Carousel setApi={setDarkCarouselApi} opts={{
+          align: "start",
+          loop: false,
+          dragFree: true
+        }} className="w-full">
             <CarouselContent className="gap-1">
               {/* Rysunki */}
-              {rysunki.map((artwork) => (
-                <CarouselItem key={artwork.id} className="basis-auto pl-0">
+              {rysunki.map(artwork => <CarouselItem key={artwork.id} className="basis-auto pl-0">
                   <div className="relative">
-                    <img
-                      src={artwork.image}
-                      alt={artwork.title}
-                      className="w-[404px] h-[539px] object-cover"
-                      draggable={false}
-                    />
+                    <img src={artwork.image} alt={artwork.title} className="w-[404px] h-[539px] object-cover" draggable={false} />
                     <div className="absolute bottom-4 left-4 text-white/80 text-sm">
                       {artwork.title}
                     </div>
                   </div>
-                </CarouselItem>
-              ))}
+                </CarouselItem>)}
               {/* Artefakty */}
-              {artworksData.artefakty.map((artwork) => (
-                <CarouselItem key={artwork.id} className="basis-auto pl-0">
+              {artworksData.artefakty.map(artwork => <CarouselItem key={artwork.id} className="basis-auto pl-0">
                   <div className="relative">
-                    <img
-                      src={artwork.image}
-                      alt={artwork.title}
-                      className="w-[404px] h-[539px] object-cover"
-                      draggable={false}
-                    />
+                    <img src={artwork.image} alt={artwork.title} className="w-[404px] h-[539px] object-cover" draggable={false} />
                     <div className="absolute bottom-4 left-4 text-white/80 text-sm">
                       {artwork.title}
                     </div>
                   </div>
-                </CarouselItem>
-              ))}
+                </CarouselItem>)}
               {/* Instalacje */}
-              {artworksData.instalacje.map((artwork) => (
-                <CarouselItem key={artwork.id} className="basis-auto pl-0">
+              {artworksData.instalacje.map(artwork => <CarouselItem key={artwork.id} className="basis-auto pl-0">
                   <div className="relative">
-                    <img
-                      src={artwork.image}
-                      alt={artwork.title}
-                      className="w-[404px] h-[539px] object-cover"
-                      draggable={false}
-                    />
+                    <img src={artwork.image} alt={artwork.title} className="w-[404px] h-[539px] object-cover" draggable={false} />
                     <div className="absolute bottom-4 left-4 text-white/80 text-sm">
                       {artwork.title}
                     </div>
                   </div>
-                </CarouselItem>
-              ))}
+                </CarouselItem>)}
               {/* Obrazy */}
-              {artworksData.obrazy.map((artwork) => (
-                <CarouselItem key={artwork.id} className="basis-auto pl-0">
+              {artworksData.obrazy.map(artwork => <CarouselItem key={artwork.id} className="basis-auto pl-0">
                   <div className="relative">
-                    <img
-                      src={artwork.image}
-                      alt={artwork.title}
-                      className="w-[404px] h-[539px] object-cover"
-                      draggable={false}
-                    />
+                    <img src={artwork.image} alt={artwork.title} className="w-[404px] h-[539px] object-cover" draggable={false} />
                     <div className="absolute bottom-4 left-4 text-white/80 text-sm">
                       {artwork.title}
                     </div>
                   </div>
-                </CarouselItem>
-              ))}
+                </CarouselItem>)}
             </CarouselContent>
           </Carousel>
         </div>
@@ -387,11 +285,7 @@ const Home = () => {
 
         <div className="flex px-0 items-start gap-[42px] self-stretch">
           <div className="flex flex-col items-start gap-6 flex-1">
-            <img
-              src="/artworks/collections/iii-materia/materia-05.jpg"
-              alt="Materia V"
-              className="h-[832px] self-stretch object-cover"
-            />
+            <img src="/artworks/collections/iii-materia/materia-05.jpg" alt="Materia V" className="h-[832px] self-stretch object-cover" />
             <div className="flex items-center gap-3">
               <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
                 [cz. V | 2023]
@@ -400,11 +294,7 @@ const Home = () => {
           </div>
 
           <div className="flex flex-col justify-center items-start gap-6 flex-1">
-            <img
-              src="/artworks/collections/iii-materia/materia-03.jpg"
-              alt="Materia VI"
-              className="h-[907px] self-stretch object-cover"
-            />
+            <img src="/artworks/collections/iii-materia/materia-03.jpg" alt="Materia VI" className="h-[907px] self-stretch object-cover" />
             <div className="flex items-center gap-3">
               <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
                 [cz. VI | 2023]
@@ -440,11 +330,7 @@ const Home = () => {
         </div>
 
         <div className="flex px-9 flex-col justify-end items-start gap-16 self-stretch">
-          <img
-            src="/artworks/collections/iii-materia/materia-07.jpg"
-            alt="Materia VII"
-            className="h-[788px] self-stretch aspect-[2/1] object-cover"
-          />
+          <img src="/artworks/collections/iii-materia/materia-07.jpg" alt="Materia VII" className="h-[788px] self-stretch aspect-[2/1] object-cover" />
         </div>
 
         <div className="flex px-9 justify-between items-end self-stretch">
@@ -457,14 +343,7 @@ const Home = () => {
         </div>
 
         <div className="flex px-9 justify-between items-center self-stretch">
-          <svg
-            width="1576"
-            height="23"
-            viewBox="0 0 1576 23"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="flex justify-between items-start flex-1 self-stretch"
-          >
+          <svg width="1576" height="23" viewBox="0 0 1576 23" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex justify-between items-start flex-1 self-stretch">
             <path d="M21.6 2.4H0V0H21.6V2.4Z" fill="currentColor" />
             <path d="M19.184 22.12V0.519999H21.584V22.12H19.184Z" fill="currentColor" />
             <path d="M1576 2.4H1554.4V0H1576V2.4Z" fill="currentColor" />
@@ -498,11 +377,7 @@ const Home = () => {
         </div>
 
         <div className="flex px-9 flex-col justify-center items-center gap-16 self-stretch">
-          <img
-            src="/artworks/collections/iii-materia/materia-08.jpg"
-            alt="Materia VIII"
-            className="w-full h-auto aspect-[1051/788] object-cover"
-          />
+          <img src="/artworks/collections/iii-materia/materia-08.jpg" alt="Materia VIII" className="w-full h-auto aspect-[1051/788] object-cover" />
         </div>
 
         <div className="flex px-9 items-center self-stretch">
@@ -514,14 +389,7 @@ const Home = () => {
         </div>
 
         <div className="flex px-9 items-center self-stretch">
-          <svg
-            width="1208"
-            height="23"
-            viewBox="0 0 1208 23"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="flex w-full justify-between items-start self-stretch"
-          >
+          <svg width="1208" height="23" viewBox="0 0 1208 23" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex w-full justify-between items-start self-stretch">
             <path d="M21.6 2.4H0V0H21.6V2.4Z" fill="currentColor" />
             <path d="M19.184 22.12V0.519999H21.584V22.12H19.184Z" fill="currentColor" />
             <path d="M1208 2.4H1186.4V0H1208V2.4Z" fill="currentColor" />
@@ -549,11 +417,7 @@ const Home = () => {
 
         <div className="flex px-9 items-start gap-[42px] self-stretch">
           <div className="flex flex-col justify-center items-start gap-6 flex-1">
-            <img
-              src="/artworks/collections/iii-materia/materia-09.jpg"
-              alt="Materia IX"
-              className="h-[654.14px] self-stretch aspect-[767/654.14] object-cover"
-            />
+            <img src="/artworks/collections/iii-materia/materia-09.jpg" alt="Materia IX" className="h-[654.14px] self-stretch aspect-[767/654.14] object-cover" />
             <div className="flex items-center gap-3">
               <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
                 [cz. IX | 2023]
@@ -562,11 +426,7 @@ const Home = () => {
           </div>
 
           <div className="flex flex-col items-start gap-6 flex-1">
-            <img
-              src="/artworks/collections/iii-materia/materia-10.jpg"
-              alt="Materia X"
-              className="h-[958.75px] self-stretch aspect-[767/958.75] object-cover"
-            />
+            <img src="/artworks/collections/iii-materia/materia-10.jpg" alt="Materia X" className="h-[958.75px] self-stretch aspect-[767/958.75] object-cover" />
             <div className="flex items-center gap-3">
               <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
                 [cz. x | 2023]
@@ -576,14 +436,7 @@ const Home = () => {
         </div>
 
         <div className="flex px-9 items-center self-stretch">
-          <svg
-            width="1208"
-            height="23"
-            viewBox="0 0 1208 23"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="flex w-[1208px] justify-between items-start self-stretch"
-          >
+          <svg width="1208" height="23" viewBox="0 0 1208 23" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex w-[1208px] justify-between items-start self-stretch">
             <path d="M21.6 2.4H0V0H21.6V2.4Z" fill="currentColor" />
             <path d="M19.184 22.12V0.519999H21.584V22.12H19.184Z" fill="currentColor" />
             <path d="M1208 2.4H1186.4V0H1208V2.4Z" fill="currentColor" />
@@ -591,7 +444,6 @@ const Home = () => {
           </svg>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
 export default Home;
