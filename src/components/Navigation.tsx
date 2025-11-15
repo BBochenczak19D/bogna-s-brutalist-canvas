@@ -6,6 +6,7 @@ import { NavLink } from "./NavLink";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+  const [clickedItem, setClickedItem] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const location = useLocation();
@@ -63,6 +64,13 @@ const Navigation = () => {
     return false;
   };
 
+  // Close dropdowns on route change
+  useEffect(() => {
+    setHoveredItem(null);
+    setClickedItem(null);
+    setIsOpen(false);
+  }, [location.pathname]);
+
   return (
     <nav className={`w-full px-8 py-4 bg-white fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${
       isVisible ? 'translate-y-0' : '-translate-y-full'
@@ -87,6 +95,11 @@ const Navigation = () => {
                 className="flex flex-col items-end gap-2.5"
                 onMouseEnter={() => setHoveredItem(item.path)}
                 onMouseLeave={() => setHoveredItem(null)}
+                onClick={() => {
+                  if (hasSubItems) {
+                    setClickedItem(clickedItem === item.path ? null : item.path);
+                  }
+                }}
               >
                 <NavLink
                   to={item.path}
@@ -107,7 +120,9 @@ const Navigation = () => {
                 {hasSubItems && (
                   <div className={`flex flex-col items-end gap-2.5 overflow-hidden transition-all duration-500 ease-in-out ${
                     shouldShowSubItems ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                  }`}>
+                  }`}
+                  onClick={(e) => e.stopPropagation()}
+                  >
                     {item.subItems.map((subItem) => (
                       <NavLink
                         key={subItem.path}
