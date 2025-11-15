@@ -33,7 +33,14 @@ const Navigation = () => {
   }, [lastScrollY]);
 
   const navItems = [
-    { path: "/collections", label: "Kolekcje" },
+    { 
+      path: "/collections", 
+      label: "Kolekcje",
+      subItems: [
+        { path: "/collections/iii-materia", label: "III Materia" },
+        { path: "/collections", label: "Inne" }
+      ]
+    },
     { 
       path: "/tworczość", 
       label: "Twórczość",
