@@ -1,6 +1,7 @@
 import CornerBracket from "@/components/CornerBracket";
 import ArrowLink from "@/components/ArrowLink";
 import artworksData from "@/data/artworks.json";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 
 const Home = () => {
   const iiiMateriaCollection = artworksData.collections.find(c => c.id === "iii-materia");
@@ -42,19 +43,28 @@ const Home = () => {
           </ArrowLink>
         </div>
         
-        {/* Horizontal Scroll Gallery */}
-        <div className="overflow-x-auto px-9 pb-4">
-          <div className="flex gap-1 min-w-min">
+        {/* Draggable Carousel Gallery */}
+        <Carousel
+          opts={{
+            align: "start",
+            loop: false,
+            dragFree: true,
+          }}
+          className="w-full"
+        >
+          <CarouselContent className="px-9 gap-1">
             {artworks.map((artwork) => (
-              <img 
-                key={artwork.id}
-                src={artwork.image}
-                alt={artwork.title}
-                className="w-[404px] h-[539px] object-cover flex-shrink-0"
-              />
+              <CarouselItem key={artwork.id} className="basis-auto pl-0">
+                <img 
+                  src={artwork.image}
+                  alt={artwork.title}
+                  className="w-[404px] h-[539px] object-cover"
+                  draggable={false}
+                />
+              </CarouselItem>
             ))}
-          </div>
-        </div>
+          </CarouselContent>
+        </Carousel>
 
         {/* Description Section */}
         <div className="px-9 pt-9 pb-[78px] flex items-start gap-16">
