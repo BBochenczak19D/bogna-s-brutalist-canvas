@@ -110,13 +110,27 @@ const Home = () => {
 
       {/* Philosophy Section */}
       <section className="max-w-[1648px] mx-auto px-9 py-[100px]">
-        <div className="flex justify-between items-start mb-9">
-          <p className="max-w-[579px] text-2xl leading-[110%] tracking-[-0.04em] uppercase">
-            <span className="font-medium">Trzecia Materia istnieje.</span>
-            <span className="opacity-50"> Nie jest ciałem. Nie jest myślą.</span>
-            <span className="font-medium"> To to, co sprawia, że jesteśmy.</span>
-          </p>
-          <CornerBracket />
+        <div className="flex px-9 justify-end items-center self-stretch">
+          <div className="flex justify-between items-start flex-1">
+            <div className="flex w-[565.801px] flex-col items-start gap-0.5">
+              <div className="w-[579px] text-foreground font-medium text-2xl leading-[110%] tracking-[-0.96px] uppercase">
+                Trzecia Materia istnieje.
+              </div>
+              <div className="text-muted-foreground font-normal text-2xl leading-[110%] tracking-[-0.96px] uppercase">
+                 Nie jest ciałem.
+              </div>
+              <div className="text-muted-foreground font-normal text-2xl leading-[110%] tracking-[-0.96px] uppercase">
+                 Nie jest myślą.
+              </div>
+              <div className="text-foreground font-medium text-2xl leading-[110%] tracking-[-0.96px] uppercase">
+                To to, co sprawia, że jesteśmy.
+              </div>
+            </div>
+            <svg className="w-[21.6px] h-[22.12px] fill-current" width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21.6 2.4H0V0H21.6V2.4Z" fill="currentColor"/>
+              <path d="M19.184 22.12V0.519999H21.584V22.12H19.184Z" fill="currentColor"/>
+            </svg>
+          </div>
         </div>
 
         {/* Two Column Images */}
