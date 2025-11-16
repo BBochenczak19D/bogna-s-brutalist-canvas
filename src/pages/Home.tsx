@@ -23,7 +23,7 @@ const Home = () => {
             alt="Bogna Bartkowiak"
             className="w-[114px] h-[174px] object-cover flex-shrink-0"
           />
-          <p className="flex-1 text-sm font-normal leading-[125%] uppercase">
+          <p className="flex-1 text-sm font-normal leading-[125%] uppercase animate-fade-in" style={{ animationDelay: '0.2s' }}>
             Jestem absolwentką Akademii Sztuk Pięknych w Katowicach i lekarzem, która w swoich obrazach bada
             niewidzialne warstwy istnienia, łącząc doświadczenie medyczne, artystyczną intuicję i Trzecią Materię.
           </p>
@@ -34,7 +34,7 @@ const Home = () => {
       {/* Main Hero Text */}
       <section className="max-w-[1648px] mx-auto px-9 py-0 mt-[42px]">
         <div className="flex flex-col gap-8 py-8">
-          <h1 className="text-[72px] font-medium leading-[100%] tracking-[-0.02em] uppercase max-w-none">
+          <h1 className="text-[72px] font-medium leading-[100%] tracking-[-0.02em] uppercase max-w-none animate-fade-in">
             Co sprawia, że jesteśmy ożywieni? Co kieruje naszym istnieniem, jeśli wykraczamy poza myśli i widzialną
             materię?
           </h1>
@@ -74,14 +74,14 @@ const Home = () => {
         {/* Description Section */}
         <div className="px-9 pt-9 pb-[78px] flex items-start gap-16">
           <CornerBracket />
-          <p className="flex-1 text-base font-light leading-[125%] tracking-[-0.02em] text-foreground/90">
+          <p className="flex-1 text-base font-light leading-[125%] tracking-[-0.02em] text-foreground/90 animate-fade-in" style={{ animationDelay: '0.4s' }}>
             Moja praca zaczyna się tam, gdzie kończy się język. Od zawsze fascynowało mnie to, czego nie da się nazwać:
             momenty pomiędzy oddechami, przestrzenie wewnątrz ciała, ciche impulsy świadomości. Jako lekarka przez lata
             uczyłam się patrzeć na człowieka przez pryzmat anatomii i nauki. Jako malarka — przez pryzmat intuicji,
             symbolu i doświadczenia.
           </p>
           <CornerBracket />
-          <p className="flex-1 text-base font-light leading-[125%] tracking-[-0.02em] text-foreground/90">
+          <p className="flex-1 text-base font-light leading-[125%] tracking-[-0.02em] text-foreground/90 animate-fade-in" style={{ animationDelay: '0.6s' }}>
             Kolekcja Trzeciej Materii powstała z potrzeby zrozumienia tego, co niewidzialne, a jednak fundamentalne. To
             mój osobisty sposób badania energii, która kieruje nami, zanim pojawi się myśl, ruch czy decyzja. Interesuje
             mnie stan pomiędzy materią a świadomością, wszędzie tam, gdzie ciało przestaje być tylko biologią, a staje
@@ -100,7 +100,7 @@ const Home = () => {
       <section className="max-w-[1648px] mx-auto px-9">
         <div className="flex items-start gap-2 justify-between">
           <div>
-            <h2 className="text-[64px] font-normal leading-[110%] tracking-[-0.02em] uppercase">[III MATERIA]</h2>
+            <h2 className="text-[64px] font-normal leading-[110%] tracking-[-0.02em] uppercase animate-fade-in" style={{ animationDelay: '0.2s' }}>[III MATERIA]</h2>
           </div>
           <p className="text-2xl font-light leading-[110%] tracking-[-0.04em] uppercase">2023</p>
         </div>
@@ -111,16 +111,16 @@ const Home = () => {
         <div className="flex justify-end items-center self-stretch py-[24px]">
           <div className="flex justify-between items-start flex-1">
             <div className="flex w-[565.801px] flex-col items-start gap-0.5">
-              <div className="w-[579px] text-foreground font-medium text-2xl leading-[110%] tracking-[-0.96px] uppercase">
+              <div className="w-[579px] text-foreground font-medium text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in" style={{ animationDelay: '0.1s' }}>
                 Trzecia Materia istnieje.
               </div>
-              <div className="text-muted-foreground font-normal text-2xl leading-[110%] tracking-[-0.96px] uppercase">
+              <div className="text-muted-foreground font-normal text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in" style={{ animationDelay: '0.3s' }}>
                 Nie jest ciałem.
               </div>
-              <div className="text-muted-foreground font-normal text-2xl leading-[110%] tracking-[-0.96px] uppercase">
+              <div className="text-muted-foreground font-normal text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in" style={{ animationDelay: '0.5s' }}>
                 Nie jest myślą.
               </div>
-              <div className="text-foreground font-medium text-2xl leading-[110%] tracking-[-0.96px] uppercase">
+              <div className="text-foreground font-medium text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in" style={{ animationDelay: '0.7s' }}>
                 To to, co sprawia, że jesteśmy.
               </div>
             </div>
@@ -175,16 +175,16 @@ const Home = () => {
         <div className="flex  justify-end items-center self-stretch py-[24px]">
           <div className="flex justify-between items-start flex-1">
             <div className="flex w-[565.801px] flex-col items-start gap-0.5">
-              <div className="w-[579px] text-foreground font-medium text-2xl leading-[110%] tracking-[-0.96px] uppercase">
+              <div className="w-[579px] text-foreground font-medium text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in" style={{ animationDelay: '0.1s' }}>
                 Pojawia się w momentach, których nie potrafimy uchwycić
               </div>
-              <div className="text-muted-foreground font-normal text-2xl leading-[110%] tracking-[-0.96px] uppercase">
+              <div className="text-muted-foreground font-normal text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in" style={{ animationDelay: '0.3s' }}>
                 w bezdechu między jednym a drugim impulsem.
               </div>
-              <div className="text-muted-foreground font-normal text-2xl leading-[110%] tracking-[-0.96px] uppercase">
+              <div className="text-muted-foreground font-normal text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in" style={{ animationDelay: '0.5s' }}>
                 W cichym pulsie, który nie należy do fizjologii.
               </div>
-              <div className="text-foreground font-medium text-2xl leading-[110%] tracking-[-0.96px] uppercase">
+              <div className="text-foreground font-medium text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in" style={{ animationDelay: '0.7s' }}>
                 W świetle, które rozprasza logikę.
               </div>
             </div>
@@ -266,7 +266,7 @@ const Home = () => {
         <div className="bg-secondary px-9 pt-[30px] pb-9 flex flex-col gap-16">
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-6 pl-16">
-              <h2 className="text-[64px] font-medium leading-[110%] tracking-[-0.04em] uppercase text-secondary-foreground">
+              <h2 className="text-[64px] font-medium leading-[110%] tracking-[-0.04em] uppercase text-secondary-foreground animate-fade-in" style={{ animationDelay: '0.2s' }}>
                 [GRAFIKI]
               </h2>
               <ArrowLink to="/tworczość/rysunki" className="text-white">
@@ -362,7 +362,7 @@ const Home = () => {
         <div className="flex px-0 items-center self-stretch">
           <div className="flex justify-between items-start flex-1">
             <CornerBracket />
-            <p className="w-[579px] text-2xl font-medium leading-[110%] tracking-[-0.48px] uppercase">
+            <p className="w-[579px] text-2xl font-medium leading-[110%] tracking-[-0.48px] uppercase animate-fade-in" style={{ animationDelay: '0.2s' }}>
               To nie jest opowieść o mistyce. To opowieść o strukturze istnienia, która nie mieści się w ciele ani w
               myśli, a mimo to kieruje jednym i drugim.
             </p>
@@ -409,7 +409,7 @@ const Home = () => {
       <section className="max-w-[1648px] mx-auto py-[100px] flex flex-col items-start gap-9">
         <div className="flex px-9 flex-col items-start gap-6 self-stretch">
           <div className="flex flex-col justify-center items-start gap-8 self-stretch">
-            <p className="self-stretch text-2xl font-medium leading-[110%] tracking-[-0.96px] uppercase">
+            <p className="self-stretch text-2xl font-medium leading-[110%] tracking-[-0.96px] uppercase animate-fade-in" style={{ animationDelay: '0.2s' }}>
               To energia, która nie domaga się dowodu. Odsłania się tylko tym, którzy potrafią słuchać inaczej.
             </p>
           </div>
@@ -461,7 +461,7 @@ const Home = () => {
       <section className="max-w-[1648px] mx-auto px-0 py-[100px] flex flex-col items-start gap-9">
         <div className="flex px-9 items-center self-stretch">
           <div className="flex flex-col justify-center items-center gap-8 flex-1">
-            <p className="self-stretch text-2xl font-medium leading-[110%] tracking-[-0.96px] uppercase text-center">
+            <p className="self-stretch text-2xl font-medium leading-[110%] tracking-[-0.96px] uppercase text-center animate-fade-in" style={{ animationDelay: '0.2s' }}>
               Pod skórą miesza się kosmos.
               {"\n"}
               {"\n"}W strukturze komórek drga echo tego,
@@ -491,7 +491,7 @@ const Home = () => {
 
         <div className="flex px-9 items-center self-stretch">
           <div className="flex flex-col justify-center items-center gap-8 flex-1">
-            <p className="text-base font-normal leading-[110%] tracking-[-0.32px] uppercase text-center">
+            <p className="text-base font-normal leading-[110%] tracking-[-0.32px] uppercase text-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
               Mikro i makro nie są przeciwieństwami.Są tą samą historią, opowiedzianą innym językiem.
             </p>
           </div>
@@ -519,11 +519,11 @@ const Home = () => {
         <div className="flex px-9 justify-end items-center self-stretch">
           <div className="flex justify-between items-start flex-1">
             <p className="w-[579px] text-2xl font-normal leading-[110%] tracking-[-0.48px] uppercase">
-              <span className="font-medium">
+              <span className="font-medium animate-fade-in" style={{ animationDelay: '0.1s' }}>
                 Trzecia Materia jest w każdym z nas. Pulsuje, porusza, prowadzi.{"\n"}
               </span>
-              <span className="opacity-50">Jest początkiem i echem.{"\n"}</span>
-              <span className="font-medium">
+              <span className="opacity-50 animate-fade-in" style={{ animationDelay: '0.3s' }}>Jest początkiem i echem.{"\n"}</span>
+              <span className="font-medium animate-fade-in" style={{ animationDelay: '0.5s' }}>
                 Mostem między światłem a ciemnością. Naszą własną, ukrytą nieskończonością.
               </span>
             </p>
