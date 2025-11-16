@@ -2,11 +2,14 @@ import { useState } from "react";
 import CornerBracket from "@/components/CornerBracket";
 import ArrowLink from "@/components/ArrowLink";
 import TypingText from "@/components/TypingText";
+import { useAnimation } from "@/contexts/AnimationContext";
 import artworksData from "@/data/artworks.json";
 import { Carousel, CarouselContent, CarouselItem, CarouselApi } from "@/components/ui/carousel";
 import { useParallaxCarousel } from "@/hooks/useParallaxCarousel";
+
 const Home = () => {
   const [typingComplete, setTypingComplete] = useState(false);
+  const { setHeroTypingComplete } = useAnimation();
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
   const [darkCarouselApi, setDarkCarouselApi] = useState<CarouselApi>();
   const carouselRef = useParallaxCarousel(carouselApi);
@@ -41,7 +44,10 @@ const Home = () => {
               text="Co sprawia, że jesteśmy ożywieni? Co kieruje naszym istnieniem, jeśli wykraczamy poza myśli i widzialną materię?" 
               speed={25}
               delay={300}
-              onComplete={() => setTypingComplete(true)}
+              onComplete={() => {
+                setTypingComplete(true);
+                setHeroTypingComplete(true);
+              }}
             />
           </h1>
         </div>

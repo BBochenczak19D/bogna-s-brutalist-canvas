@@ -2,8 +2,10 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { NavLink } from "./NavLink";
+import { useAnimation } from "@/contexts/AnimationContext";
 
 const Navigation = () => {
+  const { heroTypingComplete } = useAnimation();
   const [isOpen, setIsOpen] = useState(false);
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [clickedItem, setClickedItem] = useState<string | null>(null);
@@ -72,8 +74,10 @@ const Navigation = () => {
   }, [location.pathname]);
 
   return (
-    <nav className={`w-full px-8 py-4 bg-white fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${
+    <nav className={`w-full px-8 py-4 bg-white fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
       isVisible ? 'translate-y-0' : '-translate-y-full'
+    } ${
+      heroTypingComplete ? 'opacity-100' : 'opacity-0 pointer-events-none'
     }`}>
       <div className="flex justify-between items-start max-w-[1920px] mx-auto">
         {/* Logo */}
