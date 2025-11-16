@@ -1,6 +1,7 @@
 import { useState } from "react";
 import CornerBracket from "@/components/CornerBracket";
 import ArrowLink from "@/components/ArrowLink";
+import TypingText from "@/components/TypingText";
 import artworksData from "@/data/artworks.json";
 import { Carousel, CarouselContent, CarouselItem, CarouselApi } from "@/components/ui/carousel";
 import { useParallaxCarousel } from "@/hooks/useParallaxCarousel";
@@ -34,9 +35,12 @@ const Home = () => {
       {/* Main Hero Text */}
       <section className="max-w-[1648px] mx-auto px-9 py-0 mt-[42px]">
         <div className="flex flex-col gap-8 py-8">
-          <h1 className="text-[72px] font-medium leading-[100%] tracking-[-0.02em] uppercase max-w-none animate-fade-in">
-            Co sprawia, że jesteśmy ożywieni? Co kieruje naszym istnieniem, jeśli wykraczamy poza myśli i widzialną
-            materię?
+          <h1 className="text-[72px] font-medium leading-[100%] tracking-[-0.02em] uppercase max-w-none">
+            <TypingText 
+              text="Co sprawia, że jesteśmy ożywieni? Co kieruje naszym istnieniem, jeśli wykraczamy poza myśli i widzialną materię?" 
+              speed={25}
+              delay={300}
+            />
           </h1>
         </div>
       </section>
