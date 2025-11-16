@@ -6,6 +6,7 @@ import artworksData from "@/data/artworks.json";
 import { Carousel, CarouselContent, CarouselItem, CarouselApi } from "@/components/ui/carousel";
 import { useParallaxCarousel } from "@/hooks/useParallaxCarousel";
 const Home = () => {
+  const [typingComplete, setTypingComplete] = useState(false);
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
   const [darkCarouselApi, setDarkCarouselApi] = useState<CarouselApi>();
   const carouselRef = useParallaxCarousel(carouselApi);
@@ -16,7 +17,7 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Bio Section */}
-      <section className="max-w-[1648px] mx-auto px-9 py-0 pt-32">
+      <section className={`max-w-[1648px] mx-auto px-9 py-0 pt-32 transition-opacity duration-700 ${typingComplete ? 'opacity-100' : 'opacity-0'}`}>
         <div className="flex items-start gap-6 max-w-[574px]">
           <CornerBracket />
           <img
@@ -40,54 +41,57 @@ const Home = () => {
               text="Co sprawia, że jesteśmy ożywieni? Co kieruje naszym istnieniem, jeśli wykraczamy poza myśli i widzialną materię?" 
               speed={25}
               delay={300}
+              onComplete={() => setTypingComplete(true)}
             />
           </h1>
         </div>
       </section>
 
       {/* Gallery Section */}
-      <section ref={carouselRef} className="max-w-[1648px] mx-auto mt-[100px] mb-8">
-        <div className="flex justify-end px-9 mb-6">
-          <ArrowLink to="/collections/iii-materia">Przejdź do pełnej kolekcji</ArrowLink>
-        </div>
+      {typingComplete && (
+        <>
+          <section ref={carouselRef} className="max-w-[1648px] mx-auto mt-[100px] mb-8 animate-fade-in">
+            <div className="flex justify-end px-9 mb-6">
+              <ArrowLink to="/collections/iii-materia">Przejdź do pełnej kolekcji</ArrowLink>
+            </div>
 
-        {/* Draggable Carousel Gallery */}
-        <Carousel
-          setApi={setCarouselApi}
-          opts={{
-            align: "start",
-            loop: false,
-            dragFree: true,
-          }}
-          className="w-full"
-        >
-          <CarouselContent className="px-9 gap-1">
-            {artworks.map((artwork) => (
-              <CarouselItem key={artwork.id} className="basis-auto pl-0">
-                <img
-                  src={artwork.image}
-                  alt={artwork.title}
-                  className="w-[404px] h-[539px] object-cover"
-                  draggable={false}
-                />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
+            {/* Draggable Carousel Gallery */}
+            <Carousel
+              setApi={setCarouselApi}
+              opts={{
+                align: "start",
+                loop: false,
+                dragFree: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent className="px-9 gap-1">
+                {artworks.map((artwork) => (
+                  <CarouselItem key={artwork.id} className="basis-auto pl-0">
+                    <img
+                      src={artwork.image}
+                      alt={artwork.title}
+                      className="w-[404px] h-[539px] object-cover"
+                      draggable={false}
+                    />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
 
-        {/* Description Section */}
-        <div className="px-9 pt-9 pb-[78px] flex items-start gap-16">
-          <CornerBracket />
-          <p className="flex-1 text-base font-light leading-[125%] tracking-[-0.02em] text-foreground/90 animate-fade-in" style={{ animationDelay: '0.4s' }}>
-            Moja praca zaczyna się tam, gdzie kończy się język. Od zawsze fascynowało mnie to, czego nie da się nazwać:
-            momenty pomiędzy oddechami, przestrzenie wewnątrz ciała, ciche impulsy świadomości. Jako lekarka przez lata
-            uczyłam się patrzeć na człowieka przez pryzmat anatomii i nauki. Jako malarka — przez pryzmat intuicji,
-            symbolu i doświadczenia.
-          </p>
-          <CornerBracket />
-          <p className="flex-1 text-base font-light leading-[125%] tracking-[-0.02em] text-foreground/90 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-            Kolekcja Trzeciej Materii powstała z potrzeby zrozumienia tego, co niewidzialne, a jednak fundamentalne. To
-            mój osobisty sposób badania energii, która kieruje nami, zanim pojawi się myśl, ruch czy decyzja. Interesuje
+            {/* Description Section */}
+            <div className="px-9 pt-9 pb-[78px] flex items-start gap-16">
+              <CornerBracket />
+              <p className="flex-1 text-base font-light leading-[125%] tracking-[-0.02em] text-foreground/90 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+                Moja praca zaczyna się tam, gdzie kończy się język. Od zawsze fascynowało mnie to, czego nie da się nazwać:
+                momenty pomiędzy oddechami, przestrzenie wewnątrz ciała, ciche impulsy świadomości. Jako lekarka przez lata
+                uczyłam się patrzeć na człowieka przez pryzmat anatomii i nauki. Jako malarka — przez pryzmat intuicji,
+                symbolu i doświadczenia.
+              </p>
+              <CornerBracket />
+              <p className="flex-1 text-base font-light leading-[125%] tracking-[-0.02em] text-foreground/90 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+                Kolekcja Trzeciej Materii powstała z potrzeby zrozumienia tego, co niewidzialne, a jednak fundamentalne. To
+                mój osobisty sposób badania energii, która kieruje nami, zanim pojawi się myśl, ruch czy decyzja. Interesuje
             mnie stan pomiędzy materią a świadomością, wszędzie tam, gdzie ciało przestaje być tylko biologią, a staje
             się nośnikiem czegoś znacznie subtelniejszego.
           </p>
@@ -579,6 +583,8 @@ const Home = () => {
           </svg>
         </div>
       </section>
+        </>
+      )}
     </div>
   );
 };

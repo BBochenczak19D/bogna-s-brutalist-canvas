@@ -5,9 +5,10 @@ interface TypingTextProps {
   speed?: number;
   className?: string;
   delay?: number;
+  onComplete?: () => void;
 }
 
-const TypingText = ({ text, speed = 30, className = "", delay = 0 }: TypingTextProps) => {
+const TypingText = ({ text, speed = 30, className = "", delay = 0, onComplete }: TypingTextProps) => {
   const [displayedText, setDisplayedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [started, setStarted] = useState(false);
@@ -30,8 +31,10 @@ const TypingText = ({ text, speed = 30, className = "", delay = 0 }: TypingTextP
       }, speed);
 
       return () => clearTimeout(timeout);
+    } else if (currentIndex === text.length && onComplete) {
+      onComplete();
     }
-  }, [currentIndex, text, speed, started]);
+  }, [currentIndex, text, speed, started, onComplete]);
 
   return (
     <span className={className}>
