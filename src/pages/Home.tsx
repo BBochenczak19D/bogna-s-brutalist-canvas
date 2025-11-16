@@ -53,7 +53,9 @@ const Home = () => {
               pauseDuration={2300}
               onComplete={() => {
                 setTypingComplete(true);
-                setHeroTypingComplete(true);
+                setTimeout(() => {
+                  setHeroTypingComplete(true);
+                }, 300);
               }}
             />
           </h1>
