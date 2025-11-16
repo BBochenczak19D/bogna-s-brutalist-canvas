@@ -44,7 +44,7 @@ const Home = () => {
               text="Co sprawia, że jesteśmy ożywieni? Co kieruje naszym istnieniem, jeśli wykraczamy poza myśli i widzialną materię?" 
               speed={25}
               delay={300}
-              pauseAt={32}
+              pauseAt={33}
               pauseDuration={2000}
               onComplete={() => {
                 setTypingComplete(true);
