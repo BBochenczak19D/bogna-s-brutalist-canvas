@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CornerBracket from "@/components/CornerBracket";
 import ArrowLink from "@/components/ArrowLink";
 import TypingText from "@/components/TypingText";
@@ -17,6 +17,24 @@ const Home = () => {
   const iiiMateriaCollection = artworksData.collections.find((c) => c.id === "iii-materia");
   const artworks = iiiMateriaCollection?.artworks || [];
   const rysunki = artworksData.rysunki || [];
+
+  // Check if animations have already run in this session
+  useEffect(() => {
+    const hasAnimated = sessionStorage.getItem('heroAnimationComplete');
+    if (hasAnimated === 'true') {
+      setTypingComplete(true);
+      setHeroTypingComplete(true);
+    }
+  }, [setHeroTypingComplete]);
+
+  const handleAnimationComplete = () => {
+    setTypingComplete(true);
+    setTimeout(() => {
+      setHeroTypingComplete(true);
+      sessionStorage.setItem('heroAnimationComplete', 'true');
+    }, 300);
+  };
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Bio Section */}
@@ -45,19 +63,18 @@ const Home = () => {
       <section className="max-w-[1648px] mx-auto px-9 py-0 mt-[42px]">
         <div className="flex flex-col gap-8 py-8">
           <h1 className="text-[72px] font-medium leading-[100%] tracking-[-0.02em] uppercase max-w-none">
-            <TypingText
-              text="Co sprawia, że jesteśmy ożywieni? Co kieruje naszym istnieniem, jeśli wykraczamy poza myśli i widzialną materię?"
-              speed={25}
-              delay={300}
-              pauseAt={33}
-              pauseDuration={2300}
-              onComplete={() => {
-                setTypingComplete(true);
-                setTimeout(() => {
-                  setHeroTypingComplete(true);
-                }, 300);
-              }}
-            />
+            {sessionStorage.getItem('heroAnimationComplete') === 'true' ? (
+              "Co sprawia, że jesteśmy ożywieni? Co kieruje naszym istnieniem, jeśli wykraczamy poza myśli i widzialną materię?"
+            ) : (
+              <TypingText
+                text="Co sprawia, że jesteśmy ożywieni? Co kieruje naszym istnieniem, jeśli wykraczamy poza myśli i widzialną materię?"
+                speed={25}
+                delay={300}
+                pauseAt={33}
+                pauseDuration={2300}
+                onComplete={handleAnimationComplete}
+              />
+            )}
           </h1>
         </div>
       </section>
