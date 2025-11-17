@@ -96,8 +96,12 @@ const Home = () => {
               className="w-full"
             >
               <CarouselContent className="px-9 gap-1">
-                {artworks.map((artwork) => (
-                  <CarouselItem key={artwork.id} className="basis-auto pl-0">
+                {artworks.map((artwork, index) => (
+                  <CarouselItem 
+                    key={artwork.id} 
+                    className="basis-auto pl-0 animate-fade-in"
+                    style={{ animationDelay: `${0.1 + index * 0.15}s` }}
+                  >
                     <img
                       src={artwork.image}
                       alt={artwork.title}
