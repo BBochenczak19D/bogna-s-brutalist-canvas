@@ -80,8 +80,12 @@ const Home = () => {
       </section>
 
       {/* Gallery Section */}
-      {typingComplete && (
-        <section ref={carouselRef} className="max-w-[1648px] mx-auto mt-[100px] mb-8 animate-fade-in">
+      <section 
+        ref={carouselRef} 
+        className={`max-w-[1648px] mx-auto mt-[100px] mb-8 transition-opacity duration-700 ${
+          typingComplete ? 'opacity-100 animate-fade-in' : 'opacity-0 pointer-events-none'
+        }`}
+      >
             <div className="flex justify-end px-9 mb-6">
               <ArrowLink to="/collections/iii-materia">Przejdź do pełnej kolekcji</ArrowLink>
             </div>
@@ -143,8 +147,7 @@ const Home = () => {
                 Mapami, które nie prowadzą do jednego celu, lecz do momentu spotkania ze sobą.
               </p>
             </div>
-        </section>
-      )}
+      </section>
 
           {/* Collection Title */}
           <section className="max-w-[1648px] mx-auto px-9">
