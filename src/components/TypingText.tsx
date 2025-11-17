@@ -10,14 +10,14 @@ interface TypingTextProps {
   pauseDuration?: number; // Duration of pause in milliseconds
 }
 
-const TypingText = ({ 
-  text, 
-  speed = 30, 
-  className = "", 
-  delay = 0, 
+const TypingText = ({
+  text,
+  speed = 30,
+  className = "",
+  delay = 0,
   onComplete,
   pauseAt,
-  pauseDuration = 2000
+  pauseDuration = 1000,
 }: TypingTextProps) => {
   const [displayedText, setDisplayedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
