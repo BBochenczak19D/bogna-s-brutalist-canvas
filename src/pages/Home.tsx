@@ -80,12 +80,9 @@ const Home = () => {
       </section>
 
       {/* Gallery Section */}
-      <section 
-        ref={carouselRef} 
-        className={`max-w-[1648px] mx-auto mt-[100px] mb-8 transition-opacity duration-700 ${
-          typingComplete ? 'opacity-100 animate-fade-in' : 'opacity-0 pointer-events-none'
-        }`}
-      >
+      {typingComplete && (
+        <>
+          <section ref={carouselRef} className="max-w-[1648px] mx-auto mt-[100px] mb-8 animate-fade-in">
             <div className="flex justify-end px-9 mb-6">
               <ArrowLink to="/collections/iii-materia">Przejdź do pełnej kolekcji</ArrowLink>
             </div>
@@ -101,12 +98,8 @@ const Home = () => {
               className="w-full"
             >
               <CarouselContent className="px-9 gap-1">
-                {artworks.map((artwork, index) => (
-                  <CarouselItem 
-                    key={artwork.id} 
-                    className="basis-auto pl-0 animate-fade-in"
-                    style={{ animationDelay: `${0.1 + index * 0.15}s` }}
-                  >
+                {artworks.map((artwork) => (
+                  <CarouselItem key={artwork.id} className="basis-auto pl-0">
                     <img
                       src={artwork.image}
                       alt={artwork.title}
@@ -147,7 +140,7 @@ const Home = () => {
                 Mapami, które nie prowadzą do jednego celu, lecz do momentu spotkania ze sobą.
               </p>
             </div>
-      </section>
+          </section>
 
           {/* Collection Title */}
           <section className="max-w-[1648px] mx-auto px-9">
@@ -674,6 +667,8 @@ const Home = () => {
               </svg>
             </div>
           </section>
+        </>
+      )}
     </div>
   );
 };
