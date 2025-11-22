@@ -92,39 +92,313 @@
   "obrazy": [
     {
       "id": "obraz-01",
-      "title": "Bez tytułu I",
+      "title": "W poszukiwaniu III Materii",
       "medium": "Olej na płótnie",
-      "dimensions": "80 x 100 cm",
+      "dimensions": "150 x 120 cm",
       "year": "2023",
-      "image": "/artworks/obrazy/obraz-01.jpg"
+      "image": ""
     },
     {
       "id": "obraz-02",
-      "title": "Bez tytułu II",
+      "title": "W poszukiwaniu III Materii",
       "medium": "Olej na płótnie",
-      "dimensions": "80 x 100 cm",
+      "dimensions": "150 x 120 cm",
       "year": "2023",
-      "image": "/artworks/obrazy/obraz-02.jpg"
+      "image": ""
+    },
+    {
+      "id": "obraz-03",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Olej na płótnie",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": "obraz-04",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Olej na płótnie",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": "obraz-05",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Olej na płótnie",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": "obraz-06",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Olej na płótnie",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": "obraz-07",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Olej na płótnie",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": "obraz-08",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Olej na płótnie",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": "obraz-09",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Olej na płótnie",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": "obraz-10",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Olej na płótnie",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": "obraz-11",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Olej na płótnie",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": "obraz-12",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Olej na płótnie",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
     }
   ],
   "artefakty": [
     {
       "id": "artefakt-01",
-      "title": "Artefakt I",
+      "title": "W poszukiwaniu III Materii",
       "medium": "Technika mieszana",
-      "dimensions": "30 x 40 cm",
+      "dimensions": "150 x 120 cm",
       "year": "2023",
-      "image": "/artworks/artefakty/artefakt-01.jpg"
+      "image": ""
+    },
+    {
+      "id": "artefakt-02",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Technika mieszana",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": "artefakt-03",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Technika mieszana",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": "artefakt-04",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Technika mieszana",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": "artefakt-05",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Technika mieszana",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": "artefakt-06",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Technika mieszana",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": "artefakt-07",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Technika mieszana",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": "artefakt-08",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Technika mieszana",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
     }
   ],
   "rysunki": [
     {
       "id": "rysunek-01",
-      "title": "Szkic I",
+      "title": "W poszukiwaniu III Materii",
       "medium": "Tusz na papierze",
-      "dimensions": "21 x 29.7 cm",
-      "year": "2022",
-      "image": "/artworks/rysunki/rysunek-01.jpg"
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": "rysunek-02",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Tusz na papierze",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": "rysunek-03",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Tusz na papierze",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": "rysunek-04",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Tusz na papierze",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": "rysunek-05",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Tusz na papierze",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": "rysunek-06",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Tusz na papierze",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": "rysunek-07",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Tusz na papierze",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": "rysunek-08",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Tusz na papierze",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": "rysunek-09",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Tusz na papierze",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": "rysunek-10",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Tusz na papierze",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    }
+  ],
+  "grafiki": [
+    {
+      "id": "grafika-01",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Grafika cyfrowa",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": "grafika-02",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Grafika cyfrowa",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": "grafika-03",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Grafika cyfrowa",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": "grafika-04",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Grafika cyfrowa",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": "grafika-05",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Grafika cyfrowa",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": "grafika-06",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Grafika cyfrowa",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": "grafika-07",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Grafika cyfrowa",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": "grafika-08",
+      "title": "W poszukiwaniu III Materii",
+      "medium": "Grafika cyfrowa",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
+      "image": ""
     }
   ],
   "instalacje": [
