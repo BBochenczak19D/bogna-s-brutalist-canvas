@@ -169,6 +169,78 @@
       "dimensions": "100 x 120 cm",
       "year": "2024",
       "image": "/artworks/collections/iii-materia/materia-10.jpg"
+    },
+    {
+      "id": "obraz-11",
+      "title": "Odrobinę na temat nastroju",
+      "medium": "Akryl na płótnie",
+      "dimensions": "80 x 80 cm",
+      "year": "2020",
+      "image": "/artworks/obrazy/obraz-11.jpg"
+    },
+    {
+      "id": "obraz-12",
+      "title": "Bez tytułu",
+      "medium": "Olej na płótnie",
+      "dimensions": "50 x 80 cm",
+      "year": "2020",
+      "image": "/artworks/obrazy/obraz-12.jpg"
+    },
+    {
+      "id": "obraz-13",
+      "title": "Koniec to także początek",
+      "medium": "Olej na płótnie",
+      "dimensions": "150 x 120 cm",
+      "year": "2020",
+      "image": "/artworks/obrazy/obraz-13.jpg"
+    },
+    {
+      "id": "obraz-14",
+      "title": "Wnętrze II",
+      "medium": "Akryl na płótnie",
+      "dimensions": "80 x 80 cm",
+      "year": "2020",
+      "image": "/artworks/obrazy/obraz-14.jpg"
+    },
+    {
+      "id": "obraz-15",
+      "title": "Wnętrze I",
+      "medium": "Olej na płótnie",
+      "dimensions": "130 x 110 cm",
+      "year": "2020",
+      "image": "/artworks/obrazy/obraz-15.jpg"
+    },
+    {
+      "id": "obraz-16",
+      "title": "Żółty",
+      "medium": "Akryl na płótnie",
+      "dimensions": "80 x 80 cm",
+      "year": "2020",
+      "image": "/artworks/obrazy/obraz-16.jpg"
+    },
+    {
+      "id": "obraz-17",
+      "title": "Przeznaczenie niebieskiego - Atlantyda",
+      "medium": "Akryl, olej na płótnie",
+      "dimensions": "130 x 110 cm",
+      "year": "2020",
+      "image": "/artworks/obrazy/obraz-17.jpg"
+    },
+    {
+      "id": "obraz-18",
+      "title": "Powstanie",
+      "medium": "Olej na płótnie",
+      "dimensions": "100 x 70 cm",
+      "year": "2020",
+      "image": "/artworks/obrazy/obraz-18.jpg"
+    },
+    {
+      "id": "obraz-19",
+      "title": "Skóra",
+      "medium": "Technika mieszana na płótnie",
+      "dimensions": "110 x 100 cm",
+      "year": "2020",
+      "image": "/artworks/obrazy/obraz-19.jpg"
     }
   ],
   "artefakty": [
