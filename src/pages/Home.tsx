@@ -435,7 +435,6 @@ const Home = () => {
                       </div>
                     </CarouselItem>
                   ))}
-                  )}
                 </CarouselContent>
               </Carousel>
             </div>
