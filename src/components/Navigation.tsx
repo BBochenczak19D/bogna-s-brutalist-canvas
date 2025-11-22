@@ -14,18 +14,37 @@ const Navigation = () => {
   const location = useLocation();
 
   useEffect(() => {
+    let ticking = false;
+    
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      
-      if (currentScrollY < lastScrollY) {
-        // Scrolling up
-        setIsVisible(true);
-      } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        // Scrolling down and past 100px
-        setIsVisible(false);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
+          const documentHeight = document.documentElement.scrollHeight;
+          const windowHeight = window.innerHeight;
+          const scrollableHeight = documentHeight - windowHeight;
+          
+          // Only hide navigation if there's enough content to scroll
+          if (scrollableHeight > 200) {
+            if (currentScrollY < lastScrollY) {
+              // Scrolling up
+              setIsVisible(true);
+            } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+              // Scrolling down and past 100px
+              setIsVisible(false);
+            }
+            
+            setLastScrollY(currentScrollY);
+          } else {
+            // Not enough content, always show navigation
+            setIsVisible(true);
+          }
+          
+          ticking = false;
+        });
+        
+        ticking = true;
       }
-      
-      setLastScrollY(currentScrollY);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
