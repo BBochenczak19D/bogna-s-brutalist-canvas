@@ -13,9 +13,10 @@ interface Artwork {
 interface MasonryArtworkGridProps {
   artworks: Artwork[];
   categoryDescription?: string;
+  category?: string;
 }
 
-const MasonryArtworkGrid = ({ artworks, categoryDescription }: MasonryArtworkGridProps) => {
+const MasonryArtworkGrid = ({ artworks, categoryDescription, category }: MasonryArtworkGridProps) => {
   const [selectedArtwork, setSelectedArtwork] = useState<Artwork | null>(null);
 
   return (
@@ -33,6 +34,7 @@ const MasonryArtworkGrid = ({ artworks, categoryDescription }: MasonryArtworkGri
           {artworks.map((artwork) => {
             const isWideImage = artwork.id === "obraz-07";
             const isCenteredImage = artwork.id === "obraz-08";
+            const isArtefaktOrGrafiki = category === "artefakty" || category === "grafiki";
             
             return (
               <div
@@ -47,6 +49,7 @@ const MasonryArtworkGrid = ({ artworks, categoryDescription }: MasonryArtworkGri
                 onClick={() => setSelectedArtwork(artwork)}
               >
                 <div className={`w-full bg-muted relative overflow-hidden ${
+                  isArtefaktOrGrafiki ? "h-[336px]" :
                   isWideImage ? "aspect-[2/1]" : isCenteredImage ? "aspect-[4/5]" : "aspect-[3/4]"
                 }`}>
                 {artwork.image ? (

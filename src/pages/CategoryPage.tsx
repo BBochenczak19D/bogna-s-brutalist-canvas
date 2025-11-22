@@ -45,6 +45,7 @@ const CategoryPage = () => {
           <MasonryArtworkGrid 
             artworks={artworks} 
             categoryDescription={categoryDescriptions[category]}
+            category={category}
           />
         ) : (
           <div className="brutalist-border-medium p-12 text-center">
