@@ -85,6 +85,78 @@
           "dimensions": "100 x 120 cm",
           "year": "2024",
           "image": "/artworks/collections/iii-materia/materia-10.jpg"
+        },
+        {
+          "id": "grafika-01",
+          "title": "Tablica V",
+          "medium": "",
+          "dimensions": "",
+          "year": "",
+          "image": "/artworks/grafiki/grafika-01.jpg"
+        },
+        {
+          "id": "grafika-02",
+          "title": "Tablica 14x druk",
+          "medium": "",
+          "dimensions": "",
+          "year": "",
+          "image": "/artworks/grafiki/grafika-02.jpg"
+        },
+        {
+          "id": "grafika-03",
+          "title": "Tablica 11 druk",
+          "medium": "",
+          "dimensions": "",
+          "year": "",
+          "image": "/artworks/grafiki/grafika-03.jpg"
+        },
+        {
+          "id": "grafika-04",
+          "title": "Tablica 9X TR",
+          "medium": "",
+          "dimensions": "",
+          "year": "",
+          "image": "/artworks/grafiki/grafika-04.jpg"
+        },
+        {
+          "id": "grafika-05",
+          "title": "Tablica 9X Odzyskano TR",
+          "medium": "",
+          "dimensions": "",
+          "year": "",
+          "image": "/artworks/grafiki/grafika-05.jpg"
+        },
+        {
+          "id": "grafika-06",
+          "title": "Tablica 7 - przygotowania do druku",
+          "medium": "",
+          "dimensions": "",
+          "year": "",
+          "image": "/artworks/grafiki/grafika-06.jpg"
+        },
+        {
+          "id": "grafika-07",
+          "title": "Matryca 3X",
+          "medium": "",
+          "dimensions": "",
+          "year": "",
+          "image": "/artworks/grafiki/grafika-07.jpg"
+        },
+        {
+          "id": "grafika-08",
+          "title": "Matryca 2X",
+          "medium": "",
+          "dimensions": "",
+          "year": "",
+          "image": "/artworks/grafiki/grafika-08.jpg"
+        },
+        {
+          "id": "grafika-09",
+          "title": "Matryca 1X",
+          "medium": "",
+          "dimensions": "",
+          "year": "",
+          "image": "/artworks/grafiki/grafika-09.jpg"
         }
       ]
     }
