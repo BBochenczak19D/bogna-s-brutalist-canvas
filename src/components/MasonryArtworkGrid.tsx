@@ -41,21 +41,21 @@ const MasonryArtworkGrid = ({ artworks, categoryDescription }: MasonryArtworkGri
                   isWideImage 
                     ? "w-full" 
                     : isCenteredImage
-                    ? "flex-grow flex-shrink basis-[500px] max-w-[600px]"
+                    ? "w-full max-w-[640px] mx-auto"
                     : "flex-grow flex-shrink basis-[300px] max-w-[400px]"
                 }`}
                 onClick={() => setSelectedArtwork(artwork)}
               >
                 <div className={`w-full bg-muted relative overflow-hidden ${
-                  isWideImage ? "min-h-[568px]" : isCenteredImage ? "min-h-[684px]" : "min-h-[443px]"
+                  isWideImage ? "min-h-[568px]" : isCenteredImage ? "min-h-[640px]" : "min-h-[443px]"
                 }`}>
                 {artwork.image ? (
                   <img
                     src={artwork.image}
                     alt={artwork.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
-                    style={{ objectFit: 'cover' }}
+                    style={{ objectFit: 'cover', objectPosition: 'center' }}
                   />
                 ) : (
                   <Skeleton className="w-full h-full" />
