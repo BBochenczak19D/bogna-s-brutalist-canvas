@@ -60,15 +60,18 @@ const Home = () => {
       </section>
 
       {/* Main Hero Text */}
-      <section className="max-w-[1648px] mx-auto px-9 md:px-5 py-0 mt-[42px]">
-        <div className="flex flex-col gap-8 py-8 md:py-8">
-          <h1 className="text-[72px] md:text-2xl font-medium leading-[100%] md:leading-[125%] tracking-[-0.02em] md:tracking-[-0.48px] uppercase max-w-none">
+      <section className="max-w-[1648px] mx-auto px-9 py-0 mt-[42px]">
+        <div className="flex flex-col gap-8 py-8">
+          <h1 className="text-[72px] md:text-[42px] font-medium leading-[100%] tracking-[-0.02em] uppercase max-w-none">
             {sessionStorage.getItem('heroAnimationComplete') === 'true' ? (
               "Co sprawia, że jesteśmy ożywieni? Co kieruje naszym istnieniem, jeśli wykraczamy poza myśli i widzialną materię?"
             ) : (
               <TypingText
                 text="Co sprawia, że jesteśmy ożywieni? Co kieruje naszym istnieniem, jeśli wykraczamy poza myśli i widzialną materię?"
-                speed={30}
+                speed={25}
+                delay={300}
+                pauseAt={33}
+                pauseDuration={2300}
                 onComplete={handleAnimationComplete}
               />
             )}
@@ -79,35 +82,12 @@ const Home = () => {
       {/* Gallery Section */}
       {typingComplete && (
         <>
-          <section ref={carouselRef} className="max-w-[1648px] mx-auto mt-[100px] md:mt-6 mb-8 animate-fade-in">
-            {/* Link to collection - Desktop */}
-            <div className="flex md:hidden justify-end px-9 mb-6">
+          <section ref={carouselRef} className="max-w-[1648px] mx-auto mt-[100px] mb-8 animate-fade-in">
+            <div className="flex justify-end px-9 mb-6">
               <ArrowLink to="/collections/iii-materia">Przejdź do pełnej kolekcji</ArrowLink>
             </div>
 
-            {/* Link to collection - Mobile */}
-            <div className="hidden md:flex w-full pr-6 md:pr-5 pb-6 md:pb-6 flex-col items-center justify-center font-outfit text-lg text-foreground uppercase tracking-[-0.36px] leading-[1.1]">
-              <div className="relative flex w-[284px] max-w-full items-start gap-1 justify-start mix-blend-difference">
-                <span className="text-foreground">PRzejdź do pełnej kolekcji</span>
-                <svg width="20" height="17" viewBox="0 0 20 17" fill="none" className="flex-shrink-0 self-start">
-                  <path d="M0 8.5H18M18 8.5L11 1.5M18 8.5L11 15.5" stroke="currentColor" strokeWidth="2"/>
-                </svg>
-              </div>
-            </div>
-
-            {/* Horizontal scrolling carousel for mobile */}
-            <div className="hidden md:flex md:overflow-x-auto md:gap-1 md:px-9 md:scrollbar-hide">
-              {artworks.map((artwork) => (
-                <img 
-                  key={artwork.id}
-                  src={artwork.image} 
-                  alt={artwork.title} 
-                  className="w-[228px] flex-shrink-0 aspect-[4/3] object-cover" 
-                />
-              ))}
-            </div>
-
-            {/* Draggable Carousel Gallery - Desktop */}
+            {/* Draggable Carousel Gallery */}
             <Carousel
               setApi={setCarouselApi}
               opts={{
@@ -115,7 +95,7 @@ const Home = () => {
                 loop: false,
                 dragFree: true,
               }}
-              className="w-full md:hidden"
+              className="w-full"
             >
               <CarouselContent className="px-9 gap-1">
                 {artworks.map((artwork) => (
@@ -131,8 +111,8 @@ const Home = () => {
               </CarouselContent>
             </Carousel>
 
-            {/* Description Section - Desktop */}
-            <div className="px-9 md:px-5 pt-9 md:pt-9 pb-[78px] md:pb-[78px] flex md:hidden items-start gap-16">
+            {/* Description Section */}
+            <div className="px-9 pt-9 pb-[78px] flex md:flex-col items-start gap-16">
               <CornerBracket />
               <p
                 className="flex-1 text-base font-light leading-[125%] tracking-[-0.02em] text-foreground/90 animate-fade-in"
@@ -160,71 +140,55 @@ const Home = () => {
                 Mapami, które nie prowadzą do jednego celu, lecz do momentu spotkania ze sobą.
               </p>
             </div>
-
-            {/* Description Section - Mobile */}
-            <div className="hidden md:flex md:flex-col px-9 md:px-5 pt-9 pb-[78px] gap-6">
-              <CornerBracket />
-              <p className="text-base font-light leading-5 tracking-[-0.32px] text-foreground/90">
-                Moja praca zaczyna się tam, gdzie kończy się język. Od zawsze fascynowało mnie to, czego nie da się nazwać: momenty pomiędzy oddechami, przestrzenie wewnątrz ciała, ciche impulsy świadomości. Jako lekarka przez lata uczyłam się patrzeć na człowieka przez pryzmat anatomii i nauki. Jako malarka — przez pryzmat intuicji, symbolu i doświadczenia.
-              </p>
-              <CornerBracket />
-              <p className="text-base font-light leading-5 tracking-[-0.32px] text-foreground/90">
-                Kolekcja Trzeciej Materii powstała z potrzeby zrozumienia tego, co niewidzialne, a jednak fundamentalne. To mój osobisty sposób badania energii, która kieruje nami, zanim pojawi się myśl, ruch czy decyzja. Interesuje mnie stan pomiędzy materią a świadomością, wszędzie tam, gdzie ciało przestaje być tylko biologią, a staje się nośnikiem czegoś znacznie subtelniejszego.
-              </p>
-              <CornerBracket />
-              <p className="text-base font-light leading-5 tracking-[-0.32px] text-foreground/90">
-                Malując, szukam drżeń, napięć, pęknięć i światła — nie w świecie zewnętrznym, ale w tych głębokich, wewnętrznych przestrzeniach, które każdy z nas nosi w sobie. Moje obrazy są śladami własnych poszukiwań. Mapami, które nie prowadzą do jednego celu, lecz do momentu spotkania ze sobą.
-              </p>
-            </div>
           </section>
 
           {/* Collection Title */}
-          <section className="max-w-[1648px] mx-auto px-9 md:px-5">
-            <div className="flex md:flex-row items-start md:items-start gap-2 justify-start md:justify-start">
+          <section className="max-w-[1648px] mx-auto px-9">
+            <div className="flex items-start gap-2 justify-between">
               <div>
                 <h2
-                  className="text-[64px] md:text-[32px] font-normal leading-[110%] tracking-[-0.02em] md:tracking-[-0.64px] uppercase animate-fade-in"
+                  className="text-[64px] font-normal leading-[110%] tracking-[-0.02em] uppercase animate-fade-in"
                   style={{ animationDelay: "0.2s" }}
                 >
                   [III MATERIA]
                 </h2>
               </div>
-              <p className="text-2xl md:text-2xl font-light leading-[110%] tracking-[-0.04em] md:tracking-[-0.96px] uppercase">2023</p>
+              <p className="text-2xl font-light leading-[110%] tracking-[-0.04em] uppercase">2023</p>
             </div>
           </section>
 
           {/* Philosophy Section */}
-          <section className="max-w-[1648px] mx-auto px-9 md:px-0 py-[100px] md:py-[100px]">
-            <div className="flex justify-end items-center self-stretch py-[24px] md:py-6 px-0 md:px-5">
-              <div className="flex justify-between md:justify-between items-start flex-1">
-                <div className="flex w-[565.801px] md:w-auto flex-col items-start gap-0.5">
+          <section className="max-w-[1648px] mx-auto px-9 py-[100px]">
+            <div className="flex justify-end items-center self-stretch py-[24px]">
+              <div className="flex justify-between items-start flex-1">
+                <div className="flex w-[565.801px] flex-col items-start gap-0.5">
                   <div
-                    className="w-[579px] md:w-auto text-foreground font-medium text-2xl md:text-xl leading-[110%] tracking-[-0.96px] md:tracking-[-0.8px] uppercase animate-fade-in"
+                    className="w-[579px] text-foreground font-medium text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in"
                     style={{ animationDelay: "0.1s" }}
                   >
                     Trzecia Materia istnieje.
                   </div>
                   <div
-                    className="text-muted-foreground md:text-foreground font-normal text-2xl md:text-xl leading-[110%] tracking-[-0.96px] md:tracking-[-0.8px] uppercase animate-fade-in"
+                    className="text-muted-foreground font-normal text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in"
                     style={{ animationDelay: "0.3s" }}
                   >
                     Nie jest ciałem.
                   </div>
                   <div
-                    className="text-muted-foreground md:text-foreground font-normal text-2xl md:text-xl leading-[110%] tracking-[-0.96px] md:tracking-[-0.8px] uppercase animate-fade-in"
+                    className="text-muted-foreground font-normal text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in"
                     style={{ animationDelay: "0.5s" }}
                   >
                     Nie jest myślą.
                   </div>
                   <div
-                    className="text-foreground font-medium text-2xl md:text-xl leading-[110%] tracking-[-0.96px] md:tracking-[-0.8px] uppercase animate-fade-in"
+                    className="text-foreground font-medium text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in"
                     style={{ animationDelay: "0.7s" }}
                   >
                     To to, co sprawia, że jesteśmy.
                   </div>
                 </div>
                 <svg
-                  className="w-[21.6px] h-[22.12px] md:w-[22px] md:h-[22px] fill-current flex-shrink-0"
+                  className="w-[21.6px] h-[22.12px] fill-current"
                   width="22"
                   height="23"
                   viewBox="0 0 22 23"
@@ -237,33 +201,8 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Image Sections for mobile */}
-            <div className="hidden md:flex md:flex-col items-center justify-start font-outfit text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground gap-9 px-0 md:px-5 mt-9">
-              <div className="flex w-full flex-col items-stretch justify-center">
-                <img
-                  src="/artworks/collections/iii-materia/materia-01.jpg"
-                  alt="Materia I"
-                  className="w-full object-cover aspect-[1.18]"
-                />
-                <div className="flex items-center gap-3 mt-6 self-start">
-                  <p className="self-stretch my-auto">[cz. I | 2023]</p>
-                </div>
-              </div>
-
-              <div className="flex flex-col items-start justify-start gap-6 mt-[42px] md:mt-10">
-                <img
-                  src="/artworks/collections/iii-materia/materia-02.jpg"
-                  alt="Materia II"
-                  className="w-full object-cover aspect-[1.086]"
-                />
-                <div className="flex items-center gap-3 self-start">
-                  <p className="self-stretch my-auto">[cz.II | 2023]</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Two Column Images - Desktop */}
-            <div className="flex md:hidden gap-16 mb-9">
+            {/* Two Column Images */}
+            <div className="flex md:flex-col gap-16 mb-9">
               <div className="flex-1 w-full md:w-auto flex flex-col gap-6">
                 <img
                   src="/artworks/collections/iii-materia/materia-01.jpg"
@@ -287,11 +226,9 @@ const Home = () => {
             </div>
 
             {/* Decorative Brackets */}
-            <div className="flex justify-between md:justify-start px-0 md:px-5">
+            <div className="flex justify-between">
               <CornerBracket />
-              <div className="md:hidden">
-                <CornerBracket />
-              </div>
+              <CornerBracket />
             </div>
           </section>
 

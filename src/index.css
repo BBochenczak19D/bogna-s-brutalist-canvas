@@ -119,13 +119,4 @@ All colors MUST be HSL.
   .font-nats {
     font-family: 'NATS', -apple-system, Roboto, Helvetica, sans-serif;
   }
-  
-  .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
 }
