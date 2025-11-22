@@ -241,6 +241,62 @@
       "dimensions": "110 x 100 cm",
       "year": "2020",
       "image": "/artworks/obrazy/obraz-19.jpg"
+    },
+    {
+      "id": "obraz-20",
+      "title": "Moja biała perła",
+      "medium": "Olej na płótnie",
+      "dimensions": "100 x 100 cm",
+      "year": "2019",
+      "image": "/artworks/obrazy/obraz-20.jpg"
+    },
+    {
+      "id": "obraz-21",
+      "title": "Gdzie jestem?",
+      "medium": "Olej na płótnie",
+      "dimensions": "100 x 100 cm",
+      "year": "2019",
+      "image": "/artworks/obrazy/obraz-21.jpg"
+    },
+    {
+      "id": "obraz-22",
+      "title": "Po burzy nadchodzi ukojenie",
+      "medium": "Olej na płótnie",
+      "dimensions": "120 x 100 cm",
+      "year": "2019",
+      "image": "/artworks/obrazy/obraz-22.jpg"
+    },
+    {
+      "id": "obraz-23",
+      "title": "Nowy dzień",
+      "medium": "Olej na płótnie",
+      "dimensions": "90 x 150 cm",
+      "year": "2017",
+      "image": "/artworks/obrazy/obraz-23.jpg"
+    },
+    {
+      "id": "obraz-24",
+      "title": "Ona",
+      "medium": "Olej na płótnie",
+      "dimensions": "81 x 100 cm",
+      "year": "2006-2015",
+      "image": "/artworks/obrazy/obraz-24.jpg"
+    },
+    {
+      "id": "obraz-25",
+      "title": "Portal",
+      "medium": "Olej na płótnie",
+      "dimensions": "70 x 100 cm",
+      "year": "2017",
+      "image": "/artworks/obrazy/obraz-25.jpg"
+    },
+    {
+      "id": "obraz-26",
+      "title": "Podwodne światło",
+      "medium": "Olej na płótnie",
+      "dimensions": "100 x 100 cm",
+      "year": "2019",
+      "image": "/artworks/obrazy/obraz-26.jpg"
     }
   ],
   "artefakty": [
