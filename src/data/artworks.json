@@ -374,67 +374,163 @@
   "artefakty": [
     {
       "id": "artefakt-01",
-      "title": "W poszukiwaniu III Materii",
-      "medium": "Technika mieszana",
-      "dimensions": "150 x 120 cm",
-      "year": "2023",
-      "image": ""
+      "title": "Artefakt 01",
+      "medium": "",
+      "dimensions": "",
+      "year": "",
+      "image": "/artworks/artefakty/artefakt-01.jpg"
     },
     {
       "id": "artefakt-02",
-      "title": "W poszukiwaniu III Materii",
-      "medium": "Technika mieszana",
-      "dimensions": "150 x 120 cm",
-      "year": "2023",
-      "image": ""
+      "title": "Artefakt 02",
+      "medium": "",
+      "dimensions": "",
+      "year": "",
+      "image": "/artworks/artefakty/artefakt-02.jpg"
     },
     {
       "id": "artefakt-03",
-      "title": "W poszukiwaniu III Materii",
-      "medium": "Technika mieszana",
-      "dimensions": "150 x 120 cm",
-      "year": "2023",
-      "image": ""
+      "title": "Artefakt 03",
+      "medium": "",
+      "dimensions": "",
+      "year": "",
+      "image": "/artworks/artefakty/artefakt-03.jpg"
     },
     {
       "id": "artefakt-04",
-      "title": "W poszukiwaniu III Materii",
-      "medium": "Technika mieszana",
-      "dimensions": "150 x 120 cm",
-      "year": "2023",
-      "image": ""
+      "title": "Artefakt 04",
+      "medium": "",
+      "dimensions": "",
+      "year": "",
+      "image": "/artworks/artefakty/artefakt-04.jpg"
     },
     {
       "id": "artefakt-05",
-      "title": "W poszukiwaniu III Materii",
-      "medium": "Technika mieszana",
-      "dimensions": "150 x 120 cm",
-      "year": "2023",
-      "image": ""
+      "title": "Artefakt 05",
+      "medium": "",
+      "dimensions": "",
+      "year": "",
+      "image": "/artworks/artefakty/artefakt-05.jpg"
     },
     {
       "id": "artefakt-06",
-      "title": "W poszukiwaniu III Materii",
-      "medium": "Technika mieszana",
-      "dimensions": "150 x 120 cm",
-      "year": "2023",
-      "image": ""
+      "title": "Artefakt 06",
+      "medium": "",
+      "dimensions": "",
+      "year": "",
+      "image": "/artworks/artefakty/artefakt-06.jpg"
     },
     {
       "id": "artefakt-07",
-      "title": "W poszukiwaniu III Materii",
-      "medium": "Technika mieszana",
-      "dimensions": "150 x 120 cm",
-      "year": "2023",
-      "image": ""
+      "title": "Artefakt 07",
+      "medium": "",
+      "dimensions": "",
+      "year": "",
+      "image": "/artworks/artefakty/artefakt-07.jpg"
     },
     {
       "id": "artefakt-08",
-      "title": "W poszukiwaniu III Materii",
-      "medium": "Technika mieszana",
-      "dimensions": "150 x 120 cm",
-      "year": "2023",
-      "image": ""
+      "title": "Artefakt 08",
+      "medium": "",
+      "dimensions": "",
+      "year": "",
+      "image": "/artworks/artefakty/artefakt-08.jpg"
+    },
+    {
+      "id": "artefakt-09",
+      "title": "Artefakt 09",
+      "medium": "",
+      "dimensions": "",
+      "year": "",
+      "image": "/artworks/artefakty/artefakt-09.jpg"
+    },
+    {
+      "id": "artefakt-10",
+      "title": "Artefakt 10",
+      "medium": "",
+      "dimensions": "",
+      "year": "",
+      "image": "/artworks/artefakty/artefakt-10.jpg"
+    },
+    {
+      "id": "artefakt-11",
+      "title": "Artefakt 11",
+      "medium": "",
+      "dimensions": "",
+      "year": "",
+      "image": "/artworks/artefakty/artefakt-11.jpg"
+    },
+    {
+      "id": "artefakt-12",
+      "title": "Artefakt 12",
+      "medium": "",
+      "dimensions": "",
+      "year": "",
+      "image": "/artworks/artefakty/artefakt-12.jpg"
+    },
+    {
+      "id": "artefakt-13",
+      "title": "Artefakt 13",
+      "medium": "",
+      "dimensions": "",
+      "year": "",
+      "image": "/artworks/artefakty/artefakt-13.jpg"
+    },
+    {
+      "id": "artefakt-14",
+      "title": "Artefakt 14",
+      "medium": "",
+      "dimensions": "",
+      "year": "",
+      "image": "/artworks/artefakty/artefakt-14.jpg"
+    },
+    {
+      "id": "artefakt-15",
+      "title": "Artefakt 15",
+      "medium": "",
+      "dimensions": "",
+      "year": "",
+      "image": "/artworks/artefakty/artefakt-15.jpg"
+    },
+    {
+      "id": "artefakt-16",
+      "title": "Artefakt 16",
+      "medium": "",
+      "dimensions": "",
+      "year": "",
+      "image": "/artworks/artefakty/artefakt-16.jpg"
+    },
+    {
+      "id": "artefakt-17",
+      "title": "Artefakt 17",
+      "medium": "",
+      "dimensions": "",
+      "year": "",
+      "image": "/artworks/artefakty/artefakt-17.jpg"
+    },
+    {
+      "id": "artefakt-18",
+      "title": "Artefakt 18",
+      "medium": "",
+      "dimensions": "",
+      "year": "",
+      "image": "/artworks/artefakty/artefakt-18.jpg"
+    },
+    {
+      "id": "artefakt-19",
+      "title": "Artefakt 19",
+      "medium": "",
+      "dimensions": "",
+      "year": "",
+      "image": "/artworks/artefakty/artefakt-19.jpg"
+    },
+    {
+      "id": "artefakt-20",
+      "title": "Artefakt 20",
+      "medium": "",
+      "dimensions": "",
+      "year": "",
+      "image": "/artworks/artefakty/artefakt-20.jpg"
     }
   ],
   "rysunki": [

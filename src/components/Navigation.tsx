@@ -69,6 +69,7 @@ const Navigation = () => {
       subItems: [
         { path: "/tworczość/obrazy", label: "Obrazy" },
         { path: "/tworczość/grafiki", label: "grafiki" },
+        { path: "/tworczość/artefakty", label: "artefakty" },
         { path: "/tworczość/rysunki", label: "rysunki" },
         { path: "/tworczość/instalacje", label: "instalacje" }
       ]
