@@ -98,7 +98,7 @@ const Home = () => {
               className="w-full"
             >
               <CarouselContent className="px-9 gap-1">
-                {artworks.map((artwork) => (
+                {artworks.slice(0, 10).map((artwork) => (
                   <CarouselItem key={artwork.id} className="basis-auto pl-0">
                     <img
                       src={artwork.image}
