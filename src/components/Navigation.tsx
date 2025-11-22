@@ -128,32 +128,28 @@ const Navigation = () => {
                       e.preventDefault();
                       setClickedItem(clickedItem === item.path ? null : item.path);
                     }}
-                    className={`flex items-center gap-1 px-[5px] py-[3px] transition-all duration-300 ${
+                    className={`px-[5px] py-[3px] transition-all duration-300 ${
                       isActive ? 'text-white' : 'hover:opacity-70'
                     }`}
                   >
-                    <span className="font-nats text-2xl leading-[100%] uppercase">[</span>
                     <span className={`text-xl font-normal uppercase leading-[100%] tracking-normal transition-all duration-300 ${
                       isActive ? 'underline decoration-solid' : ''
                     }`}>
                       {item.label}
                     </span>
-                    <span className="font-nats text-2xl leading-[100%] uppercase">]</span>
                   </button>
                 ) : (
                   <NavLink
                     to={item.path}
-                    className={`flex items-center gap-1 px-[5px] py-[3px] transition-all duration-300 ${
+                    className={`px-[5px] py-[3px] transition-all duration-300 ${
                       isActive ? 'text-white' : 'hover:opacity-70'
                     }`}
                   >
-                    <span className="font-nats text-2xl leading-[100%] uppercase">[</span>
                     <span className={`text-xl font-normal uppercase leading-[100%] tracking-normal transition-all duration-300 ${
                       isActive ? 'underline decoration-solid' : ''
                     }`}>
                       {item.label}
                     </span>
-                    <span className="font-nats text-2xl leading-[100%] uppercase">]</span>
                   </NavLink>
                 )}
 
@@ -168,9 +164,8 @@ const Navigation = () => {
                       <NavLink
                         key={subItem.path}
                         to={subItem.path}
-                        className="flex items-center gap-1 px-[5px] py-[3px] hover:opacity-70 transition-all duration-300"
+                        className="px-[5px] py-[3px] hover:opacity-70 transition-all duration-300"
                       >
-                        <span className="font-nats text-2xl leading-[100%] uppercase">+</span>
                         <span className="text-lg font-normal uppercase leading-[100%] tracking-normal">
                           {subItem.label}
                         </span>
@@ -201,13 +196,11 @@ const Navigation = () => {
               key={item.path}
               to={item.path}
               onClick={() => setIsOpen(false)}
-              className="flex items-center gap-1 px-[5px] py-[3px] hover:opacity-70 transition-opacity"
+              className="px-[5px] py-[3px] hover:opacity-70 transition-opacity"
             >
-              <span className="font-nats text-2xl leading-[100%] uppercase">[</span>
               <span className="text-xl font-normal uppercase leading-[100%]">
                 {item.label}
               </span>
-              <span className="font-nats text-2xl leading-[100%] uppercase">]</span>
             </Link>
           ))}
         </div>
