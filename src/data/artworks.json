@@ -96,7 +96,7 @@
       "medium": "Olej na płótnie",
       "dimensions": "150 x 120 cm",
       "year": "2023",
-      "image": ""
+      "image": "/artworks/collections/iii-materia/materia-01.jpg"
     },
     {
       "id": "obraz-02",
@@ -104,7 +104,7 @@
       "medium": "Olej na płótnie",
       "dimensions": "150 x 120 cm",
       "year": "2023",
-      "image": ""
+      "image": "/artworks/collections/iii-materia/materia-02.jpg"
     },
     {
       "id": "obraz-03",
@@ -112,7 +112,7 @@
       "medium": "Olej na płótnie",
       "dimensions": "150 x 120 cm",
       "year": "2023",
-      "image": ""
+      "image": "/artworks/collections/iii-materia/materia-03.jpg"
     },
     {
       "id": "obraz-04",
@@ -120,7 +120,7 @@
       "medium": "Olej na płótnie",
       "dimensions": "150 x 120 cm",
       "year": "2023",
-      "image": ""
+      "image": "/artworks/collections/iii-materia/materia-04.jpg"
     },
     {
       "id": "obraz-05",
@@ -128,7 +128,7 @@
       "medium": "Olej na płótnie",
       "dimensions": "150 x 120 cm",
       "year": "2023",
-      "image": ""
+      "image": "/artworks/collections/iii-materia/materia-05.jpg"
     },
     {
       "id": "obraz-06",
@@ -136,7 +136,7 @@
       "medium": "Olej na płótnie",
       "dimensions": "150 x 120 cm",
       "year": "2023",
-      "image": ""
+      "image": "/artworks/collections/iii-materia/materia-06.jpg"
     },
     {
       "id": "obraz-07",
@@ -144,7 +144,7 @@
       "medium": "Olej na płótnie",
       "dimensions": "150 x 120 cm",
       "year": "2023",
-      "image": ""
+      "image": "/artworks/collections/iii-materia/materia-07.jpg"
     },
     {
       "id": "obraz-08",
@@ -152,7 +152,7 @@
       "medium": "Olej na płótnie",
       "dimensions": "150 x 120 cm",
       "year": "2023",
-      "image": ""
+      "image": "/artworks/collections/iii-materia/materia-08.jpg"
     },
     {
       "id": "obraz-09",
@@ -160,7 +160,7 @@
       "medium": "Olej na płótnie",
       "dimensions": "150 x 120 cm",
       "year": "2023",
-      "image": ""
+      "image": "/artworks/collections/iii-materia/materia-09.jpg"
     },
     {
       "id": "obraz-10",
@@ -168,23 +168,7 @@
       "medium": "Olej na płótnie",
       "dimensions": "150 x 120 cm",
       "year": "2023",
-      "image": ""
-    },
-    {
-      "id": "obraz-11",
-      "title": "W poszukiwaniu III Materii",
-      "medium": "Olej na płótnie",
-      "dimensions": "150 x 120 cm",
-      "year": "2023",
-      "image": ""
-    },
-    {
-      "id": "obraz-12",
-      "title": "W poszukiwaniu III Materii",
-      "medium": "Olej na płótnie",
-      "dimensions": "150 x 120 cm",
-      "year": "2023",
-      "image": ""
+      "image": "/artworks/collections/iii-materia/materia-10.jpg"
     }
   ],
   "artefakty": [
