@@ -85,11 +85,13 @@ const Navigation = () => {
     return false;
   };
 
-  // Close dropdowns on route change
+  // Close dropdowns and reset visibility on route change
   useEffect(() => {
     setHoveredItem(null);
     setClickedItem(null);
     setIsOpen(false);
+    setIsVisible(true); // Always show navigation on route change
+    setLastScrollY(0); // Reset scroll position tracking
   }, [location.pathname]);
 
   return (
