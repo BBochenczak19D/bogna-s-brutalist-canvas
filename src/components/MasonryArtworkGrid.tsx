@@ -47,15 +47,14 @@ const MasonryArtworkGrid = ({ artworks, categoryDescription }: MasonryArtworkGri
                 onClick={() => setSelectedArtwork(artwork)}
               >
                 <div className={`w-full bg-muted relative overflow-hidden ${
-                  isWideImage ? "min-h-[568px]" : isCenteredImage ? "min-h-[640px]" : "min-h-[443px]"
+                  isWideImage ? "aspect-[2/1]" : isCenteredImage ? "aspect-[4/5]" : "aspect-[3/4]"
                 }`}>
                 {artwork.image ? (
                   <img
                     src={artwork.image}
                     alt={artwork.title}
-                    className="w-full h-full group-hover:scale-105 transition-transform duration-500"
+                    className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
-                    style={{ objectFit: 'cover', objectPosition: 'center' }}
                   />
                 ) : (
                   <Skeleton className="w-full h-full" />
