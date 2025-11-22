@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import CornerBracket from "@/components/CornerBracket";
 import ArrowLink from "@/components/ArrowLink";
 import TypingText from "@/components/TypingText";
@@ -262,28 +263,25 @@ const Home = () => {
           {/* Dark Section - Other Works */}
           <section ref={darkCarouselRef} className="max-w-[1648px] mx-auto">
             <div className="bg-secondary px-9 pt-[30px] pb-9 flex flex-col gap-16">
-              <div className="flex flex-col gap-3">
-                <div className="flex items-center gap-6 pl-16">
-                  <h2 className="text-[64px] font-medium leading-[110%] tracking-[-0.04em] uppercase text-secondary-foreground animate-fade-in" style={{
-                animationDelay: "0.2s"
-              }}>
-                    [GRAFIKI]
-                  </h2>
-                  <ArrowLink to="/tworczość/rysunki" className="text-white">
-                    Przejdź do pełnej kolekcji
-                  </ArrowLink>
-                </div>
-                <div className="flex justify-center opacity-50">
-                  <h3 className="text-[64px] font-medium leading-[110%] tracking-[-0.04em] uppercase text-secondary-foreground">
-                    [ARTEFAKTY]
-                  </h3>
-                </div>
-                <div className="flex justify-center opacity-50">
-                  <h3 className="text-[64px] font-medium leading-[110%] tracking-[-0.04em] uppercase text-secondary-foreground">
-                    [INSTALACJE]
-                  </h3>
-                </div>
+            <div className="flex flex-col gap-3">
+              <div className="flex justify-center">
+                <Link to="/tworczość/grafiki" className="text-[64px] font-medium leading-[110%] tracking-[-0.04em] uppercase text-secondary-foreground hover:text-white transition-colors animate-fade-in" style={{
+              animationDelay: "0.2s"
+            }}>
+                  [GRAFIKI]
+                </Link>
               </div>
+              <div className="flex justify-center">
+                <Link to="/tworczość/artefakty" className="text-[64px] font-medium leading-[110%] tracking-[-0.04em] uppercase text-secondary-foreground hover:text-white transition-colors opacity-50 hover:opacity-100">
+                  [ARTEFAKTY]
+                </Link>
+              </div>
+              <div className="flex justify-center">
+                <Link to="/tworczość/instalacje" className="text-[64px] font-medium leading-[110%] tracking-[-0.04em] uppercase text-secondary-foreground hover:text-white transition-colors opacity-50 hover:opacity-100">
+                  [INSTALACJE]
+                </Link>
+              </div>
+            </div>
 
               {/* Horizontal Carousel Gallery */}
               <Carousel setApi={setDarkCarouselApi} opts={{
