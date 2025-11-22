@@ -30,13 +30,22 @@ const MasonryArtworkGrid = ({ artworks, categoryDescription }: MasonryArtworkGri
         )}
 
         <div className="flex flex-wrap gap-10 justify-center">
-          {artworks.map((artwork) => (
-            <div
-              key={artwork.id}
-              className="flex-grow flex-shrink basis-[300px] max-w-[400px] cursor-pointer group"
-              onClick={() => setSelectedArtwork(artwork)}
-            >
-              <div className="w-full min-h-[443px] bg-muted relative overflow-hidden">
+          {artworks.map((artwork) => {
+            const isWideImage = artwork.id === "obraz-07";
+            
+            return (
+              <div
+                key={artwork.id}
+                className={`cursor-pointer group ${
+                  isWideImage 
+                    ? "w-full" 
+                    : "flex-grow flex-shrink basis-[300px] max-w-[400px]"
+                }`}
+                onClick={() => setSelectedArtwork(artwork)}
+              >
+                <div className={`w-full bg-muted relative overflow-hidden ${
+                  isWideImage ? "min-h-[568px]" : "min-h-[443px]"
+                }`}>
                 {artwork.image ? (
                   <img
                     src={artwork.image}
@@ -48,11 +57,13 @@ const MasonryArtworkGrid = ({ artworks, categoryDescription }: MasonryArtworkGri
                   <Skeleton className="w-full h-full" />
                 )}
               </div>
-              <div className="mt-4">
+              <div className={`mt-4 ${isWideImage ? "text-center" : ""}`}>
                 <h3 className="text-lg font-normal tracking-tight uppercase text-foreground mb-1">
                   {artwork.title}
                 </h3>
-                <div className="flex items-center gap-1 text-sm font-light text-muted-foreground">
+                <div className={`flex items-center gap-1 text-sm font-light text-muted-foreground ${
+                  isWideImage ? "justify-center" : ""
+                }`}>
                   <span>{artwork.medium}</span>
                   <span className="tracking-tight">|</span>
                   <span>{artwork.dimensions}</span>
@@ -61,7 +72,8 @@ const MasonryArtworkGrid = ({ artworks, categoryDescription }: MasonryArtworkGri
                 </div>
               </div>
             </div>
-          ))}
+          );
+          })}
         </div>
       </div>
 
