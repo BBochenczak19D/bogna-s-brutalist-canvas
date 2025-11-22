@@ -32,6 +32,7 @@ const MasonryArtworkGrid = ({ artworks, categoryDescription }: MasonryArtworkGri
         <div className="flex flex-wrap gap-10 justify-center">
           {artworks.map((artwork) => {
             const isWideImage = artwork.id === "obraz-07";
+            const isCenteredImage = artwork.id === "obraz-08";
             
             return (
               <div
@@ -39,12 +40,14 @@ const MasonryArtworkGrid = ({ artworks, categoryDescription }: MasonryArtworkGri
                 className={`cursor-pointer group ${
                   isWideImage 
                     ? "w-full" 
+                    : isCenteredImage
+                    ? "flex-grow flex-shrink basis-[500px] max-w-[600px]"
                     : "flex-grow flex-shrink basis-[300px] max-w-[400px]"
                 }`}
                 onClick={() => setSelectedArtwork(artwork)}
               >
                 <div className={`w-full bg-muted relative overflow-hidden ${
-                  isWideImage ? "min-h-[568px]" : "min-h-[443px]"
+                  isWideImage ? "min-h-[568px]" : isCenteredImage ? "min-h-[684px]" : "min-h-[443px]"
                 }`}>
                 {artwork.image ? (
                   <img
@@ -52,17 +55,18 @@ const MasonryArtworkGrid = ({ artworks, categoryDescription }: MasonryArtworkGri
                     alt={artwork.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
+                    style={{ objectFit: 'cover' }}
                   />
                 ) : (
                   <Skeleton className="w-full h-full" />
                 )}
               </div>
-              <div className={`mt-4 ${isWideImage ? "text-center" : ""}`}>
+              <div className={`mt-4 ${(isWideImage || isCenteredImage) ? "text-center" : ""}`}>
                 <h3 className="text-lg font-normal tracking-tight uppercase text-foreground mb-1">
                   {artwork.title}
                 </h3>
                 <div className={`flex items-center gap-1 text-sm font-light text-muted-foreground ${
-                  isWideImage ? "justify-center" : ""
+                  (isWideImage || isCenteredImage) ? "justify-center" : ""
                 }`}>
                   <span>{artwork.medium}</span>
                   <span className="tracking-tight">|</span>
