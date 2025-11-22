@@ -361,23 +361,23 @@ const Home = () => {
                     to="/tworczość/grafiki"
                     className="text-[64px] font-medium leading-[110%] tracking-[-0.04em] uppercase text-secondary-foreground hover:text-white transition-colors opacity-50 hover:opacity-100"
                   >
-                    [GRAFIKI]
+                    GRAFIKI
                   </Link>
                 </div>
-                <div className="flex justify-center">
+                <div className="flex">
                   <Link
                     to="/tworczość/artefakty"
                     className="text-[64px] font-medium leading-[110%] tracking-[-0.04em] uppercase text-secondary-foreground hover:text-white transition-colors opacity-50 hover:opacity-100"
                   >
-                    [ARTEFAKTY]
+                    ARTEFAKTY
                   </Link>
                 </div>
-                <div className="flex justify-center">
+                <div className="flex">
                   <Link
                     to="/tworczość/instalacje"
                     className="text-[64px] font-medium leading-[110%] tracking-[-0.04em] uppercase text-secondary-foreground hover:text-white transition-colors opacity-50 hover:opacity-100"
                   >
-                    [INSTALACJE]
+                    INSTALACJE
                   </Link>
                 </div>
               </div>
