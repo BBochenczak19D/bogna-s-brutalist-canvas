@@ -18,9 +18,9 @@ const Tworczość = () => {
       description: "Rysunki i szkice"
     },
     {
-      title: "INSTALACJE",
-      path: "/tworczość/instalacje",
-      description: "Instalacje przestrzenne"
+      title: "GRAFIKI",
+      path: "/tworczość/grafiki",
+      description: "Grafika cyfrowa i drukowana"
     }
   ];
 
