@@ -368,83 +368,19 @@
   "rysunki": [
     {
       "id": "rysunek-01",
-      "title": "W poszukiwaniu III Materii",
-      "medium": "Tusz na papierze",
-      "dimensions": "150 x 120 cm",
-      "year": "2023",
-      "image": ""
+      "title": "Rysunek I",
+      "medium": "Technika mieszana na płótnie",
+      "dimensions": "120 x 110 cm",
+      "year": "2020",
+      "image": "/artworks/rysunki/rysunek-01.jpg"
     },
     {
       "id": "rysunek-02",
-      "title": "W poszukiwaniu III Materii",
-      "medium": "Tusz na papierze",
-      "dimensions": "150 x 120 cm",
-      "year": "2023",
-      "image": ""
-    },
-    {
-      "id": "rysunek-03",
-      "title": "W poszukiwaniu III Materii",
-      "medium": "Tusz na papierze",
-      "dimensions": "150 x 120 cm",
-      "year": "2023",
-      "image": ""
-    },
-    {
-      "id": "rysunek-04",
-      "title": "W poszukiwaniu III Materii",
-      "medium": "Tusz na papierze",
-      "dimensions": "150 x 120 cm",
-      "year": "2023",
-      "image": ""
-    },
-    {
-      "id": "rysunek-05",
-      "title": "W poszukiwaniu III Materii",
-      "medium": "Tusz na papierze",
-      "dimensions": "150 x 120 cm",
-      "year": "2023",
-      "image": ""
-    },
-    {
-      "id": "rysunek-06",
-      "title": "W poszukiwaniu III Materii",
-      "medium": "Tusz na papierze",
-      "dimensions": "150 x 120 cm",
-      "year": "2023",
-      "image": ""
-    },
-    {
-      "id": "rysunek-07",
-      "title": "W poszukiwaniu III Materii",
-      "medium": "Tusz na papierze",
-      "dimensions": "150 x 120 cm",
-      "year": "2023",
-      "image": ""
-    },
-    {
-      "id": "rysunek-08",
-      "title": "W poszukiwaniu III Materii",
-      "medium": "Tusz na papierze",
-      "dimensions": "150 x 120 cm",
-      "year": "2023",
-      "image": ""
-    },
-    {
-      "id": "rysunek-09",
-      "title": "W poszukiwaniu III Materii",
-      "medium": "Tusz na papierze",
-      "dimensions": "150 x 120 cm",
-      "year": "2023",
-      "image": ""
-    },
-    {
-      "id": "rysunek-10",
-      "title": "W poszukiwaniu III Materii",
-      "medium": "Tusz na papierze",
-      "dimensions": "150 x 120 cm",
-      "year": "2023",
-      "image": ""
+      "title": "Rysunek II",
+      "medium": "Technika mieszana na płótnie",
+      "dimensions": "80 x 80 cm",
+      "year": "2020",
+      "image": "/artworks/rysunki/rysunek-02.jpg"
     }
   ],
   "grafiki": [
