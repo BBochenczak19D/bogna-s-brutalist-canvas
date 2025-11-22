@@ -62,7 +62,7 @@ const Home = () => {
       {/* Main Hero Text */}
       <section className="max-w-[1648px] mx-auto px-9 py-0 mt-[42px]">
         <div className="flex flex-col gap-8 py-8">
-          <h1 className="text-[72px] md:text-[42px] font-medium leading-[100%] tracking-[-0.02em] uppercase max-w-none">
+          <h1 className="text-[72px] font-medium leading-[100%] tracking-[-0.02em] uppercase max-w-none">
             {sessionStorage.getItem('heroAnimationComplete') === 'true' ? (
               "Co sprawia, że jesteśmy ożywieni? Co kieruje naszym istnieniem, jeśli wykraczamy poza myśli i widzialną materię?"
             ) : (
@@ -112,7 +112,7 @@ const Home = () => {
             </Carousel>
 
             {/* Description Section */}
-            <div className="px-9 pt-9 pb-[78px] flex md:flex-col items-start gap-16">
+            <div className="px-9 pt-9 pb-[78px] flex items-start gap-16">
               <CornerBracket />
               <p
                 className="flex-1 text-base font-light leading-[125%] tracking-[-0.02em] text-foreground/90 animate-fade-in"
@@ -202,8 +202,8 @@ const Home = () => {
             </div>
 
             {/* Two Column Images */}
-            <div className="flex md:flex-col gap-16 mb-9">
-              <div className="flex-1 w-full md:w-auto flex flex-col gap-6">
+            <div className="flex gap-16 mb-9">
+              <div className="flex-1 flex flex-col gap-6">
                 <img
                   src="/artworks/collections/iii-materia/materia-01.jpg"
                   alt="Materia I"
@@ -213,7 +213,7 @@ const Home = () => {
                   [cz. I | 2023]
                 </p>
               </div>
-              <div className="flex-1 w-full md:w-auto flex flex-col gap-6">
+              <div className="flex-1 flex flex-col gap-6">
                 <img
                   src="/artworks/collections/iii-materia/materia-02.jpg"
                   alt="Materia II"
@@ -277,11 +277,11 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="flex md:flex-col px-0 items-center gap-16 self-stretch">
+            <div className="flex px-0 items-center gap-16 self-stretch">
               <img
                 src="/artworks/collections/iii-materia/materia-03.jpg"
                 alt="Materia III"
-                className="w-[743px] md:w-full h-[743px] aspect-square object-cover"
+                className="w-[743px] h-[743px] aspect-square object-cover"
               />
               <div className="flex flex-col justify-center items-start gap-3">
                 <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
@@ -316,7 +316,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="flex md:flex-col px-0 justify-end items-center gap-16 self-stretch">
+            <div className="flex px-0 justify-end items-center gap-16 self-stretch">
               <div className="flex flex-col justify-center items-start gap-3">
                 <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
                   [cz. IV | 2023]
@@ -326,7 +326,7 @@ const Home = () => {
               <img
                 src="/artworks/collections/iii-materia/materia-04.jpg"
                 alt="Materia IV"
-                className="w-[640px] md:w-full h-[698px] object-cover"
+                className="w-[640px] h-[698px] object-cover"
               />
             </div>
 
