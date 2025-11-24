@@ -9,7 +9,7 @@ const navItems = [
     path: "/collections",
     label: "Kolekcje",
     subItems: [
-      { path: "/collections/iii-materia", label: "III Materia" },
+      //{ path: "/collections/iii-materia", label: "III Materia" },
       { path: "/collections/inne", label: "Inne" },
     ],
   },
