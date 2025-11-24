@@ -195,18 +195,57 @@ const Navigation = () => {
       {/* Mobile Navigation */}
       {isOpen && (
         <div className="md:hidden mt-4 flex flex-col gap-2 border-t border-foreground pt-4">
-          {navItems.map((item) => (
-            <Link
-              key={item.path}
-              to={item.path}
-              onClick={() => setIsOpen(false)}
-              className="px-[5px] py-[3px] hover:opacity-70 transition-opacity"
-            >
-              <span className="text-xl font-normal uppercase leading-[100%]">
-                {item.label}
-              </span>
-            </Link>
-          ))}
+          {navItems.map((item) => {
+            const isActive = isActiveParent(item);
+            const hasSubItems = 'subItems' in item && item.subItems;
+            
+            return (
+              <div key={item.path} className="flex flex-col gap-2">
+                {hasSubItems ? (
+                  <>
+                    <button
+                      onClick={() => setClickedItem(clickedItem === item.path ? null : item.path)}
+                      className={`px-[5px] py-[3px] text-left transition-opacity ${
+                        isActive ? 'opacity-100 underline' : 'hover:opacity-70'
+                      }`}
+                    >
+                      <span className="text-xl font-normal uppercase leading-[100%]">
+                        {item.label}
+                      </span>
+                    </button>
+                    {clickedItem === item.path && (
+                      <div className="flex flex-col gap-2 pl-4">
+                        {item.subItems.map((subItem) => (
+                          <NavLink
+                            key={subItem.path}
+                            to={subItem.path}
+                            onClick={() => setIsOpen(false)}
+                            className="px-[5px] py-[3px] hover:opacity-70 transition-opacity"
+                            activeClassName="underline opacity-100"
+                          >
+                            <span className="text-lg font-normal uppercase leading-[100%]">
+                              {subItem.label}
+                            </span>
+                          </NavLink>
+                        ))}
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <NavLink
+                    to={item.path}
+                    onClick={() => setIsOpen(false)}
+                    className="px-[5px] py-[3px] hover:opacity-70 transition-opacity"
+                    activeClassName="underline opacity-100"
+                  >
+                    <span className="text-xl font-normal uppercase leading-[100%]">
+                      {item.label}
+                    </span>
+                  </NavLink>
+                )}
+              </div>
+            );
+          })}
         </div>
       )}
     </nav>
