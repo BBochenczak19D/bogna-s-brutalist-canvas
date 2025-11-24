@@ -59,7 +59,8 @@ const Navigation = () => {
       path: "/collections", 
       label: "Kolekcje",
       subItems: [
-        { path: "/collections/iii-materia", label: "III Materia" }
+        { path: "/collections/iii-materia", label: "III Materia" },
+        { path: "/collections", label: "Inne" }
       ]
     },
     { 
