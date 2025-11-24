@@ -165,6 +165,10 @@ const Navigation = () => {
                         key={subItem.path}
                         to={subItem.path}
                         className="px-[5px] py-[3px] hover:opacity-70 transition-all duration-300"
+                        onClick={() => {
+                          setHoveredItem(null);
+                          setClickedItem(null);
+                        }}
                       >
                         <span className="text-lg font-normal uppercase leading-[100%] tracking-normal">
                           {subItem.label}
