@@ -10,7 +10,6 @@ const navItems = [
     label: "Kolekcje",
     subItems: [
       { path: "/collections/iii-materia", label: "III Materia" },
-      // If "Inne" should be a separate page, give it a unique path, e.g. "/collections/inne"
       { path: "/collections/inne", label: "Inne" },
     ],
   },
@@ -34,27 +33,24 @@ const Navigation = () => {
   const location = useLocation();
 
   // UI states
-  const [isOpen, setIsOpen] = useState(false); // mobile menu
+  const [isOpen, setIsOpen] = useState(false);
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [clickedItem, setClickedItem] = useState<string | null>(null);
 
-  // Visibility states for nav show/hide on scroll
+  // Scroll visibility
   const [isVisible, setIsVisible] = useState(true);
+  const lastScrollYRef = useRef(0);
+  const tickingRef = useRef(false);
+  const scrollLockedRef = useRef(false);
 
-  // Refs for scroll handling to avoid stale-closure bugs
-  const lastScrollYRef = useRef<number>(0);
-  const tickingRef = useRef<boolean>(false);
-  const scrollLockedRef = useRef<boolean>(false);
-
-  // A safe wrapper to update both ref and state for lastScrollY if you ever want stateful value (not required here)
   const setLastScrollYRef = (val: number) => {
     lastScrollYRef.current = val;
   };
 
-  // Utility: is parent active only when a real child path is active (prevents subitem that equals parent path from keeping it open)
+  // Check if parent is active only when a real child path matches
   const isActiveParent = useCallback(
     (item: (typeof navItems)[0]) => {
-      if ("subItems" in item && item.subItems) {
+      if (item.subItems) {
         return item.subItems.some((sub) => sub.path !== item.path && sub.path === location.pathname);
       }
       return item.path === location.pathname;
@@ -62,95 +58,67 @@ const Navigation = () => {
     [location.pathname],
   );
 
-  // Scroll handler: runs once, uses refs
+  // Scroll handler
   useEffect(() => {
     const handleScroll = () => {
       if (scrollLockedRef.current) return;
 
       if (!tickingRef.current) {
         tickingRef.current = true;
-
         window.requestAnimationFrame(() => {
-          const currentScrollY = window.scrollY;
-          const documentHeight = document.documentElement.scrollHeight;
-          const windowHeight = window.innerHeight;
-          const scrollableHeight = documentHeight - windowHeight;
+          const current = window.scrollY;
+          const last = lastScrollYRef.current;
 
-          if (scrollableHeight > 200) {
-            const last = lastScrollYRef.current;
+          if (current < last) setIsVisible(true);
+          else if (current > last && current > 100) setIsVisible(false);
 
-            if (currentScrollY < last) {
-              // Scrolling up
-              setIsVisible(true);
-            } else if (currentScrollY > last && currentScrollY > 100) {
-              // Scrolling down and past 100px
-              setIsVisible(false);
-            }
-            setLastScrollYRef(currentScrollY);
-          } else {
-            setIsVisible(true);
-            setLastScrollYRef(currentScrollY);
-          }
-
+          setLastScrollYRef(current);
           tickingRef.current = false;
         });
       }
     };
 
-    // Register once
     window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []); // empty deps => registered once
-
-  // On route change: close dropdowns and lock scroll handling briefly to avoid race/interrupt
+  // Route change: reset dropdowns
   useEffect(() => {
     setHoveredItem(null);
     setClickedItem(null);
     setIsOpen(false);
-
-    // Ensure nav is visible after route change
     setIsVisible(true);
 
-    // Lock scroll-based hiding for a short time to avoid immediate hide due to layout/scroll jumps
     scrollLockedRef.current = true;
     const timer = setTimeout(() => {
-      // reset lastScrollY to current actual scroll pos to avoid an immediate hide due to stale 0
-      setLastScrollYRef(window.scrollY || 0);
       scrollLockedRef.current = false;
-    }, 260); // tweak duration if needed (200-350ms is common)
+      setLastScrollYRef(window.scrollY || 0);
+    }, 250);
 
     return () => clearTimeout(timer);
   }, [location.pathname]);
 
-  // Helper for deciding to show subitems (hover, click, or active child)
-  const shouldShowSubItemsFor = (item: (typeof navItems)[0]) => {
-    const isActive = isActiveParent(item);
-    const isHovered = hoveredItem === item.path;
-    const isClicked = clickedItem === item.path;
-    return isActive || isHovered || isClicked;
-  };
+  const shouldShowSubItemsFor = (item: (typeof navItems)[0]) =>
+    isActiveParent(item) || hoveredItem === item.path || clickedItem === item.path;
 
   return (
     <nav
-      className={`w-full px-8 py-4 bg-white fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
+      className={`w-full px-8 py-4 bg-white fixed top-0 left-0 right-0 z-[9999] transition-all duration-700 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       } ${heroTypingComplete ? "opacity-100" : "opacity-0 pointer-events-none"}`}
     >
       <div className="flex justify-between items-start max-w-[1920px] mx-auto">
         {/* Logo */}
-        <Link to="/" className="text-2xl font-normal uppercase leading-[100%] tracking-normal">
-          Bogna bartkowiak
+        <Link to="/" className="text-2xl font-normal uppercase">
+          Bogna Bartkowiak
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-start gap-2.5">
           {navItems.map((item) => {
-            const hasSubItems = "subItems" in item && item.subItems;
+            const hasSubItems = !!item.subItems;
             const isActive = isActiveParent(item);
-            const shouldShowSubItems = shouldShowSubItemsFor(item);
+            const showSub = shouldShowSubItemsFor(item);
 
             return (
               <div
@@ -161,18 +129,13 @@ const Navigation = () => {
               >
                 {hasSubItems ? (
                   <button
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setClickedItem((prev) => (prev === item.path ? null : item.path));
-                    }}
-                    className={`px-[5px] py-[3px] transition-all duration-300 ${
-                      isActive ? "text-white" : "hover:opacity-70"
-                    }`}
-                    aria-expanded={shouldShowSubItems}
+                    onClick={() => setClickedItem((p) => (p === item.path ? null : item.path))}
+                    className={`px-[5px] py-[3px] transition-all duration-300 hover:opacity-70`}
+                    aria-expanded={showSub}
                     aria-haspopup="true"
                   >
                     <span
-                      className={`text-xl font-normal uppercase leading-[100%] tracking-normal transition-all duration-300 ${
+                      className={`text-xl font-normal uppercase transition-all ${
                         isActive ? "underline decoration-solid" : ""
                       }`}
                     >
@@ -182,17 +145,10 @@ const Navigation = () => {
                 ) : (
                   <NavLink
                     to={item.path}
-                    className={`px-[5px] py-[3px] transition-all duration-300 ${
-                      isActive ? "text-white" : "hover:opacity-70"
-                    }`}
+                    className="px-[5px] py-[3px] transition-all duration-300 hover:opacity-70"
+                    activeClassName="underline"
                   >
-                    <span
-                      className={`text-xl font-normal uppercase leading-[100%] tracking-normal transition-all duration-300 ${
-                        isActive ? "underline decoration-solid" : ""
-                      }`}
-                    >
-                      {item.label}
-                    </span>
+                    <span className="text-xl font-normal uppercase">{item.label}</span>
                   </NavLink>
                 )}
 
@@ -200,7 +156,9 @@ const Navigation = () => {
                 {hasSubItems && (
                   <div
                     className={`flex flex-col items-end gap-2.5 overflow-hidden transition-all duration-500 ease-in-out ${
-                      shouldShowSubItems ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                      showSub
+                        ? "max-h-[500px] opacity-100 pointer-events-auto z-[50]"
+                        : "max-h-0 opacity-0 pointer-events-none"
                     }`}
                     onClick={(e) => e.stopPropagation()}
                   >
@@ -210,11 +168,9 @@ const Navigation = () => {
                         to={subItem.path}
                         className="px-[5px] py-[3px] hover:opacity-70 transition-all duration-300"
                         onClick={() => {
-                          // Immediately close dropdowns on click (desktop)
                           setHoveredItem(null);
                           setClickedItem(null);
                           setIsOpen(false);
-                          // lock scroll for a short moment to prevent race with scroll handler
                           scrollLockedRef.current = true;
                           setTimeout(() => {
                             scrollLockedRef.current = false;
@@ -222,9 +178,7 @@ const Navigation = () => {
                           }, 260);
                         }}
                       >
-                        <span className="text-lg font-normal uppercase leading-[100%] tracking-normal">
-                          {subItem.label}
-                        </span>
+                        <span className="text-lg font-normal uppercase">{subItem.label}</span>
                       </NavLink>
                     ))}
                   </div>
@@ -235,37 +189,23 @@ const Navigation = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden p-2" onClick={() => setIsOpen((s) => !s)} aria-label="Toggle menu">
+        <button className="md:hidden p-2" onClick={() => setIsOpen((s) => !s)}>
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden mt-4 flex flex-col gap-2 border-t border-foreground pt-4">
+        <div className="md:hidden mt-4 flex flex-col gap-2 border-t pt-4">
           {navItems.map((item) => (
-            <div key={item.path}>
-              <Link
-                to={item.path}
-                onClick={() => {
-                  setIsOpen(false);
-                  // ensure submenu states are cleared
-                  setHoveredItem(null);
-                  setClickedItem(null);
-                  // lock scroll briefly to avoid race
-                  scrollLockedRef.current = true;
-                  setTimeout(() => {
-                    scrollLockedRef.current = false;
-                    setLastScrollYRef(window.scrollY || 0);
-                  }, 260);
-                }}
-                className="px-[5px] py-[3px] hover:opacity-70 transition-opacity"
-              >
-                <span className="text-xl font-normal uppercase leading-[100%]">{item.label}</span>
-              </Link>
-
-              {/* if want mobile expandable subitems, you can add toggles here */}
-            </div>
+            <Link
+              key={item.path}
+              to={item.path}
+              className="px-[5px] py-[3px] hover:opacity-70"
+              onClick={() => setIsOpen(false)}
+            >
+              <span className="text-xl uppercase">{item.label}</span>
+            </Link>
           ))}
         </div>
       )}
