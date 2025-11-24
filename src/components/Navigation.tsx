@@ -4,6 +4,8 @@ import { Menu, X } from "lucide-react";
 import { NavLink } from "./NavLink";
 import { useAnimation } from "@/contexts/AnimationContext";
 
+const [scrollLocked, setScrollLocked] = useState(false);
+
 const Navigation = () => {
   const { heroTypingComplete } = useAnimation();
   const [isOpen, setIsOpen] = useState(false);
@@ -18,6 +20,7 @@ const Navigation = () => {
 
     const handleScroll = () => {
       if (!ticking) {
+        if (scrollLocked) return; // to tez dodałam teraz
         window.requestAnimationFrame(() => {
           const currentScrollY = window.scrollY;
           const documentHeight = document.documentElement.scrollHeight;
@@ -100,8 +103,14 @@ const Navigation = () => {
     setHoveredItem(null);
     setClickedItem(null);
     setIsOpen(false);
+    // Lock scroll-based nav hiding for a short moment
+    setScrollLocked(true); //teraz dodałam
     setIsVisible(true); // Always show navigation on route change
+
     setLastScrollY(0); // Reset scroll position tracking
+    // Unlock after 300ms
+    const timer = setTimeout(() => setScrollLocked(false), 300);
+    return () => clearTimeout(timer);
   }, [location.pathname]);
 
   return (
