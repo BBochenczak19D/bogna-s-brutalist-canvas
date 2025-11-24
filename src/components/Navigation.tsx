@@ -33,27 +33,29 @@ const Navigation = () => {
   const location = useLocation();
 
   // UI states
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); // mobile menu
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [clickedItem, setClickedItem] = useState<string | null>(null);
 
-  // Scroll visibility
+  // Visibility states for nav show/hide on scroll
   const [isVisible, setIsVisible] = useState(true);
-  const lastScrollYRef = useRef(0);
-  const tickingRef = useRef(false);
-  const scrollLockedRef = useRef(false);
+
+  // Refs for scroll handling to avoid stale-closure bugs
+  const lastScrollYRef = useRef<number>(0);
+  const tickingRef = useRef<boolean>(false);
+  const scrollLockedRef = useRef<boolean>(false);
 
   const setLastScrollYRef = (val: number) => {
     lastScrollYRef.current = val;
   };
 
-  // Check if parent is active only when a real child path matches
+  // Utility: is parent active only when a real child path is active
   const isActiveParent = useCallback(
     (item: (typeof navItems)[0]) => {
       if (item.subItems) {
-        return item.subItems.some((sub) => sub.path !== item.path && sub.path === location.pathname);
+        return item.subItems.some((sub) => location.pathname.startsWith(sub.path));
       }
-      return item.path === location.pathname;
+      return location.pathname === item.path;
     },
     [location.pathname],
   );
@@ -65,24 +67,40 @@ const Navigation = () => {
 
       if (!tickingRef.current) {
         tickingRef.current = true;
+
         window.requestAnimationFrame(() => {
-          const current = window.scrollY;
-          const last = lastScrollYRef.current;
+          const currentScrollY = window.scrollY;
+          const documentHeight = document.documentElement.scrollHeight;
+          const windowHeight = window.innerHeight;
+          const scrollableHeight = documentHeight - windowHeight;
 
-          if (current < last) setIsVisible(true);
-          else if (current > last && current > 100) setIsVisible(false);
+          if (scrollableHeight > 200) {
+            const last = lastScrollYRef.current;
 
-          setLastScrollYRef(current);
+            if (currentScrollY < last) {
+              setIsVisible(true);
+            } else if (currentScrollY > last && currentScrollY > 100) {
+              setIsVisible(false);
+            }
+            setLastScrollYRef(currentScrollY);
+          } else {
+            setIsVisible(true);
+            setLastScrollYRef(currentScrollY);
+          }
+
           tickingRef.current = false;
         });
       }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
-  // Route change: reset dropdowns
+  // Close dropdowns and lock scroll briefly on route change
   useEffect(() => {
     setHoveredItem(null);
     setClickedItem(null);
@@ -91,34 +109,38 @@ const Navigation = () => {
 
     scrollLockedRef.current = true;
     const timer = setTimeout(() => {
-      scrollLockedRef.current = false;
       setLastScrollYRef(window.scrollY || 0);
-    }, 250);
+      scrollLockedRef.current = false;
+    }, 260);
 
     return () => clearTimeout(timer);
   }, [location.pathname]);
 
-  const shouldShowSubItemsFor = (item: (typeof navItems)[0]) =>
-    isActiveParent(item) || hoveredItem === item.path || clickedItem === item.path;
+  // Determine if submenu should show
+  const shouldShowSubItemsFor = (item: (typeof navItems)[0]) => {
+    const isActive = isActiveParent(item);
+    const isHovered = hoveredItem === item.path;
+    const isClicked = clickedItem === item.path;
+    return isActive || isHovered || isClicked;
+  };
 
   return (
     <nav
-      className={`w-full px-8 py-4 bg-white fixed top-0 left-0 right-0 z-[9999] transition-all duration-700 ${
+      className={`w-full px-8 py-4 bg-white fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       } ${heroTypingComplete ? "opacity-100" : "opacity-0 pointer-events-none"}`}
     >
       <div className="flex justify-between items-start max-w-[1920px] mx-auto">
         {/* Logo */}
-        <Link to="/" className="text-2xl font-normal uppercase">
-          Bogna Bartkowiak
+        <Link to="/" className="text-2xl font-normal uppercase leading-[100%] tracking-normal">
+          Bogna bartkowiak
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-start gap-2.5">
           {navItems.map((item) => {
             const hasSubItems = !!item.subItems;
-            const isActive = isActiveParent(item);
-            const showSub = shouldShowSubItemsFor(item);
+            const shouldShowSubItems = shouldShowSubItemsFor(item);
 
             return (
               <div
@@ -129,14 +151,17 @@ const Navigation = () => {
               >
                 {hasSubItems ? (
                   <button
-                    onClick={() => setClickedItem((p) => (p === item.path ? null : item.path))}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setClickedItem((prev) => (prev === item.path ? null : item.path));
+                    }}
                     className={`px-[5px] py-[3px] transition-all duration-300 hover:opacity-70`}
-                    aria-expanded={showSub}
+                    aria-expanded={shouldShowSubItems}
                     aria-haspopup="true"
                   >
                     <span
-                      className={`text-xl font-normal uppercase transition-all ${
-                        isActive ? "underline decoration-solid" : ""
+                      className={`text-xl font-normal uppercase leading-[100%] tracking-normal transition-all duration-300 ${
+                        isActiveParent(item) ? "underline decoration-solid" : ""
                       }`}
                     >
                       {item.label}
@@ -145,10 +170,10 @@ const Navigation = () => {
                 ) : (
                   <NavLink
                     to={item.path}
-                    className="px-[5px] py-[3px] transition-all duration-300 hover:opacity-70"
-                    activeClassName="underline"
+                    className={`px-[5px] py-[3px] transition-all duration-300 hover:opacity-70`}
+                    activeClassName="underline decoration-solid"
                   >
-                    <span className="text-xl font-normal uppercase">{item.label}</span>
+                    <span className="text-xl font-normal uppercase leading-[100%] tracking-normal">{item.label}</span>
                   </NavLink>
                 )}
 
@@ -156,9 +181,7 @@ const Navigation = () => {
                 {hasSubItems && (
                   <div
                     className={`flex flex-col items-end gap-2.5 overflow-hidden transition-all duration-500 ease-in-out ${
-                      showSub
-                        ? "max-h-[500px] opacity-100 pointer-events-auto z-[50]"
-                        : "max-h-0 opacity-0 pointer-events-none"
+                      shouldShowSubItems ? "max-h-96 opacity-100" : "max-h-0 opacity-0 pointer-events-none"
                     }`}
                     onClick={(e) => e.stopPropagation()}
                   >
@@ -167,7 +190,9 @@ const Navigation = () => {
                         key={subItem.path}
                         to={subItem.path}
                         className="px-[5px] py-[3px] hover:opacity-70 transition-all duration-300"
+                        activeClassName="underline opacity-100"
                         onClick={() => {
+                          // Close dropdowns on click
                           setHoveredItem(null);
                           setClickedItem(null);
                           setIsOpen(false);
@@ -178,7 +203,9 @@ const Navigation = () => {
                           }, 260);
                         }}
                       >
-                        <span className="text-lg font-normal uppercase">{subItem.label}</span>
+                        <span className="text-lg font-normal uppercase leading-[100%] tracking-normal">
+                          {subItem.label}
+                        </span>
                       </NavLink>
                     ))}
                   </div>
@@ -189,23 +216,48 @@ const Navigation = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden p-2" onClick={() => setIsOpen((s) => !s)}>
+        <button className="md:hidden p-2" onClick={() => setIsOpen((s) => !s)} aria-label="Toggle menu">
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden mt-4 flex flex-col gap-2 border-t pt-4">
+        <div className="md:hidden mt-4 flex flex-col gap-2 border-t border-foreground pt-4">
           {navItems.map((item) => (
-            <Link
-              key={item.path}
-              to={item.path}
-              className="px-[5px] py-[3px] hover:opacity-70"
-              onClick={() => setIsOpen(false)}
-            >
-              <span className="text-xl uppercase">{item.label}</span>
-            </Link>
+            <div key={item.path}>
+              <Link
+                to={item.path}
+                onClick={() => {
+                  setIsOpen(false);
+                  setHoveredItem(null);
+                  setClickedItem(null);
+                  scrollLockedRef.current = true;
+                  setTimeout(() => {
+                    scrollLockedRef.current = false;
+                    setLastScrollYRef(window.scrollY || 0);
+                  }, 260);
+                }}
+                className="px-[5px] py-[3px] hover:opacity-70 transition-opacity"
+              >
+                <span className="text-xl font-normal uppercase leading-[100%]">{item.label}</span>
+              </Link>
+              {/* Optional: mobile expandable subitems */}
+              {item.subItems && clickedItem === item.path && (
+                <div className="flex flex-col gap-2 pl-4 mt-2">
+                  {item.subItems.map((subItem) => (
+                    <Link
+                      key={subItem.path}
+                      to={subItem.path}
+                      onClick={() => setIsOpen(false)}
+                      className="px-[5px] py-[3px] hover:opacity-70 transition-opacity"
+                    >
+                      <span className="text-lg font-normal uppercase leading-[100%]">{subItem.label}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
         </div>
       )}
