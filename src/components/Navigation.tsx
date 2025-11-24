@@ -128,9 +128,7 @@ const Navigation = () => {
                       e.preventDefault();
                       setClickedItem(clickedItem === item.path ? null : item.path);
                     }}
-                    className={`px-[5px] py-[3px] transition-all duration-300 ${
-                      isActive ? 'text-white' : 'hover:opacity-70'
-                    }`}
+                    className={`px-[5px] py-[3px] transition-all duration-300 hover:opacity-70`}
                   >
                     <span className={`text-xl font-normal uppercase leading-[100%] tracking-normal transition-all duration-300 ${
                       isActive ? 'underline decoration-solid' : ''
@@ -141,13 +139,10 @@ const Navigation = () => {
                 ) : (
                   <NavLink
                     to={item.path}
-                    className={`px-[5px] py-[3px] transition-all duration-300 ${
-                      isActive ? 'text-white' : 'hover:opacity-70'
-                    }`}
+                    className="px-[5px] py-[3px] transition-all duration-300 hover:opacity-70"
+                    activeClassName="underline decoration-solid"
                   >
-                    <span className={`text-xl font-normal uppercase leading-[100%] tracking-normal transition-all duration-300 ${
-                      isActive ? 'underline decoration-solid' : ''
-                    }`}>
+                    <span className="text-xl font-normal uppercase leading-[100%] tracking-normal">
                       {item.label}
                     </span>
                   </NavLink>
