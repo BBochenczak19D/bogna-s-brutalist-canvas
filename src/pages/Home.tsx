@@ -297,7 +297,7 @@ const Home = () => {
               <img
                 src="/artworks/collections/iii-materia/materia-03.jpg"
                 alt="Materia III"
-                className="w-[743px] h-[743px] aspect-square object-cover"
+                className="w-full md:w-[743px] aspect-square object-cover"
               />
               <div className="flex flex-col justify-center items-start gap-3">
                 <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
