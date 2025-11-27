@@ -62,7 +62,7 @@ const Home = () => {
       {/* Main Hero Text */}
       <section className="max-w-[1648px] mx-auto px-9 py-0 mt-[42px]">
         <div className="flex flex-col gap-8 py-8">
-          <h1 className="text-[72px] font-medium leading-[100%] tracking-[-0.02em] uppercase max-w-none">
+          <h1 className="text-[32px] md:text-[72px] font-medium leading-[100%] tracking-[-0.02em] uppercase max-w-none">
             {sessionStorage.getItem("heroAnimationComplete") === "true" ? (
               "Co sprawia, że jesteśmy ożywieni? Co kieruje naszym istnieniem, jeśli wykraczamy poza myśli i widzialną materię?"
             ) : (
