@@ -227,7 +227,7 @@ const Home = () => {
           <section className="max-w-[1648px] mx-auto px-9 py-[100px] flex flex-col items-start gap-6">
             <div className="flex px-0 items-center self-stretch">
               <div className="flex flex-col justify-center items-end gap-8 flex-1">
-                <p className="w-[599px] text-2xl font-normal leading-[110%] tracking-[-0.48px] uppercase">
+                <p className="w-full md:w-[599px] text-2xl font-normal leading-[110%] tracking-[-0.48px] uppercase">
                   <span className="text-foreground">
                     Wejście w Trzecią Materię nie wymaga wiary.{"\n"}Wymaga uważności.{" "}
                   </span>
