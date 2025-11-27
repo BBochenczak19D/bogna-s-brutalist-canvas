@@ -360,7 +360,7 @@ const Home = () => {
             </div>
 
             <div className="flex px-9 flex-col justify-end items-start gap-16 self-stretch">
-              <img src="/artworks/collections/iii-materia/materia-07.jpg" alt="Materia VII" className="h-[788px] self-stretch aspect-[2/1] object-cover" />
+              <img src="/artworks/collections/iii-materia/materia-07.jpg" alt="Materia VII" className="w-full h-auto md:h-[788px] md:aspect-[2/1] object-cover" />
             </div>
 
             <div className="flex px-9 justify-between items-end self-stretch">
