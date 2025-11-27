@@ -300,9 +300,9 @@ const Home = () => {
           {/* Final Philosophy Sections */}
           <section className="max-w-[1648px] mx-auto px-9 py-[100px] flex flex-col items-start gap-9">
             <div className="flex px-0 items-center self-stretch">
-              <div className="flex justify-between items-start flex-1">
+              <div className="flex flex-col md:flex-row justify-between items-start flex-1">
                 <CornerBracket />
-                <p className="w-[579px] text-2xl font-medium leading-[110%] tracking-[-0.48px] uppercase animate-fade-in" style={{
+                <p className="w-full md:w-[579px] text-2xl font-medium leading-[110%] tracking-[-0.48px] uppercase animate-fade-in" style={{
               animationDelay: "0.2s"
             }}>
                   To nie jest opowieść o mistyce. To opowieść o strukturze istnienia, która nie mieści się w ciele ani w
