@@ -263,17 +263,17 @@ const Home = () => {
             <div className="bg-secondary px-9 pt-[30px] pb-9 flex flex-col gap-16">
               <div className="flex flex-col gap-3">
                 <div className="flex">
-                  <Link to="/tworczość/grafiki" className="text-[64px] font-medium leading-[110%] tracking-[-0.04em] uppercase text-secondary-foreground hover:text-white transition-colors opacity-50 hover:opacity-100">
+                  <Link to="/tworczość/grafiki" className="text-2xl font-medium leading-[110%] tracking-[-0.04em] uppercase text-secondary-foreground hover:text-white transition-colors opacity-50 hover:opacity-100">
                     GRAFIKI
                   </Link>
                 </div>
                 <div className="flex">
-                  <Link to="/tworczość/artefakty" className="text-[64px] font-medium leading-[110%] tracking-[-0.04em] uppercase text-secondary-foreground hover:text-white transition-colors opacity-50 hover:opacity-100">
+                  <Link to="/tworczość/artefakty" className="text-2xl font-medium leading-[110%] tracking-[-0.04em] uppercase text-secondary-foreground hover:text-white transition-colors opacity-50 hover:opacity-100">
                     ARTEFAKTY
                   </Link>
                 </div>
                 <div className="flex">
-                  <Link to="/tworczość/instalacje" className="text-[64px] font-medium leading-[110%] tracking-[-0.04em] uppercase text-secondary-foreground hover:text-white transition-colors opacity-50 hover:opacity-100">
+                  <Link to="/tworczość/instalacje" className="text-2xl font-medium leading-[110%] tracking-[-0.04em] uppercase text-secondary-foreground hover:text-white transition-colors opacity-50 hover:opacity-100">
                     INSTALACJE
                   </Link>
                 </div>
