@@ -249,7 +249,7 @@ const Home = () => {
                 </p>
                 <ArrowLink to="/collections/iii-materia">PRzejdź do pełnej kolekcji</ArrowLink>
               </div>
-              <img src="/artworks/collections/iii-materia/materia-04.jpg" alt="Materia IV" className="w-[640px] h-[698px] object-cover" />
+              <img src="/artworks/collections/iii-materia/materia-04.jpg" alt="Materia IV" className="w-full md:w-[640px] aspect-square md:aspect-auto md:h-[698px] object-cover" />
             </div>
 
             <div className="flex px-0 justify-between items-center self-stretch">
