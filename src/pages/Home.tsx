@@ -145,7 +145,7 @@ const Home = () => {
             <div className="flex items-start gap-2 justify-between">
               <div>
                 <h2
-                  className="text-[64px] font-normal leading-[110%] tracking-[-0.02em] uppercase animate-fade-in"
+                  className="text-[32px] font-normal leading-[110%] tracking-[-0.02em] uppercase animate-fade-in"
                   style={{
                     animationDelay: "0.2s",
                   }}
