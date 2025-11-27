@@ -161,7 +161,7 @@ const Home = () => {
           <section className="max-w-[1648px] mx-auto px-9 py-[100px]">
             <div className="flex justify-end items-center self-stretch py-[24px]">
               <div className="flex justify-between items-start flex-1">
-                <div className="flex w-[565.801px] flex-col items-start gap-0.5">
+                <div className="flex w-full md:w-[565.801px] flex-col items-start gap-0.5">
                   <div
                     className="w-[579px] text-foreground font-medium text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in"
                     style={{
