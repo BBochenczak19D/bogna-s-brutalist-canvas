@@ -163,7 +163,7 @@ const Home = () => {
               <div className="flex justify-between items-start flex-1">
                 <div className="flex w-full md:w-[565.801px] flex-col items-start gap-0.5">
                   <div
-                    className="w-[579px] text-foreground font-medium text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in"
+                    className="w-full text-foreground font-medium text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in"
                     style={{
                       animationDelay: "0.1s",
                     }}
@@ -393,21 +393,19 @@ const Home = () => {
                 className="w-full"
               >
                 <CarouselContent className="gap-1">
-                  {[...rysunki, ...artworksData.artefakty, ...artworksData.instalacje]
-                    .slice(0, 8)
-                    .map((artwork) => (
-                      <CarouselItem key={artwork.id} className="basis-auto pl-0">
-                        <div className="relative">
-                          <img
-                            src={artwork.image}
-                            alt={artwork.title}
-                            className="w-[404px] h-[539px] object-cover"
-                            draggable={false}
-                          />
-                          <div className="absolute bottom-4 left-4 text-white/80 text-sm">{artwork.title}</div>
-                        </div>
-                      </CarouselItem>
-                    ))}
+                  {[...rysunki, ...artworksData.artefakty, ...artworksData.instalacje].slice(0, 8).map((artwork) => (
+                    <CarouselItem key={artwork.id} className="basis-auto pl-0">
+                      <div className="relative">
+                        <img
+                          src={artwork.image}
+                          alt={artwork.title}
+                          className="w-[404px] h-[539px] object-cover"
+                          draggable={false}
+                        />
+                        <div className="absolute bottom-4 left-4 text-white/80 text-sm">{artwork.title}</div>
+                      </div>
+                    </CarouselItem>
+                  ))}
                 </CarouselContent>
               </Carousel>
             </div>
