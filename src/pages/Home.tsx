@@ -210,7 +210,7 @@ const Home = () => {
             </div>
 
             {/* Two Column Images */}
-            <div className="flex gap-16 mb-9">
+            <div className="flex flex-col md:flex-row gap-16 mb-9">
               <div className="flex-1 flex flex-col gap-6">
                 <img
                   src="/artworks/collections/iii-materia/materia-01.jpg"
