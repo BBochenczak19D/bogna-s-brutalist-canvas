@@ -311,9 +311,9 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="flex px-0 items-start gap-[42px] self-stretch">
+            <div className="flex flex-col md:flex-row px-0 items-start gap-[42px] self-stretch">
               <div className="flex flex-col items-start gap-6 flex-1">
-                <img src="/artworks/collections/iii-materia/materia-05.jpg" alt="Materia V" className="h-[832px] self-stretch object-cover" />
+                <img src="/artworks/collections/iii-materia/materia-05.jpg" alt="Materia V" className="w-full h-auto md:h-[832px] self-stretch object-cover" />
                 <div className="flex items-center gap-3">
                   <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
                     [cz. V | 2023]
@@ -322,7 +322,7 @@ const Home = () => {
               </div>
 
               <div className="flex flex-col justify-center items-start gap-6 flex-1">
-                <img src="/artworks/collections/iii-materia/materia-06.jpg" alt="Materia VI" className="h-[907px] self-stretch object-cover" />
+                <img src="/artworks/collections/iii-materia/materia-06.jpg" alt="Materia VI" className="w-full h-auto md:h-[907px] self-stretch object-cover" />
                 <div className="flex items-center gap-3">
                   <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
                     [cz. VI | 2023]
