@@ -302,9 +302,9 @@ const Home = () => {
             <div className="flex px-0 items-center self-stretch">
               <div className="flex flex-col md:flex-row justify-between items-start flex-1">
                 <CornerBracket />
-                <p className="w-full md:w-[579px] text-2xl font-medium leading-[110%] tracking-[-0.48px] uppercase animate-fade-in" style={{
+                <p style={{
               animationDelay: "0.2s"
-            }}>
+            }} className="w-full md:w-[579px] text-2xl font-medium leading-[110%] tracking-[-0.48px] uppercase animate-fade-in py-[24px]">
                   To nie jest opowieść o mistyce. To opowieść o strukturze istnienia, która nie mieści się w ciele ani w
                   myśli, a mimo to kieruje jednym i drugim.
                 </p>
