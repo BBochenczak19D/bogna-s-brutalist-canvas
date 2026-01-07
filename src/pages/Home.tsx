@@ -38,7 +38,7 @@ const Home = () => {
   return <div className="min-h-screen bg-background">
       {/* Hero Bio Section */}
       <section className={`max-w-[1648px] mx-auto px-9 py-0 pt-32 transition-opacity duration-700 ${typingComplete ? "opacity-100" : "opacity-0"}`}>
-        <div className="flex items-start gap-6 max-w-[574px]">
+        <div className="items-start gap-6 max-w-[574px] flex flex-col">
           <CornerBracket />
           <img src="/artworks/profile.jpg" alt="Bogna Bartkowiak" className="w-[114px] h-[174px] object-cover flex-shrink-0" />
           <p className="flex-1 text-sm font-normal leading-[125%] uppercase animate-fade-in" style={{
