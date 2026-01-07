@@ -288,7 +288,7 @@ const Home = () => {
                 <CarouselContent className="gap-1">
                   {[...rysunki, ...artworksData.artefakty, ...artworksData.instalacje].slice(0, 8).map(artwork => <CarouselItem key={artwork.id} className="basis-auto pl-0">
                       <div className="relative">
-                        <img src={artwork.image} alt={artwork.title} className="w-full h-auto md:w-[404px] md:h-[539px] object-cover" draggable={false} />
+                        <img src={artwork.image} alt={artwork.title} className="h-[400px] w-auto md:w-[404px] md:h-[539px] object-cover" draggable={false} />
                         <div className="absolute bottom-4 left-4 text-white/80 text-sm">{artwork.title}</div>
                       </div>
                     </CarouselItem>)}
