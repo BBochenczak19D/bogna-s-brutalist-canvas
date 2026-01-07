@@ -459,7 +459,7 @@ const Home = () => {
 
             <div className="px-9 items-start gap-[42px] self-stretch flex flex-col">
               <div className="flex flex-col justify-center items-start gap-6 flex-1">
-                <img src="/artworks/collections/iii-materia/materia-09.jpg" alt="Materia IX" className="h-[654.14px] self-stretch aspect-[767/654.14] object-cover" />
+                <img src="/artworks/collections/iii-materia/materia-09.jpg" alt="Materia IX" className="w-full h-auto md:h-[654.14px] md:aspect-[767/654.14] object-cover" />
                 <div className="flex items-center gap-3">
                   <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
                     [cz. IX | 2023]
