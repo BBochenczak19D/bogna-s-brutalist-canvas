@@ -81,7 +81,7 @@ const Home = () => {
             </Carousel>
 
             {/* Description Section */}
-            <div className="px-9 pt-9 pb-[78px] flex items-start gap-16">
+            <div className="px-9 pt-9 pb-[78px] items-start flex flex-col py-[24px] gap-[32px]">
               <CornerBracket />
               <p className="flex-1 text-base font-light leading-[125%] tracking-[-0.02em] text-foreground/90 animate-fade-in" style={{
             animationDelay: "0.4s"
