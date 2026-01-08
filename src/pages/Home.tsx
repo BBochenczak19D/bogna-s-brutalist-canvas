@@ -76,7 +76,7 @@ const Home = () => {
         }} className="w-full">
               <CarouselContent className="px-9 gap-1">
                 {artworks.slice(0, 10).map(artwork => <CarouselItem key={artwork.id} className="basis-auto pl-0">
-                    <img src={artwork.image} alt={artwork.title} className="w-[404px] h-[539px] object-cover" draggable={false} />
+                    <img src={artwork.image} alt={artwork.title} className="max-w-[400px] h-auto object-contain" draggable={false} />
                   </CarouselItem>)}
               </CarouselContent>
             </Carousel>
