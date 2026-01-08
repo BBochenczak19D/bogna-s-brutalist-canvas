@@ -457,9 +457,9 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="px-9 items-start gap-[42px] self-stretch flex flex-row">
+            <div className="px-9 items-start gap-[42px] self-stretch flex flex-col md:flex-row">
               <div className="flex flex-col justify-center items-start gap-6 flex-1">
-                <img src="/artworks/collections/iii-materia/materia-09.jpg" alt="Materia IX" className="w-full h-auto md:h-[654.14px] md:aspect-[767/654.14] object-cover" />
+                <img src="/artworks/collections/iii-materia/materia-09.jpg" alt="Materia IX" className="w-full h-auto object-contain md:h-[654.14px] md:object-cover" />
                 <div className="flex items-center gap-3">
                   <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
                     [cz. IX | 2023]
@@ -468,7 +468,7 @@ const Home = () => {
               </div>
 
               <div className="flex flex-col items-start gap-6 flex-1">
-                <img src="/artworks/collections/iii-materia/materia-10.jpg" alt="Materia X" className="w-full h-auto md:h-[958.75px] md:aspect-[767/958.75] object-cover" />
+                <img src="/artworks/collections/iii-materia/materia-10.jpg" alt="Materia X" className="w-full h-auto object-contain md:h-[958.75px] md:object-cover" />
                 <div className="flex items-center gap-3">
                   <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
                     [cz. x | 2023]
