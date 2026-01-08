@@ -71,7 +71,8 @@ const Home = () => {
             <Carousel setApi={setCarouselApi} opts={{
           align: "start",
           loop: false,
-          dragFree: true
+          dragFree: true,
+          watchDrag: true
         }} className="w-full">
               <CarouselContent className="px-9 gap-1">
                 {artworks.slice(0, 10).map(artwork => <CarouselItem key={artwork.id} className="basis-auto pl-0">
