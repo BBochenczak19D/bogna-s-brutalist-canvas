@@ -1,8 +1,33 @@
+import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import { AnimationProvider } from "@/contexts/AnimationContext";
 
+const footerImages = [
+  "/artworks/obrazy/obraz-15.jpg",
+  "/artworks/obrazy/obraz-11.jpg",
+  "/artworks/obrazy/obraz-18.jpg",
+  "/artworks/grafiki/grafika-01.jpg",
+  "/artworks/artefakty/artefakt-05.jpg",
+  "/artworks/collections/iii-materia/materia-03.jpg",
+];
+
 const Layout = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setCurrentImageIndex((prev) => (prev + 1) % footerImages.length);
+        setIsTransitioning(false);
+      }, 500);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <AnimationProvider>
       <div className="min-h-screen bg-background">
@@ -10,19 +35,26 @@ const Layout = () => {
         <main>
           <Outlet />
         </main>
-        <footer className="relative mt-20 overflow-hidden h-[800px]">
-          {/* Background Image */}
+        <footer className="relative mt-20 overflow-hidden h-[564px]">
+          {/* Background Images with Crossfade */}
           <div className="absolute inset-0 z-0">
-            <img 
-              src="/artworks/obrazy/obraz-15.jpg" 
-              alt="" 
-              className="w-full h-full object-cover"
-            />
+            {footerImages.map((src, index) => (
+              <img
+                key={src}
+                src={src}
+                alt=""
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+                  index === currentImageIndex && !isTransitioning
+                    ? "opacity-100"
+                    : "opacity-0"
+                }`}
+              />
+            ))}
             <div className="absolute inset-0 bg-foreground/40" />
           </div>
           
           {/* Content */}
-          <div className="relative z-10 max-w-[1648px] mx-auto px-9 py-16">
+          <div className="relative z-10 max-w-[1648px] mx-auto px-9 py-16 h-full flex flex-col justify-between">
             <div className="flex flex-col md:flex-row justify-between gap-12">
               {/* Left Column - Name & Tagline */}
               <div className="flex flex-col gap-4">
@@ -111,7 +143,7 @@ const Layout = () => {
             </div>
             
             {/* Bottom Bar */}
-            <div className="mt-12 pt-6 border-t border-background/20 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="pt-6 border-t border-background/20 flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-background/60 text-sm">
                 © {new Date().getFullYear()} Bogna Bartkowiak. Wszelkie prawa zastrzeżone.
               </p>
