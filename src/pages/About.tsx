@@ -28,36 +28,35 @@ const About = () => {
         </h1>
       </section>
 
-      {/* Bio Section - Minimalistic */}
+      {/* Bio Section - Asymmetric Layout */}
       <section className="max-w-[1648px] mx-auto px-9 py-[80px]">
-        <div className="flex flex-col gap-24">
-          {/* First block */}
-          <div className="flex flex-col md:flex-row gap-12 md:gap-24">
-            <div className="md:w-[45%]">
-              <img 
-                src="/about/bogna-02.jpg" 
-                alt="Bogna Bartkowiak-Trepka - portret" 
-                className="w-full h-auto object-cover"
-              />
-            </div>
-            <div className="md:w-[55%] flex flex-col justify-center">
-              <p className="text-[18px] md:text-[22px] font-light leading-[150%] tracking-[-0.02em] text-foreground">
-                Moja twórczość wyrasta z potrzeby poszukiwania odpowiedzi na pytania o przyczynę i sens istnienia oraz z fascynacji tym, co wymyka się materii, myśli i racjonalnemu poznaniu.
-              </p>
-            </div>
+        <div className="flex flex-col md:flex-row gap-8">
+          {/* Left - Main large image */}
+          <div className="md:w-[50%]">
+            <img 
+              src="/about/bogna-02.jpg" 
+              alt="Bogna Bartkowiak-Trepka - portret" 
+              className="w-full h-[700px] object-cover"
+            />
           </div>
-
-          {/* Second block */}
-          <div className="flex flex-col md:flex-row-reverse gap-12 md:gap-24">
-            <div className="md:w-[40%]">
+          
+          {/* Right - Stacked content */}
+          <div className="md:w-[50%] flex flex-col gap-8">
+            {/* Top - Second image */}
+            <div>
               <img 
                 src="/about/bogna-08.jpg" 
                 alt="Bogna Bartkowiak-Trepka z pracą" 
-                className="w-full h-auto object-cover"
+                className="w-full h-[320px] object-cover object-top"
               />
             </div>
-            <div className="md:w-[60%] flex flex-col justify-center">
-              <p className="text-[18px] md:text-[22px] font-light leading-[150%] tracking-[-0.02em] text-foreground">
+            
+            {/* Bottom - Text content */}
+            <div className="flex flex-col gap-6 pt-4">
+              <p className="text-base font-light leading-[160%] tracking-[-0.02em] text-foreground/90">
+                Moja twórczość wyrasta z potrzeby poszukiwania odpowiedzi na pytania o przyczynę i sens istnienia oraz z fascynacji tym, co wymyka się materii, myśli i racjonalnemu poznaniu.
+              </p>
+              <p className="text-base font-light leading-[160%] tracking-[-0.02em] text-foreground/90">
                 Jestem również praktykującą lekarką. Studia medyczne pozwoliły mi zgłębiać anatomię i mechanizmy funkcjonowania ludzkiego ciała. Zamiast jednoznacznych odpowiedzi doświadczenie to przyniosło mi jednak kolejne pytania i wzmocniło świadomość, jak rozległy obszar rzeczywistości pozostaje poza granicami naszej wiedzy.
               </p>
             </div>
