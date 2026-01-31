@@ -72,25 +72,62 @@ const About = () => {
         
       </section>
 
-      {/* Process Images Grid */}
-      <section className="max-w-[1648px] mx-auto px-9">
-        <div className="flex flex-col md:flex-row justify-between">
-          <div className="md:w-1/3">
-            <img src="/about/bogna-05.jpg" alt="Bogna w ruchu - proces twórczy" className="w-full max-w-[620px] h-[500px] object-cover" />
+      {/* Process & Manifesto Section - Redesigned */}
+      <section className="max-w-[1648px] mx-auto px-4 md:px-9 py-16 md:py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+          {/* Left - Large Image */}
+          <div className="lg:col-span-5">
+            <img 
+              src="/about/bogna-09.jpg" 
+              alt="Bogna Bartkowiak z obrazem i rzeźbami" 
+              className="w-full h-auto object-contain"
+            />
           </div>
-          <div className="max-w-[50%] flex flex-col gap-6">
-            <div className="flex flex-col md:flex-row gap-6">
-              <img src="/about/bogna-04.jpg" alt="Praca z artefaktami" className="w-full md:w-1/2 h-[300px] object-cover object-center" />
-              
+          
+          {/* Center - Text Content */}
+          <div className="lg:col-span-4 flex flex-col justify-center gap-8">
+            <div className="space-y-1">
+              <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Moja filozofia</span>
+              <h3 className="text-2xl md:text-3xl font-medium leading-[120%] tracking-[-0.02em]">
+                Między nauką a tajemnicą
+              </h3>
             </div>
-            <p className="text-base font-light leading-[160%] tracking-[-0.02em] text-foreground/90">
-              W swojej twórczości łączę doświadczenia lekarskie z poszukiwaniami tego, co niewyjaśnione i
-              niewyjaśnialne. Badając granice pomiędzy tym, co fizyczne, a tym, co metafizyczne, tworzę własny język
+            
+            <div className="relative pl-6 border-l-2 border-foreground/20">
+              <p className="text-base md:text-lg font-light leading-[170%] tracking-[-0.01em] text-foreground/90 italic">
+                W swojej twórczości łączę doświadczenia lekarskie z poszukiwaniami tego, co niewyjaśnione i
+                niewyjaśnialne.
+              </p>
+            </div>
+            
+            <p className="text-sm md:text-base leading-[170%] tracking-[-0.01em] text-foreground/70">
+              Badając granice pomiędzy tym, co fizyczne, a tym, co metafizyczne, tworzę własny język
               wizualny — próbę dialogu między intuicją, świadomością, materią i wewnętrzną energią.
             </p>
+            
+            <div className="flex items-center gap-4 mt-4">
+              <div className="w-12 h-px bg-foreground/30" />
+              <span className="text-xs uppercase tracking-[0.15em] text-muted-foreground">Bogna Bartkowiak</span>
+            </div>
+          </div>
+          
+          {/* Right - Stacked Images */}
+          <div className="lg:col-span-3 flex flex-col gap-6">
+            <img 
+              src="/about/bogna-05.jpg" 
+              alt="Bogna w ruchu - proces twórczy" 
+              className="w-full h-auto object-contain"
+            />
+            <img 
+              src="/about/bogna-04.jpg" 
+              alt="Praca z artefaktami" 
+              className="w-full h-auto object-contain"
+            />
           </div>
         </div>
-        <div className="flex justify-between mt-6">
+        
+        {/* Decorative Elements */}
+        <div className="flex justify-between mt-8">
           <CornerBracket />
           <CornerBracket />
         </div>
