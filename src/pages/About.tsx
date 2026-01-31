@@ -2,24 +2,17 @@ import CornerBracket from "@/components/CornerBracket";
 import ArrowLink from "@/components/ArrowLink";
 import { Instagram, Youtube, Mail } from "lucide-react";
 const About = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Hero Section - Redesigned */}
       <section className="w-full px-4 md:px-9 pt-24 md:pt-32">
-        <div
-          className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 w-full justify-center
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 w-full justify-center
 justify-items-center
-items-center"
-        >
+items-center">
           {/* Left Column - Main Image */}
           <div className="lg:col-span-4">
             <div className="relative">
               <div className="aspect-[3/4] w-full">
-                <img
-                  src="/about/bogna-02.jpg"
-                  alt="Bogna Bartkowiak-Trepka - portret"
-                  className="w-full h-full object-cover"
-                />
+                <img src="/about/bogna-02.jpg" alt="Bogna Bartkowiak-Trepka - portret" className="w-full h-full object-cover" />
               </div>
               {/* Decorative element */}
             </div>
@@ -57,28 +50,15 @@ items-center"
             <div className="mt-8 lg:mt-0">
               <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-4">Media społecznościowe</p>
               <div className="flex flex-col gap-3">
-                <a
-                  href="mailto:bartkowiakbogna@gmail.com"
-                  className="inline-flex items-center gap-3 text-sm hover:text-foreground/70 transition-colors group"
-                >
+                <a href="mailto:bartkowiakbogna@gmail.com" className="inline-flex items-center gap-3 text-sm hover:text-foreground/70 transition-colors group">
                   <Mail size={18} className="text-foreground/60 group-hover:text-foreground transition-colors" />
                   <span>bartkowiakbogna@gmail.com</span>
                 </a>
-                <a
-                  href="https://www.instagram.com/bogna_bartkowiak"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 text-sm hover:text-foreground/70 transition-colors group"
-                >
+                <a href="https://www.instagram.com/bogna_bartkowiak" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 text-sm hover:text-foreground/70 transition-colors group">
                   <Instagram size={18} className="text-foreground/60 group-hover:text-foreground transition-colors" />
                   <span>@bogna_bartkowiak</span>
                 </a>
-                <a
-                  href="https://www.youtube.com/watch?v=UKljf1XDh0k&list=PLjiSr4QYw7PzFWYJYW5cQstY7DQJzxyXG"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 text-sm hover:text-foreground/70 transition-colors group"
-                >
+                <a href="https://www.youtube.com/watch?v=UKljf1XDh0k&list=PLjiSr4QYw7PzFWYJYW5cQstY7DQJzxyXG" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 text-sm hover:text-foreground/70 transition-colors group">
                   <Youtube size={18} className="text-foreground/60 group-hover:text-foreground transition-colors" />
                   <span>Kanał YouTube</span>
                 </a>
@@ -100,11 +80,7 @@ items-center"
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
           {/* Left - Large Image */}
           <div className="lg:col-span-5">
-            <img
-              src="/about/bogna-09.jpg"
-              alt="Bogna Bartkowiak z obrazem i rzeźbami"
-              className="w-full h-auto object-contain"
-            />
+            <img src="/about/bogna-09.jpg" alt="Bogna Bartkowiak z obrazem i rzeźbami" className="w-full h-auto object-contain" />
           </div>
 
           {/* Center - Text Content */}
@@ -136,11 +112,7 @@ items-center"
 
           {/* Right - Stacked Images */}
           <div className="lg:col-span-3 flex flex-col gap-4 items-center lg:items-start">
-            <img
-              src="/about/bogna-05.jpg"
-              alt="Bogna w ruchu - proces twórczy"
-              className="w-2/3 h-auto object-contain"
-            />
+            <img src="/about/bogna-05.jpg" alt="Bogna w ruchu - proces twórczy" className="w-2/3 h-auto object-contain" />
             <img src="/about/bogna-04.jpg" alt="Praca z artefaktami" className="w-2/3 h-auto object-contain" />
           </div>
         </div>
@@ -208,11 +180,7 @@ items-center"
           </div>
           {/* Image on right */}
           <div className="order-1 md:order-2 flex-shrink-0">
-            <img 
-              src="/about/bogna-01.jpg" 
-              alt="Bogna z artefaktem" 
-              className="w-full md:w-auto md:max-w-[648px] md:max-h-[512px] h-auto object-contain" 
-            />
+            <img src="/about/bogna-01.jpg" alt="Bogna z artefaktem" className="w-full md:w-auto md:max-w-[648px] md:max-h-[512px] h-auto object-contain" />
           </div>
         </div>
       </section>
@@ -408,42 +376,7 @@ items-center"
       </section>
 
       {/* Contact Section */}
-      <section className="max-w-[1648px] mx-auto px-9 py-16 md:py-24">
-        <h2 className="text-[20px] md:text-[32px] font-medium leading-[110%] tracking-[-0.02em] uppercase mb-12">
-          Kontakt
-        </h2>
-        <div className="flex flex-col md:flex-row gap-8 md:gap-16">
-          <div className="flex items-start gap-6">
-            <span className="text-[14px] font-medium text-muted-foreground min-w-[100px]">Email</span>
-            <a href="mailto:bartkowiakbogna@gmail.com" className="text-base hover:text-foreground/70 transition-colors">
-              bartkowiakbogna@gmail.com
-            </a>
-          </div>
-          <div className="flex items-start gap-6">
-            <span className="text-[14px] font-medium text-muted-foreground min-w-[100px]">Instagram</span>
-            <a
-              href="https://www.instagram.com/bogna_bartkowiak"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-base hover:text-foreground/70 transition-colors"
-            >
-              @bogna_bartkowiak
-            </a>
-          </div>
-          <div className="flex items-start gap-6">
-            <span className="text-[14px] font-medium text-muted-foreground min-w-[100px]">YouTube</span>
-            <a
-              href="https://www.youtube.com/watch?v=UKljf1XDh0k&list=PLjiSr4QYw7PzFWYJYW5cQstY7DQJzxyXG"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-base hover:text-foreground/70 transition-colors"
-            >
-              Kanał YouTube
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+      
+    </div>;
 };
 export default About;
