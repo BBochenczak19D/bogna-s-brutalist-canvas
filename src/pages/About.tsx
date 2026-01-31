@@ -28,54 +28,39 @@ const About = () => {
         </h1>
       </section>
 
-      {/* Two Column Bio Section */}
-      <section className="max-w-[1648px] mx-auto px-9 py-[100px]">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-6">
-          {/* Left column - Portrait */}
-          <div className="md:col-span-5">
-            <img 
-              src="/about/bogna-02.jpg" 
-              alt="Bogna Bartkowiak-Trepka - portret" 
-              className="w-full h-[600px] object-cover"
-            />
-          </div>
-          
-          {/* Middle column - Text */}
-          <div className="md:col-span-4 flex flex-col justify-between py-4">
-            <div className="flex items-start gap-4">
-              <CornerBracket className="hidden md:block flex-shrink-0" />
-              <div>
-                <h3 className="text-[20px] md:text-[24px] font-medium leading-[120%] tracking-[-0.02em] uppercase mb-4">
-                  Poszukiwanie sensu istnienia
-                </h3>
-                <p className="text-sm font-light leading-[160%] tracking-[-0.02em] text-foreground/80">
-                  Moja twórczość wyrasta z potrzeby poszukiwania odpowiedzi na pytania o przyczynę i sens istnienia oraz z fascynacji tym, co wymyka się materii, myśli i racjonalnemu poznaniu.
-                </p>
-              </div>
+      {/* Bio Section - Minimalistic */}
+      <section className="max-w-[1648px] mx-auto px-9 py-[80px]">
+        <div className="flex flex-col gap-24">
+          {/* First block */}
+          <div className="flex flex-col md:flex-row gap-12 md:gap-24">
+            <div className="md:w-[45%]">
+              <img 
+                src="/about/bogna-02.jpg" 
+                alt="Bogna Bartkowiak-Trepka - portret" 
+                className="w-full h-auto object-cover"
+              />
             </div>
-            <div className="flex items-end gap-4 mt-8">
-              <div>
-                <h3 className="text-[20px] md:text-[24px] font-medium leading-[120%] tracking-[-0.02em] uppercase mb-4">
-                  Medycyna i sztuka
-                </h3>
-                <p className="text-sm font-light leading-[160%] tracking-[-0.02em] text-foreground/80">
-                  Jestem również praktykującą lekarką. Studia medyczne pozwoliły mi zgłębiać anatomię i mechanizmy funkcjonowania ludzkiego ciała. Zamiast jednoznacznych odpowiedzi doświadczenie to przyniosło mi jednak kolejne pytania.
-                </p>
-              </div>
-              <CornerBracket className="hidden md:block flex-shrink-0" />
+            <div className="md:w-[55%] flex flex-col justify-center">
+              <p className="text-[18px] md:text-[22px] font-light leading-[150%] tracking-[-0.02em] text-foreground">
+                Moja twórczość wyrasta z potrzeby poszukiwania odpowiedzi na pytania o przyczynę i sens istnienia oraz z fascynacji tym, co wymyka się materii, myśli i racjonalnemu poznaniu.
+              </p>
             </div>
           </div>
 
-          {/* Right column - Second image */}
-          <div className="md:col-span-3 flex flex-col justify-end">
-            <img 
-              src="/about/bogna-08.jpg" 
-              alt="Bogna Bartkowiak-Trepka z pracą" 
-              className="w-full h-[450px] object-cover object-top"
-            />
-            <p className="text-xs text-muted-foreground mt-3 italic">
-              Rozległy obszar rzeczywistości pozostaje poza granicami naszej wiedzy.
-            </p>
+          {/* Second block */}
+          <div className="flex flex-col md:flex-row-reverse gap-12 md:gap-24">
+            <div className="md:w-[40%]">
+              <img 
+                src="/about/bogna-08.jpg" 
+                alt="Bogna Bartkowiak-Trepka z pracą" 
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="md:w-[60%] flex flex-col justify-center">
+              <p className="text-[18px] md:text-[22px] font-light leading-[150%] tracking-[-0.02em] text-foreground">
+                Jestem również praktykującą lekarką. Studia medyczne pozwoliły mi zgłębiać anatomię i mechanizmy funkcjonowania ludzkiego ciała. Zamiast jednoznacznych odpowiedzi doświadczenie to przyniosło mi jednak kolejne pytania i wzmocniło świadomość, jak rozległy obszar rzeczywistości pozostaje poza granicami naszej wiedzy.
+              </p>
+            </div>
           </div>
         </div>
       </section>
