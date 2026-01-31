@@ -3,64 +3,92 @@ import ArrowLink from "@/components/ArrowLink";
 import { Instagram, Youtube, Mail } from "lucide-react";
 const About = () => {
   return <div className="min-h-screen bg-background">
-      {/* Hero Section - Redesigned */}
-      <section className="w-full px-4 md:px-9 pt-24 md:pt-32">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 w-full items-center">
-          {/* Left Column - Main Image */}
-          <div className="lg:col-span-4">
-            <div className="relative">
-              <div className="aspect-[3/4] w-full">
-                <img src="/about/bogna-02.jpg" alt="Bogna Bartkowiak-Trepka - portret" className="w-full h-full object-cover" />
-              </div>
-              {/* Decorative element */}
-              <div className="hidden lg:block absolute -bottom-4 -right-4 w-24 h-24 border border-foreground/20" />
-            </div>
+      {/* Hero Section - Asymmetric Masonry Layout */}
+      <section className="w-full px-4 md:px-8 lg:px-12 pt-24 md:pt-32 pb-16">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-6">
+          
+          {/* Left Column - Stacked Images */}
+          <div className="lg:w-[35%] flex flex-col gap-6">
+            <img 
+              src="/about/bogna-02.jpg" 
+              alt="Bogna Bartkowiak-Trepka - portret" 
+              className="w-full object-contain"
+            />
+            <img 
+              src="/about/bogna-04.jpg" 
+              alt="Bogna w pracowni" 
+              className="w-full object-contain hidden lg:block"
+            />
           </div>
 
-          {/* Center Column - Name & Bio */}
-          <div className="lg:col-span-5 flex flex-col justify-between py-4 w-full">
-            <div className="space-y-6">
-              <div className="space-y-2">
-                <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">Artystka / Lekarka</p>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-[100%] tracking-[-0.02em]">
+          {/* Center Column - Bio & Contact */}
+          <div className="lg:w-[30%] flex flex-col justify-center py-8 lg:py-16">
+            <div className="space-y-8">
+              <div className="space-y-3">
+                <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground font-light">Artystka / Lekarka</p>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold uppercase leading-[105%] tracking-[-0.02em]">
                   Bogna<br />Bartkowiak-<br />Trepka
                 </h1>
               </div>
               
-              <div className="w-16 h-px bg-foreground/30" />
+              <div className="w-12 h-px bg-foreground/20" />
               
-              <div className="space-y-4 w-full">
-                <p className="text-sm md:text-base leading-[170%] tracking-[-0.01em] text-foreground/90 font-medium">
-                  Jestem artystką poruszającą się w przestrzeni wspólnej dla nauki, duchowości i sztuki. Moja twórczość
-                  wyrasta z potrzeby poszukiwania odpowiedzi na pytania o przyczynę i sens istnienia.
+              <div className="space-y-4">
+                <p className="text-sm leading-[180%] tracking-[-0.01em] text-foreground/85">
+                  Jestem artystką poruszającą się w przestrzeni wspólnej dla nauki, duchowości i sztuki. Moja twórczość wyrasta z potrzeby poszukiwania odpowiedzi na pytania o przyczynę i sens istnienia.
                 </p>
-                <p className="text-sm md:text-base leading-[170%] tracking-[-0.01em] text-foreground/70 font-light">
+                <p className="text-sm leading-[180%] tracking-[-0.01em] text-foreground/60">
                   Jestem również praktykującą lekarką. To właśnie w przestrzeni — pomiędzy naukową precyzją a tajemnicą — zakorzeniła się moja praktyka artystyczna.
                 </p>
               </div>
-            </div>
 
-            {/* Social Links */}
-            <div className="mt-8 lg:mt-0">
-              <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-4">Media społecznościowe</p>
-              <div className="flex flex-col gap-3">
-                <a href="mailto:bartkowiakbogna@gmail.com" className="inline-flex items-center gap-3 text-sm hover:text-foreground/70 transition-colors group">
-                  <Mail size={18} className="text-foreground/60 group-hover:text-foreground transition-colors" />
-                  <span>bartkowiakbogna@gmail.com</span>
-                </a>
-                <a href="https://www.instagram.com/bogna_bartkowiak" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 text-sm hover:text-foreground/70 transition-colors group">
-                  <Instagram size={18} className="text-foreground/60 group-hover:text-foreground transition-colors" />
-                  <span>@bogna_bartkowiak</span>
-                </a>
-                <a href="https://www.youtube.com/watch?v=UKljf1XDh0k&list=PLjiSr4QYw7PzFWYJYW5cQstY7DQJzxyXG" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 text-sm hover:text-foreground/70 transition-colors group">
-                  <Youtube size={18} className="text-foreground/60 group-hover:text-foreground transition-colors" />
-                  <span>Kanał YouTube</span>
-                </a>
+              {/* Contact Links */}
+              <div className="pt-4 space-y-4">
+                <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Kontakt</p>
+                <div className="flex flex-col gap-2.5">
+                  <a 
+                    href="mailto:bartkowiakbogna@gmail.com" 
+                    className="inline-flex items-center gap-2.5 text-xs hover:text-foreground/60 transition-colors group"
+                  >
+                    <Mail size={14} className="text-foreground/40 group-hover:text-foreground transition-colors" />
+                    <span>bartkowiakbogna@gmail.com</span>
+                  </a>
+                  <a 
+                    href="https://www.instagram.com/bogna_bartkowiak" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="inline-flex items-center gap-2.5 text-xs hover:text-foreground/60 transition-colors group"
+                  >
+                    <Instagram size={14} className="text-foreground/40 group-hover:text-foreground transition-colors" />
+                    <span>@bogna_bartkowiak</span>
+                  </a>
+                  <a 
+                    href="https://www.youtube.com/watch?v=UKljf1XDh0k&list=PLjiSr4QYw7PzFWYJYW5cQstY7DQJzxyXG" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="inline-flex items-center gap-2.5 text-xs hover:text-foreground/60 transition-colors group"
+                  >
+                    <Youtube size={14} className="text-foreground/40 group-hover:text-foreground transition-colors" />
+                    <span>YouTube</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Right Column - Secondary Image */}
+          {/* Right Column - Large Feature Image */}
+          <div className="lg:w-[35%] flex flex-col gap-6">
+            <img 
+              src="/about/bogna-09.jpg" 
+              alt="Bogna z dziełem - portret artystyczny" 
+              className="w-full object-contain"
+            />
+            <img 
+              src="/about/bogna-03.jpg" 
+              alt="Bogna - proces twórczy" 
+              className="w-full object-contain hidden lg:block"
+            />
+          </div>
           
         </div>
       </section>
