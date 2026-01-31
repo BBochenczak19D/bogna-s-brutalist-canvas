@@ -19,7 +19,7 @@ const About = () => {
                 wyrasta z potrzeby poszukiwania odpowiedzi na pytania o przyczynę i sens istnienia oraz z fascynacji
                 tym, co wymyka się materii, myśli i racjonalnemu poznaniu.
               </p>
-              <p className="text-xs leading-[160%] tracking-[-0.02em] text-foreground/90 font-semibold md:text-base">
+              <p className="text-xs leading-[160%] tracking-[-0.02em] text-foreground/90 md:text-base font-light">
                 Jestem również praktykującą lekarką. Studia medyczne pozwoliły mi zgłębiać anatomię i mechanizmy funkcjonowania ludzkiego ciała. Zamiast jednoznacznych odpowiedzi doświadczenie to przyniosło mi jednak kolejne pytania i wzmocniło świadomość, jak rozległy obszar rzeczywistości pozostaje poza granicami naszej wiedzy. To właśnie w tej przestrzeni — pomiędzy naukową precyzją a tajemnicą — zakorzeniła się moja praktyka artystyczna.
               </p>
             </div>
