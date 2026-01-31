@@ -10,14 +10,17 @@ const About = () => {
             <div className="w-full max-w-[400px] aspect-[3/4]">
               <img src="/about/bogna-02.jpg" alt="Bogna Bartkowiak-Trepka - portret" className="w-full h-full object-cover" />
             </div>
-            <div className="flex flex-col gap-4 max-w-[400px]">
-              <h1 className="leading-[100%] tracking-[-0.02em] uppercase font-bold font-sans text-6xl">
+            <div className="w-full flex flex-col gap-4 pr-8">
+              <h1 className="leading-[100%] tracking-[-0.02em] uppercase font-bold font-sans text-[42px]">
                 Bogna Bartkowiak-Trepka
               </h1>
               <p className="text-xs leading-[160%] tracking-[-0.02em] text-foreground/90 font-semibold md:text-base">
                 Jestem artystką poruszającą się w przestrzeni wspólnej dla nauki, duchowości i sztuki. Moja twórczość
                 wyrasta z potrzeby poszukiwania odpowiedzi na pytania o przyczynę i sens istnienia oraz z fascynacji
                 tym, co wymyka się materii, myśli i racjonalnemu poznaniu.
+              </p>
+              <p className="text-xs leading-[160%] tracking-[-0.02em] text-foreground/90 font-semibold md:text-base">
+                Jestem również praktykującą lekarką. Studia medyczne pozwoliły mi zgłębiać anatomię i mechanizmy funkcjonowania ludzkiego ciała. Zamiast jednoznacznych odpowiedzi doświadczenie to przyniosło mi jednak kolejne pytania i wzmocniło świadomość, jak rozległy obszar rzeczywistości pozostaje poza granicami naszej wiedzy. To właśnie w tej przestrzeni — pomiędzy naukową precyzją a tajemnicą — zakorzeniła się moja praktyka artystyczna.
               </p>
             </div>
           </div>
