@@ -2,16 +2,46 @@ import CornerBracket from "@/components/CornerBracket";
 import ArrowLink from "@/components/ArrowLink";
 const About = () => {
   return <div className="min-h-screen bg-background">
-      {/* Hero Section - Matching Home page structure */}
-      <section className="max-w-[1648px] mx-auto px-9 pt-32">
-        
-      </section>
-
-      {/* Main Title */}
-      <section className="max-w-[1648px] mx-auto px-9 mt-[42px]">
-        <h1 className="text-[32px] md:text-[72px] font-medium leading-[100%] tracking-[-0.02em] uppercase">
-          Bogna Bartkowiak-Trepka
-        </h1>
+      {/* Hero Section - Asymmetric Layout */}
+      <section className="max-w-[1648px] mx-auto px-4 md:px-9 pt-24 md:pt-32">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-8">
+          {/* Left - Large Image */}
+          <div className="md:w-[55%]">
+            <img 
+              src="/about/bogna-02.jpg" 
+              alt="Bogna Bartkowiak-Trepka - portret" 
+              className="w-full h-[400px] md:h-[700px] object-cover"
+            />
+          </div>
+          
+          {/* Right - Content Block */}
+          <div className="md:w-[45%] flex flex-col gap-6 md:gap-8">
+            {/* Secondary Image */}
+            <div className="w-full">
+              <img 
+                src="/about/bogna-08.jpg" 
+                alt="Bogna w pracowni" 
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            
+            {/* Title & Bio Text */}
+            <div className="flex flex-col gap-6">
+              <h1 className="text-[28px] md:text-[48px] font-medium leading-[100%] tracking-[-0.02em] uppercase">
+                Bogna Bartkowiak-Trepka
+              </h1>
+              
+              <div className="space-y-4">
+                <p className="text-base md:text-lg font-light leading-[160%] tracking-[-0.02em] text-foreground/90">
+                  Jestem artystką poruszającą się w przestrzeni wspólnej dla nauki, duchowości i sztuki. Moja twórczość wyrasta z potrzeby poszukiwania odpowiedzi na pytania o przyczynę i sens istnienia oraz z fascynacji tym, co wymyka się materii, myśli i racjonalnemu poznaniu.
+                </p>
+                <p className="text-base md:text-lg font-light leading-[160%] tracking-[-0.02em] text-foreground/90">
+                  Jestem również praktykującą lekarką. Studia medyczne pozwoliły mi zgłębiać anatomię i mechanizmy funkcjonowania ludzkiego ciała. Zamiast jednoznacznych odpowiedzi doświadczenie to przyniosło mi jednak kolejne pytania i wzmocniło świadomość, jak rozległy obszar rzeczywistości pozostaje poza granicami naszej wiedzy. To właśnie w tej przestrzeni — pomiędzy naukową precyzją a tajemnicą — zakorzeniła się moja praktyka artystyczna.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Bio Section - Asymmetric Layout */}
