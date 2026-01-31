@@ -1,20 +1,19 @@
 import CornerBracket from "@/components/CornerBracket";
 import ArrowLink from "@/components/ArrowLink";
 import { Instagram, Youtube, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
 const About = () => {
   return <div className="min-h-screen bg-background">
       {/* Hero Section - Redesigned */}
-      <section className="w-full px-4 md:px-9 pt-24 md:pt-32">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 w-full justify-center
-justify-items-center
-items-center">
+      <section className="max-w-[1648px] mx-auto px-4 md:px-9 pt-24 md:pt-32">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Column - Main Image */}
           <div className="lg:col-span-4">
             <div className="relative">
               <div className="aspect-[3/4] w-full">
                 <img src="/about/bogna-02.jpg" alt="Bogna Bartkowiak-Trepka - portret" className="w-full h-full object-cover" />
               </div>
-              {/* Decorative element */}
             </div>
           </div>
 
@@ -24,11 +23,7 @@ items-center">
               <div className="space-y-2">
                 <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">Artystka / Lekarka</p>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-[100%] tracking-[-0.02em]">
-                  Bogna
-                  <br />
-                  Bartkowiak-
-                  <br />
-                  Trepka
+                  Bogna Bartkowiak-Trepka
                 </h1>
               </div>
 
@@ -44,10 +39,18 @@ items-center">
                   — zakorzeniła się moja praktyka artystyczna.
                 </p>
               </div>
+
+              {/* Contact Button */}
+              <Button asChild variant="outline" className="w-fit">
+                <a href="mailto:bartkowiakbogna@gmail.com">
+                  <Mail size={18} />
+                  Skontaktuj się
+                </a>
+              </Button>
             </div>
 
             {/* Social Links */}
-            <div className="mt-8 lg:mt-0">
+            <div className="mt-8 lg:mt-12">
               <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-4">Media społecznościowe</p>
               <div className="flex flex-col gap-3">
                 <a href="mailto:bartkowiakbogna@gmail.com" className="inline-flex items-center gap-3 text-sm hover:text-foreground/70 transition-colors group">
