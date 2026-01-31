@@ -69,31 +69,36 @@ const About = () => {
       </section>
 
       {/* III Materia Project Section */}
-      <section className="border-t border-b border-foreground mt-[100px]">
-        <div className="max-w-[1648px] mx-auto px-9 py-24 md:py-32">
-          <h2 className="text-[28px] md:text-[48px] font-medium leading-[110%] tracking-[-0.02em] uppercase mb-16">
+      <section className="relative overflow-hidden mt-[100px]">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img src="/artworks/collections/iii-materia/materia-08.jpg" alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
+        <div className="relative z-10 max-w-[1648px] mx-auto px-9 py-24 md:py-32">
+          <h2 className="text-[28px] md:text-[48px] font-medium leading-[110%] tracking-[-0.02em] uppercase mb-16 text-white">
             W poszukiwaniu III Materii
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
             <div className="space-y-8">
-              <p className="text-base font-light leading-[160%] tracking-[-0.02em] text-foreground/90">
+              <p className="text-base font-light leading-[160%] tracking-[-0.02em] text-white/90">
                 Projekt <em className="font-medium">W poszukiwaniu III Materii</em> — obejmujący obrazy, grafiki,
                 artefakty oraz seans 3D przeznaczony do prezentacji na ekranie sferycznym planetarium — jest rezultatem
                 wieloletnich rozważań, poszukiwań filozoficznych oraz eksperymentów artystycznych prowadzonych na
                 granicy percepcji.
               </p>
-              <p className="text-base font-light leading-[160%] tracking-[-0.02em] text-foreground/90">
+              <p className="text-base font-light leading-[160%] tracking-[-0.02em] text-white/90">
                 To także przekorna próba odnalezienia duszy człowieka w medycznych badaniach obrazowych oraz moja
                 indywidualna interpretacja tego, co niewypowiedziane — zbliżenie się do Niewiadomej zarówno poprzez sam
                 akt twórczy, jak i jego efekt.
               </p>
             </div>
             <div className="space-y-8">
-              <p className="text-base font-light leading-[160%] tracking-[-0.02em] text-foreground/90">
+              <p className="text-base font-light leading-[160%] tracking-[-0.02em] text-white/90">
                 Kolejne projekty stanowią kontynuację tych poszukiwań — są ich rozwinięciem, nawarstwieniem i dalszym
                 eksplorowaniem idei Trzeciej Materii.
               </p>
-              <ArrowLink to="/collections/iii-materia">Zobacz kolekcję III Materia</ArrowLink>
+              <ArrowLink to="/collections/iii-materia" className="text-white hover:text-white/70">Zobacz kolekcję III Materia</ArrowLink>
             </div>
           </div>
         </div>
