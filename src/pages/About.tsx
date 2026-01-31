@@ -6,15 +6,15 @@ const About = () => {
       <section className="max-w-[1648px] mx-auto px-4 md:px-9 pt-24 md:pt-32">
         <div className="flex flex-col md:flex-row gap-6 md:gap-8 justify-start">
           {/* Left - Image with Name & Quote */}
-          <div className="md:w-[calc(25%-1rem)] flex flex-col gap-6">
-            <div className="w-full aspect-[3/4]">
+          <div className="w-full flex flex-col gap-6">
+            <div className="w-full max-w-[400px] aspect-[3/4]">
               <img src="/about/bogna-02.jpg" alt="Bogna Bartkowiak-Trepka - portret" className="w-full h-full object-cover" />
             </div>
-            <div className="flex flex-col gap-4">
-              <h1 className="text-[20px] leading-[100%] tracking-[-0.02em] uppercase font-bold font-sans md:text-4xl">
+            <div className="flex flex-col gap-4 max-w-[400px]">
+              <h1 className="text-[42px] leading-[100%] tracking-[-0.02em] uppercase font-bold font-sans">
                 Bogna Bartkowiak-Trepka
               </h1>
-              <p className="text-sm md:text-base font-light leading-[160%] tracking-[-0.02em] text-foreground/90">
+              <p className="text-xs md:text-sm font-light leading-[160%] tracking-[-0.02em] text-foreground/90">
                 Jestem artystką poruszającą się w przestrzeni wspólnej dla nauki, duchowości i sztuki. Moja twórczość
                 wyrasta z potrzeby poszukiwania odpowiedzi na pytania o przyczynę i sens istnienia oraz z fascynacji
                 tym, co wymyka się materii, myśli i racjonalnemu poznaniu.
@@ -23,12 +23,12 @@ const About = () => {
           </div>
 
           {/* Right - Image with Rest of Content */}
-          <div className="md:w-[calc(25%-1rem)] flex flex-col gap-6">
-            <div className="w-full aspect-[3/4]">
+          <div className="w-full flex flex-col gap-6">
+            <div className="w-full max-w-[316px] aspect-[3/4]">
               <img src="/about/bogna-08.jpg" alt="Bogna w pracowni" className="w-full h-full object-cover" />
             </div>
-            <div className="space-y-4">
-              <p className="text-sm md:text-base font-light leading-[160%] tracking-[-0.02em] text-foreground/90">
+            <div className="space-y-4 max-w-[316px]">
+              <p className="text-xs md:text-sm font-light leading-[160%] tracking-[-0.02em] text-foreground/90">
                 Jestem również praktykującą lekarką. Studia medyczne pozwoliły mi zgłębiać anatomię i mechanizmy
                 funkcjonowania ludzkiego ciała. Zamiast jednoznacznych odpowiedzi doświadczenie to przyniosło mi
                 jednak kolejne pytania i wzmocniło świadomość, jak rozległy obszar rzeczywistości pozostaje poza
