@@ -37,13 +37,7 @@ const MasonryArtworkGrid = ({ artworks, categoryDescription, category }: Masonry
   return (
     <>
       <div className="w-full mb-24">
-        {categoryDescription && (
-          <div className="flex justify-end mb-12">
-            <p className="text-2xl font-medium tracking-tight max-w-[579px]">
-              {categoryDescription}
-            </p>
-          </div>
-        )}
+        {/* Category description hidden for now */}
 
         <div className="flex flex-wrap gap-10 justify-center">
           {artworks.map((artwork, index) => {
