@@ -88,37 +88,41 @@ const MasonryArtworkGrid = ({ artworks, categoryDescription, category }: Masonry
       {/* Lightbox Modal */}
       {selectedArtwork && (
         <div
-          className="fixed inset-0 z-50 bg-background/95 flex items-center justify-center p-4"
+          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4 md:p-8"
           onClick={() => setSelectedArtwork(null)}
         >
-          <div className="brutalist-border max-w-6xl w-full max-h-[90vh] overflow-auto">
-            <div className="grid md:grid-cols-2 gap-0">
-              <div className="bg-muted p-8 flex items-center justify-center">
-                {selectedArtwork.image ? (
-                  <img
-                    src={selectedArtwork.image}
-                    alt={selectedArtwork.title}
-                    className="max-w-full max-h-[70vh] object-contain"
-                  />
-                ) : (
-                  <Skeleton className="w-full h-[70vh]" />
-                )}
-              </div>
-              <div className="p-8 bg-background flex flex-col justify-center">
-                <h2 className="text-3xl font-bold mb-4">{selectedArtwork.title}</h2>
-                <div className="space-y-2 text-lg">
-                  <p><span className="font-bold">Medium:</span> {selectedArtwork.medium}</p>
-                  <p><span className="font-bold">Wymiary:</span> {selectedArtwork.dimensions}</p>
-                  <p><span className="font-bold">Rok:</span> {selectedArtwork.year}</p>
-                </div>
-                <button
-                  onClick={() => setSelectedArtwork(null)}
-                  className="mt-8 brutalist-border-medium px-6 py-3 font-bold uppercase hover:bg-foreground hover:text-background transition-colors"
-                >
-                  Zamknij
-                </button>
-              </div>
-            </div>
+          {/* Close button */}
+          <button
+            onClick={() => setSelectedArtwork(null)}
+            className="absolute top-6 right-6 z-10 text-white/70 hover:text-white transition-colors"
+            aria-label="Zamknij podgląd"
+          >
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <path d="M18 6L6 18M6 6l12 12" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
+
+          {/* Image container */}
+          <div 
+            className="w-full h-full flex items-center justify-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {selectedArtwork.image ? (
+              <img
+                src={selectedArtwork.image}
+                alt={selectedArtwork.title}
+                className="max-w-[95vw] max-h-[90vh] object-contain"
+                onClick={() => setSelectedArtwork(null)}
+              />
+            ) : (
+              <Skeleton className="w-full h-[70vh]" />
+            )}
+          </div>
+
+          {/* Artwork info at bottom */}
+          <div className="absolute bottom-6 left-6 right-6 text-white/80 text-sm">
+            <p className="font-medium text-white">{selectedArtwork.title}</p>
+            <p className="text-white/60">{selectedArtwork.medium} | {selectedArtwork.dimensions} | {selectedArtwork.year}</p>
           </div>
         </div>
       )}
