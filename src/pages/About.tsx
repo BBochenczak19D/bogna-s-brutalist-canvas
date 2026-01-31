@@ -10,7 +10,7 @@ const About = () => {
             <div className="w-full max-w-[400px] aspect-[3/4]">
               <img src="/about/bogna-02.jpg" alt="Bogna Bartkowiak-Trepka - portret" className="w-full h-full object-cover" />
             </div>
-            <div className="w-full flex flex-col gap-4 pr-8">
+            <div className="w-full flex flex-col gap-4 pr-[90px]">
               <h1 className="leading-[100%] tracking-[-0.02em] uppercase font-bold font-sans text-[42px]">
                 Bogna Bartkowiak-Trepka
               </h1>
