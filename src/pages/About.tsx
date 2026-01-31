@@ -190,11 +190,9 @@ items-center"
 
       {/* Joy of Creation Section */}
       <section className="max-w-[1648px] mx-auto px-9 py-[100px]">
-        <div className="flex flex-col md:flex-row gap-16 items-center">
-          <div className="md:w-1/2">
-            <img src="/about/bogna-01.jpg" alt="Bogna z artefaktem" className="w-full h-auto object-cover" />
-          </div>
-          <div className="md:w-1/2 flex flex-col gap-8">
+        <div className="flex flex-col md:flex-row gap-12 lg:gap-20 items-center">
+          {/* Text on left */}
+          <div className="flex-1 flex flex-col gap-8 order-2 md:order-1">
             <div className="flex items-start gap-6">
               <CornerBracket className="hidden md:block flex-shrink-0" />
               <blockquote>
@@ -207,6 +205,14 @@ items-center"
             <p className="text-lg font-medium text-foreground">
               To przestrzeń, w której czuję się najbardziej obecna i prawdziwa.
             </p>
+          </div>
+          {/* Image on right */}
+          <div className="order-1 md:order-2 flex-shrink-0">
+            <img 
+              src="/about/bogna-01.jpg" 
+              alt="Bogna z artefaktem" 
+              className="w-full md:w-auto md:max-w-[648px] h-auto object-contain" 
+            />
           </div>
         </div>
       </section>
