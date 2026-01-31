@@ -194,13 +194,13 @@ const About = () => {
           
           {/* Right column with image and description */}
           <div className="lg:col-span-5 flex flex-col gap-8">
-            <img src="/about/bogna-07.jpg" alt="Materiały i narzędzia" className="w-full h-auto object-contain" />
             <div className="relative">
               <div className="absolute -left-4 top-0 bottom-0 w-[2px] bg-foreground/20" />
               <p className="text-base font-light leading-[160%] tracking-[-0.02em] text-foreground/80 pl-4">
                 Tworzę sztukę, która nie tylko oddziałuje wizualnie, ale także zaprasza do pogłębionej refleksji nad naturą rzeczywistości, świadomości i istnienia.
               </p>
             </div>
+            <img src="/about/bogna-07.jpg" alt="Materiały i narzędzia" className="w-full h-auto object-contain" />
           </div>
         </div>
       </section>
