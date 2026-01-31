@@ -1,22 +1,17 @@
 import CornerBracket from "@/components/CornerBracket";
 import ArrowLink from "@/components/ArrowLink";
 const About = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Hero Section - Asymmetric Layout */}
       <section className="max-w-[1648px] mx-auto px-4 md:px-9 pt-24 md:pt-32">
         <div className="flex flex-col md:flex-row gap-6 md:gap-8 justify-start">
           {/* Left - Image with Name & Quote */}
-          <div className="flex flex-col gap-6 md:w-full max-w-[620px]">
-            <div className="w-full max-w-[420px] aspect-[3/4]">
-              <img
-                src="/about/bogna-02.jpg"
-                alt="Bogna Bartkowiak-Trepka - portret"
-                className="w-full h-full object-cover"
-              />
+          <div className="md:w-[calc(25%-1rem)] flex flex-col gap-6">
+            <div className="w-full aspect-[3/4]">
+              <img src="/about/bogna-02.jpg" alt="Bogna Bartkowiak-Trepka - portret" className="w-full h-full object-cover" />
             </div>
             <div className="flex flex-col gap-4">
-              <h1 className="text-[20px] md:text-[28px] font-medium leading-[100%] tracking-[-0.02em] uppercase">
+              <h1 className="text-[20px] leading-[100%] tracking-[-0.02em] uppercase font-bold font-sans md:text-4xl">
                 Bogna Bartkowiak-Trepka
               </h1>
               <p className="text-sm md:text-base font-light leading-[160%] tracking-[-0.02em] text-foreground/90">
@@ -29,16 +24,16 @@ const About = () => {
 
           {/* Right - Image with Rest of Content */}
           <div className="md:w-[calc(25%-1rem)] flex flex-col gap-6">
-            <div className="w-full max-w-[316px] aspect-[3/4]">
+            <div className="w-full aspect-[3/4]">
               <img src="/about/bogna-08.jpg" alt="Bogna w pracowni" className="w-full h-full object-cover" />
             </div>
             <div className="space-y-4">
-              <p className="text-[10px] md:text-xs font-light leading-[160%] tracking-[-0.02em] text-foreground/90">
+              <p className="text-sm md:text-base font-light leading-[160%] tracking-[-0.02em] text-foreground/90">
                 Jestem również praktykującą lekarką. Studia medyczne pozwoliły mi zgłębiać anatomię i mechanizmy
-                funkcjonowania ludzkiego ciała. Zamiast jednoznacznych odpowiedzi doświadczenie to przyniosło mi jednak
-                kolejne pytania i wzmocniło świadomość, jak rozległy obszar rzeczywistości pozostaje poza granicami
-                naszej wiedzy. To właśnie w tej przestrzeni — pomiędzy naukową precyzją a tajemnicą — zakorzeniła się
-                moja praktyka artystyczna.
+                funkcjonowania ludzkiego ciała. Zamiast jednoznacznych odpowiedzi doświadczenie to przyniosło mi
+                jednak kolejne pytania i wzmocniło świadomość, jak rozległy obszar rzeczywistości pozostaje poza
+                granicami naszej wiedzy. To właśnie w tej przestrzeni — pomiędzy naukową precyzją a tajemnicą —
+                zakorzeniła się moja praktyka artystyczna.
               </p>
             </div>
           </div>
@@ -62,14 +57,7 @@ const About = () => {
                 zakorzeniła się moja praktyka artystyczna.
               </div>
             </div>
-            <svg
-              className="w-[21.6px] h-[22.12px] fill-current hidden md:block"
-              width="22"
-              height="23"
-              viewBox="0 0 22 23"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg className="w-[21.6px] h-[22.12px] fill-current hidden md:block" width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M21.6 2.4H0V0H21.6V2.4Z" fill="currentColor" />
               <path d="M19.184 22.12V0.519999H21.584V22.12H19.184Z" fill="currentColor" />
             </svg>
@@ -81,24 +69,12 @@ const About = () => {
       <section className="max-w-[1648px] mx-auto px-9">
         <div className="flex flex-col md:flex-row gap-6">
           <div className="md:w-1/3">
-            <img
-              src="/about/bogna-05.jpg"
-              alt="Bogna w ruchu - proces twórczy"
-              className="w-full h-[500px] object-cover"
-            />
+            <img src="/about/bogna-05.jpg" alt="Bogna w ruchu - proces twórczy" className="w-full h-[500px] object-cover" />
           </div>
           <div className="md:w-2/3 flex flex-col gap-6">
             <div className="flex flex-col md:flex-row gap-6">
-              <img
-                src="/about/bogna-04.jpg"
-                alt="Praca z artefaktami"
-                className="w-full md:w-1/2 h-[300px] object-cover"
-              />
-              <img
-                src="/about/bogna-06.jpg"
-                alt="Detale procesu twórczego"
-                className="w-full md:w-1/2 h-[300px] object-cover"
-              />
+              <img src="/about/bogna-04.jpg" alt="Praca z artefaktami" className="w-full md:w-1/2 h-[300px] object-cover" />
+              <img src="/about/bogna-06.jpg" alt="Detale procesu twórczego" className="w-full md:w-1/2 h-[300px] object-cover" />
             </div>
             <p className="text-base font-light leading-[160%] tracking-[-0.02em] text-foreground/90">
               W swojej twórczości łączę doświadczenia lekarskie z poszukiwaniami tego, co niewyjaśnione i
@@ -359,29 +335,18 @@ const About = () => {
           </div>
           <div className="flex items-start gap-6">
             <span className="text-[14px] font-medium text-muted-foreground min-w-[100px]">Instagram</span>
-            <a
-              href="https://www.instagram.com/bogna_bartkowiak"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-base hover:text-foreground/70 transition-colors"
-            >
+            <a href="https://www.instagram.com/bogna_bartkowiak" target="_blank" rel="noopener noreferrer" className="text-base hover:text-foreground/70 transition-colors">
               @bogna_bartkowiak
             </a>
           </div>
           <div className="flex items-start gap-6">
             <span className="text-[14px] font-medium text-muted-foreground min-w-[100px]">YouTube</span>
-            <a
-              href="https://www.youtube.com/watch?v=UKljf1XDh0k&list=PLjiSr4QYw7PzFWYJYW5cQstY7DQJzxyXG"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-base hover:text-foreground/70 transition-colors"
-            >
+            <a href="https://www.youtube.com/watch?v=UKljf1XDh0k&list=PLjiSr4QYw7PzFWYJYW5cQstY7DQJzxyXG" target="_blank" rel="noopener noreferrer" className="text-base hover:text-foreground/70 transition-colors">
               Kanał YouTube
             </a>
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
 export default About;
