@@ -203,7 +203,7 @@ items-center">
               </blockquote>
             </div>
             <p className="text-lg font-medium text-foreground">
-              Pracuję głównie z farbą olejną, lecz sięgam również po instalacje, grafikę, rzeźbę oraz nowe media.
+              Tworzę sztukę, która nie tylko oddziałuje wizualnie, ale także zaprasza do pogłębionej refleksji nad naturą rzeczywistości, świadomości i istnienia.
             </p>
           </div>
         </div>
