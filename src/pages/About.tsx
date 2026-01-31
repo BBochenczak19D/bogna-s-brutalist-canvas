@@ -30,30 +30,52 @@ const About = () => {
 
       {/* Two Column Bio Section */}
       <section className="max-w-[1648px] mx-auto px-9 py-[100px]">
-        <div className="flex flex-col md:flex-row gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-6">
           {/* Left column - Portrait */}
-          <div className="md:w-1/2">
+          <div className="md:col-span-5">
             <img 
               src="/about/bogna-02.jpg" 
               alt="Bogna Bartkowiak-Trepka - portret" 
-              className="w-full h-auto object-cover"
+              className="w-full h-[600px] object-cover"
             />
           </div>
           
-          {/* Right column - Text */}
-          <div className="md:w-1/2 flex flex-col gap-8">
-            <div className="flex items-start gap-6">
+          {/* Middle column - Text */}
+          <div className="md:col-span-4 flex flex-col justify-between py-4">
+            <div className="flex items-start gap-4">
               <CornerBracket className="hidden md:block flex-shrink-0" />
-              <p className="text-base font-light leading-[160%] tracking-[-0.02em] text-foreground/90">
-                Moja twórczość wyrasta z potrzeby poszukiwania odpowiedzi na pytania o przyczynę i sens istnienia oraz z fascynacji tym, co wymyka się materii, myśli i racjonalnemu poznaniu.
-              </p>
+              <div>
+                <h3 className="text-[20px] md:text-[24px] font-medium leading-[120%] tracking-[-0.02em] uppercase mb-4">
+                  Poszukiwanie sensu istnienia
+                </h3>
+                <p className="text-sm font-light leading-[160%] tracking-[-0.02em] text-foreground/80">
+                  Moja twórczość wyrasta z potrzeby poszukiwania odpowiedzi na pytania o przyczynę i sens istnienia oraz z fascynacji tym, co wymyka się materii, myśli i racjonalnemu poznaniu.
+                </p>
+              </div>
             </div>
-            <div className="flex items-start gap-6">
-              <p className="text-base font-light leading-[160%] tracking-[-0.02em] text-foreground/90">
-                Jestem również praktykującą lekarką. Studia medyczne pozwoliły mi zgłębiać anatomię i mechanizmy funkcjonowania ludzkiego ciała. Zamiast jednoznacznych odpowiedzi doświadczenie to przyniosło mi jednak kolejne pytania i wzmocniło świadomość, jak rozległy obszar rzeczywistości pozostaje poza granicami naszej wiedzy.
-              </p>
+            <div className="flex items-end gap-4 mt-8">
+              <div>
+                <h3 className="text-[20px] md:text-[24px] font-medium leading-[120%] tracking-[-0.02em] uppercase mb-4">
+                  Medycyna i sztuka
+                </h3>
+                <p className="text-sm font-light leading-[160%] tracking-[-0.02em] text-foreground/80">
+                  Jestem również praktykującą lekarką. Studia medyczne pozwoliły mi zgłębiać anatomię i mechanizmy funkcjonowania ludzkiego ciała. Zamiast jednoznacznych odpowiedzi doświadczenie to przyniosło mi jednak kolejne pytania.
+                </p>
+              </div>
               <CornerBracket className="hidden md:block flex-shrink-0" />
             </div>
+          </div>
+
+          {/* Right column - Second image */}
+          <div className="md:col-span-3 flex flex-col justify-end">
+            <img 
+              src="/about/bogna-08.jpg" 
+              alt="Bogna Bartkowiak-Trepka z pracą" 
+              className="w-full h-[450px] object-cover object-top"
+            />
+            <p className="text-xs text-muted-foreground mt-3 italic">
+              Rozległy obszar rzeczywistości pozostaje poza granicami naszej wiedzy.
+            </p>
           </div>
         </div>
       </section>
