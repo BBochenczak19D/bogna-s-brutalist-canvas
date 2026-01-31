@@ -229,7 +229,7 @@ items-center"
                 naturą rzeczywistości, świadomości i istnienia.
               </p>
             </div>
-            <img src="/about/bogna-07.jpg" alt="Materiały i narzędzia" className="w-full h-auto object-contain" />
+            <img src="/about/bogna-07.jpg" alt="Materiały i narzędzia" className="w-full max-h-[512px] h-auto object-contain" />
           </div>
 
           {/* Large header text spanning left side */}
