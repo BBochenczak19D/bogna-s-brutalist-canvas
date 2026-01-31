@@ -180,19 +180,30 @@ const About = () => {
 
       {/* Materials Section */}
       <section className="max-w-[1648px] mx-auto px-9 pb-[100px]">
-        <div className="flex flex-col md:flex-row gap-16">
-          <div className="md:w-1/3 flex items-start gap-6">
-            <img src="/about/bogna-07.jpg" alt="Materiały i narzędzia" className="w-full h-[400px] object-cover" />
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-end">
+          {/* Large header text spanning left side */}
+          <div className="lg:col-span-7 flex flex-col">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-[2px] bg-foreground" />
+              <span className="text-xs uppercase tracking-[0.2em] text-foreground/60">Proces twórczy</span>
+            </div>
+            <h3 className="text-[28px] md:text-[36px] lg:text-[42px] font-medium leading-[120%] tracking-[-0.02em] text-foreground">
+              Pracuję głównie z farbą olejną, lecz sięgam również po instalacje, grafikę, rzeźbę oraz nowe media.
+            </h3>
           </div>
-          <div className="md:w-2/3 flex flex-col justify-center">
-            <p className="text-base font-light leading-[160%] tracking-[-0.02em] text-foreground/90 mb-8">
-              Pracuję głównie z farbą olejną, lecz sięgam również po instalacje, grafikę, rzeźbę oraz nowe media. Tworzę
-              sztukę, która nie tylko oddziałuje wizualnie, ale także zaprasza do pogłębionej refleksji nad naturą
-              rzeczywistości, świadomości i istnienia.
-            </p>
-            <div className="flex justify-between">
-              <CornerBracket />
-              <CornerBracket />
+          
+          {/* Right column with image and description */}
+          <div className="lg:col-span-5 flex flex-col gap-8">
+            <img 
+              src="/about/bogna-07.jpg" 
+              alt="Materiały i narzędzia" 
+              className="w-full h-auto object-contain" 
+            />
+            <div className="relative">
+              <div className="absolute -left-4 top-0 bottom-0 w-[2px] bg-foreground/20" />
+              <p className="text-base font-light leading-[160%] tracking-[-0.02em] text-foreground/80 pl-4">
+                Tworzę sztukę, która nie tylko oddziałuje wizualnie, ale także zaprasza do pogłębionej refleksji nad naturą rzeczywistości, świadomości i istnienia.
+              </p>
             </div>
           </div>
         </div>
