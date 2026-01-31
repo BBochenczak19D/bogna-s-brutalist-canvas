@@ -31,13 +31,7 @@ const About = () => {
               <img src="/about/bogna-08.jpg" alt="Bogna w pracowni" className="w-full h-full object-cover" />
             </div>
             <div className="space-y-4 max-w-[316px]">
-              <p className="text-xs md:text-sm font-light leading-[160%] tracking-[-0.02em] text-foreground/90">
-                Jestem również praktykującą lekarką. Studia medyczne pozwoliły mi zgłębiać anatomię i mechanizmy
-                funkcjonowania ludzkiego ciała. Zamiast jednoznacznych odpowiedzi doświadczenie to przyniosło mi
-                jednak kolejne pytania i wzmocniło świadomość, jak rozległy obszar rzeczywistości pozostaje poza
-                granicami naszej wiedzy. To właśnie w tej przestrzeni — pomiędzy naukową precyzją a tajemnicą —
-                zakorzeniła się moja praktyka artystyczna.
-              </p>
+              
             </div>
           </div>
         </div>
