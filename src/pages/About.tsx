@@ -11,7 +11,7 @@ const About = () => {
               <img src="/about/bogna-02.jpg" alt="Bogna Bartkowiak-Trepka - portret" className="w-full h-full object-cover" />
             </div>
             <div className="w-full flex flex-col gap-4 pr-[90px]">
-              <h1 className="leading-[100%] tracking-[-0.02em] uppercase font-bold font-sans text-[42px]">
+              <h1 className="leading-[100%] tracking-[-0.02em] uppercase font-bold font-sans text-7xl">
                 Bogna Bartkowiak-Trepka
               </h1>
               <p className="text-xs leading-[160%] tracking-[-0.02em] text-foreground/90 font-semibold md:text-base">
@@ -146,11 +146,7 @@ const About = () => {
       <section className="relative overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src="/artworks/collections/iii-materia/materia-07.jpg" 
-            alt="" 
-            className="w-full h-full object-cover"
-          />
+          <img src="/artworks/collections/iii-materia/materia-07.jpg" alt="" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative z-10 max-w-[1648px] mx-auto px-9 py-24 md:py-32">
