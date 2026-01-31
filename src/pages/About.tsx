@@ -198,8 +198,7 @@ items-center">
               <CornerBracket className="hidden md:block flex-shrink-0" />
               <blockquote>
                 <p className="text-[22px] md:text-[28px] font-light leading-[140%] tracking-[-0.02em] italic">
-                  Tworzę sztukę, która nie tylko oddziałuje wizualnie, ale także zaprasza do pogłębionej refleksji nad
-                  naturą rzeczywistości, świadomości i istnienia.
+                  Pracuję głównie z farbą olejną, lecz sięgam również po instalacje, grafikę, rzeźbę oraz nowe media.
                 </p>
               </blockquote>
             </div>
