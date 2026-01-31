@@ -46,11 +46,11 @@ const About = () => {
 
       {/* Process Images Grid */}
       <section className="max-w-[1648px] mx-auto px-9">
-        <div className="flex flex-col md:flex-row gap-6">
+        <div className="flex flex-col md:flex-row justify-between">
           <div className="md:w-1/3">
             <img src="/about/bogna-05.jpg" alt="Bogna w ruchu - proces twórczy" className="w-full h-[500px] object-cover" />
           </div>
-          <div className="md:w-2/3 flex flex-col gap-6">
+          <div className="max-w-[50%] flex flex-col gap-6">
             <div className="flex flex-col md:flex-row gap-6">
               <img src="/about/bogna-04.jpg" alt="Praca z artefaktami" className="w-full md:w-1/2 h-[300px] object-cover object-center" />
               
