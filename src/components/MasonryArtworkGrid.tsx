@@ -63,20 +63,22 @@ const MasonryArtworkGrid = ({ artworks, categoryDescription, category }: Masonry
                   <Skeleton className="w-full h-full" />
                 )}
               </div>
-              <div className={`mt-4 ${(isWideImage || isCenteredImage) ? "text-center" : ""}`}>
-                <h3 className="text-lg font-normal tracking-tight uppercase text-foreground mb-1">
-                  {artwork.title}
-                </h3>
-                <div className={`flex items-center gap-1 text-sm font-light text-muted-foreground ${
-                  (isWideImage || isCenteredImage) ? "justify-center" : ""
-                }`}>
-                  <span>{artwork.medium}</span>
-                  <span className="tracking-tight">|</span>
-                  <span>{artwork.dimensions}</span>
-                  <span className="tracking-tight">|</span>
-                  <span className="uppercase">{artwork.year}</span>
+              {category !== "grafiki" && (
+                <div className={`mt-4 ${(isWideImage || isCenteredImage) ? "text-center" : ""}`}>
+                  <h3 className="text-lg font-normal tracking-tight uppercase text-foreground mb-1">
+                    {artwork.title}
+                  </h3>
+                  <div className={`flex items-center gap-1 text-sm font-light text-muted-foreground ${
+                    (isWideImage || isCenteredImage) ? "justify-center" : ""
+                  }`}>
+                    <span>{artwork.medium}</span>
+                    <span className="tracking-tight">|</span>
+                    <span>{artwork.dimensions}</span>
+                    <span className="tracking-tight">|</span>
+                    <span className="uppercase">{artwork.year}</span>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           );
           })}
