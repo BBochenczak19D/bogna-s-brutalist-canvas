@@ -50,10 +50,7 @@ const About = () => {
                 zakorzeniła się moja praktyka artystyczna.
               </div>
             </div>
-            <svg className="w-[21.6px] h-[22.12px] fill-current hidden md:block" width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M21.6 2.4H0V0H21.6V2.4Z" fill="currentColor" />
-              <path d="M19.184 22.12V0.519999H21.584V22.12H19.184Z" fill="currentColor" />
-            </svg>
+            
           </div>
         </div>
       </section>
