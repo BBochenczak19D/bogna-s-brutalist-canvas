@@ -7,8 +7,8 @@ const About = () => {
       <section className="max-w-[1648px] mx-auto px-4 md:px-9 pt-24 md:pt-32">
         <div className="flex flex-col md:flex-row gap-6 md:gap-8 justify-start">
           {/* Left - Image with Name & Quote */}
-          <div className="flex flex-col gap-6 md:w-full">
-            <div className="w-full max-w-[420px] aspect-[3/4]">
+          <div className="flex flex-col gap-6 md:w-full max-w-[620px]">
+            <div className="w-full aspect-[3/4]">
               <img
                 src="/about/bogna-02.jpg"
                 alt="Bogna Bartkowiak-Trepka - portret"
