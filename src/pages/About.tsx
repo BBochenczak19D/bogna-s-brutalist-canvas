@@ -6,15 +6,15 @@ const About = () => {
       <section className="max-w-[1648px] mx-auto px-4 md:px-9 pt-24 md:pt-32">
         <div className="flex flex-col md:flex-row gap-6 md:gap-8 justify-start">
           {/* Left - Image with Name & Quote */}
-          <div className="w-full flex flex-col gap-6">
+          <div className="w-full gap-6 flex flex-row">
             <div className="w-full max-w-[400px] aspect-[3/4]">
               <img src="/about/bogna-02.jpg" alt="Bogna Bartkowiak-Trepka - portret" className="w-full h-full object-cover" />
             </div>
             <div className="flex flex-col gap-4 max-w-[400px]">
-              <h1 className="text-[42px] leading-[100%] tracking-[-0.02em] uppercase font-bold font-sans">
+              <h1 className="leading-[100%] tracking-[-0.02em] uppercase font-bold font-sans text-6xl">
                 Bogna Bartkowiak-Trepka
               </h1>
-              <p className="text-xs md:text-sm font-light leading-[160%] tracking-[-0.02em] text-foreground/90">
+              <p className="text-xs leading-[160%] tracking-[-0.02em] text-foreground/90 font-semibold md:text-base">
                 Jestem artystką poruszającą się w przestrzeni wspólnej dla nauki, duchowości i sztuki. Moja twórczość
                 wyrasta z potrzeby poszukiwania odpowiedzi na pytania o przyczynę i sens istnienia oraz z fascynacji
                 tym, co wymyka się materii, myśli i racjonalnemu poznaniu.
