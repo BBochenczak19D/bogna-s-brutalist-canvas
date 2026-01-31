@@ -17,11 +17,11 @@ const About = () => {
           {/* Right - Content Block */}
           <div className="md:w-[45%] flex flex-col gap-6 md:gap-8">
             {/* Secondary Image */}
-            <div className="w-full">
+            <div className="w-full md:max-w-[420px]">
               <img 
                 src="/about/bogna-08.jpg" 
                 alt="Bogna w pracowni" 
-                className="w-full h-auto object-cover"
+                className="w-full h-auto"
               />
             </div>
             
