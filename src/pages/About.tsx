@@ -47,7 +47,7 @@ const About = () => {
               <img 
                 src="/about/bogna-08.jpg" 
                 alt="Bogna Bartkowiak-Trepka z pracą" 
-                className="w-full h-[320px] object-cover object-top"
+                className="w-full h-auto"
               />
             </div>
             
