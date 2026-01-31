@@ -14,11 +14,11 @@ const Layout = () => {
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <img 
-              src="/about/bogna-02.jpg" 
+              src="/artworks/obrazy/obraz-15.jpg" 
               alt="" 
-              className="w-full h-full object-cover opacity-30"
+              className="w-full h-full object-cover opacity-40"
             />
-            <div className="absolute inset-0 bg-foreground/80" />
+            <div className="absolute inset-0 bg-foreground/70" />
           </div>
           
           {/* Content */}
@@ -34,15 +34,43 @@ const Layout = () => {
                 </p>
               </div>
               
-              {/* Middle Column - Navigation */}
+              {/* Kolekcje Column */}
+              <div className="flex flex-col gap-3">
+                <span className="text-background/50 text-xs uppercase tracking-widest mb-2">Kolekcje</span>
+                <a href="/collections" className="text-background hover:text-background/70 transition-colors uppercase text-sm">
+                  Wszystkie kolekcje
+                </a>
+                <a href="/collections/iii-materia" className="text-background hover:text-background/70 transition-colors uppercase text-sm">
+                  III Materia
+                </a>
+              </div>
+              
+              {/* Twórczość Column */}
+              <div className="flex flex-col gap-3">
+                <span className="text-background/50 text-xs uppercase tracking-widest mb-2">Twórczość</span>
+                <a href="/tworczość" className="text-background hover:text-background/70 transition-colors uppercase text-sm">
+                  Wszystkie prace
+                </a>
+                <a href="/tworczość/obrazy" className="text-background hover:text-background/70 transition-colors uppercase text-sm">
+                  Obrazy
+                </a>
+                <a href="/tworczość/grafiki" className="text-background hover:text-background/70 transition-colors uppercase text-sm">
+                  Grafiki
+                </a>
+                <a href="/tworczość/artefakty" className="text-background hover:text-background/70 transition-colors uppercase text-sm">
+                  Artefakty
+                </a>
+                <a href="/tworczość/rysunki" className="text-background hover:text-background/70 transition-colors uppercase text-sm">
+                  Rysunki
+                </a>
+                <a href="/tworczość/instalacje" className="text-background hover:text-background/70 transition-colors uppercase text-sm">
+                  Instalacje
+                </a>
+              </div>
+              
+              {/* O mnie & Kontakt Column */}
               <div className="flex flex-col gap-3">
                 <span className="text-background/50 text-xs uppercase tracking-widest mb-2">Nawigacja</span>
-                <a href="/collections" className="text-background hover:text-background/70 transition-colors uppercase text-sm">
-                  Kolekcje
-                </a>
-                <a href="/tworczość" className="text-background hover:text-background/70 transition-colors uppercase text-sm">
-                  Twórczość
-                </a>
                 <a href="/about" className="text-background hover:text-background/70 transition-colors uppercase text-sm">
                   O mnie
                 </a>
