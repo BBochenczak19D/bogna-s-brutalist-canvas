@@ -41,12 +41,12 @@ const Home = () => {
         <div className="items-start gap-6 max-w-[574px] flex flex-col md:flex-row">
           <CornerBracket className="hidden md:block" />
           <img alt="Bogna Bartkowiak" className="w-[114px] h-[174px] object-cover flex-shrink-0" src="/lovable-uploads/3f96b157-ec5e-4b05-b37f-0b44e7dfd18e.jpg" />
-          <p className="flex-1 text-sm font-normal leading-[125%] uppercase animate-fade-in" style={{
+          <p className="flex-1 text-sm font-normal leading-[125%] uppercase animate-fade-in italic" style={{
           animationDelay: "0.2s"
         }}>
-            Jestem absolwentką Akademii Sztuk Pięknych w Katowicach oraz lekarzem. W swojej twórczości badam
-niewidzialne warstwy istnienia, łącząc doświadczenia medyczne z artystyczną intuicją.
-Tworzenie jest dla mnie sposobem zbliżania się do Niewiadomej.
+            Jestem absolwentką Akademii Sztuk Pięknych w Katowicach oraz lekarzem. W swojej twórczości badam niewidzialne warstwy istnienia, łącząc doświadczenia medyczne z artystyczną intuicją.
+            <br />
+            Tworzenie jest dla mnie sposobem zbliżania się do Niewiadomej.
           </p>
           <CornerBracket />
         </div>
