@@ -10,7 +10,7 @@ const About = () => {
             <img 
               src="/about/bogna-02.jpg" 
               alt="Bogna Bartkowiak-Trepka - portret" 
-              className="w-full h-[400px] md:h-[700px] object-cover"
+              className="w-full md:max-w-[420px] h-auto"
             />
           </div>
           
