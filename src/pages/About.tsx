@@ -44,12 +44,8 @@ const About = () => {
         <div className="flex justify-end items-center self-stretch py-[24px]">
           <div className="flex justify-between items-start flex-1">
             <div className="flex w-full md:w-[700px] flex-col items-start gap-0.5">
-              <div className="text-foreground font-medium text-2xl leading-[110%] tracking-[-0.96px] uppercase">
-                To właśnie w tej przestrzeni
-              </div>
-              <div className="text-muted-foreground font-normal text-2xl leading-[110%] tracking-[-0.96px] uppercase">
-                pomiędzy naukową precyzją a tajemnicą
-              </div>
+              <div className="text-foreground font-medium text-2xl leading-[110%] tracking-[-0.96px] uppercase">Jestem również praktykującą lekarką. Studia medyczne pozwoliły mi zgłębiać anatomię i mechanizmy funkcjonowania ludzkiego ciała</div>
+              <div className="text-muted-foreground font-normal text-2xl leading-[110%] tracking-[-0.96px] uppercase">Zamiast jednoznacznych odpowiedzi doświadczenie to przyniosło mi jednak kolejne pytania i wzmocniło świadomość, jak rozległy obszar rzeczywistości pozostaje poza granicami naszej wiedzy. </div>
               <div className="text-foreground font-medium text-2xl leading-[110%] tracking-[-0.96px] uppercase">
                 zakorzeniła się moja praktyka artystyczna.
               </div>
