@@ -18,7 +18,7 @@ const About = () => {
         {/* Two Column Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Left - Image */}
-          <div className="relative">
+          <div className="relative w-fit">
             <img 
               src="/about/bogna-02.jpg" 
               alt="Bogna Bartkowiak-Trepka - portret" 
