@@ -44,8 +44,9 @@ const Home = () => {
           <p className="flex-1 text-sm font-normal leading-[125%] uppercase animate-fade-in" style={{
           animationDelay: "0.2s"
         }}>
-            Jestem absolwentką Akademii Sztuk Pięknych w Katowicach i lekarzem, która w swoich obrazach bada
-            niewidzialne warstwy istnienia, łącząc doświadczenie medyczne, artystyczną intuicję i Trzecią Materię.
+            Jestem absolwentką Akademii Sztuk Pięknych w Katowicach oraz lekarzem. W swojej twórczości badam
+niewidzialne warstwy istnienia, łącząc doświadczenia medyczne z artystyczną intuicją.
+Tworzenie jest dla mnie sposobem zbliżania się do Niewiadomej.
           </p>
           <CornerBracket />
         </div>
