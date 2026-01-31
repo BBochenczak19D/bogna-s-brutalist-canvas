@@ -7,9 +7,12 @@ const footerImages = [
   "/artworks/obrazy/obraz-15.jpg",
   "/artworks/obrazy/obraz-11.jpg",
   "/artworks/obrazy/obraz-18.jpg",
-  "/artworks/grafiki/grafika-01.jpg",
   "/artworks/artefakty/artefakt-05.jpg",
+  "/artworks/collections/iii-materia/materia-01.jpg",
   "/artworks/collections/iii-materia/materia-03.jpg",
+  "/artworks/collections/iii-materia/materia-05.jpg",
+  "/artworks/collections/iii-materia/materia-07.jpg",
+  "/artworks/collections/iii-materia/materia-09.jpg",
 ];
 
 const Layout = () => {
