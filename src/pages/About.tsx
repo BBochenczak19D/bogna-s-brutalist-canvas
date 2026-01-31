@@ -16,7 +16,7 @@ const About = () => {
               />
             </div>
             <div className="flex flex-col gap-4">
-              <h1 className="text-[20px] md:text-[28px] font-medium leading-[100%] tracking-[-0.02em] uppercase">
+              <h1 className="text-[36px] md:text-[32px] font-medium leading-[100%] tracking-[-0.02em] uppercase">
                 Bogna Bartkowiak-Trepka
               </h1>
               <p className="text-sm md:text-base font-light leading-[160%] tracking-[-0.02em] text-foreground/90">
@@ -30,19 +30,15 @@ const About = () => {
           {/* Right - Image with Rest of Content */}
           <div className="md:w-[calc(25%-1rem)] flex flex-col gap-6">
             <div className="w-full aspect-[3/4]">
-              <img
-                src="/about/bogna-08.jpg"
-                alt="Bogna w pracowni"
-                className="w-full h-full object-cover"
-              />
+              <img src="/about/bogna-08.jpg" alt="Bogna w pracowni" className="w-full h-full object-cover" />
             </div>
             <div className="space-y-4">
               <p className="text-sm md:text-base font-light leading-[160%] tracking-[-0.02em] text-foreground/90">
                 Jestem również praktykującą lekarką. Studia medyczne pozwoliły mi zgłębiać anatomię i mechanizmy
-                funkcjonowania ludzkiego ciała. Zamiast jednoznacznych odpowiedzi doświadczenie to przyniosło mi
-                jednak kolejne pytania i wzmocniło świadomość, jak rozległy obszar rzeczywistości pozostaje poza
-                granicami naszej wiedzy. To właśnie w tej przestrzeni — pomiędzy naukową precyzją a tajemnicą —
-                zakorzeniła się moja praktyka artystyczna.
+                funkcjonowania ludzkiego ciała. Zamiast jednoznacznych odpowiedzi doświadczenie to przyniosło mi jednak
+                kolejne pytania i wzmocniło świadomość, jak rozległy obszar rzeczywistości pozostaje poza granicami
+                naszej wiedzy. To właśnie w tej przestrzeni — pomiędzy naukową precyzją a tajemnicą — zakorzeniła się
+                moja praktyka artystyczna.
               </p>
             </div>
           </div>
