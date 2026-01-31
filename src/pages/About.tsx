@@ -197,7 +197,7 @@ items-center">
             <div className="flex items-start gap-6">
               <CornerBracket className="hidden md:block flex-shrink-0" />
               <blockquote>
-                <p className="text-[22px] md:text-[28px] font-light leading-[140%] tracking-[-0.02em] italic">
+                <p className="text-[22px] font-light leading-[140%] tracking-[-0.02em] italic md:text-4xl">
                   Pracuję głównie z farbą olejną, lecz sięgam również po instalacje, grafikę, rzeźbę oraz nowe media.
                 </p>
               </blockquote>
