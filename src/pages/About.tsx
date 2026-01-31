@@ -6,7 +6,11 @@ const About = () => {
     <div className="min-h-screen bg-background">
       {/* Hero Section - Redesigned */}
       <section className="w-full px-4 md:px-9 pt-24 md:pt-32">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 w-full items-center">
+        <div
+          className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 w-full justify-center
+justify-items-center
+items-center"
+        >
           {/* Left Column - Main Image */}
           <div className="lg:col-span-4">
             <div className="relative">
