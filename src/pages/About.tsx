@@ -77,15 +77,11 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
           {/* Left - Large Image */}
           <div className="lg:col-span-5">
-            <img 
-              src="/about/bogna-09.jpg" 
-              alt="Bogna Bartkowiak z obrazem i rzeźbami" 
-              className="w-full h-auto object-contain"
-            />
+            <img src="/about/bogna-09.jpg" alt="Bogna Bartkowiak z obrazem i rzeźbami" className="w-full h-auto object-contain" />
           </div>
           
           {/* Center - Text Content */}
-          <div className="lg:col-span-4 flex flex-col justify-center gap-8">
+          <div className="lg:col-span-4 flex flex-col justify-center gap-[48px]">
             <div className="space-y-1">
               <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Moja filozofia</span>
               <h3 className="text-2xl md:text-3xl font-medium leading-[120%] tracking-[-0.02em]">
@@ -94,13 +90,13 @@ const About = () => {
             </div>
             
             <div className="relative pl-6 border-l-2 border-foreground/20">
-              <p className="text-base md:text-lg font-light leading-[170%] tracking-[-0.01em] text-foreground/90 italic">
+              <p className="text-base font-light leading-[170%] tracking-[-0.01em] text-foreground/90 italic md:text-xl">
                 W swojej twórczości łączę doświadczenia lekarskie z poszukiwaniami tego, co niewyjaśnione i
                 niewyjaśnialne.
               </p>
             </div>
             
-            <p className="text-sm md:text-base leading-[170%] tracking-[-0.01em] text-foreground/70">
+            <p className="text-sm leading-[170%] tracking-[-0.01em] text-foreground/70 md:text-lg">
               Badając granice pomiędzy tym, co fizyczne, a tym, co metafizyczne, tworzę własny język
               wizualny — próbę dialogu między intuicją, świadomością, materią i wewnętrzną energią.
             </p>
@@ -113,16 +109,8 @@ const About = () => {
           
           {/* Right - Stacked Images */}
           <div className="lg:col-span-3 flex flex-col gap-4 items-center lg:items-start">
-            <img 
-              src="/about/bogna-05.jpg" 
-              alt="Bogna w ruchu - proces twórczy" 
-              className="w-2/3 h-auto object-contain"
-            />
-            <img 
-              src="/about/bogna-04.jpg" 
-              alt="Praca z artefaktami" 
-              className="w-2/3 h-auto object-contain"
-            />
+            <img src="/about/bogna-05.jpg" alt="Bogna w ruchu - proces twórczy" className="w-2/3 h-auto object-contain" />
+            <img src="/about/bogna-04.jpg" alt="Praca z artefaktami" className="w-2/3 h-auto object-contain" />
           </div>
         </div>
         
