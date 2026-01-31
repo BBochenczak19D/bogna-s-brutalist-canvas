@@ -73,7 +73,7 @@ const About = () => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img src="/artworks/collections/iii-materia/materia-08.jpg" alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative z-10 max-w-[1648px] mx-auto px-9 py-24 md:py-32">
           <h2 className="text-[28px] font-medium leading-[110%] tracking-[-0.02em] uppercase mb-16 text-white md:text-7xl">
