@@ -13,7 +13,7 @@ const About = () => {
                 <img src="/about/bogna-02.jpg" alt="Bogna Bartkowiak-Trepka - portret" className="w-full h-full object-cover" />
               </div>
               {/* Decorative element */}
-              <div className="hidden lg:block absolute -bottom-4 -right-4 w-24 h-24 border border-foreground/20" />
+              
             </div>
           </div>
 
