@@ -83,7 +83,7 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
           {/* Left - Large Image */}
           <div className="lg:col-span-5">
-            <img src="/about/bogna-09.jpg" alt="Bogna Bartkowiak z obrazem i rzeźbami" className="w-full max-w-[600px] h-auto object-contain" />
+            <img src="/about/bogna-09.jpg" alt="Bogna Bartkowiak z obrazem i rzeźbami" className="w-full max-w-[600px] max-h-[564px] h-auto object-contain" />
           </div>
 
           {/* Center - Text Content */}
