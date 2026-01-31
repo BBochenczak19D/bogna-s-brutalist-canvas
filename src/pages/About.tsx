@@ -143,21 +143,30 @@ const About = () => {
       </section>
 
       {/* Artistic Manifesto - Dark Section */}
-      <section className="bg-secondary text-secondary-foreground">
-        <div className="max-w-[1648px] mx-auto px-9 py-24 md:py-32">
-          <h2 className="text-[20px] md:text-[32px] font-medium leading-[110%] tracking-[-0.02em] uppercase mb-16">
+      <section className="relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/artworks/collections/iii-materia/materia-07.jpg" 
+            alt="" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
+        <div className="relative z-10 max-w-[1648px] mx-auto px-9 py-24 md:py-32">
+          <h2 className="text-[20px] md:text-[32px] font-medium leading-[110%] tracking-[-0.02em] uppercase mb-16 text-white">
             Manifest artystyczny
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            <blockquote className="relative pl-8 border-l-2 border-secondary-foreground/30">
-              <p className="text-[18px] md:text-[22px] font-light leading-[150%] tracking-[-0.02em]">
+            <blockquote className="relative pl-8 border-l-2 border-white/30">
+              <p className="text-[18px] md:text-[22px] font-light leading-[150%] tracking-[-0.02em] text-white">
                 "Sztuka jest dla mnie narzędziem badawczym, które pozwala poznać to, co istnieje poza naszym
                 bezpośrednim doświadczeniem. W swojej twórczości poszukuję Trzeciej Materii - wymiaru, który nie jest
                 ani fizyczny, ani mentalny, ale stanowi esencję naszego istnienia."
               </p>
             </blockquote>
-            <blockquote className="relative pl-8 border-l-2 border-secondary-foreground/30">
-              <p className="text-[18px] md:text-[22px] font-light leading-[150%] tracking-[-0.02em]">
+            <blockquote className="relative pl-8 border-l-2 border-white/30">
+              <p className="text-[18px] md:text-[22px] font-light leading-[150%] tracking-[-0.02em] text-white">
                 "Wierzę, że poprzez sztukę możemy dotknąć tego, co niewyrażalne w języku nauki czy codziennej
                 komunikacji. Moje obrazy są zapisem tych poszukiwań - zaproszeniem do spojrzenia głębiej, poza
                 powierzchnię rzeczywistości."
