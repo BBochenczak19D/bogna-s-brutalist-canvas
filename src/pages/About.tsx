@@ -93,7 +93,7 @@ const About = () => {
             </p>
           </div>
           <div className="mt-12 space-y-8">
-            <p className="text-base font-light leading-[160%] tracking-[-0.02em] text-white/90">
+            <p className="font-light leading-[160%] tracking-[-0.02em] text-white/90 text-4xl">
               Kolejne projekty stanowią kontynuację tych poszukiwań — są ich rozwinięciem, nawarstwieniem i dalszym
               eksplorowaniem idei Trzeciej Materii.
             </p>
