@@ -18,7 +18,21 @@ interface MasonryArtworkGridProps {
 }
 
 const MasonryArtworkGrid = ({ artworks, categoryDescription, category }: MasonryArtworkGridProps) => {
-  const [selectedArtwork, setSelectedArtwork] = useState<Artwork | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
+  const selectedArtwork = selectedIndex !== null ? artworks[selectedIndex] : null;
+
+  const handlePrev = () => {
+    if (selectedIndex !== null && selectedIndex > 0) {
+      setSelectedIndex(selectedIndex - 1);
+    }
+  };
+
+  const handleNext = () => {
+    if (selectedIndex !== null && selectedIndex < artworks.length - 1) {
+      setSelectedIndex(selectedIndex + 1);
+    }
+  };
 
   return (
     <>
@@ -32,7 +46,7 @@ const MasonryArtworkGrid = ({ artworks, categoryDescription, category }: Masonry
         )}
 
         <div className="flex flex-wrap gap-10 justify-center">
-          {artworks.map((artwork) => {
+          {artworks.map((artwork, index) => {
             const isWideImage = artwork.id === "obraz-07";
             const isCenteredImage = artwork.id === "obraz-08";
             const isArtefaktOrGrafiki = category === "artefakty" || category === "grafiki";
@@ -47,7 +61,7 @@ const MasonryArtworkGrid = ({ artworks, categoryDescription, category }: Masonry
                     ? "w-full max-w-[640px] mx-auto"
                     : "flex-grow flex-shrink basis-[300px] max-w-[400px]"
                 }`}
-                onClick={() => setSelectedArtwork(artwork)}
+                onClick={() => setSelectedIndex(index)}
               >
                 <div className={`w-full bg-muted relative overflow-hidden ${
                   isArtefaktOrGrafiki ? "h-[336px]" :
@@ -87,12 +101,16 @@ const MasonryArtworkGrid = ({ artworks, categoryDescription, category }: Masonry
       </div>
 
       {/* Lightbox Modal */}
-      {selectedArtwork && (
+      {selectedArtwork && selectedIndex !== null && (
         <ImageLightbox
           image={selectedArtwork.image}
           title={selectedArtwork.title}
           details={`${selectedArtwork.medium} | ${selectedArtwork.dimensions} | ${selectedArtwork.year}`}
-          onClose={() => setSelectedArtwork(null)}
+          onClose={() => setSelectedIndex(null)}
+          onPrev={handlePrev}
+          onNext={handleNext}
+          hasPrev={selectedIndex > 0}
+          hasNext={selectedIndex < artworks.length - 1}
         />
       )}
     </>
