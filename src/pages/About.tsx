@@ -1,37 +1,91 @@
 import CornerBracket from "@/components/CornerBracket";
 import ArrowLink from "@/components/ArrowLink";
+import { Instagram, Youtube, Mail } from "lucide-react";
+
 const About = () => {
   return <div className="min-h-screen bg-background">
-      {/* Hero Section - Asymmetric Layout */}
+      {/* Hero Section - Redesigned */}
       <section className="max-w-[1648px] mx-auto px-4 md:px-9 pt-24 md:pt-32">
-        <div className="flex flex-col md:flex-row gap-6 md:gap-8 justify-start">
-          {/* Left - Image with Name & Quote */}
-          <div className="w-full gap-6 flex flex-row">
-            <div className="w-full max-w-[400px] aspect-[3/4]">
-              <img src="/about/bogna-02.jpg" alt="Bogna Bartkowiak-Trepka - portret" className="w-full h-full object-cover" />
-            </div>
-            <div className="w-full flex flex-col gap-4 pr-[90px]">
-              <h1 className="leading-[100%] tracking-[-0.02em] uppercase font-bold font-sans text-7xl">
-                Bogna Bartkowiak-Trepka
-              </h1>
-              <p className="text-xs leading-[160%] tracking-[-0.02em] text-foreground/90 font-semibold md:text-base">
-                Jestem artystką poruszającą się w przestrzeni wspólnej dla nauki, duchowości i sztuki. Moja twórczość
-                wyrasta z potrzeby poszukiwania odpowiedzi na pytania o przyczynę i sens istnienia oraz z fascynacji
-                tym, co wymyka się materii, myśli i racjonalnemu poznaniu.
-              </p>
-              <p className="text-xs leading-[160%] tracking-[-0.02em] text-foreground/90 md:text-base font-light">
-                Jestem również praktykującą lekarką. Studia medyczne pozwoliły mi zgłębiać anatomię i mechanizmy funkcjonowania ludzkiego ciała. Zamiast jednoznacznych odpowiedzi doświadczenie to przyniosło mi jednak kolejne pytania i wzmocniło świadomość, jak rozległy obszar rzeczywistości pozostaje poza granicami naszej wiedzy. To właśnie w tej przestrzeni — pomiędzy naukową precyzją a tajemnicą — zakorzeniła się moja praktyka artystyczna.
-              </p>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+          {/* Left Column - Main Image */}
+          <div className="lg:col-span-4">
+            <div className="relative">
+              <div className="aspect-[3/4] w-full">
+                <img 
+                  src="/about/bogna-02.jpg" 
+                  alt="Bogna Bartkowiak-Trepka - portret" 
+                  className="w-full h-full object-cover" 
+                />
+              </div>
+              {/* Decorative element */}
+              <div className="hidden lg:block absolute -bottom-4 -right-4 w-24 h-24 border border-foreground/20" />
             </div>
           </div>
 
-          {/* Right - Image with Rest of Content */}
-          <div className="w-fit flex flex-col gap-6">
-            <div className="w-full max-w-[316px] aspect-[3/4]">
-              <img src="/about/bogna-08.jpg" alt="Bogna w pracowni" className="w-full h-full object-cover" />
-            </div>
-            <div className="space-y-4 max-w-[316px]">
+          {/* Center Column - Name & Bio */}
+          <div className="lg:col-span-5 flex flex-col justify-between py-4">
+            <div className="space-y-6">
+              <div className="space-y-2">
+                <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">Artystka / Lekarka</p>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-[100%] tracking-[-0.02em]">
+                  Bogna<br />Bartkowiak-<br />Trepka
+                </h1>
+              </div>
               
+              <div className="w-16 h-px bg-foreground/30" />
+              
+              <div className="space-y-4 max-w-[480px]">
+                <p className="text-sm md:text-base leading-[170%] tracking-[-0.01em] text-foreground/90 font-medium">
+                  Jestem artystką poruszającą się w przestrzeni wspólnej dla nauki, duchowości i sztuki. Moja twórczość
+                  wyrasta z potrzeby poszukiwania odpowiedzi na pytania o przyczynę i sens istnienia.
+                </p>
+                <p className="text-sm md:text-base leading-[170%] tracking-[-0.01em] text-foreground/70 font-light">
+                  Jestem również praktykującą lekarką. To właśnie w przestrzeni — pomiędzy naukową precyzją a tajemnicą — zakorzeniła się moja praktyka artystyczna.
+                </p>
+              </div>
+            </div>
+
+            {/* Social Links */}
+            <div className="mt-8 lg:mt-0">
+              <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-4">Media społecznościowe</p>
+              <div className="flex flex-col gap-3">
+                <a 
+                  href="mailto:bartkowiakbogna@gmail.com" 
+                  className="inline-flex items-center gap-3 text-sm hover:text-foreground/70 transition-colors group"
+                >
+                  <Mail size={18} className="text-foreground/60 group-hover:text-foreground transition-colors" />
+                  <span>bartkowiakbogna@gmail.com</span>
+                </a>
+                <a 
+                  href="https://www.instagram.com/bogna_bartkowiak" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 text-sm hover:text-foreground/70 transition-colors group"
+                >
+                  <Instagram size={18} className="text-foreground/60 group-hover:text-foreground transition-colors" />
+                  <span>@bogna_bartkowiak</span>
+                </a>
+                <a 
+                  href="https://www.youtube.com/watch?v=UKljf1XDh0k&list=PLjiSr4QYw7PzFWYJYW5cQstY7DQJzxyXG" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 text-sm hover:text-foreground/70 transition-colors group"
+                >
+                  <Youtube size={18} className="text-foreground/60 group-hover:text-foreground transition-colors" />
+                  <span>Kanał YouTube</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column - Secondary Image */}
+          <div className="lg:col-span-3 flex flex-col justify-end">
+            <div className="aspect-[3/4] w-full max-w-[280px] ml-auto">
+              <img 
+                src="/about/bogna-08.jpg" 
+                alt="Bogna w pracowni" 
+                className="w-full h-full object-cover" 
+              />
             </div>
           </div>
         </div>
