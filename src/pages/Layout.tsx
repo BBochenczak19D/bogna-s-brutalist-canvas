@@ -10,7 +10,7 @@ const Layout = () => {
         <main>
           <Outlet />
         </main>
-        <footer className="relative mt-20 overflow-hidden h-[200px]">
+        <footer className="relative mt-20 overflow-hidden h-[800px]">
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <img 
@@ -18,7 +18,7 @@ const Layout = () => {
               alt="" 
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-foreground/20" />
+            <div className="absolute inset-0 bg-foreground/40" />
           </div>
           
           {/* Content */}
