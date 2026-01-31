@@ -190,7 +190,7 @@ items-center">
         <div className="flex flex-col md:flex-row gap-12 lg:gap-20 items-center">
           {/* Image on left */}
           <div className="order-1 flex-shrink-0">
-            <img src="/about/bogna-03.jpg" alt="Bogna w pracowni" className="w-full md:w-auto md:max-w-[648px] md:max-h-[512px] h-auto object-contain" />
+            <img alt="Bogna w pracowni" className="w-full md:w-auto md:max-w-[648px] md:max-h-[512px] h-auto object-contain" src="/lovable-uploads/3f303509-0d78-4508-bbd3-ec3dcc93f495.jpg" />
           </div>
           {/* Text on right */}
           <div className="flex-1 flex flex-col gap-8 order-2">
