@@ -251,21 +251,21 @@ const About = () => {
         <h2 className="text-[20px] md:text-[32px] font-medium leading-[110%] tracking-[-0.02em] uppercase mb-12">
           Edukacja
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
-          <div className="flex items-start gap-6">
+        <div className="flex flex-col gap-0">
+          <div className="flex items-start gap-6 py-6 border-t border-border">
             <span className="text-[14px] font-medium text-muted-foreground min-w-[60px]">2024</span>
             <div>
               <p className="text-base font-medium">Specjalizacja z medycyny rodzinnej</p>
             </div>
           </div>
-          <div className="flex items-start gap-6">
+          <div className="flex items-start gap-6 py-6 border-t border-border">
             <span className="text-[14px] font-medium text-muted-foreground min-w-[60px]">2023</span>
             <div>
               <p className="text-base font-medium">Akademia Sztuk Pięknych w Katowicach</p>
               <p className="text-sm text-muted-foreground">Wydział Artystyczny, Kierunek: Grafika</p>
             </div>
           </div>
-          <div className="flex items-start gap-6">
+          <div className="flex items-start gap-6 py-6 border-t border-b border-border">
             <span className="text-[14px] font-medium text-muted-foreground min-w-[60px]">2014</span>
             <div>
               <p className="text-base font-medium">Śląski Uniwersytet Medyczny w Katowicach</p>
