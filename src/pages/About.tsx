@@ -1,7 +1,6 @@
 import CornerBracket from "@/components/CornerBracket";
 import ArrowLink from "@/components/ArrowLink";
 import { Instagram, Youtube, Mail } from "lucide-react";
-
 const About = () => {
   return <div className="min-h-screen bg-background">
       {/* Hero Section - Redesigned */}
@@ -11,11 +10,7 @@ const About = () => {
           <div className="lg:col-span-4">
             <div className="relative">
               <div className="aspect-[3/4] w-full">
-                <img 
-                  src="/about/bogna-02.jpg" 
-                  alt="Bogna Bartkowiak-Trepka - portret" 
-                  className="w-full h-full object-cover" 
-                />
+                <img src="/about/bogna-02.jpg" alt="Bogna Bartkowiak-Trepka - portret" className="w-full h-full object-cover" />
               </div>
               {/* Decorative element */}
               <div className="hidden lg:block absolute -bottom-4 -right-4 w-24 h-24 border border-foreground/20" />
@@ -49,28 +44,15 @@ const About = () => {
             <div className="mt-8 lg:mt-0">
               <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-4">Media społecznościowe</p>
               <div className="flex flex-col gap-3">
-                <a 
-                  href="mailto:bartkowiakbogna@gmail.com" 
-                  className="inline-flex items-center gap-3 text-sm hover:text-foreground/70 transition-colors group"
-                >
+                <a href="mailto:bartkowiakbogna@gmail.com" className="inline-flex items-center gap-3 text-sm hover:text-foreground/70 transition-colors group">
                   <Mail size={18} className="text-foreground/60 group-hover:text-foreground transition-colors" />
                   <span>bartkowiakbogna@gmail.com</span>
                 </a>
-                <a 
-                  href="https://www.instagram.com/bogna_bartkowiak" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 text-sm hover:text-foreground/70 transition-colors group"
-                >
+                <a href="https://www.instagram.com/bogna_bartkowiak" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 text-sm hover:text-foreground/70 transition-colors group">
                   <Instagram size={18} className="text-foreground/60 group-hover:text-foreground transition-colors" />
                   <span>@bogna_bartkowiak</span>
                 </a>
-                <a 
-                  href="https://www.youtube.com/watch?v=UKljf1XDh0k&list=PLjiSr4QYw7PzFWYJYW5cQstY7DQJzxyXG" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 text-sm hover:text-foreground/70 transition-colors group"
-                >
+                <a href="https://www.youtube.com/watch?v=UKljf1XDh0k&list=PLjiSr4QYw7PzFWYJYW5cQstY7DQJzxyXG" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 text-sm hover:text-foreground/70 transition-colors group">
                   <Youtube size={18} className="text-foreground/60 group-hover:text-foreground transition-colors" />
                   <span>Kanał YouTube</span>
                 </a>
@@ -79,15 +61,7 @@ const About = () => {
           </div>
 
           {/* Right Column - Secondary Image */}
-          <div className="lg:col-span-3 flex flex-col justify-end">
-            <div className="aspect-[3/4] w-full max-w-[280px] ml-auto">
-              <img 
-                src="/about/bogna-08.jpg" 
-                alt="Bogna w pracowni" 
-                className="w-full h-full object-cover" 
-              />
-            </div>
-          </div>
+          
         </div>
       </section>
 
