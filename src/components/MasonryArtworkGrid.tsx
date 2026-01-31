@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
+import ImageLightbox from "@/components/ImageLightbox";
 
 interface Artwork {
   id: string;
@@ -87,44 +88,12 @@ const MasonryArtworkGrid = ({ artworks, categoryDescription, category }: Masonry
 
       {/* Lightbox Modal */}
       {selectedArtwork && (
-        <div
-          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4 md:p-8"
-          onClick={() => setSelectedArtwork(null)}
-        >
-          {/* Close button */}
-          <button
-            onClick={() => setSelectedArtwork(null)}
-            className="absolute top-6 right-6 z-10 text-white/70 hover:text-white transition-colors"
-            aria-label="Zamknij podgląd"
-          >
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <path d="M18 6L6 18M6 6l12 12" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </button>
-
-          {/* Image container */}
-          <div 
-            className="w-full h-full flex items-center justify-center"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {selectedArtwork.image ? (
-              <img
-                src={selectedArtwork.image}
-                alt={selectedArtwork.title}
-                className="max-w-[95vw] max-h-[90vh] object-contain"
-                onClick={() => setSelectedArtwork(null)}
-              />
-            ) : (
-              <Skeleton className="w-full h-[70vh]" />
-            )}
-          </div>
-
-          {/* Artwork info at bottom */}
-          <div className="absolute bottom-6 left-6 right-6 text-white/80 text-sm">
-            <p className="font-medium text-white">{selectedArtwork.title}</p>
-            <p className="text-white/60">{selectedArtwork.medium} | {selectedArtwork.dimensions} | {selectedArtwork.year}</p>
-          </div>
-        </div>
+        <ImageLightbox
+          image={selectedArtwork.image}
+          title={selectedArtwork.title}
+          details={`${selectedArtwork.medium} | ${selectedArtwork.dimensions} | ${selectedArtwork.year}`}
+          onClose={() => setSelectedArtwork(null)}
+        />
       )}
     </>
   );

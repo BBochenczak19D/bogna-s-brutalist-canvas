@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 import CornerBracket from "@/components/CornerBracket";
 import ArrowLink from "@/components/ArrowLink";
 import TypingText from "@/components/TypingText";
+import ImageLightbox from "@/components/ImageLightbox";
 import { useAnimation } from "@/contexts/AnimationContext";
 import artworksData from "@/data/artworks.json";
 import { Carousel, CarouselContent, CarouselItem, CarouselApi } from "@/components/ui/carousel";
 import { useParallaxCarousel } from "@/hooks/useParallaxCarousel";
 const Home = () => {
   const [typingComplete, setTypingComplete] = useState(false);
+  const [lightboxImage, setLightboxImage] = useState<{ src: string; title?: string } | null>(null);
   const {
     setHeroTypingComplete
   } = useAnimation();
@@ -19,6 +21,10 @@ const Home = () => {
   const iiiMateriaCollection = artworksData.collections.find(c => c.id === "iii-materia");
   const artworks = iiiMateriaCollection?.artworks || [];
   const rysunki = artworksData.rysunki || [];
+
+  const openLightbox = (src: string, title?: string) => {
+    setLightboxImage({ src, title });
+  };
 
   // Check if animations have already run in this session
   useEffect(() => {
@@ -77,7 +83,13 @@ const Home = () => {
         }} className="w-full">
               <CarouselContent className="px-9 gap-1">
                 {artworks.slice(0, 10).map(artwork => <CarouselItem key={artwork.id} className="basis-auto pl-0">
-                    <img src={artwork.image} alt={artwork.title} className="max-w-[400px] h-auto object-contain" draggable={false} />
+                    <img 
+                      src={artwork.image} 
+                      alt={artwork.title} 
+                      className="max-w-[400px] h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity" 
+                      draggable={false} 
+                      onClick={() => openLightbox(artwork.image, artwork.title)}
+                    />
                   </CarouselItem>)}
               </CarouselContent>
             </Carousel>
@@ -155,13 +167,23 @@ const Home = () => {
             {/* Two Column Images */}
             <div className="flex flex-col md:flex-row gap-16 mb-9">
               <div className="flex-1 flex flex-col gap-6">
-                <img src="/artworks/collections/iii-materia/materia-01.jpg" alt="Materia I" className="w-full aspect-[756/894] object-cover" />
+                <img 
+                  src="/artworks/collections/iii-materia/materia-01.jpg" 
+                  alt="Materia I" 
+                  className="w-full aspect-[756/894] object-cover cursor-pointer hover:opacity-90 transition-opacity" 
+                  onClick={() => openLightbox("/artworks/collections/iii-materia/materia-01.jpg", "CZ. I")}
+                />
                 <p className="text-2xl font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground text-center">
                   [cz. I | 2023]
                 </p>
               </div>
               <div className="flex-1 flex flex-col gap-6">
-                <img src="/artworks/collections/iii-materia/materia-02.jpg" alt="Materia II" className="w-full aspect-[756/820] object-cover" />
+                <img 
+                  src="/artworks/collections/iii-materia/materia-02.jpg" 
+                  alt="Materia II" 
+                  className="w-full aspect-[756/820] object-cover cursor-pointer hover:opacity-90 transition-opacity" 
+                  onClick={() => openLightbox("/artworks/collections/iii-materia/materia-02.jpg", "CZ. II")}
+                />
                 <p className="text-2xl font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground text-center">
                   [cz. II | 2023]
                 </p>
@@ -210,7 +232,12 @@ const Home = () => {
             </div>
 
             <div className="flex px-0 items-center gap-16 self-stretch">
-              <img src="/artworks/collections/iii-materia/materia-03.jpg" alt="Materia III" className="w-full md:w-[743px] aspect-square object-cover" />
+              <img 
+                src="/artworks/collections/iii-materia/materia-03.jpg" 
+                alt="Materia III" 
+                className="w-full md:w-[743px] aspect-square object-cover cursor-pointer hover:opacity-90 transition-opacity" 
+                onClick={() => openLightbox("/artworks/collections/iii-materia/materia-03.jpg", "CZ. III")}
+              />
               <div className="flex flex-col justify-center items-start gap-3">
                 <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
                   [cz. III]
@@ -251,7 +278,12 @@ const Home = () => {
                 </p>
                 <ArrowLink to="/collections/iii-materia">PRzejdź do pełnej kolekcji</ArrowLink>
               </div>
-              <img src="/artworks/collections/iii-materia/materia-04.jpg" alt="Materia IV" className="w-full md:w-[640px] aspect-square md:aspect-auto md:h-[698px] object-cover" />
+              <img 
+                src="/artworks/collections/iii-materia/materia-04.jpg" 
+                alt="Materia IV" 
+                className="w-full md:w-[640px] aspect-square md:aspect-auto md:h-[698px] object-cover cursor-pointer hover:opacity-90 transition-opacity" 
+                onClick={() => openLightbox("/artworks/collections/iii-materia/materia-04.jpg", "CZ. IV")}
+              />
             </div>
 
             <div className="flex px-0 justify-between items-center self-stretch">
@@ -289,8 +321,8 @@ const Home = () => {
           }} className="w-full">
                 <CarouselContent className="gap-1">
                   {[...rysunki, ...artworksData.artefakty, ...artworksData.instalacje].slice(0, 8).map(artwork => <CarouselItem key={artwork.id} className="basis-auto pl-0">
-                      <div className="relative">
-                        <img src={artwork.image} alt={artwork.title} className="h-[400px] w-auto md:w-[404px] md:h-[539px] object-cover" draggable={false} />
+                      <div className="relative cursor-pointer" onClick={() => openLightbox(artwork.image, artwork.title)}>
+                        <img src={artwork.image} alt={artwork.title} className="h-[400px] w-auto md:w-[404px] md:h-[539px] object-cover hover:opacity-90 transition-opacity" draggable={false} />
                         <div className="absolute bottom-4 left-4 text-white/80 text-sm">{artwork.title}</div>
                       </div>
                     </CarouselItem>)}
@@ -315,7 +347,12 @@ const Home = () => {
 
             <div className="flex flex-col md:flex-row px-0 items-start gap-[42px] self-stretch">
               <div className="flex flex-col items-start gap-6 flex-1">
-                <img src="/artworks/collections/iii-materia/materia-05.jpg" alt="Materia V" className="w-full h-auto md:h-[832px] self-stretch object-cover" />
+                <img 
+                  src="/artworks/collections/iii-materia/materia-05.jpg" 
+                  alt="Materia V" 
+                  className="w-full h-auto md:h-[832px] self-stretch object-cover cursor-pointer hover:opacity-90 transition-opacity" 
+                  onClick={() => openLightbox("/artworks/collections/iii-materia/materia-05.jpg", "CZ. V")}
+                />
                 <div className="flex items-center gap-3">
                   <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
                     [cz. V | 2023]
@@ -324,7 +361,12 @@ const Home = () => {
               </div>
 
               <div className="flex flex-col justify-center items-start gap-6 flex-1">
-                <img src="/artworks/collections/iii-materia/materia-06.jpg" alt="Materia VI" className="w-full h-auto md:h-[907px] self-stretch object-cover" />
+                <img 
+                  src="/artworks/collections/iii-materia/materia-06.jpg" 
+                  alt="Materia VI" 
+                  className="w-full h-auto md:h-[907px] self-stretch object-cover cursor-pointer hover:opacity-90 transition-opacity" 
+                  onClick={() => openLightbox("/artworks/collections/iii-materia/materia-06.jpg", "CZ. VI")}
+                />
                 <div className="flex items-center gap-3">
                   <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
                     [cz. VI | 2023]
@@ -362,7 +404,12 @@ const Home = () => {
             </div>
 
             <div className="flex px-9 flex-col justify-end items-start gap-16 self-stretch">
-              <img src="/artworks/collections/iii-materia/materia-07.jpg" alt="Materia VII" className="w-full h-auto md:h-[788px] md:aspect-[2/1] object-cover" />
+              <img 
+                src="/artworks/collections/iii-materia/materia-07.jpg" 
+                alt="Materia VII" 
+                className="w-full h-auto md:h-[788px] md:aspect-[2/1] object-cover cursor-pointer hover:opacity-90 transition-opacity" 
+                onClick={() => openLightbox("/artworks/collections/iii-materia/materia-07.jpg", "CZ. VII")}
+              />
             </div>
 
             <div className="flex px-9 justify-between items-end self-stretch">
@@ -411,7 +458,12 @@ const Home = () => {
             </div>
 
             <div className="flex px-9 flex-col justify-center items-center gap-16 self-stretch">
-              <img src="/artworks/collections/iii-materia/materia-08.jpg" alt="Materia VIII" className="w-full h-auto aspect-[1051/788] object-cover" />
+              <img 
+                src="/artworks/collections/iii-materia/materia-08.jpg" 
+                alt="Materia VIII" 
+                className="w-full h-auto aspect-[1051/788] object-cover cursor-pointer hover:opacity-90 transition-opacity" 
+                onClick={() => openLightbox("/artworks/collections/iii-materia/materia-08.jpg", "CZ. VIII")}
+              />
             </div>
 
             <div className="flex px-9 items-center self-stretch">
@@ -461,7 +513,12 @@ const Home = () => {
 
             <div className="px-9 items-start gap-[42px] self-stretch flex flex-col md:flex-row">
               <div className="flex flex-col justify-center items-start gap-6 flex-1">
-                <img src="/artworks/collections/iii-materia/materia-09.jpg" alt="Materia IX" className="w-full h-auto object-contain md:h-[654.14px] md:object-cover" />
+                <img 
+                  src="/artworks/collections/iii-materia/materia-09.jpg" 
+                  alt="Materia IX" 
+                  className="w-full h-auto object-contain md:h-[654.14px] md:object-cover cursor-pointer hover:opacity-90 transition-opacity" 
+                  onClick={() => openLightbox("/artworks/collections/iii-materia/materia-09.jpg", "CZ. IX")}
+                />
                 <div className="flex items-center gap-3">
                   <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
                     [cz. IX | 2023]
@@ -470,7 +527,12 @@ const Home = () => {
               </div>
 
               <div className="flex flex-col items-start gap-6 flex-1">
-                <img src="/artworks/collections/iii-materia/materia-10.jpg" alt="Materia X" className="w-full h-auto object-contain md:h-[958.75px] md:object-cover" />
+                <img 
+                  src="/artworks/collections/iii-materia/materia-10.jpg" 
+                  alt="Materia X" 
+                  className="w-full h-auto object-contain md:h-[958.75px] md:object-cover cursor-pointer hover:opacity-90 transition-opacity" 
+                  onClick={() => openLightbox("/artworks/collections/iii-materia/materia-10.jpg", "CZ. X")}
+                />
                 <div className="flex items-center gap-3">
                   <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
                     [cz. x | 2023]
@@ -489,6 +551,15 @@ const Home = () => {
             </div>
           </section>
         </>}
+
+      {/* Lightbox */}
+      {lightboxImage && (
+        <ImageLightbox
+          image={lightboxImage.src}
+          title={lightboxImage.title}
+          onClose={() => setLightboxImage(null)}
+        />
+      )}
     </div>;
 };
 export default Home;
