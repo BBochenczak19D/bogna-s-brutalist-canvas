@@ -18,7 +18,7 @@ const About = () => {
           </div>
 
           {/* Center Column - Name & Bio */}
-          <div className="lg:col-span-5 flex flex-col justify-between py-4">
+          <div className="lg:col-span-5 flex flex-col justify-between py-4 w-full">
             <div className="space-y-6">
               <div className="space-y-2">
                 <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">Artystka / Lekarka</p>
@@ -29,7 +29,7 @@ const About = () => {
               
               <div className="w-16 h-px bg-foreground/30" />
               
-              <div className="space-y-4 max-w-[480px]">
+              <div className="space-y-4 w-full">
                 <p className="text-sm md:text-base leading-[170%] tracking-[-0.01em] text-foreground/90 font-medium">
                   Jestem artystką poruszającą się w przestrzeni wspólnej dla nauki, duchowości i sztuki. Moja twórczość
                   wyrasta z potrzeby poszukiwania odpowiedzi na pytania o przyczynę i sens istnienia.
