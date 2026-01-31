@@ -7,7 +7,7 @@ const About = () => {
       <section className="max-w-[1648px] mx-auto px-4 md:px-9 pt-24 md:pt-32">
         <div className="flex flex-col md:flex-row gap-6 md:gap-8 justify-start">
           {/* Left - Image with Name & Quote */}
-          <div className="md:w-[calc(25%-1rem)] flex flex-col gap-6">
+          <div className="flex flex-col gap-6 md:max-w-[700px] md:w-full">
             <div className="w-full aspect-[3/4]">
               <img
                 src="/about/bogna-02.jpg"
@@ -16,7 +16,7 @@ const About = () => {
               />
             </div>
             <div className="flex flex-col gap-4">
-              <h1 className="text-[36px] md:text-[32px] font-medium leading-[100%] tracking-[-0.02em] uppercase">
+              <h1 className="text-[20px] md:text-[28px] font-medium leading-[100%] tracking-[-0.02em] uppercase">
                 Bogna Bartkowiak-Trepka
               </h1>
               <p className="text-sm md:text-base font-light leading-[160%] tracking-[-0.02em] text-foreground/90">
