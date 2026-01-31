@@ -211,7 +211,7 @@ items-center"
             <img 
               src="/about/bogna-01.jpg" 
               alt="Bogna z artefaktem" 
-              className="w-full md:w-auto md:max-w-[648px] h-auto object-contain" 
+              className="w-full md:w-auto md:max-w-[648px] md:max-h-[512px] h-auto object-contain" 
             />
           </div>
         </div>
