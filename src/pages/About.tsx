@@ -23,7 +23,7 @@ const About = () => {
           </div>
 
           {/* Right - Image with Rest of Content */}
-          <div className="w-full flex flex-col gap-6">
+          <div className="w-fit flex flex-col gap-6">
             <div className="w-full max-w-[316px] aspect-[3/4]">
               <img src="/about/bogna-08.jpg" alt="Bogna w pracowni" className="w-full h-full object-cover" />
             </div>
