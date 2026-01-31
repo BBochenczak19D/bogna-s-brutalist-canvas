@@ -1,13 +1,27 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface ImageLightboxProps {
   image: string;
   title?: string;
   details?: string;
   onClose: () => void;
+  onPrev?: () => void;
+  onNext?: () => void;
+  hasPrev?: boolean;
+  hasNext?: boolean;
 }
 
-const ImageLightbox = ({ image, title, details, onClose }: ImageLightboxProps) => {
+const ImageLightbox = ({ 
+  image, 
+  title, 
+  details, 
+  onClose, 
+  onPrev, 
+  onNext, 
+  hasPrev = false, 
+  hasNext = false 
+}: ImageLightboxProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
 
@@ -17,23 +31,27 @@ const ImageLightbox = ({ image, title, details, onClose }: ImageLightboxProps) =
   }, []);
 
   // Handle close with animation
-  const handleClose = () => {
+  const handleClose = useCallback(() => {
     setIsClosing(true);
     setTimeout(() => {
       onClose();
     }, 200);
-  };
+  }, [onClose]);
 
-  // Handle ESC key
+  // Handle ESC key and arrow keys
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         handleClose();
+      } else if (e.key === "ArrowLeft" && hasPrev && onPrev) {
+        onPrev();
+      } else if (e.key === "ArrowRight" && hasNext && onNext) {
+        onNext();
       }
     };
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, []);
+  }, [handleClose, hasPrev, hasNext, onPrev, onNext]);
 
   // Prevent body scroll when lightbox is open
   useEffect(() => {
@@ -60,6 +78,33 @@ const ImageLightbox = ({ image, title, details, onClose }: ImageLightboxProps) =
           <path d="M18 6L6 18M6 6l12 12" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       </button>
+
+      {/* Navigation arrows */}
+      {hasPrev && onPrev && (
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            onPrev();
+          }}
+          className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-10 text-white/50 hover:text-white transition-colors p-2"
+          aria-label="Poprzedni obraz"
+        >
+          <ChevronLeft size={48} strokeWidth={1} />
+        </button>
+      )}
+
+      {hasNext && onNext && (
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            onNext();
+          }}
+          className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-10 text-white/50 hover:text-white transition-colors p-2"
+          aria-label="Następny obraz"
+        >
+          <ChevronRight size={48} strokeWidth={1} />
+        </button>
+      )}
 
       {/* Image container */}
       <div 
