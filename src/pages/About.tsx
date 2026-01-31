@@ -1,24 +1,10 @@
 import CornerBracket from "@/components/CornerBracket";
 import ArrowLink from "@/components/ArrowLink";
-
 const About = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Hero Section - Matching Home page structure */}
       <section className="max-w-[1648px] mx-auto px-9 pt-32">
-        <div className="flex items-start gap-6 max-w-[700px]">
-          <CornerBracket className="hidden md:block flex-shrink-0" />
-          <img 
-            src="/about/bogna-03.jpg" 
-            alt="Bogna Bartkowiak-Trepka" 
-            className="w-[140px] h-[200px] object-cover flex-shrink-0"
-          />
-          <p className="flex-1 text-sm font-normal leading-[125%] uppercase italic">
-            Artystka poruszająca się w przestrzeni wspólnej dla nauki, duchowości i sztuki. 
-            Praktykująca lekarka, absolwentka Akademii Sztuk Pięknych w Katowicach.
-          </p>
-          <CornerBracket className="hidden md:block flex-shrink-0" />
-        </div>
+        
       </section>
 
       {/* Main Title */}
@@ -29,40 +15,7 @@ const About = () => {
       </section>
 
       {/* Bio Section - Asymmetric Layout */}
-      <section className="max-w-[1648px] mx-auto px-9 py-[80px]">
-        <div className="flex flex-col md:flex-row gap-8">
-          {/* Left - Main large image */}
-          <div className="md:w-[50%]">
-            <img 
-              src="/about/bogna-02.jpg" 
-              alt="Bogna Bartkowiak-Trepka - portret" 
-              className="w-full h-[700px] object-cover"
-            />
-          </div>
-          
-          {/* Right - Stacked content */}
-          <div className="md:w-[50%] flex flex-col gap-8">
-            {/* Top - Second image */}
-            <div>
-              <img 
-                src="/about/bogna-08.jpg" 
-                alt="Bogna Bartkowiak-Trepka z pracą" 
-                className="w-full h-auto"
-              />
-            </div>
-            
-            {/* Bottom - Text content */}
-            <div className="flex flex-col gap-6 pt-4">
-              <p className="text-base font-light leading-[160%] tracking-[-0.02em] text-foreground/90">
-                Moja twórczość wyrasta z potrzeby poszukiwania odpowiedzi na pytania o przyczynę i sens istnienia oraz z fascynacji tym, co wymyka się materii, myśli i racjonalnemu poznaniu.
-              </p>
-              <p className="text-base font-light leading-[160%] tracking-[-0.02em] text-foreground/90">
-                Jestem również praktykującą lekarką. Studia medyczne pozwoliły mi zgłębiać anatomię i mechanizmy funkcjonowania ludzkiego ciała. Zamiast jednoznacznych odpowiedzi doświadczenie to przyniosło mi jednak kolejne pytania i wzmocniło świadomość, jak rozległy obszar rzeczywistości pozostaje poza granicami naszej wiedzy.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Quote Section - Between Science and Mystery */}
       <section className="max-w-[1648px] mx-auto px-9 py-[100px]">
@@ -91,24 +44,12 @@ const About = () => {
       <section className="max-w-[1648px] mx-auto px-9">
         <div className="flex flex-col md:flex-row gap-6">
           <div className="md:w-1/3">
-            <img 
-              src="/about/bogna-05.jpg" 
-              alt="Bogna w ruchu - proces twórczy" 
-              className="w-full h-[500px] object-cover"
-            />
+            <img src="/about/bogna-05.jpg" alt="Bogna w ruchu - proces twórczy" className="w-full h-[500px] object-cover" />
           </div>
           <div className="md:w-2/3 flex flex-col gap-6">
             <div className="flex flex-col md:flex-row gap-6">
-              <img 
-                src="/about/bogna-04.jpg" 
-                alt="Praca z artefaktami" 
-                className="w-full md:w-1/2 h-[300px] object-cover"
-              />
-              <img 
-                src="/about/bogna-06.jpg" 
-                alt="Detale procesu twórczego" 
-                className="w-full md:w-1/2 h-[300px] object-cover"
-              />
+              <img src="/about/bogna-04.jpg" alt="Praca z artefaktami" className="w-full md:w-1/2 h-[300px] object-cover" />
+              <img src="/about/bogna-06.jpg" alt="Detale procesu twórczego" className="w-full md:w-1/2 h-[300px] object-cover" />
             </div>
             <p className="text-base font-light leading-[160%] tracking-[-0.02em] text-foreground/90">
               W swojej twórczości łączę doświadczenia lekarskie z poszukiwaniami tego, co niewyjaśnione i niewyjaśnialne. 
@@ -154,11 +95,7 @@ const About = () => {
       <section className="max-w-[1648px] mx-auto px-9 py-[100px]">
         <div className="flex flex-col md:flex-row gap-16 items-center">
           <div className="md:w-1/2">
-            <img 
-              src="/about/bogna-01.jpg" 
-              alt="Bogna z artefaktem" 
-              className="w-full h-auto object-cover"
-            />
+            <img src="/about/bogna-01.jpg" alt="Bogna z artefaktem" className="w-full h-auto object-cover" />
           </div>
           <div className="md:w-1/2 flex flex-col gap-8">
             <div className="flex items-start gap-6">
@@ -180,11 +117,7 @@ const About = () => {
       <section className="max-w-[1648px] mx-auto px-9 pb-[100px]">
         <div className="flex flex-col md:flex-row gap-16">
           <div className="md:w-1/3 flex items-start gap-6">
-            <img 
-              src="/about/bogna-07.jpg" 
-              alt="Materiały i narzędzia" 
-              className="w-full h-[400px] object-cover"
-            />
+            <img src="/about/bogna-07.jpg" alt="Materiały i narzędzia" className="w-full h-[400px] object-cover" />
           </div>
           <div className="md:w-2/3 flex flex-col justify-center">
             <p className="text-base font-light leading-[160%] tracking-[-0.02em] text-foreground/90 mb-8">
@@ -354,30 +287,18 @@ const About = () => {
           </div>
           <div className="flex items-start gap-6">
             <span className="text-[14px] font-medium text-muted-foreground min-w-[100px]">Instagram</span>
-            <a 
-              href="https://www.instagram.com/bogna_bartkowiak" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-base hover:text-foreground/70 transition-colors"
-            >
+            <a href="https://www.instagram.com/bogna_bartkowiak" target="_blank" rel="noopener noreferrer" className="text-base hover:text-foreground/70 transition-colors">
               @bogna_bartkowiak
             </a>
           </div>
           <div className="flex items-start gap-6">
             <span className="text-[14px] font-medium text-muted-foreground min-w-[100px]">YouTube</span>
-            <a 
-              href="https://www.youtube.com/watch?v=UKljf1XDh0k&list=PLjiSr4QYw7PzFWYJYW5cQstY7DQJzxyXG" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-base hover:text-foreground/70 transition-colors"
-            >
+            <a href="https://www.youtube.com/watch?v=UKljf1XDh0k&list=PLjiSr4QYw7PzFWYJYW5cQstY7DQJzxyXG" target="_blank" rel="noopener noreferrer" className="text-base hover:text-foreground/70 transition-colors">
               Kanał YouTube
             </a>
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default About;
