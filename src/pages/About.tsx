@@ -76,17 +76,17 @@ const About = () => {
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative z-10 max-w-[1648px] mx-auto px-9 py-24 md:py-32">
-          <h2 className="text-[28px] md:text-[48px] font-medium leading-[110%] tracking-[-0.02em] uppercase mb-16 text-white">
+          <h2 className="text-[28px] font-medium leading-[110%] tracking-[-0.02em] uppercase mb-16 text-white md:text-7xl">
             W poszukiwaniu III Materii
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
-            <p className="text-base font-light leading-[160%] tracking-[-0.02em] text-white/90">
+            <p className="font-light leading-[160%] tracking-[-0.02em] text-white/90 text-xl">
               Projekt <em className="font-medium">W poszukiwaniu III Materii</em> — obejmujący obrazy, grafiki,
               artefakty oraz seans 3D przeznaczony do prezentacji na ekranie sferycznym planetarium — jest rezultatem
               wieloletnich rozważań, poszukiwań filozoficznych oraz eksperymentów artystycznych prowadzonych na
               granicy percepcji.
             </p>
-            <p className="text-base font-light leading-[160%] tracking-[-0.02em] text-white/90">
+            <p className="font-light leading-[160%] tracking-[-0.02em] text-white/90 text-xl">
               To także przekorna próba odnalezienia duszy człowieka w medycznych badaniach obrazowych oraz moja
               indywidualna interpretacja tego, co niewypowiedziane — zbliżenie się do Niewiadomej zarówno poprzez sam
               akt twórczy, jak i jego efekt.
