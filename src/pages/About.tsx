@@ -16,7 +16,7 @@ const About = () => {
         </div>
 
         {/* Two Column Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 justify-start items-start">
           {/* Left - Image */}
           <div className="relative w-fit">
             <img 
