@@ -80,26 +80,24 @@ const About = () => {
             W poszukiwaniu III Materii
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
-            <div className="space-y-8">
-              <p className="text-base font-light leading-[160%] tracking-[-0.02em] text-white/90">
-                Projekt <em className="font-medium">W poszukiwaniu III Materii</em> — obejmujący obrazy, grafiki,
-                artefakty oraz seans 3D przeznaczony do prezentacji na ekranie sferycznym planetarium — jest rezultatem
-                wieloletnich rozważań, poszukiwań filozoficznych oraz eksperymentów artystycznych prowadzonych na
-                granicy percepcji.
-              </p>
-              <p className="text-base font-light leading-[160%] tracking-[-0.02em] text-white/90">
-                To także przekorna próba odnalezienia duszy człowieka w medycznych badaniach obrazowych oraz moja
-                indywidualna interpretacja tego, co niewypowiedziane — zbliżenie się do Niewiadomej zarówno poprzez sam
-                akt twórczy, jak i jego efekt.
-              </p>
-            </div>
-            <div className="space-y-8">
-              <p className="text-base font-light leading-[160%] tracking-[-0.02em] text-white/90">
-                Kolejne projekty stanowią kontynuację tych poszukiwań — są ich rozwinięciem, nawarstwieniem i dalszym
-                eksplorowaniem idei Trzeciej Materii.
-              </p>
-              <ArrowLink to="/collections/iii-materia" className="text-white hover:text-white/70">Zobacz kolekcję III Materia</ArrowLink>
-            </div>
+            <p className="text-base font-light leading-[160%] tracking-[-0.02em] text-white/90">
+              Projekt <em className="font-medium">W poszukiwaniu III Materii</em> — obejmujący obrazy, grafiki,
+              artefakty oraz seans 3D przeznaczony do prezentacji na ekranie sferycznym planetarium — jest rezultatem
+              wieloletnich rozważań, poszukiwań filozoficznych oraz eksperymentów artystycznych prowadzonych na
+              granicy percepcji.
+            </p>
+            <p className="text-base font-light leading-[160%] tracking-[-0.02em] text-white/90">
+              To także przekorna próba odnalezienia duszy człowieka w medycznych badaniach obrazowych oraz moja
+              indywidualna interpretacja tego, co niewypowiedziane — zbliżenie się do Niewiadomej zarówno poprzez sam
+              akt twórczy, jak i jego efekt.
+            </p>
+          </div>
+          <div className="mt-12 space-y-8">
+            <p className="text-base font-light leading-[160%] tracking-[-0.02em] text-white/90">
+              Kolejne projekty stanowią kontynuację tych poszukiwań — są ich rozwinięciem, nawarstwieniem i dalszym
+              eksplorowaniem idei Trzeciej Materii.
+            </p>
+            <ArrowLink to="/collections/iii-materia" className="text-white hover:text-white/70">Zobacz kolekcję III Materia</ArrowLink>
           </div>
         </div>
       </section>
