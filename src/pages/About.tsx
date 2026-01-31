@@ -168,7 +168,7 @@ items-center">
             <div className="flex items-start gap-6">
               <CornerBracket className="hidden md:block flex-shrink-0" />
               <blockquote>
-                <p className="text-[22px] md:text-[28px] font-light leading-[140%] tracking-[-0.02em] italic">
+                <p className="text-[22px] font-light leading-[140%] tracking-[-0.02em] italic md:text-4xl">
                   Tworzenie jest dla mnie źródłem radości i głębokiej satysfakcji. Obcowanie ze sztuką — zarówno w
                   procesie twórczym, jak i w jego kontemplacji — daje mi poczucie spełnienia i wewnętrznej harmonii.
                 </p>
