@@ -5,43 +5,45 @@ import { Button } from "@/components/ui/button";
 
 const About = () => {
   return <div className="min-h-screen bg-background">
-      {/* Hero Section - Redesigned */}
+      {/* Hero Section - Editorial Stack Layout */}
       <section className="max-w-[1648px] mx-auto px-4 md:px-9 pt-24 md:pt-32">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          {/* Left Column - Main Image */}
-          <div className="lg:col-span-4">
-            <div className="relative">
-              <div className="aspect-[3/4] w-full">
-                <img src="/about/bogna-02.jpg" alt="Bogna Bartkowiak-Trepka - portret" className="w-full h-full object-cover" />
-              </div>
-            </div>
+        {/* Name as Bold Typography Statement */}
+        <div className="mb-12 md:mb-16">
+          <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-4">Artystka / Lekarka</p>
+          <h1 className="text-5xl md:text-7xl lg:text-[120px] font-bold uppercase leading-[0.9] tracking-[-0.03em]">
+            Bogna<br />Bartkowiak-Trepka
+          </h1>
+        </div>
+
+        {/* Two Column Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+          {/* Left - Image */}
+          <div className="relative">
+            <img 
+              src="/about/bogna-02.jpg" 
+              alt="Bogna Bartkowiak-Trepka - portret" 
+              className="w-full h-auto object-cover max-h-[600px]" 
+            />
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 border-2 border-foreground/20 hidden md:block" />
           </div>
 
-          {/* Center Column - Name & Bio */}
-          <div className="lg:col-span-5 flex flex-col justify-between py-4 w-full">
+          {/* Right - Bio & Contact */}
+          <div className="flex flex-col justify-between gap-12">
             <div className="space-y-6">
-              <div className="space-y-2">
-                <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">Artystka / Lekarka</p>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-[100%] tracking-[-0.02em]">
-                  Bogna Bartkowiak-Trepka
-                </h1>
-              </div>
-
-              <div className="w-16 h-px bg-foreground/30" />
-
-              <div className="space-y-4 w-full">
-                <p className="text-sm md:text-base leading-[170%] tracking-[-0.01em] text-foreground/90 font-medium">
-                  Jestem artystką poruszającą się w przestrzeni wspólnej dla nauki, duchowości i sztuki. Moja twórczość
-                  wyrasta z potrzeby poszukiwania odpowiedzi na pytania o przyczynę i sens istnienia.
-                </p>
-                <p className="text-sm md:text-base leading-[170%] tracking-[-0.01em] text-foreground/70 font-light">
-                  Jestem również praktykującą lekarką. To właśnie w przestrzeni — pomiędzy naukową precyzją a tajemnicą
-                  — zakorzeniła się moja praktyka artystyczna.
-                </p>
-              </div>
+              <div className="w-20 h-px bg-foreground/40" />
+              
+              <p className="text-lg md:text-xl leading-[170%] tracking-[-0.01em] text-foreground/90 font-medium">
+                Jestem artystką poruszającą się w przestrzeni wspólnej dla nauki, duchowości i sztuki. Moja twórczość
+                wyrasta z potrzeby poszukiwania odpowiedzi na pytania o przyczynę i sens istnienia.
+              </p>
+              
+              <p className="text-base md:text-lg leading-[170%] tracking-[-0.01em] text-foreground/60 font-light">
+                Jestem również praktykującą lekarką. To właśnie w przestrzeni — pomiędzy naukową precyzją a tajemnicą
+                — zakorzeniła się moja praktyka artystyczna.
+              </p>
 
               {/* Contact Button */}
-              <Button asChild variant="outline" className="w-fit">
+              <Button asChild variant="outline" className="w-fit mt-4">
                 <a href="mailto:bartkowiakbogna@gmail.com">
                   <Mail size={18} />
                   Skontaktuj się
@@ -50,26 +52,24 @@ const About = () => {
             </div>
 
             {/* Social Links */}
-            <div className="mt-8 lg:mt-12">
-              <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-4">Media społecznościowe</p>
-              <div className="flex flex-col gap-3">
-                <a href="mailto:bartkowiakbogna@gmail.com" className="inline-flex items-center gap-3 text-sm hover:text-foreground/70 transition-colors group">
-                  <Mail size={18} className="text-foreground/60 group-hover:text-foreground transition-colors" />
-                  <span>bartkowiakbogna@gmail.com</span>
+            <div className="border-t border-foreground/10 pt-8">
+              <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-6">Znajdź mnie</p>
+              <div className="flex flex-wrap gap-6">
+                <a href="mailto:bartkowiakbogna@gmail.com" className="inline-flex items-center gap-2 text-sm hover:text-foreground/70 transition-colors group">
+                  <Mail size={16} className="text-foreground/60 group-hover:text-foreground transition-colors" />
+                  <span>Email</span>
                 </a>
-                <a href="https://www.instagram.com/bogna_bartkowiak" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 text-sm hover:text-foreground/70 transition-colors group">
-                  <Instagram size={18} className="text-foreground/60 group-hover:text-foreground transition-colors" />
-                  <span>@bogna_bartkowiak</span>
+                <a href="https://www.instagram.com/bogna_bartkowiak" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm hover:text-foreground/70 transition-colors group">
+                  <Instagram size={16} className="text-foreground/60 group-hover:text-foreground transition-colors" />
+                  <span>Instagram</span>
                 </a>
-                <a href="https://www.youtube.com/watch?v=UKljf1XDh0k&list=PLjiSr4QYw7PzFWYJYW5cQstY7DQJzxyXG" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 text-sm hover:text-foreground/70 transition-colors group">
-                  <Youtube size={18} className="text-foreground/60 group-hover:text-foreground transition-colors" />
-                  <span>Kanał YouTube</span>
+                <a href="https://www.youtube.com/watch?v=UKljf1XDh0k&list=PLjiSr4QYw7PzFWYJYW5cQstY7DQJzxyXG" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm hover:text-foreground/70 transition-colors group">
+                  <Youtube size={16} className="text-foreground/60 group-hover:text-foreground transition-colors" />
+                  <span>YouTube</span>
                 </a>
               </div>
             </div>
           </div>
-
-          {/* Right Column - Secondary Image */}
         </div>
       </section>
 
