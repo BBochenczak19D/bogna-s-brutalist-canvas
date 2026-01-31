@@ -52,7 +52,7 @@ const About = () => {
           </div>
           <div className="md:w-2/3 flex flex-col gap-6">
             <div className="flex flex-col md:flex-row gap-6">
-              <img src="/about/bogna-04.jpg" alt="Praca z artefaktami" className="w-full md:w-1/2 h-[300px] object-cover" />
+              <img src="/about/bogna-04.jpg" alt="Praca z artefaktami" className="w-full md:w-1/2 h-[300px] object-cover object-center" />
               
             </div>
             <p className="text-base font-light leading-[160%] tracking-[-0.02em] text-foreground/90">
