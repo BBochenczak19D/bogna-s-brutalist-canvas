@@ -57,7 +57,7 @@ const About = () => {
               <div className="flex flex-wrap gap-6">
                 <a href="mailto:bartkowiakbogna@gmail.com" className="inline-flex items-center gap-2 text-sm hover:text-foreground/70 transition-colors group">
                   <Mail size={16} className="text-foreground/60 group-hover:text-foreground transition-colors" />
-                  <span>Email</span>
+                  <span>bognabartkowiak@gmail.com</span>
                 </a>
                 <a href="https://www.instagram.com/bogna_bartkowiak" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm hover:text-foreground/70 transition-colors group">
                   <Instagram size={16} className="text-foreground/60 group-hover:text-foreground transition-colors" />
