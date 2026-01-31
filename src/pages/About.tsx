@@ -185,6 +185,31 @@ items-center">
         </div>
       </section>
 
+      {/* Art & Reflection Section */}
+      <section className="max-w-[1648px] mx-auto px-9 py-[100px]">
+        <div className="flex flex-col md:flex-row gap-12 lg:gap-20 items-center">
+          {/* Image on left */}
+          <div className="order-1 flex-shrink-0">
+            <img src="/about/bogna-03.jpg" alt="Bogna w pracowni" className="w-full md:w-auto md:max-w-[648px] md:max-h-[512px] h-auto object-contain" />
+          </div>
+          {/* Text on right */}
+          <div className="flex-1 flex flex-col gap-8 order-2">
+            <div className="flex items-start gap-6">
+              <CornerBracket className="hidden md:block flex-shrink-0" />
+              <blockquote>
+                <p className="text-[22px] md:text-[28px] font-light leading-[140%] tracking-[-0.02em] italic">
+                  Tworzę sztukę, która nie tylko oddziałuje wizualnie, ale także zaprasza do pogłębionej refleksji nad
+                  naturą rzeczywistości, świadomości i istnienia.
+                </p>
+              </blockquote>
+            </div>
+            <p className="text-lg font-medium text-foreground">
+              Pracuję głównie z farbą olejną, lecz sięgam również po instalacje, grafikę, rzeźbę oraz nowe media.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Materials Section */}
       <section className="max-w-[1648px] mx-auto px-9 pb-[100px]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-end">
