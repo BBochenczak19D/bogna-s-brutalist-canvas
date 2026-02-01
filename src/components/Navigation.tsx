@@ -74,8 +74,7 @@ const Navigation = () => {
         { path: "/tworczość/instalacje", label: "instalacje" }
       ]
     },
-    { path: "/about", label: "O MNIE" },
-    { path: "/contact", label: "Kontakt" }
+    { path: "/about", label: "O MNIE" }
   ];
 
   const isActiveParent = (item: typeof navItems[0]) => {
