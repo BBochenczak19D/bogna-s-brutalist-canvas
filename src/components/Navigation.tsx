@@ -158,12 +158,24 @@ const Navigation = () => {
                       <NavLink
                         key={subItem.path}
                         to={subItem.path}
-                        className="px-[5px] py-[3px] hover:opacity-70 transition-all duration-300"
+                        className="group flex items-center gap-1.5 px-[5px] py-[3px] hover:opacity-70 transition-all duration-300"
                         onClick={() => {
                           setHoveredItem(null);
                           setClickedItem(null);
                         }}
                       >
+                        <svg 
+                          width="12" 
+                          height="12" 
+                          viewBox="0 0 12 12" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          strokeWidth="1.5"
+                          className="transition-transform duration-300 group-hover:rotate-90"
+                        >
+                          <line x1="6" y1="2" x2="6" y2="10" />
+                          <line x1="2" y1="6" x2="10" y2="6" />
+                        </svg>
                         <span className="text-lg font-normal uppercase leading-[100%] tracking-normal">
                           {subItem.label}
                         </span>
@@ -214,9 +226,21 @@ const Navigation = () => {
                             key={subItem.path}
                             to={subItem.path}
                             onClick={() => setIsOpen(false)}
-                            className="px-[5px] py-[3px] hover:opacity-70 transition-opacity"
+                            className="group flex items-center gap-1.5 px-[5px] py-[3px] hover:opacity-70 transition-opacity"
                             activeClassName="underline opacity-100"
                           >
+                            <svg 
+                              width="12" 
+                              height="12" 
+                              viewBox="0 0 12 12" 
+                              fill="none" 
+                              stroke="currentColor" 
+                              strokeWidth="1.5"
+                              className="transition-transform duration-300 group-hover:rotate-90"
+                            >
+                              <line x1="6" y1="2" x2="6" y2="10" />
+                              <line x1="2" y1="6" x2="10" y2="6" />
+                            </svg>
                             <span className="text-lg font-normal uppercase leading-[100%]">
                               {subItem.label}
                             </span>
