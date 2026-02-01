@@ -9,6 +9,7 @@ interface Artwork {
   dimensions: string;
   year: string;
   image: string;
+  collection?: string;
 }
 
 interface MasonryArtworkGridProps {
@@ -77,6 +78,13 @@ const MasonryArtworkGrid = ({ artworks, categoryDescription, category }: Masonry
                   <h3 className="text-lg font-normal tracking-tight uppercase text-foreground mb-1">
                     {artwork.title}
                   </h3>
+                  {artwork.collection && (
+                    <p className={`text-xs font-medium text-muted-foreground/70 uppercase tracking-wider mb-1 ${
+                      (isWideImage || isCenteredImage) ? "text-center" : ""
+                    }`}>
+                      {artwork.collection}
+                    </p>
+                  )}
                   <div className={`flex items-center gap-1 text-sm font-light text-muted-foreground ${
                     (isWideImage || isCenteredImage) ? "justify-center" : ""
                   }`}>
