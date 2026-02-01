@@ -60,6 +60,7 @@ const Navigation = () => {
       label: "Kolekcje",
       subItems: [
         { path: "/collections/iii-materia", label: "III Materia" },
+        { path: "/collections/w-kolekcji-prywatnej", label: "W kolekcji prywatnej" },
         { path: "/collections", label: "Inne" }
       ]
     },

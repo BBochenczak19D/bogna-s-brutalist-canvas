@@ -78,6 +78,9 @@ const Layout = () => {
                 <a href="/collections/iii-materia" className="text-background hover:text-background/70 transition-colors uppercase text-sm">
                   III Materia
                 </a>
+                <a href="/collections/w-kolekcji-prywatnej" className="text-background hover:text-background/70 transition-colors uppercase text-sm">
+                  W kolekcji prywatnej
+                </a>
               </div>
               
               {/* Twórczość Column */}
