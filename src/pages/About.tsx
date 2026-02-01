@@ -113,7 +113,7 @@ const About = () => {
           </div>
 
           {/* Right - Stacked Images */}
-          <div className="lg:col-span-3 flex flex-col gap-4 items-center lg:items-start">
+          <div className="lg:col-span-3 flex flex-col gap-4 items-center lg:items-start w-fit">
             <img src="/about/bogna-05.jpg" alt="Bogna w ruchu - proces twórczy" className="w-2/3 h-auto object-contain" />
             <img src="/about/bogna-04.jpg" alt="Praca z artefaktami" className="w-2/3 h-auto object-contain" />
           </div>
