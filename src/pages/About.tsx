@@ -27,7 +27,7 @@ const About = () => {
           </div>
 
           {/* Right - Bio & Contact */}
-          <div className="flex flex-col justify-between gap-12">
+          <div className="flex flex-col justify-between gap-12 w-full">
             <div className="space-y-6">
               <div className="w-20 h-px bg-foreground/40" />
               
