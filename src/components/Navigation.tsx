@@ -123,8 +123,8 @@ const Navigation = () => {
             const isActive = isActiveParent(item);
             const hasSubItems = 'subItems' in item && item.subItems;
             const isHovered = hoveredItem === item.path;
-            // Hide subcategories when scrolled, show on hover or when at top and active
-            const shouldShowSubItems = isHovered || (isActive && !hasScrolled);
+            // Show subcategories only on hover - consistent behavior across all sections
+            const shouldShowSubItems = isHovered;
             
             return (
               <div 
