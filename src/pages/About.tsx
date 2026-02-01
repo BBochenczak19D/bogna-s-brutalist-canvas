@@ -81,7 +81,7 @@ const About = () => {
       <section className="max-w-[1648px] mx-auto px-4 md:px-9 py-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
           {/* Left - Large Image */}
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-5 w-fit">
             <img src="/about/bogna-09.jpg" alt="Bogna Bartkowiak z obrazem i rzeźbami" className="w-fit max-w-[600px] max-h-[564px] h-auto object-contain" />
           </div>
 
