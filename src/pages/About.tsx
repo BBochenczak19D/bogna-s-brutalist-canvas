@@ -16,7 +16,7 @@ const About = () => {
         </div>
 
         {/* Two Column Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 justify-start items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 justify-start items-start">
           {/* Left - Image */}
           <div className="w-fit">
             <img 
@@ -27,7 +27,7 @@ const About = () => {
           </div>
 
           {/* Right - Bio & Contact */}
-          <div className="flex flex-col justify-between gap-12 lg:ml-[80px]">
+          <div className="flex flex-col justify-between gap-12">
             <div className="space-y-6">
               <div className="w-20 h-px bg-foreground/40" />
               
