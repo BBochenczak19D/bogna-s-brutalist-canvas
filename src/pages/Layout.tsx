@@ -109,9 +109,6 @@ const Layout = () => {
                 <a href="/about" className="text-background hover:text-background/70 transition-colors uppercase text-sm">
                   O mnie
                 </a>
-                <a href="/contact" className="text-background hover:text-background/70 transition-colors uppercase text-sm">
-                  Kontakt
-                </a>
               </div>
               
               {/* Right Column - Social & Contact */}
