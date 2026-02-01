@@ -18,13 +18,12 @@ const About = () => {
         {/* Two Column Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 justify-start items-start">
           {/* Left - Image */}
-          <div className="relative w-fit">
+          <div className="w-fit">
             <img 
               src="/about/bogna-02.jpg" 
               alt="Bogna Bartkowiak-Trepka - portret" 
               className="w-full max-w-[474px] h-auto object-cover max-h-[600px]" 
             />
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 border-2 border-foreground/20 hidden md:block" />
           </div>
 
           {/* Right - Bio & Contact */}
