@@ -78,7 +78,11 @@ const Navigation = () => {
   ];
 
   const isActiveParent = (item: typeof navItems[0]) => {
+    // Exact match on parent path
     if (item.path === location.pathname) return true;
+    // Check if current path starts with parent path (for nested routes)
+    if (location.pathname.startsWith(item.path + '/')) return true;
+    // Check subItems for exact match
     if ('subItems' in item && item.subItems) {
       return item.subItems.some(sub => sub.path === location.pathname);
     }
