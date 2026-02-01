@@ -10,6 +10,7 @@ const Navigation = () => {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [clickedItem, setClickedItem] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(true);
+  const [hasScrolled, setHasScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const location = useLocation();
 
@@ -26,6 +27,9 @@ const Navigation = () => {
           
           // Only hide navigation if there's enough content to scroll
           if (scrollableHeight > 200) {
+            // Track if user has scrolled past threshold (to hide subcategories)
+            setHasScrolled(currentScrollY > 50);
+            
             if (currentScrollY < lastScrollY) {
               // Scrolling up
               setIsVisible(true);
@@ -38,6 +42,7 @@ const Navigation = () => {
           } else {
             // Not enough content, always show navigation
             setIsVisible(true);
+            setHasScrolled(false);
           }
           
           ticking = false;
@@ -96,6 +101,7 @@ const Navigation = () => {
     setClickedItem(null);
     setIsOpen(false);
     setIsVisible(true); // Always show navigation on route change
+    setHasScrolled(false); // Reset scroll state
     setLastScrollY(0); // Reset scroll position tracking
   }, [location.pathname]);
 
@@ -117,7 +123,8 @@ const Navigation = () => {
             const isActive = isActiveParent(item);
             const hasSubItems = 'subItems' in item && item.subItems;
             const isHovered = hoveredItem === item.path;
-            const shouldShowSubItems = isActive || isHovered;
+            // Hide subcategories when scrolled, show on hover or when at top and active
+            const shouldShowSubItems = isHovered || (isActive && !hasScrolled);
             
             return (
               <div 
