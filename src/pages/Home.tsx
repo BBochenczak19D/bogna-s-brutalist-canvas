@@ -387,7 +387,7 @@ const Home = () => {
           <section className="max-w-[1648px] mx-auto py-[100px] flex flex-col items-start gap-9">
             <div className="flex px-9 flex-col items-start gap-6 self-stretch">
               <div className="flex flex-col justify-center items-start gap-8 self-stretch">
-                <p className="self-stretch text-2xl font-medium leading-[110%] tracking-[-0.96px] uppercase animate-fade-in" style={{
+                <p className="self-stretch text-lg md:text-2xl font-medium leading-[110%] tracking-[-0.96px] uppercase animate-fade-in" style={{
               animationDelay: "0.2s"
             }}>
                   To energia, która nie domaga się dowodu. Odsłania się tylko tym, którzy potrafią słuchać inaczej.
