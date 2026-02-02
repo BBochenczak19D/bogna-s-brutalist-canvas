@@ -2,37 +2,21 @@ import { useState, useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import { AnimationProvider } from "@/contexts/AnimationContext";
-
-const footerImages = [
-  "/artworks/obrazy/obraz-15.jpg",
-  "/artworks/obrazy/obraz-11.jpg",
-  "/artworks/obrazy/obraz-18.jpg",
-  "/artworks/artefakty/artefakt-05.jpg",
-  "/artworks/collections/iii-materia/materia-01.jpg",
-  "/artworks/collections/iii-materia/materia-03.jpg",
-  "/artworks/collections/iii-materia/materia-05.jpg",
-  "/artworks/collections/iii-materia/materia-07.jpg",
-  "/artworks/collections/iii-materia/materia-09.jpg",
-];
-
+const footerImages = ["/artworks/obrazy/obraz-15.jpg", "/artworks/obrazy/obraz-11.jpg", "/artworks/obrazy/obraz-18.jpg", "/artworks/artefakty/artefakt-05.jpg", "/artworks/collections/iii-materia/materia-01.jpg", "/artworks/collections/iii-materia/materia-03.jpg", "/artworks/collections/iii-materia/materia-05.jpg", "/artworks/collections/iii-materia/materia-07.jpg", "/artworks/collections/iii-materia/materia-09.jpg"];
 const Layout = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
-
   useEffect(() => {
     const interval = setInterval(() => {
       setIsTransitioning(true);
       setTimeout(() => {
-        setCurrentImageIndex((prev) => (prev + 1) % footerImages.length);
+        setCurrentImageIndex(prev => (prev + 1) % footerImages.length);
         setIsTransitioning(false);
       }, 500);
     }, 5000);
-
     return () => clearInterval(interval);
   }, []);
-
-  return (
-    <AnimationProvider>
+  return <AnimationProvider>
       <div className="min-h-screen bg-background">
         <Navigation />
         <main>
@@ -41,18 +25,7 @@ const Layout = () => {
         <footer className="relative mt-20 overflow-hidden h-[564px]">
           {/* Background Images with Crossfade */}
           <div className="absolute inset-0 z-0">
-            {footerImages.map((src, index) => (
-              <img
-                key={src}
-                src={src}
-                alt=""
-                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-                  index === currentImageIndex && !isTransitioning
-                    ? "opacity-100"
-                    : "opacity-0"
-                }`}
-              />
-            ))}
+            {footerImages.map((src, index) => <img key={src} src={src} alt="" className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${index === currentImageIndex && !isTransitioning ? "opacity-100" : "opacity-0"}`} />)}
             <div className="absolute inset-0 bg-foreground/40" />
           </div>
           
@@ -65,7 +38,7 @@ const Layout = () => {
                   Bogna Bartkowiak
                 </Link>
                 <p className="text-background/70 text-sm uppercase tracking-wide">
-                  Artystka · Lekarka
+                  Artysta · Lekarz
                 </p>
               </div>
               
@@ -118,27 +91,17 @@ const Layout = () => {
               <div className="flex flex-col gap-4">
                 <span className="text-background/50 text-xs uppercase tracking-widest mb-2">Kontakt</span>
                 <div className="flex items-center gap-4">
-                  <a 
-                    href="https://instagram.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-background hover:text-background/70 transition-colors"
-                    aria-label="Instagram"
-                  >
+                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-background hover:text-background/70 transition-colors" aria-label="Instagram">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
-                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
                     </svg>
                   </a>
-                  <a 
-                    href="mailto:kontakt@bognabartkowiak.pl" 
-                    className="text-background hover:text-background/70 transition-colors"
-                    aria-label="Email"
-                  >
+                  <a href="mailto:kontakt@bognabartkowiak.pl" className="text-background hover:text-background/70 transition-colors" aria-label="Email">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                      <rect width="20" height="16" x="2" y="4" rx="2"/>
-                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                      <rect width="20" height="16" x="2" y="4" rx="2" />
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                     </svg>
                   </a>
                 </div>
@@ -157,8 +120,6 @@ const Layout = () => {
           </div>
         </footer>
       </div>
-    </AnimationProvider>
-  );
+    </AnimationProvider>;
 };
-
 export default Layout;
