@@ -7,10 +7,10 @@ const About = () => {
       {/* Hero Section - Editorial Stack Layout */}
       <section className="max-w-[1648px] mx-auto px-4 md:px-9 pt-24 md:pt-32">
         {/* Two Column Layout: Image Left, Content Right */}
-        <div className="flex flex-col lg:flex-row items-start justify-start gap-9">
+        <div className="flex flex-col lg:flex-row items-stretch justify-start gap-9">
           {/* Left - Image */}
-          <div className="w-fit">
-            <img src="/about/bogna-02.jpg" alt="Bogna Bartkowiak-Trepka - portret" className="w-full max-w-[520px] h-auto object-cover max-h-[680px]" />
+          <div className="w-fit lg:self-stretch">
+            <img src="/about/bogna-02.jpg" alt="Bogna Bartkowiak-Trepka - portret" className="w-full max-w-[520px] h-auto lg:h-full object-cover object-center" />
           </div>
 
           {/* Right - Title, Bio & Contact */}
