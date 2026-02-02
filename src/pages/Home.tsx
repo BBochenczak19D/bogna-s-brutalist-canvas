@@ -490,7 +490,7 @@ const Home = () => {
           <section className="max-w-[1648px] mx-auto py-[100px] flex flex-col items-start gap-9">
             <div className="flex px-9 justify-end items-center self-stretch">
               <div className="flex justify-between items-start flex-1">
-                <p className="w-full md:w-[579px] text-2xl font-normal leading-[110%] tracking-[-0.48px] uppercase">
+                <p className="w-full max-w-[579px] text-lg md:text-2xl font-normal leading-[110%] tracking-[-0.48px] uppercase">
                   <span className="font-medium animate-fade-in" style={{
                 animationDelay: "0.1s"
               }}>
