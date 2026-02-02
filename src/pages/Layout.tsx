@@ -113,9 +113,7 @@ const Layout = () => {
               <p className="text-background/60 text-sm">
                 © {new Date().getFullYear()} Bogna Bartkowiak. Wszelkie prawa zastrzeżone.
               </p>
-              <p className="text-background/40 text-[10px] uppercase tracking-wider">
-                author of design portfolio
-              </p>
+              
             </div>
           </div>
         </footer>
