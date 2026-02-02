@@ -6,23 +6,23 @@ const About = () => {
   return <div className="min-h-screen bg-background">
       {/* Hero Section - Editorial Stack Layout */}
       <section className="max-w-[1648px] mx-auto px-4 md:px-9 pt-24 md:pt-32">
-        {/* Name as Bold Typography Statement */}
-        <div className="mb-12 md:mb-16">
-          <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-4">Artystka / Lekarka</p>
-          <h1 className="text-5xl md:text-7xl font-bold uppercase leading-[0.9] tracking-[-0.03em] lg:text-7xl">
-            Bogna<br />Bartkowiak-Trepka
-          </h1>
-        </div>
-
-        {/* Two Column Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 justify-start items-start">
+        {/* Two Column Layout: Image Left, Content Right */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Left - Image */}
           <div className="w-fit">
-            <img src="/about/bogna-02.jpg" alt="Bogna Bartkowiak-Trepka - portret" className="w-full max-w-[474px] h-auto object-cover max-h-[600px]" />
+            <img src="/about/bogna-02.jpg" alt="Bogna Bartkowiak-Trepka - portret" className="w-full max-w-[520px] h-auto object-cover max-h-[680px]" />
           </div>
 
-          {/* Right - Bio & Contact */}
-          <div className="flex flex-col justify-between gap-12 w-full">
+          {/* Right - Title, Bio & Contact */}
+          <div className="flex flex-col justify-start gap-8 w-full">
+            {/* Name as Bold Typography Statement */}
+            <div>
+              <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-4">Artystka / Lekarka</p>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-[0.9] tracking-[-0.03em]">
+                Bogna<br />Bartkowiak-Trepka
+              </h1>
+            </div>
+
             <div className="space-y-6">
               <div className="w-20 h-px bg-foreground/40" />
               
