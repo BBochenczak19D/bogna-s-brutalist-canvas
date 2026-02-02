@@ -231,7 +231,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="flex px-0 items-center gap-16 self-stretch">
+            <div className="flex flex-col md:flex-row px-0 items-start md:items-center gap-6 md:gap-16 self-stretch">
               <img 
                 src="/artworks/collections/iii-materia/materia-03.jpg" 
                 alt="Materia III" 
@@ -239,7 +239,7 @@ const Home = () => {
                 onClick={() => openLightbox("/artworks/collections/iii-materia/materia-03.jpg", "CZ. III")}
               />
               <div className="flex flex-col justify-center items-start gap-3">
-                <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
+                <p className="text-lg md:text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-muted-foreground">
                   [cz. III]
                 </p>
                 <ArrowLink to="/collections/iii-materia">PRzejdź do pełnej kolekcji</ArrowLink>
@@ -253,10 +253,10 @@ const Home = () => {
           </section>
 
           {/* Section IV */}
-          <section className="max-w-[1648px] mx-auto px-9 py-[100px] flex flex-col items-start gap-6">
+          <section className="max-w-[1648px] mx-auto px-4 md:px-9 py-12 md:py-[100px] flex flex-col items-start gap-6">
             <div className="flex px-0 items-center self-stretch">
-              <div className="flex flex-col justify-center items-end gap-8 flex-1">
-                <p className="w-full md:w-[599px] text-2xl font-normal leading-[110%] tracking-[-0.48px] uppercase">
+              <div className="flex flex-col justify-center items-start md:items-end gap-8 flex-1">
+                <p className="w-full max-w-[599px] text-lg md:text-2xl font-normal leading-[110%] tracking-[-0.48px] uppercase">
                   <span className="text-foreground">
                     Wejście w Trzecią Materię nie wymaga wiary.{"\n"}Wymaga uważności.{" "}
                   </span>
@@ -271,9 +271,9 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="flex px-0 justify-end items-center gap-16 self-stretch">
+            <div className="flex flex-col-reverse md:flex-row px-0 justify-end items-start md:items-center gap-6 md:gap-16 self-stretch">
               <div className="flex flex-col justify-center items-start gap-3">
-                <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
+                <p className="text-lg md:text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-muted-foreground">
                   [cz. IV | 2023]
                 </p>
                 <ArrowLink to="/collections/iii-materia">PRzejdź do pełnej kolekcji</ArrowLink>
