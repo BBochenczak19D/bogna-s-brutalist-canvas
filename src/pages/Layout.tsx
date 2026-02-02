@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import { AnimationProvider } from "@/contexts/AnimationContext";
 
@@ -61,9 +61,9 @@ const Layout = () => {
             <div className="flex flex-col md:flex-row justify-between gap-12">
               {/* Left Column - Name & Tagline */}
               <div className="flex flex-col gap-4">
-                <h2 className="text-background text-3xl md:text-4xl font-normal uppercase">
+                <Link to="/" className="text-background text-3xl md:text-4xl font-normal uppercase hover:text-background/70 transition-colors">
                   Bogna Bartkowiak
-                </h2>
+                </Link>
                 <p className="text-background/70 text-sm uppercase tracking-wide">
                   Artystka · Lekarka
                 </p>
