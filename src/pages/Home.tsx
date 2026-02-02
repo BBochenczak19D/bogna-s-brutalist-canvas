@@ -132,32 +132,32 @@ const Home = () => {
           </section>
 
           {/* Philosophy Section */}
-          <section className="max-w-[1648px] mx-auto px-9 py-[100px]">
-            <div className="flex justify-end items-center self-stretch py-[24px]">
-              <div className="flex justify-between items-start flex-1">
-                <div className="flex w-full md:w-[565.801px] flex-col items-start gap-0.5">
-                  <div className="w-full text-foreground font-medium text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in" style={{
+          <section className="max-w-[1648px] mx-auto px-4 md:px-9 py-12 md:py-[100px]">
+            <div className="flex justify-end items-center self-stretch py-4 md:py-[24px]">
+              <div className="flex justify-between items-start flex-1 gap-4">
+                <div className="flex w-full max-w-[565px] flex-col items-start gap-0.5">
+                  <div className="w-full text-foreground font-medium text-lg md:text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in" style={{
                 animationDelay: "0.1s"
               }}>
                     Trzecia Materia istnieje.
                   </div>
-                  <div className="text-muted-foreground font-normal text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in" style={{
+                  <div className="text-muted-foreground font-normal text-lg md:text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in" style={{
                 animationDelay: "0.3s"
               }}>
                     Nie jest ciałem.
                   </div>
-                  <div className="text-muted-foreground font-normal text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in" style={{
+                  <div className="text-muted-foreground font-normal text-lg md:text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in" style={{
                 animationDelay: "0.5s"
               }}>
                     Nie jest myślą.
                   </div>
-                  <div className="text-foreground font-medium text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in" style={{
+                  <div className="text-foreground font-medium text-lg md:text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in" style={{
                 animationDelay: "0.7s"
               }}>
                     To to, co sprawia, że jesteśmy.
                   </div>
                 </div>
-                <svg className="w-[21.6px] h-[22.12px] fill-current" width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className="w-[21.6px] h-[22.12px] fill-current flex-shrink-0" width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M21.6 2.4H0V0H21.6V2.4Z" fill="currentColor" />
                   <path d="M19.184 22.12V0.519999H21.584V22.12H19.184Z" fill="currentColor" />
                 </svg>
