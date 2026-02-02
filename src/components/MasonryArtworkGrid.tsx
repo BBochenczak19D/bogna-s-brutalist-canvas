@@ -73,7 +73,7 @@ const MasonryArtworkGrid = ({ artworks, categoryDescription, category }: Masonry
                   <Skeleton className="w-full h-full" />
                 )}
               </div>
-              {category !== "grafiki" && (
+              {category !== "grafiki" && category !== "artefakty" && (
                 <div className={`mt-4 ${(isWideImage || isCenteredImage) ? "text-center" : ""}`}>
                   <h3 className="text-lg font-normal tracking-tight uppercase text-foreground mb-1">
                     {artwork.title}
