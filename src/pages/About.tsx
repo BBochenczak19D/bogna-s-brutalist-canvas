@@ -2,7 +2,6 @@ import CornerBracket from "@/components/CornerBracket";
 import ArrowLink from "@/components/ArrowLink";
 import { Instagram, Youtube, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const About = () => {
   return <div className="min-h-screen bg-background">
       {/* Hero Section - Editorial Stack Layout */}
@@ -10,7 +9,7 @@ const About = () => {
         {/* Name as Bold Typography Statement */}
         <div className="mb-12 md:mb-16">
           <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-4">Artystka / Lekarka</p>
-          <h1 className="text-5xl md:text-7xl lg:text-[120px] font-bold uppercase leading-[0.9] tracking-[-0.03em]">
+          <h1 className="text-5xl md:text-7xl font-bold uppercase leading-[0.9] tracking-[-0.03em] lg:text-7xl">
             Bogna<br />Bartkowiak-Trepka
           </h1>
         </div>
@@ -19,11 +18,7 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 justify-start items-start">
           {/* Left - Image */}
           <div className="w-fit">
-            <img 
-              src="/about/bogna-02.jpg" 
-              alt="Bogna Bartkowiak-Trepka - portret" 
-              className="w-full max-w-[474px] h-auto object-cover max-h-[600px]" 
-            />
+            <img src="/about/bogna-02.jpg" alt="Bogna Bartkowiak-Trepka - portret" className="w-full max-w-[474px] h-auto object-cover max-h-[600px]" />
           </div>
 
           {/* Right - Bio & Contact */}
