@@ -248,7 +248,7 @@ const Home = () => {
               <img 
                 src="/artworks/collections/iii-materia/materia-03.jpg" 
                 alt="Materia III" 
-                className="w-full md:w-[743px] aspect-square object-cover cursor-pointer hover:opacity-90 transition-opacity" 
+                className="w-full md:w-[743px] h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity" 
                 onClick={() => openLightbox("/artworks/collections/iii-materia/materia-03.jpg", "CZ. III")}
               />
               <div className="flex flex-col justify-center items-start gap-3">
