@@ -98,13 +98,15 @@ const Home = () => {
         }} className="w-full">
               <CarouselContent className="px-9 gap-1">
                 {artworks.slice(0, 10).map(artwork => <CarouselItem key={artwork.id} className="basis-auto pl-0">
-                <img 
-                      src={artwork.image} 
-                      alt={artwork.title} 
-                      className="max-w-[260px] md:max-w-[400px] h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity"
-                      draggable={false} 
-                      onClick={() => openLightbox(artwork.image, artwork.title)}
-                    />
+                    <div className="w-[236px] h-[312px] md:w-[376px] md:h-[500px] overflow-hidden">
+                      <img 
+                        src={artwork.image} 
+                        alt={artwork.title} 
+                        className="w-full h-full object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                        draggable={false} 
+                        onClick={() => openLightbox(artwork.image, artwork.title)}
+                      />
+                    </div>
                   </CarouselItem>)}
               </CarouselContent>
             </Carousel>
