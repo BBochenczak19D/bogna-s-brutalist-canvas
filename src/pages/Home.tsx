@@ -9,6 +9,8 @@ import { useAnimation } from "@/contexts/AnimationContext";
 import artworksData from "@/data/artworks.json";
 import { Carousel, CarouselContent, CarouselItem, CarouselApi } from "@/components/ui/carousel";
 import { useParallaxCarousel } from "@/hooks/useParallaxCarousel";
+import { noOrphans } from "@/lib/typography";
+
 const Home = () => {
   const [typingComplete, setTypingComplete] = useState(false);
   const [bioExpanded, setBioExpanded] = useState(false);
@@ -63,9 +65,9 @@ const Home = () => {
             <p className="flex-1 text-sm font-normal leading-[125%] uppercase animate-fade-in italic" style={{
               animationDelay: "0.2s"
             }}>
-              Jestem absolwentką Akademii Sztuk Pięknych w Katowicach oraz lekarzem. W swojej twórczości badam niewidzialne warstwy istnienia, łącząc doświadczenia medyczne z artystyczną intuicją.
+              {noOrphans("Jestem absolwentką Akademii Sztuk Pięknych w Katowicach oraz lekarzem. W swojej twórczości badam niewidzialne warstwy istnienia, łącząc doświadczenia medyczne z artystyczną intuicją.")}
               <br />
-              Tworzenie jest dla mnie sposobem zbliżania się do Niewiadomej.
+              {noOrphans("Tworzenie jest dla mnie sposobem zbliżania się do Niewiadomej.")}
             </p>
           </div>
         </div>
@@ -75,7 +77,7 @@ const Home = () => {
       <section className="max-w-[1648px] mx-auto px-9 py-0 mt-[42px]">
         <div className="flex flex-col gap-8 py-8">
           <h1 className="text-[24px] md:text-[64px] font-medium leading-[100%] tracking-[-0.02em] uppercase max-w-none">
-            {sessionStorage.getItem("heroAnimationComplete") === "true" ? "Co sprawia, że jesteśmy ożywieni? Co kieruje naszym istnieniem, jeśli wykraczamy poza myśli i widzialną materię?" : <TypingText text="Co sprawia, że jesteśmy ożywieni? Co kieruje naszym istnieniem, jeśli wykraczamy poza myśli i widzialną materię?" speed={18} delay={200} pauseAt={33} pauseDuration={1800} onComplete={handleAnimationComplete} />}
+            {sessionStorage.getItem("heroAnimationComplete") === "true" ? noOrphans("Co sprawia, że jesteśmy ożywieni? Co kieruje naszym istnieniem, jeśli wykraczamy poza myśli i widzialną materię?") : <TypingText text="Co sprawia, że jesteśmy ożywieni? Co kieruje naszym istnieniem, jeśli wykraczamy poza myśli i widzialną materię?" speed={18} delay={200} pauseAt={33} pauseDuration={1800} onComplete={handleAnimationComplete} />}
           </h1>
         </div>
       </section>
@@ -84,7 +86,7 @@ const Home = () => {
       {typingComplete && <>
           <section ref={carouselRef} className="max-w-[1648px] mx-auto mt-[100px] mb-8 animate-fade-in">
             <div className="flex justify-end px-9 mb-6">
-              <ArrowLink to="/collections/iii-materia">Przejdź do pełnej kolekcji</ArrowLink>
+              <ArrowLink to="/collections/iii-materia">{noOrphans("Przejdź do pełnej kolekcji")}</ArrowLink>
             </div>
 
             {/* Draggable Carousel Gallery */}
@@ -113,19 +115,13 @@ const Home = () => {
               <p className="flex-1 text-base font-light leading-[125%] tracking-[-0.02em] text-foreground/90 animate-fade-in" style={{
             animationDelay: "0.4s"
           }}>
-                Moja praca zaczyna się tam, gdzie kończy się język. Od zawsze fascynowało mnie to, czego nie da się
-                nazwać: momenty pomiędzy oddechami, przestrzenie wewnątrz ciała, ciche impulsy świadomości. Jako lekarka
-                przez lata uczyłam się patrzeć na człowieka przez pryzmat anatomii i nauki. Jako malarka — przez pryzmat
-                intuicji, symbolu i doświadczenia.
+                {noOrphans("Moja praca zaczyna się tam, gdzie kończy się język. Od zawsze fascynowało mnie to, czego nie da się nazwać: momenty pomiędzy oddechami, przestrzenie wewnątrz ciała, ciche impulsy świadomości. Jako lekarka przez lata uczyłam się patrzeć na człowieka przez pryzmat anatomii i nauki. Jako malarka — przez pryzmat intuicji, symbolu i doświadczenia.")}
               </p>
               <CornerBracket />
               <p className="flex-1 text-base font-light leading-[125%] tracking-[-0.02em] text-foreground/90 animate-fade-in" style={{
             animationDelay: "0.6s"
           }}>
-                Kolekcja Trzeciej Materii powstała z potrzeby zrozumienia tego, co niewidzialne, a jednak fundamentalne.
-                To mój osobisty sposób badania energii, która kieruje nami, zanim pojawi się myśl, ruch czy decyzja.
-                Interesuje mnie stan pomiędzy materią a świadomością, wszędzie tam, gdzie ciało przestaje być tylko
-                biologią, a staje się nośnikiem czegoś znacznie subtelniejszego.
+                {noOrphans("Kolekcja Trzeciej Materii powstała z potrzeby zrozumienia tego, co niewidzialne, a jednak fundamentalne. To mój osobisty sposób badania energii, która kieruje nami, zanim pojawi się myśl, ruch czy decyzja. Interesuje mnie stan pomiędzy materią a świadomością, wszędzie tam, gdzie ciało przestaje być tylko biologią, a staje się nośnikiem czegoś znacznie subtelniejszego.")}
               </p>
             </div>
           </section>
@@ -152,22 +148,22 @@ const Home = () => {
                   <div className="w-full text-foreground font-medium text-lg md:text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in" style={{
                 animationDelay: "0.1s"
               }}>
-                    Trzecia Materia istnieje.
+                    {noOrphans("Trzecia Materia istnieje.")}
                   </div>
                   <div className="text-muted-foreground font-normal text-lg md:text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in" style={{
                 animationDelay: "0.3s"
               }}>
-                    Nie jest ciałem.
+                    {noOrphans("Nie jest ciałem.")}
                   </div>
                   <div className="text-muted-foreground font-normal text-lg md:text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in" style={{
                 animationDelay: "0.5s"
               }}>
-                    Nie jest myślą.
+                    {noOrphans("Nie jest myślą.")}
                   </div>
                   <div className="text-foreground font-medium text-lg md:text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in" style={{
                 animationDelay: "0.7s"
               }}>
-                    To to, co sprawia, że jesteśmy.
+                    {noOrphans("To to, co sprawia, że jesteśmy.")}
                   </div>
                 </div>
                 <svg className="w-[21.6px] h-[22.12px] fill-current flex-shrink-0" width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -211,7 +207,6 @@ const Home = () => {
           </section>
 
           {/* Section III - cz3 */}
-          {/* Philosophy Section */}
           <section className="max-w-[1648px] mx-auto px-4 md:px-9 py-12 md:py-[100px]">
             <div className="flex justify-end items-center self-stretch py-4 md:py-[24px]">
               <div className="flex justify-between items-start flex-1 gap-4">
@@ -219,22 +214,22 @@ const Home = () => {
                   <div className="w-full text-foreground font-medium text-lg md:text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in" style={{
                 animationDelay: "0.1s"
               }}>
-                    Pojawia się w momentach, których nie potrafimy uchwycić
+                    {noOrphans("Pojawia się w momentach, których nie potrafimy uchwycić")}
                   </div>
                   <div className="text-muted-foreground font-normal text-lg md:text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in" style={{
                 animationDelay: "0.3s"
               }}>
-                    w bezdechu między jednym a drugim impulsem.
+                    {noOrphans("w bezdechu między jednym a drugim impulsem.")}
                   </div>
                   <div className="text-muted-foreground font-normal text-lg md:text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in" style={{
                 animationDelay: "0.5s"
               }}>
-                    W cichym pulsie, który nie należy do fizjologii.
+                    {noOrphans("W cichym pulsie, który nie należy do fizjologii.")}
                   </div>
                   <div className="text-foreground font-medium text-lg md:text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in" style={{
                 animationDelay: "0.7s"
               }}>
-                    W świetle, które rozprasza logikę.
+                    {noOrphans("W świetle, które rozprasza logikę.")}
                   </div>
                 </div>
                 <svg className="w-[21.6px] h-[22.12px] fill-current flex-shrink-0" width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -255,7 +250,7 @@ const Home = () => {
                 <p className="text-lg md:text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-muted-foreground">
                   [cz. III]
                 </p>
-                <ArrowLink to="/collections/iii-materia">PRzejdź do pełnej kolekcji</ArrowLink>
+                <ArrowLink to="/collections/iii-materia">{noOrphans("Przejdź do pełnej kolekcji")}</ArrowLink>
               </div>
             </div>
 
@@ -271,14 +266,15 @@ const Home = () => {
               <div className="flex flex-col justify-center items-start md:items-end gap-8 flex-1">
                 <p className="w-full max-w-[599px] text-lg md:text-2xl font-normal leading-[110%] tracking-[-0.48px] uppercase">
                   <span className="text-foreground">
-                    Wejście w Trzecią Materię nie wymaga wiary.{"\n"}Wymaga uważności.{" "}
+                    {noOrphans("Wejście w Trzecią Materię nie wymaga wiary. Wymaga uważności.")}{" "}
                   </span>
                   <span className="opacity-45">
-                    Ciszy.{"\n"}
+                    {"Ciszy."}
+                    {"\n"}
                     {"\n"}
                   </span>
                   <span className="text-foreground">
-                    Zgody na to, że rzeczywistość jest większa niż to, czego dotykamy.
+                    {noOrphans("Zgody na to, że rzeczywistość jest większa niż to, czego dotykamy.")}
                   </span>
                 </p>
               </div>
@@ -289,7 +285,7 @@ const Home = () => {
                 <p className="text-lg md:text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-muted-foreground">
                   [cz. IV | 2023]
                 </p>
-                <ArrowLink to="/collections/iii-materia">PRzejdź do pełnej kolekcji</ArrowLink>
+                <ArrowLink to="/collections/iii-materia">{noOrphans("Przejdź do pełnej kolekcji")}</ArrowLink>
               </div>
               <img 
                 src="/artworks/collections/iii-materia/materia-04.jpg" 
@@ -352,8 +348,7 @@ const Home = () => {
                 <p style={{
               animationDelay: "0.2s"
             }} className="w-full max-w-[579px] text-lg md:text-2xl font-medium leading-[110%] tracking-[-0.48px] uppercase animate-fade-in py-4 md:py-[24px]">
-                  To nie jest opowieść o mistyce. To opowieść o strukturze istnienia, która nie mieści się w ciele ani w
-                  myśli, a mimo to kieruje jednym i drugim.
+                  {noOrphans("To nie jest opowieść o mistyce. To opowieść o strukturze istnienia, która nie mieści się w ciele ani w myśli, a mimo to kieruje jednym i drugim.")}
                 </p>
               </div>
             </div>
@@ -403,7 +398,7 @@ const Home = () => {
                 <p className="self-stretch text-lg md:text-2xl font-medium leading-[110%] tracking-[-0.96px] uppercase animate-fade-in" style={{
               animationDelay: "0.2s"
             }}>
-                  To energia, która nie domaga się dowodu. Odsłania się tylko tym, którzy potrafią słuchać inaczej.
+                  {noOrphans("To energia, która nie domaga się dowodu. Odsłania się tylko tym, którzy potrafią słuchać inaczej.")}
                 </p>
               </div>
               <div className="flex justify-between items-center self-stretch">
@@ -412,7 +407,7 @@ const Home = () => {
                     [cz. VII | 2023]
                   </p>
                 </div>
-                <ArrowLink to="/collections/iii-materia">PRzejdź do pełnej kolekcji</ArrowLink>
+                <ArrowLink to="/collections/iii-materia">{noOrphans("Przejdź do pełnej kolekcji")}</ArrowLink>
               </div>
             </div>
 
@@ -428,8 +423,7 @@ const Home = () => {
             <div className="flex px-9 justify-between items-end self-stretch">
               <div className="flex flex-col justify-center items-start gap-8 flex-1">
                 <p className="self-stretch text-2xl font-medium leading-[110%] tracking-[-0.96px] uppercase">
-                  Jesteśmy zbudowani z tkanek, emocji i wspomnień, a jednak każdy z nas nosi w sobie coś, czego nie da
-                  się nazwać.
+                  {noOrphans("Jesteśmy zbudowani z tkanek, emocji i wspomnień, a jednak każdy z nas nosi w sobie coś, czego nie da się nazwać.")}
                 </p>
               </div>
             </div>
@@ -451,11 +445,11 @@ const Home = () => {
                 <p className="self-stretch text-2xl font-medium leading-[110%] tracking-[-0.96px] uppercase text-center animate-fade-in" style={{
               animationDelay: "0.2s"
             }}>
-                  Pod skórą miesza się kosmos.
+                  {noOrphans("Pod skórą miesza się kosmos.")}
                   {"\n"}
-                  {"\n"}W strukturze komórek drga echo tego,
+                  {"\n"}{noOrphans("W strukturze komórek drga echo tego,")}
                   {"\n"}
-                  {"\n"}co tworzy galaktyki i zapadające się gwiazdy.
+                  {"\n"}{noOrphans("co tworzy galaktyki i zapadające się gwiazdy.")}
                 </p>
               </div>
             </div>
@@ -484,7 +478,7 @@ const Home = () => {
                 <p className="text-base font-normal leading-[110%] tracking-[-0.32px] uppercase text-center animate-fade-in" style={{
               animationDelay: "0.4s"
             }}>
-                  Mikro i makro nie są przeciwieństwami.Są tą samą historią, opowiedzianą innym językiem.
+                  {noOrphans("Mikro i makro nie są przeciwieństwami. Są tą samą historią, opowiedzianą innym językiem.")}
                 </p>
               </div>
             </div>
@@ -507,17 +501,19 @@ const Home = () => {
                   <span className="font-medium animate-fade-in" style={{
                 animationDelay: "0.1s"
               }}>
-                    Trzecia Materia jest w każdym z nas. Pulsuje, porusza, prowadzi.{"\n"}
+                    {noOrphans("Trzecia Materia jest w każdym z nas. Pulsuje, porusza, prowadzi.")}
+                    {"\n"}
                   </span>
                   <span className="opacity-50 animate-fade-in" style={{
                 animationDelay: "0.3s"
               }}>
-                    Jest początkiem i echem.{"\n"}
+                    {noOrphans("Jest początkiem i echem.")}
+                    {"\n"}
                   </span>
                   <span className="font-medium animate-fade-in" style={{
                 animationDelay: "0.5s"
               }}>
-                    Mostem między światłem a ciemnością. Naszą własną, ukrytą nieskończonością.
+                    {noOrphans("Mostem między światłem a ciemnością. Naszą własną, ukrytą nieskończonością.")}
                   </span>
                 </p>
                 <CornerBracket />
