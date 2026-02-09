@@ -98,10 +98,10 @@ const Home = () => {
         }} className="w-full">
               <CarouselContent className="px-9 gap-1">
                 {artworks.slice(0, 10).map(artwork => <CarouselItem key={artwork.id} className="basis-auto pl-0">
-                    <img 
+                <img 
                       src={artwork.image} 
                       alt={artwork.title} 
-                      className="max-w-[400px] h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity" 
+                      className="max-w-[260px] md:max-w-[400px] h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity"
                       draggable={false} 
                       onClick={() => openLightbox(artwork.image, artwork.title)}
                     />
