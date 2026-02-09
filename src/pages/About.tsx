@@ -18,18 +18,18 @@ Bartkowiak-Trepka
         </p>
 
         {/* 4 Photos in a row */}
-        <div className="flex flex-col sm:flex-row gap-4 mb-12">
-          <div className="flex-1">
-            <img src="/about/bogna-02.jpg" alt="Bogna Bartkowiak - portret 1" className="w-full h-[300px] md:h-[400px] object-cover" />
+        <div className="flex flex-col sm:flex-row gap-4 mb-12 items-end">
+          <div className="sm:flex-1">
+            <img src="/about/bogna-02.jpg" alt="Bogna Bartkowiak - portret 1" className="w-full h-auto object-contain" />
           </div>
-          <div className="flex-1">
-            <img src="/about/bogna-05.jpg" alt="Bogna Bartkowiak - portret 2" className="w-full h-[300px] md:h-[400px] object-cover" />
+          <div className="sm:flex-1">
+            <img src="/about/bogna-05.jpg" alt="Bogna Bartkowiak - portret 2" className="w-full h-auto object-contain" />
           </div>
-          <div className="flex-1">
-            <img src="/about/bogna-04.jpg" alt="Bogna Bartkowiak - portret 3" className="w-full h-[300px] md:h-[400px] object-cover" />
+          <div className="sm:flex-1">
+            <img src="/about/bogna-04.jpg" alt="Bogna Bartkowiak - portret 3" className="w-full h-auto object-contain" />
           </div>
-          <div className="flex-1">
-            <img src="/about/bogna-09.jpg" alt="Bogna Bartkowiak - portret 4" className="w-full h-[300px] md:h-[400px] object-cover" />
+          <div className="sm:flex-1">
+            <img src="/about/bogna-09.jpg" alt="Bogna Bartkowiak - portret 4" className="w-full h-auto object-contain" />
           </div>
         </div>
 
