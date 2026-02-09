@@ -22,7 +22,7 @@ const Layout = () => {
         <main>
           <Outlet />
         </main>
-        <footer className="relative mt-20 overflow-hidden h-[564px]">
+        <footer className="relative mt-20 overflow-hidden min-h-[564px] md:h-[564px]">
           {/* Background Images with Crossfade */}
           <div className="absolute inset-0 z-0">
             {footerImages.map((src, index) => <img key={src} src={src} alt="" className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${index === currentImageIndex && !isTransitioning ? "opacity-100" : "opacity-0"}`} />)}
