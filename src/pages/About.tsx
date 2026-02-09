@@ -64,7 +64,7 @@ Bartkowiak-Trepka
         <div className="flex flex-col lg:flex-row gap-8 justify-center items-center">
           {/* Left - Large Image */}
           <div className="w-full lg:w-1/2">
-            <img src="/about/bogna-09.jpg" alt="Bogna Bartkowiak z obrazem i rzeźbami" className="w-full h-auto object-contain" />
+            <img src="/about/bogna-09.jpg" alt="Bogna Bartkowiak z obrazem i rzeźbami" className="w-full max-h-[414px] h-auto object-contain" />
           </div>
 
           {/* Center - Text Content */}
