@@ -46,7 +46,7 @@ const Home = () => {
   return <div className="min-h-screen bg-background">
       {/* Hero Bio Section */}
       <section className={`max-w-[1648px] mx-auto px-9 py-0 pt-32 transition-opacity duration-700 ${typingComplete ? "opacity-100" : "opacity-0"}`}>
-        <div className="items-start gap-6 max-w-[574px] flex flex-col md:flex-row">
+        <div className="items-start gap-6 max-w-[724px] flex flex-col md:flex-row">
           <button 
             onClick={() => setBioExpanded(!bioExpanded)} 
             className="hidden md:flex items-center justify-center flex-shrink-0 transition-transform duration-300 hover:scale-110"
