@@ -3,7 +3,6 @@ import ArrowLink from "@/components/ArrowLink";
 import { Instagram, Youtube, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { noOrphans } from "@/lib/typography";
-
 const About = () => {
   return <div className="min-h-screen bg-background">
       {/* Hero Section - Inspired by reference layout */}
@@ -59,7 +58,7 @@ Bartkowiak-Trepka
       {/* Bio Section - Asymmetric Layout */}
 
       {/* Quote Section - Between Science and Mystery */}
-      <section className="max-w-[1648px] mx-auto px-9 py-[100px]"></section>
+      <section className="max-w-[1648px] mx-auto px-9 py-0"></section>
 
       {/* Process & Manifesto Section - Redesigned */}
       <section className="max-w-[1648px] mx-auto px-4 md:px-9 py-16 md:py-24">
