@@ -181,7 +181,7 @@ const Home = () => {
                 <img 
                   src="/artworks/collections/iii-materia/materia-02.jpg" 
                   alt="Materia II" 
-                  className="w-full aspect-[756/820] object-cover cursor-pointer hover:opacity-90 transition-opacity" 
+                  className="w-full h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity" 
                   onClick={() => openLightbox("/artworks/collections/iii-materia/materia-02.jpg", "CZ. II")}
                 />
                 <p className="text-2xl font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground text-center">
