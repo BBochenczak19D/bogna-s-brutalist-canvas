@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Plus, Minus } from "lucide-react";
 import { Link } from "react-router-dom";
 import CornerBracket from "@/components/CornerBracket";
 import ArrowLink from "@/components/ArrowLink";
@@ -10,6 +11,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselApi } from "@/componen
 import { useParallaxCarousel } from "@/hooks/useParallaxCarousel";
 const Home = () => {
   const [typingComplete, setTypingComplete] = useState(false);
+  const [bioExpanded, setBioExpanded] = useState(false);
   const [lightboxImage, setLightboxImage] = useState<{ src: string; title?: string } | null>(null);
   const {
     setHeroTypingComplete
@@ -45,16 +47,27 @@ const Home = () => {
       {/* Hero Bio Section */}
       <section className={`max-w-[1648px] mx-auto px-9 py-0 pt-32 transition-opacity duration-700 ${typingComplete ? "opacity-100" : "opacity-0"}`}>
         <div className="items-start gap-6 max-w-[574px] flex flex-col md:flex-row">
-          <CornerBracket className="hidden md:block" />
-          <img alt="Bogna Bartkowiak" className="w-[114px] h-[174px] object-cover flex-shrink-0" src="/lovable-uploads/3f96b157-ec5e-4b05-b37f-0b44e7dfd18e.jpg" />
-          <p className="flex-1 text-sm font-normal leading-[125%] uppercase animate-fade-in italic" style={{
-          animationDelay: "0.2s"
-        }}>
-            Jestem absolwentką Akademii Sztuk Pięknych w Katowicach oraz lekarzem. W swojej twórczości badam niewidzialne warstwy istnienia, łącząc doświadczenia medyczne z artystyczną intuicją.
-            <br />
-            Tworzenie jest dla mnie sposobem zbliżania się do Niewiadomej.
-          </p>
-          <CornerBracket />
+          <button 
+            onClick={() => setBioExpanded(!bioExpanded)} 
+            className="hidden md:flex items-center justify-center flex-shrink-0 transition-transform duration-300 hover:scale-110"
+            aria-label={bioExpanded ? "Zwiń" : "Rozwiń"}
+          >
+            {bioExpanded ? <Minus size={20} /> : <Plus size={20} />}
+          </button>
+          <img 
+            alt="Bogna Bartkowiak" 
+            className={`object-cover flex-shrink-0 transition-all duration-500 ${bioExpanded ? "w-[114px] h-[174px]" : "w-[80px] h-[120px]"}`} 
+            src="/lovable-uploads/3f96b157-ec5e-4b05-b37f-0b44e7dfd18e.jpg" 
+          />
+          <div className={`overflow-hidden transition-all duration-500 ${bioExpanded ? "max-h-[300px] opacity-100" : "max-h-0 opacity-0"}`}>
+            <p className="flex-1 text-sm font-normal leading-[125%] uppercase animate-fade-in italic" style={{
+              animationDelay: "0.2s"
+            }}>
+              Jestem absolwentką Akademii Sztuk Pięknych w Katowicach oraz lekarzem. W swojej twórczości badam niewidzialne warstwy istnienia, łącząc doświadczenia medyczne z artystyczną intuicją.
+              <br />
+              Tworzenie jest dla mnie sposobem zbliżania się do Niewiadomej.
+            </p>
+          </div>
         </div>
       </section>
 
