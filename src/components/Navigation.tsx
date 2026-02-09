@@ -110,7 +110,7 @@ const Navigation = () => {
   return <nav className={`w-full px-8 py-4 bg-white fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${isVisible ? 'translate-y-0' : '-translate-y-full'} ${heroTypingComplete ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
       <div className="flex justify-between items-start max-w-[1920px] mx-auto">
         {/* Logo */}
-        <Link to="/" className="text-2xl font-normal uppercase leading-[100%] tracking-normal">
+        <Link to="/" className="text-base md:text-2xl font-normal uppercase leading-[100%] tracking-normal">
           Bogna Bartkowiak-Trepka
         </Link>
 
