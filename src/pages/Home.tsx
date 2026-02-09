@@ -75,7 +75,7 @@ const Home = () => {
 
       {/* Main Hero Text */}
       <section className="max-w-[1648px] mx-auto px-9 py-0 mt-[42px]">
-        <div className="flex flex-col gap-8 py-8">
+        <div className="flex flex-col gap-8 py-0 md:py-8">
           <h1 className="text-[24px] md:text-[64px] font-medium leading-[100%] tracking-[-0.02em] uppercase max-w-none">
             {sessionStorage.getItem("heroAnimationComplete") === "true" ? noOrphans("Co sprawia, że jesteśmy ożywieni? Co kieruje naszym istnieniem, jeśli wykraczamy poza myśli i widzialną materię?") : <TypingText text="Co sprawia, że jesteśmy ożywieni? Co kieruje naszym istnieniem, jeśli wykraczamy poza myśli i widzialną materię?" speed={18} delay={200} pauseAt={33} pauseDuration={1800} onComplete={handleAnimationComplete} />}
           </h1>
