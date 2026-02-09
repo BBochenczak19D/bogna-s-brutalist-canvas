@@ -2,6 +2,8 @@ import CornerBracket from "@/components/CornerBracket";
 import ArrowLink from "@/components/ArrowLink";
 import { Instagram, Youtube, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { noOrphans } from "@/lib/typography";
+
 const About = () => {
   return <div className="min-h-screen bg-background">
       {/* Hero Section - Inspired by reference layout */}
@@ -14,7 +16,7 @@ Bartkowiak-Trepka
         
         {/* Subtitle - Small text below name */}
         <p className="text-base md:text-lg text-foreground/70 mb-12 w-full">
-          Jestem artystką poruszającą się w przestrzeni wspólnej dla nauki, duchowości i sztuki. Moja twórczość wyrasta z potrzeby poszukiwania odpowiedzi na pytania o przyczynę i sens istnienia.
+          {noOrphans("Jestem artystką poruszającą się w przestrzeni wspólnej dla nauki, duchowości i sztuki. Moja twórczość wyrasta z potrzeby poszukiwania odpowiedzi na pytania o przyczynę i sens istnienia.")}
         </p>
 
         {/* 4 Photos in a row */}
@@ -34,7 +36,7 @@ Bartkowiak-Trepka
         </div>
         {/* Medical practice note */}
         <p className="text-base md:text-lg text-foreground/70 mb-12">
-          Jestem również praktykującą lekarką. To właśnie w przestrzeni pomiędzy naukową precyzją a tajemnicą zakorzeniła się moja praktyka artystyczna.
+          {noOrphans("Jestem również praktykującą lekarką. To właśnie w przestrzeni pomiędzy naukową precyzją a tajemnicą zakorzeniła się moja praktyka artystyczna.")}
         </p>
 
         {/* Contact info - Social links row */}
@@ -72,20 +74,18 @@ Bartkowiak-Trepka
             <div className="space-y-1">
               <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Moja filozofia</span>
               <h3 className="text-2xl md:text-3xl font-medium leading-[120%] tracking-[-0.02em]">
-                Między nauką a tajemnicą
+                {noOrphans("Między nauką a tajemnicą")}
               </h3>
             </div>
 
             <div className="relative pl-6 border-l-2 border-foreground/20">
               <p className="text-base font-light leading-[170%] tracking-[-0.01em] text-foreground/90 italic md:text-xl">
-                W swojej twórczości łączę doświadczenia lekarskie z poszukiwaniami tego, co niewyjaśnione i
-                niewyjaśnialne.
+                {noOrphans("W swojej twórczości łączę doświadczenia lekarskie z poszukiwaniami tego, co niewyjaśnione i niewyjaśnialne.")}
               </p>
             </div>
 
             <p className="text-sm leading-[170%] tracking-[-0.01em] text-foreground/70 md:text-lg">
-              Badając granice pomiędzy tym, co fizyczne, a tym, co metafizyczne, tworzę własny język wizualny — próbę
-              dialogu między intuicją, świadomością, materią i wewnętrzną energią.
+              {noOrphans("Badając granice pomiędzy tym, co fizyczne, a tym, co metafizyczne, tworzę własny język wizualny — próbę dialogu między intuicją, świadomością, materią i wewnętrzną energią.")}
             </p>
 
             <div className="flex items-center gap-4 mt-4">
@@ -112,28 +112,22 @@ Bartkowiak-Trepka
         </div>
         <div className="relative z-10 max-w-[1648px] mx-auto px-9 py-24 md:py-32">
           <h2 className="text-[28px] font-medium leading-[110%] tracking-[-0.02em] uppercase mb-16 text-white md:text-7xl">
-            W poszukiwaniu III Materii
+            {noOrphans("W poszukiwaniu III Materii")}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
             <p className="font-light leading-[160%] tracking-[-0.02em] text-white/90 text-xl">
-              Projekt <em className="font-medium">W poszukiwaniu III Materii</em> — obejmujący obrazy, grafiki,
-              artefakty oraz seans 3D przeznaczony do prezentacji na ekranie sferycznym planetarium — jest rezultatem
-              wieloletnich rozważań, poszukiwań filozoficznych oraz eksperymentów artystycznych prowadzonych na granicy
-              percepcji.
+              {noOrphans("Projekt W poszukiwaniu III Materii — obejmujący obrazy, grafiki, artefakty oraz seans 3D przeznaczony do prezentacji na ekranie sferycznym planetarium — jest rezultatem wieloletnich rozważań, poszukiwań filozoficznych oraz eksperymentów artystycznych prowadzonych na granicy percepcji.")}
             </p>
             <p className="font-light leading-[160%] tracking-[-0.02em] text-white/90 text-xl">
-              To także przekorna próba odnalezienia duszy człowieka w medycznych badaniach obrazowych oraz moja
-              indywidualna interpretacja tego, co niewypowiedziane — zbliżenie się do Niewiadomej zarówno poprzez sam
-              akt twórczy, jak i jego efekt.
+              {noOrphans("To także przekorna próba odnalezienia duszy człowieka w medycznych badaniach obrazowych oraz moja indywidualna interpretacja tego, co niewypowiedziane — zbliżenie się do Niewiadomej zarówno poprzez sam akt twórczy, jak i jego efekt.")}
             </p>
           </div>
           <div className="mt-12 space-y-8">
             <p className="font-light leading-[160%] tracking-[-0.02em] text-white/90 text-4xl">
-              Kolejne projekty stanowią kontynuację tych poszukiwań — są ich rozwinięciem, nawarstwieniem i dalszym
-              eksplorowaniem idei Trzeciej Materii.
+              {noOrphans("Kolejne projekty stanowią kontynuację tych poszukiwań — są ich rozwinięciem, nawarstwieniem i dalszym eksplorowaniem idei Trzeciej Materii.")}
             </p>
             <ArrowLink to="/collections/iii-materia" className="text-white hover:text-white/70">
-              Zobacz kolekcję III Materia
+              {noOrphans("Zobacz kolekcję III Materia")}
             </ArrowLink>
           </div>
         </div>
@@ -148,13 +142,12 @@ Bartkowiak-Trepka
               <CornerBracket className="hidden md:block flex-shrink-0" />
               <blockquote>
                 <p className="text-[22px] font-light leading-[140%] tracking-[-0.02em] italic md:text-4xl">
-                  Tworzenie jest dla mnie źródłem radości i głębokiej satysfakcji. Obcowanie ze sztuką — zarówno w
-                  procesie twórczym, jak i w jego kontemplacji — daje mi poczucie spełnienia i wewnętrznej harmonii.
+                  {noOrphans("Tworzenie jest dla mnie źródłem radości i głębokiej satysfakcji. Obcowanie ze sztuką — zarówno w procesie twórczym, jak i w jego kontemplacji — daje mi poczucie spełnienia i wewnętrznej harmonii.")}
                 </p>
               </blockquote>
             </div>
             <p className="text-lg font-medium text-foreground">
-              To przestrzeń, w której czuję się najbardziej obecna i prawdziwa.
+              {noOrphans("To przestrzeń, w której czuję się najbardziej obecna i prawdziwa.")}
             </p>
           </div>
           {/* Image on right */}
@@ -177,12 +170,12 @@ Bartkowiak-Trepka
               <CornerBracket className="hidden md:block flex-shrink-0" />
               <blockquote>
                 <p className="text-[22px] font-light leading-[140%] tracking-[-0.02em] italic md:text-4xl">
-                  Pracuję głównie z farbą olejną, lecz sięgam również po instalacje, grafikę, rzeźbę oraz nowe media.
+                  {noOrphans("Pracuję głównie z farbą olejną, lecz sięgam również po instalacje, grafikę, rzeźbę oraz nowe media.")}
                 </p>
               </blockquote>
             </div>
             <p className="text-lg font-medium text-foreground">
-              Tworzę sztukę, która nie tylko oddziałuje wizualnie, ale także zaprasza do pogłębionej refleksji nad naturą rzeczywistości, świadomości i istnienia.
+              {noOrphans("Tworzę sztukę, która nie tylko oddziałuje wizualnie, ale także zaprasza do pogłębionej refleksji nad naturą rzeczywistości, świadomości i istnienia.")}
             </p>
           </div>
         </div>
@@ -207,16 +200,12 @@ Bartkowiak-Trepka
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             <blockquote className="relative pl-8 border-l-2 border-white/30">
               <p className="text-[18px] md:text-[22px] font-light leading-[150%] tracking-[-0.02em] text-white">
-                "Sztuka jest dla mnie narzędziem badawczym, które pozwala poznać to, co istnieje poza naszym
-                bezpośrednim doświadczeniem. W swojej twórczości poszukuję Trzeciej Materii - wymiaru, który nie jest
-                ani fizyczny, ani mentalny, ale stanowi esencję naszego istnienia."
+                {noOrphans("\"Sztuka jest dla mnie narzędziem badawczym, które pozwala poznać to, co istnieje poza naszym bezpośrednim doświadczeniem. W swojej twórczości poszukuję Trzeciej Materii - wymiaru, który nie jest ani fizyczny, ani mentalny, ale stanowi esencję naszego istnienia.\"")}
               </p>
             </blockquote>
             <blockquote className="relative pl-8 border-l-2 border-white/30">
               <p className="text-[18px] md:text-[22px] font-light leading-[150%] tracking-[-0.02em] text-white">
-                "Wierzę, że poprzez sztukę możemy dotknąć tego, co niewyrażalne w języku nauki czy codziennej
-                komunikacji. Moje obrazy są zapisem tych poszukiwań - zaproszeniem do spojrzenia głębiej, poza
-                powierzchnię rzeczywistości."
+                {noOrphans("\"Wierzę, że poprzez sztukę możemy dotknąć tego, co niewyrażalne w języku nauki czy codziennej komunikacji. Moje obrazy są zapisem tych poszukiwań - zaproszeniem do spojrzenia głębiej, poza powierzchnię rzeczywistości.\"")}
               </p>
             </blockquote>
           </div>
@@ -232,22 +221,22 @@ Bartkowiak-Trepka
           <div className="flex items-start gap-6">
             <span className="text-[14px] font-medium text-muted-foreground min-w-[60px]">2024</span>
             <div>
-              <p className="text-base font-medium">Specjalizacja z medycyny rodzinnej</p>
+              <p className="text-base font-medium">{noOrphans("Specjalizacja z medycyny rodzinnej")}</p>
             </div>
           </div>
           <div className="flex items-start gap-6">
             <span className="text-[14px] font-medium text-muted-foreground min-w-[60px]">2023</span>
             <div>
-              <p className="text-base font-medium">Akademia Sztuk Pięknych w Katowicach</p>
+              <p className="text-base font-medium">{noOrphans("Akademia Sztuk Pięknych w Katowicach")}</p>
               <p className="text-sm text-muted-foreground">Wydział Artystyczny, Kierunek: Grafika</p>
             </div>
           </div>
           <div className="flex items-start gap-6">
             <span className="text-[14px] font-medium text-muted-foreground min-w-[60px]">2014</span>
             <div>
-              <p className="text-base font-medium">Śląski Uniwersytet Medyczny w Katowicach</p>
+              <p className="text-base font-medium">{noOrphans("Śląski Uniwersytet Medyczny w Katowicach")}</p>
               <p className="text-sm text-muted-foreground">
-                Wydział Lekarski z Oddziałem Lekarsko-Dentystycznym, Kierunek: Lekarski
+                {noOrphans("Wydział Lekarski z Oddziałem Lekarsko-Dentystycznym, Kierunek: Lekarski")}
               </p>
             </div>
           </div>
@@ -270,18 +259,18 @@ Bartkowiak-Trepka
               <div className="flex flex-col md:flex-row md:items-start gap-2 md:gap-8 border-b border-foreground/20 pb-6">
                 <span className="text-[14px] font-medium text-muted-foreground min-w-[100px]">2023/2024</span>
                 <div>
-                  <p className="text-base font-medium">W POSZUKIWANIU TRZECIEJ MATERII</p>
+                  <p className="text-base font-medium">{noOrphans("W POSZUKIWANIU TRZECIEJ MATERII")}</p>
                   <p className="text-sm text-muted-foreground">
-                    Seans artystyczny, Planetarium - Śląski Park Nauki, Chorzów
+                    {noOrphans("Seans artystyczny, Planetarium - Śląski Park Nauki, Chorzów")}
                   </p>
                 </div>
               </div>
               <div className="flex flex-col md:flex-row md:items-start gap-2 md:gap-8 border-b border-foreground/20 pb-6">
                 <span className="text-[14px] font-medium text-muted-foreground min-w-[100px]">2023</span>
                 <div>
-                  <p className="text-base font-medium">W POSZUKIWANIU TRZECIEJ MATERII</p>
+                  <p className="text-base font-medium">{noOrphans("W POSZUKIWANIU TRZECIEJ MATERII")}</p>
                   <p className="text-sm text-muted-foreground">
-                    Wystawa kolekcji prac malarskich, Planetarium - Śląski Park Nauki, Chorzów
+                    {noOrphans("Wystawa kolekcji prac malarskich, Planetarium - Śląski Park Nauki, Chorzów")}
                   </p>
                 </div>
               </div>
@@ -298,14 +287,14 @@ Bartkowiak-Trepka
                 <span className="text-[14px] font-medium text-muted-foreground min-w-[100px]">2024/25</span>
                 <div>
                   <p className="text-base font-medium">RE-RECOVERY</p>
-                  <p className="text-sm text-muted-foreground">Rondo Sztuki, Katowice</p>
+                  <p className="text-sm text-muted-foreground">{noOrphans("Rondo Sztuki, Katowice")}</p>
                 </div>
               </div>
               <div className="flex flex-col md:flex-row md:items-start gap-2 md:gap-8 border-b border-foreground/20 pb-6">
                 <span className="text-[14px] font-medium text-muted-foreground min-w-[100px]">2024/25</span>
                 <div>
-                  <p className="text-base font-medium">12. TRIENNALE GRAFIKI POLSKIEJ</p>
-                  <p className="text-sm text-muted-foreground">Muzeum Śląskie, Katowice</p>
+                  <p className="text-base font-medium">{noOrphans("12. TRIENNALE GRAFIKI POLSKIEJ")}</p>
+                  <p className="text-sm text-muted-foreground">{noOrphans("Muzeum Śląskie, Katowice")}</p>
                 </div>
               </div>
               <div className="flex flex-col md:flex-row md:items-start gap-2 md:gap-8 border-b border-foreground/20 pb-6">
@@ -313,7 +302,7 @@ Bartkowiak-Trepka
                 <div>
                   <p className="text-base font-medium">S.C.R.E.E.N.</p>
                   <p className="text-sm text-muted-foreground">
-                    Wystawa Pracowni Sitodruku ASP w Katowicach, Galeria Instytutu Sztuk Pięknych UR, Rzeszów
+                    {noOrphans("Wystawa Pracowni Sitodruku ASP w Katowicach, Galeria Instytutu Sztuk Pięknych UR, Rzeszów")}
                   </p>
                 </div>
               </div>
@@ -322,7 +311,7 @@ Bartkowiak-Trepka
                 <div>
                   <p className="text-base font-medium">RAJZEFIBER</p>
                   <p className="text-sm text-muted-foreground">
-                    Wystawa prac dyplomowych ASP w Katowicach, BWA w Katowicach
+                    {noOrphans("Wystawa prac dyplomowych ASP w Katowicach, BWA w Katowicach")}
                   </p>
                 </div>
               </div>
@@ -331,7 +320,7 @@ Bartkowiak-Trepka
                 <div>
                   <p className="text-base font-medium">TOŻ(TO)SAMO(TNO)ŚĆ</p>
                   <p className="text-sm text-muted-foreground">
-                    Wystawa koła grafiki Koszary grafki, Absurdalna, Katowice
+                    {noOrphans("Wystawa koła grafiki Koszary grafki, Absurdalna, Katowice")}
                   </p>
                 </div>
               </div>
@@ -339,7 +328,7 @@ Bartkowiak-Trepka
                 <span className="text-[14px] font-medium text-muted-foreground min-w-[100px]">2020</span>
                 <div>
                   <p className="text-base font-medium">PROSTE GESTY</p>
-                  <p className="text-sm text-muted-foreground">BWA w Katowicach</p>
+                  <p className="text-sm text-muted-foreground">{noOrphans("BWA w Katowicach")}</p>
                 </div>
               </div>
               <div className="flex flex-col md:flex-row md:items-start gap-2 md:gap-8">
@@ -347,7 +336,7 @@ Bartkowiak-Trepka
                 <div>
                   <p className="text-base font-medium">SITOTISK/SITODRUK</p>
                   <p className="text-sm text-muted-foreground">
-                    Wystawa Pracowni Serigrafii w Katowicach, Galeria Koridor, Ostrawa
+                    {noOrphans("Wystawa Pracowni Serigrafii w Katowicach, Galeria Koridor, Ostrawa")}
                   </p>
                 </div>
               </div>
