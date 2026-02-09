@@ -117,7 +117,7 @@ Bartkowiak-Trepka
             <p className="font-light leading-[160%] tracking-[-0.02em] text-white/90 text-xl">
               {noOrphans("Projekt W poszukiwaniu III Materii — obejmujący obrazy, grafiki, artefakty oraz seans 3D przeznaczony do prezentacji na ekranie sferycznym planetarium — jest rezultatem wieloletnich rozważań, poszukiwań filozoficznych oraz eksperymentów artystycznych prowadzonych na granicy percepcji.")}
             </p>
-            <p className="font-light leading-[160%] tracking-[-0.02em] text-white/90 text-xl">
+            <p className="font-light leading-[160%] tracking-[-0.02em] text-white/90 text-base md:text-xl">
               {noOrphans("To także przekorna próba odnalezienia duszy człowieka w medycznych badaniach obrazowych oraz moja indywidualna interpretacja tego, co niewypowiedziane — zbliżenie się do Niewiadomej zarówno poprzez sam akt twórczy, jak i jego efekt.")}
             </p>
           </div>
