@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 const About = () => {
   return <div className="min-h-screen bg-background">
       {/* Hero Section - Inspired by reference layout */}
-      <section className="max-w-[1648px] mx-auto px-4 md:px-9 pt-24 md:pt-32">
+      <section className="max-w-[1648px] mx-auto px-4 md:px-9 pt-24 md:pt-32 mt-[256px]">
         {/* Name - Large uppercase */}
         <h1 className="text-6xl md:text-8xl font-bold uppercase leading-[0.9] tracking-[-0.03em] mb-4 lg:text-7xl">
           Bogna
