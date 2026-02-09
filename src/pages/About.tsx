@@ -71,7 +71,7 @@ Bartkowiak-Trepka
           {/* Center - Text Content */}
           <div className="w-full lg:w-1/2 flex flex-col justify-center gap-[48px]">
             <div className="space-y-1">
-              <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Moja filozofia</span>
+              <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Moja droga</span>
               <h3 className="text-2xl md:text-3xl font-medium leading-[120%] tracking-[-0.02em]">
                 {noOrphans("Między nauką a tajemnicą")}
               </h3>
