@@ -13,7 +13,7 @@ Bartkowiak-Trepka
         </h1>
         
         {/* Subtitle - Small text below name */}
-        <p className="text-base md:text-lg text-foreground/70 mb-12 max-w-[600px]">
+        <p className="text-base md:text-lg text-foreground/70 mb-12 w-full">
           Artystka poruszająca się w przestrzeni wspólnej dla nauki, duchowości i sztuki.
         </p>
 
