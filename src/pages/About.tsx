@@ -61,14 +61,14 @@ Bartkowiak-Trepka
 
       {/* Process & Manifesto Section - Redesigned */}
       <section className="max-w-[1648px] mx-auto px-4 md:px-9 py-16 md:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div className="flex flex-col lg:flex-row gap-8 justify-center items-center">
           {/* Left - Large Image */}
-          <div className="lg:col-span-5 w-fit">
-            <img src="/about/bogna-09.jpg" alt="Bogna Bartkowiak z obrazem i rzeźbami" className="w-fit max-w-[600px] max-h-[564px] h-auto object-contain" />
+          <div className="w-full lg:w-1/2">
+            <img src="/about/bogna-09.jpg" alt="Bogna Bartkowiak z obrazem i rzeźbami" className="w-full h-auto object-contain" />
           </div>
 
           {/* Center - Text Content */}
-          <div className="lg:col-span-4 flex flex-col justify-center gap-[48px] w-full">
+          <div className="w-full lg:w-1/2 flex flex-col justify-center gap-[48px]">
             <div className="space-y-1">
               <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Moja filozofia</span>
               <h3 className="text-2xl md:text-3xl font-medium leading-[120%] tracking-[-0.02em]">
