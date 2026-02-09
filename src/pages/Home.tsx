@@ -182,9 +182,9 @@ const Home = () => {
               <div className="flex-1 flex flex-col gap-6">
                 <img 
                   src="/artworks/collections/iii-materia/materia-01.jpg" 
-                  alt="Materia I" 
+                  alt="W poszukiwaniu III materii, cz. I" 
                   className="w-full h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity" 
-                  onClick={() => openLightbox("/artworks/collections/iii-materia/materia-01.jpg", "CZ. I")}
+                  onClick={() => openLightbox("/artworks/collections/iii-materia/materia-01.jpg", "W poszukiwaniu III materii, cz. I")}
                 />
                 <p className="text-2xl font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground text-center">
                   [cz. I | 2023]
@@ -193,9 +193,9 @@ const Home = () => {
               <div className="flex-1 flex flex-col gap-6">
                 <img 
                   src="/artworks/collections/iii-materia/materia-02.jpg" 
-                  alt="Materia II" 
+                  alt="W poszukiwaniu III materii, cz. II" 
                   className="w-full h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity" 
-                  onClick={() => openLightbox("/artworks/collections/iii-materia/materia-02.jpg", "CZ. II")}
+                  onClick={() => openLightbox("/artworks/collections/iii-materia/materia-02.jpg", "W poszukiwaniu III materii, cz. II")}
                 />
                 <p className="text-2xl font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground text-center">
                   [cz. II | 2023]
@@ -247,9 +247,9 @@ const Home = () => {
             <div className="flex flex-col md:flex-row px-0 items-start md:items-center gap-6 md:gap-16 self-stretch">
               <img 
                 src="/artworks/collections/iii-materia/materia-03.jpg" 
-                alt="Materia III" 
+                alt="W poszukiwaniu III materii, cz. III" 
                 className="w-full md:w-[743px] h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity" 
-                onClick={() => openLightbox("/artworks/collections/iii-materia/materia-03.jpg", "CZ. III")}
+                onClick={() => openLightbox("/artworks/collections/iii-materia/materia-03.jpg", "W poszukiwaniu III materii, cz. III")}
               />
               <div className="flex flex-col justify-center items-start gap-3">
                 <p className="text-lg md:text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-muted-foreground">
@@ -293,9 +293,9 @@ const Home = () => {
               </div>
               <img 
                 src="/artworks/collections/iii-materia/materia-04.jpg" 
-                alt="Materia IV" 
+                alt="W poszukiwaniu III materii, cz. IV" 
                 className="w-full md:w-[640px] aspect-square md:aspect-auto md:h-[698px] object-cover cursor-pointer hover:opacity-90 transition-opacity" 
-                onClick={() => openLightbox("/artworks/collections/iii-materia/materia-04.jpg", "CZ. IV")}
+                onClick={() => openLightbox("/artworks/collections/iii-materia/materia-04.jpg", "W poszukiwaniu III materii, cz. IV")}
               />
             </div>
 
@@ -362,9 +362,9 @@ const Home = () => {
               <div className="flex flex-col items-start gap-6 flex-1">
                 <img 
                   src="/artworks/collections/iii-materia/materia-05.jpg" 
-                  alt="Materia V" 
+                  alt="W poszukiwaniu III materii, cz. V" 
                   className="w-full h-auto md:h-[832px] self-stretch object-cover cursor-pointer hover:opacity-90 transition-opacity" 
-                  onClick={() => openLightbox("/artworks/collections/iii-materia/materia-05.jpg", "CZ. V")}
+                  onClick={() => openLightbox("/artworks/collections/iii-materia/materia-05.jpg", "W poszukiwaniu III materii, cz. V")}
                 />
                 <div className="flex items-center gap-3">
                   <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
@@ -376,9 +376,9 @@ const Home = () => {
               <div className="flex flex-col justify-center items-start gap-6 flex-1">
                 <img 
                   src="/artworks/collections/iii-materia/materia-06.jpg" 
-                  alt="Materia VI" 
+                  alt="W poszukiwaniu III materii, cz. VI" 
                   className="w-full h-auto md:h-[907px] self-stretch object-cover cursor-pointer hover:opacity-90 transition-opacity" 
-                  onClick={() => openLightbox("/artworks/collections/iii-materia/materia-06.jpg", "CZ. VI")}
+                  onClick={() => openLightbox("/artworks/collections/iii-materia/materia-06.jpg", "W poszukiwaniu III materii, cz. VI")}
                 />
                 <div className="flex items-center gap-3">
                   <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
@@ -419,9 +419,9 @@ const Home = () => {
             <div className="flex px-9 flex-col justify-end items-start gap-16 self-stretch">
               <img 
                 src="/artworks/collections/iii-materia/materia-07.jpg" 
-                alt="Materia VII" 
+                alt="W poszukiwaniu III materii, cz. VII" 
                 className="w-full h-auto md:h-[788px] md:aspect-[2/1] object-cover cursor-pointer hover:opacity-90 transition-opacity" 
-                onClick={() => openLightbox("/artworks/collections/iii-materia/materia-07.jpg", "CZ. VII")}
+                onClick={() => openLightbox("/artworks/collections/iii-materia/materia-07.jpg", "W poszukiwaniu III materii, cz. VII")}
               />
             </div>
 
@@ -473,9 +473,9 @@ const Home = () => {
             <div className="flex px-9 flex-col justify-center items-center gap-16 self-stretch">
               <img 
                 src="/artworks/collections/iii-materia/materia-08.jpg" 
-                alt="Materia VIII" 
+                alt="W poszukiwaniu III materii, cz. VIII" 
                 className="w-full h-auto aspect-[1051/788] object-cover cursor-pointer hover:opacity-90 transition-opacity" 
-                onClick={() => openLightbox("/artworks/collections/iii-materia/materia-08.jpg", "CZ. VIII")}
+                onClick={() => openLightbox("/artworks/collections/iii-materia/materia-08.jpg", "W poszukiwaniu III materii, cz. VIII")}
               />
             </div>
 
@@ -528,9 +528,9 @@ const Home = () => {
               <div className="flex flex-col justify-center items-start gap-6 flex-1">
                 <img 
                   src="/artworks/collections/iii-materia/materia-09.jpg" 
-                  alt="Materia IX" 
+                  alt="W poszukiwaniu III materii, cz. IX" 
                   className="w-full h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity" 
-                  onClick={() => openLightbox("/artworks/collections/iii-materia/materia-09.jpg", "CZ. IX")}
+                  onClick={() => openLightbox("/artworks/collections/iii-materia/materia-09.jpg", "W poszukiwaniu III materii, cz. IX")}
                 />
                 <div className="flex items-center gap-3">
                   <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
@@ -542,9 +542,9 @@ const Home = () => {
               <div className="flex flex-col items-start gap-6 flex-1">
                 <img 
                   src="/artworks/collections/iii-materia/materia-10.jpg" 
-                  alt="Materia X" 
+                  alt="W poszukiwaniu III materii, cz. X" 
                   className="w-full h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity" 
-                  onClick={() => openLightbox("/artworks/collections/iii-materia/materia-10.jpg", "CZ. X")}
+                  onClick={() => openLightbox("/artworks/collections/iii-materia/materia-10.jpg", "W poszukiwaniu III materii, cz. X")}
                 />
                 <div className="flex items-center gap-3">
                   <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
