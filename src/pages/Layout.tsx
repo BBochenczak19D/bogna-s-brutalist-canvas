@@ -35,7 +35,7 @@ const Layout = () => {
               {/* Left Column - Name & Tagline */}
               <div className="flex flex-col gap-4">
                 <Link to="/" className="text-background text-3xl md:text-4xl font-normal uppercase hover:text-background/70 transition-colors">
-                  Bogna Bartkowiak
+                  Bogna Bartkowiak-Trepka
                 </Link>
                 <p className="text-background/70 text-sm uppercase tracking-wide">
                   Artysta · Lekarz
