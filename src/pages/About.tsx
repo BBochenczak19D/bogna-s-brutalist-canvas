@@ -32,6 +32,10 @@ Bartkowiak-Trepka
             <img src="/about/bogna-09.jpg" alt="Bogna Bartkowiak - portret 4" className="w-full h-auto object-contain" />
           </div>
         </div>
+        {/* Medical practice note */}
+        <p className="text-base md:text-lg text-foreground/70 mb-12">
+          Jestem również praktykującą lekarką. To właśnie w przestrzeni pomiędzy naukową precyzją a tajemnicą zakorzeniła się moja praktyka artystyczna.
+        </p>
 
         {/* Contact info - Social links row */}
         <div className="flex flex-wrap items-center gap-8">
