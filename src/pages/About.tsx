@@ -14,7 +14,7 @@ Bartkowiak-Trepka
         
         {/* Subtitle - Small text below name */}
         <p className="text-base md:text-lg text-foreground/70 mb-12 w-full">
-          Artystka poruszająca się w przestrzeni wspólnej dla nauki, duchowości i sztuki.
+          Jestem artystką poruszającą się w przestrzeni wspólnej dla nauki, duchowości i sztuki. Moja twórczość wyrasta z potrzeby poszukiwania odpowiedzi na pytania o przyczynę i sens istnienia.
         </p>
 
         {/* 4 Photos in a row */}
