@@ -7,8 +7,9 @@ const About = () => {
       {/* Hero Section - Inspired by reference layout */}
       <section className="max-w-[1648px] mx-auto px-4 md:px-9 pt-24 md:pt-32">
         {/* Name - Large uppercase */}
-        <h1 className="text-6xl md:text-8xl lg:text-[120px] font-bold uppercase leading-[0.9] tracking-[-0.03em] mb-4">
-          BOGNA
+        <h1 className="text-6xl md:text-8xl font-bold uppercase leading-[0.9] tracking-[-0.03em] mb-4 lg:text-7xl">
+          Bogna
+Bartkowiak-Trepka 
         </h1>
         
         {/* Subtitle - Small text below name */}
@@ -19,59 +20,30 @@ const About = () => {
         {/* 4 Photos in a row */}
         <div className="flex flex-col sm:flex-row gap-4 mb-12">
           <div className="flex-1">
-            <img 
-              src="/about/bogna-02.jpg" 
-              alt="Bogna Bartkowiak - portret 1" 
-              className="w-full h-[300px] md:h-[400px] object-cover" 
-            />
+            <img src="/about/bogna-02.jpg" alt="Bogna Bartkowiak - portret 1" className="w-full h-[300px] md:h-[400px] object-cover" />
           </div>
           <div className="flex-1">
-            <img 
-              src="/about/bogna-05.jpg" 
-              alt="Bogna Bartkowiak - portret 2" 
-              className="w-full h-[300px] md:h-[400px] object-cover" 
-            />
+            <img src="/about/bogna-05.jpg" alt="Bogna Bartkowiak - portret 2" className="w-full h-[300px] md:h-[400px] object-cover" />
           </div>
           <div className="flex-1">
-            <img 
-              src="/about/bogna-04.jpg" 
-              alt="Bogna Bartkowiak - portret 3" 
-              className="w-full h-[300px] md:h-[400px] object-cover" 
-            />
+            <img src="/about/bogna-04.jpg" alt="Bogna Bartkowiak - portret 3" className="w-full h-[300px] md:h-[400px] object-cover" />
           </div>
           <div className="flex-1">
-            <img 
-              src="/about/bogna-09.jpg" 
-              alt="Bogna Bartkowiak - portret 4" 
-              className="w-full h-[300px] md:h-[400px] object-cover" 
-            />
+            <img src="/about/bogna-09.jpg" alt="Bogna Bartkowiak - portret 4" className="w-full h-[300px] md:h-[400px] object-cover" />
           </div>
         </div>
 
         {/* Contact info - Social links row */}
         <div className="flex flex-wrap items-center gap-8">
-          <a 
-            href="https://www.instagram.com/bogna_bartkowiak" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="inline-flex items-center gap-2 text-sm hover:text-foreground/70 transition-colors group"
-          >
+          <a href="https://www.instagram.com/bogna_bartkowiak" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm hover:text-foreground/70 transition-colors group">
             <Instagram size={18} className="text-foreground/60 group-hover:text-foreground transition-colors" />
             <span>Instagram</span>
           </a>
-          <a 
-            href="https://www.youtube.com/watch?v=UKljf1XDh0k&list=PLjiSr4QYw7PzFWYJYW5cQstY7DQJzxyXG" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="inline-flex items-center gap-2 text-sm hover:text-foreground/70 transition-colors group"
-          >
+          <a href="https://www.youtube.com/watch?v=UKljf1XDh0k&list=PLjiSr4QYw7PzFWYJYW5cQstY7DQJzxyXG" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm hover:text-foreground/70 transition-colors group">
             <Youtube size={18} className="text-foreground/60 group-hover:text-foreground transition-colors" />
             <span>YouTube</span>
           </a>
-          <a 
-            href="mailto:bartkowiakbogna@gmail.com" 
-            className="inline-flex items-center gap-2 text-sm hover:text-foreground/70 transition-colors group"
-          >
+          <a href="mailto:bartkowiakbogna@gmail.com" className="inline-flex items-center gap-2 text-sm hover:text-foreground/70 transition-colors group">
             <Mail size={18} className="text-foreground/60 group-hover:text-foreground transition-colors" />
             <span>bartkowiakbogna@gmail.com</span>
           </a>
