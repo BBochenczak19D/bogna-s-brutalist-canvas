@@ -14,7 +14,7 @@ import { noOrphans } from "@/lib/typography";
 const Home = () => {
   const [typingComplete, setTypingComplete] = useState(false);
   const [bioExpanded, setBioExpanded] = useState(false);
-  const [lightboxImage, setLightboxImage] = useState<{ src: string; title?: string } | null>(null);
+  const [lightboxImage, setLightboxImage] = useState<{src: string;title?: string;} | null>(null);
   const {
     setHeroTypingComplete
   } = useAnimation();
@@ -22,7 +22,7 @@ const Home = () => {
   const [darkCarouselApi, setDarkCarouselApi] = useState<CarouselApi>();
   const carouselRef = useParallaxCarousel(carouselApi);
   const darkCarouselRef = useParallaxCarousel(darkCarouselApi);
-  const iiiMateriaCollection = artworksData.collections.find(c => c.id === "iii-materia");
+  const iiiMateriaCollection = artworksData.collections.find((c) => c.id === "iii-materia");
   const artworks = iiiMateriaCollection?.artworks || [];
   const rysunki = artworksData.rysunki || [];
 
@@ -49,22 +49,22 @@ const Home = () => {
       {/* Hero Bio Section */}
       <section className={`max-w-[1648px] mx-auto px-9 py-0 pt-32 transition-opacity duration-700 ${typingComplete ? "opacity-100" : "opacity-0"}`}>
         <div className="items-start gap-6 max-w-[724px] flex flex-col md:flex-row">
-          <button 
-            onClick={() => setBioExpanded(!bioExpanded)} 
-            className="hidden md:flex items-center justify-center flex-shrink-0 transition-transform duration-300 hover:scale-110"
-            aria-label={bioExpanded ? "Zwiń" : "Rozwiń"}
-          >
+          <button
+          onClick={() => setBioExpanded(!bioExpanded)}
+          className="hidden md:flex items-center justify-center flex-shrink-0 transition-transform duration-300 hover:scale-110"
+          aria-label={bioExpanded ? "Zwiń" : "Rozwiń"}>
+
             {bioExpanded ? <Minus size={20} /> : <Plus size={20} />}
           </button>
-          <img 
-            alt="Bogna Bartkowiak" 
-            className={`object-cover flex-shrink-0 transition-all duration-500 ${bioExpanded ? "w-[114px] h-[174px]" : "w-[80px] h-[120px]"}`} 
-            src="/lovable-uploads/3f96b157-ec5e-4b05-b37f-0b44e7dfd18e.jpg" 
-          />
+          <img
+          alt="Bogna Bartkowiak"
+          className={`object-cover flex-shrink-0 transition-all duration-500 ${bioExpanded ? "w-[114px] h-[174px]" : "w-[80px] h-[120px]"}`}
+          src="/lovable-uploads/3f96b157-ec5e-4b05-b37f-0b44e7dfd18e.jpg" />
+
           <div className={`overflow-hidden transition-all duration-500 ${bioExpanded ? "max-h-[300px] opacity-100" : "max-h-0 opacity-0"}`}>
             <p className="flex-1 text-sm font-normal leading-[125%] uppercase animate-fade-in italic" style={{
-              animationDelay: "0.2s"
-            }}>
+            animationDelay: "0.2s"
+          }}>
               {noOrphans("Jestem absolwentką Akademii Sztuk Pięknych w Katowicach oraz lekarzem. W swojej twórczości badam niewidzialne warstwy istnienia, łącząc doświadczenia medyczne z artystyczną intuicją.")}
               <br />
               {noOrphans("Tworzenie jest dla mnie sposobem zbliżania się do Niewiadomej.")}
@@ -97,15 +97,15 @@ const Home = () => {
           watchDrag: true
         }} className="w-full">
               <CarouselContent className="px-9 gap-1">
-                {artworks.slice(0, 10).map(artwork => <CarouselItem key={artwork.id} className="basis-auto pl-0">
+                {artworks.slice(0, 10).map((artwork) => <CarouselItem key={artwork.id} className="basis-auto pl-0">
                     <div className="w-[236px] h-[312px] md:w-[376px] md:h-[500px] overflow-hidden">
-                      <img 
-                        src={artwork.image} 
-                        alt={artwork.title} 
-                        className="w-full h-full object-cover cursor-pointer hover:opacity-90 transition-opacity"
-                        draggable={false} 
-                        onClick={() => openLightbox(artwork.image, artwork.title)}
-                      />
+                      <img
+                  src={artwork.image}
+                  alt={artwork.title}
+                  className="w-full h-full object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                  draggable={false}
+                  onClick={() => openLightbox(artwork.image, artwork.title)} />
+
                     </div>
                   </CarouselItem>)}
               </CarouselContent>
@@ -134,9 +134,9 @@ const Home = () => {
               <div>
                 <h2 className="text-[32px] font-normal leading-[110%] tracking-[-0.02em] uppercase animate-fade-in" style={{
               animationDelay: "0.2s"
-            }}>
-                  [III MATERIA]
-                </h2>
+            }}>III MATERIA
+
+            </h2>
               </div>
               <p className="text-2xl font-light leading-[110%] tracking-[-0.04em] uppercase">2023</p>
             </div>
@@ -178,23 +178,23 @@ const Home = () => {
             {/* Two Column Images */}
             <div className="flex flex-col md:flex-row gap-16 mb-9">
               <div className="flex-1 flex flex-col gap-6">
-                <img 
-                  src="/artworks/collections/iii-materia/materia-01.jpg" 
-                  alt="W poszukiwaniu III materii, cz. I" 
-                  className="w-full h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity" 
-                  onClick={() => openLightbox("/artworks/collections/iii-materia/materia-01.jpg", "W poszukiwaniu III materii, cz. I")}
-                />
+                <img
+              src="/artworks/collections/iii-materia/materia-01.jpg"
+              alt="W poszukiwaniu III materii, cz. I"
+              className="w-full h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity"
+              onClick={() => openLightbox("/artworks/collections/iii-materia/materia-01.jpg", "W poszukiwaniu III materii, cz. I")} />
+
                 <p className="text-2xl font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground text-center">
                   [cz. I | 2023]
                 </p>
               </div>
               <div className="flex-1 flex flex-col gap-6">
-                <img 
-                  src="/artworks/collections/iii-materia/materia-02.jpg" 
-                  alt="W poszukiwaniu III materii, cz. II" 
-                  className="w-full h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity" 
-                  onClick={() => openLightbox("/artworks/collections/iii-materia/materia-02.jpg", "W poszukiwaniu III materii, cz. II")}
-                />
+                <img
+              src="/artworks/collections/iii-materia/materia-02.jpg"
+              alt="W poszukiwaniu III materii, cz. II"
+              className="w-full h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity"
+              onClick={() => openLightbox("/artworks/collections/iii-materia/materia-02.jpg", "W poszukiwaniu III materii, cz. II")} />
+
                 <p className="text-2xl font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground text-center">
                   [cz. II | 2023]
                 </p>
@@ -242,12 +242,12 @@ const Home = () => {
             </div>
 
             <div className="flex flex-col md:flex-row px-0 items-start md:items-center gap-6 md:gap-16 self-stretch">
-              <img 
-                src="/artworks/collections/iii-materia/materia-03.jpg" 
-                alt="W poszukiwaniu III materii, cz. III" 
-                className="w-full md:w-[743px] h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity" 
-                onClick={() => openLightbox("/artworks/collections/iii-materia/materia-03.jpg", "W poszukiwaniu III materii, cz. III")}
-              />
+              <img
+            src="/artworks/collections/iii-materia/materia-03.jpg"
+            alt="W poszukiwaniu III materii, cz. III"
+            className="w-full md:w-[743px] h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity"
+            onClick={() => openLightbox("/artworks/collections/iii-materia/materia-03.jpg", "W poszukiwaniu III materii, cz. III")} />
+
               <div className="flex flex-col justify-center items-start gap-3">
                 <p className="text-lg md:text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-muted-foreground">
                   [cz. III]
@@ -289,12 +289,12 @@ const Home = () => {
                 </p>
                 <ArrowLink to="/collections/iii-materia">{noOrphans("Przejdź do pełnej kolekcji")}</ArrowLink>
               </div>
-              <img 
-                src="/artworks/collections/iii-materia/materia-04.jpg" 
-                alt="W poszukiwaniu III materii, cz. IV" 
-                className="w-full md:w-[640px] aspect-square md:aspect-auto md:h-[698px] object-cover cursor-pointer hover:opacity-90 transition-opacity" 
-                onClick={() => openLightbox("/artworks/collections/iii-materia/materia-04.jpg", "W poszukiwaniu III materii, cz. IV")}
-              />
+              <img
+            src="/artworks/collections/iii-materia/materia-04.jpg"
+            alt="W poszukiwaniu III materii, cz. IV"
+            className="w-full md:w-[640px] aspect-square md:aspect-auto md:h-[698px] object-cover cursor-pointer hover:opacity-90 transition-opacity"
+            onClick={() => openLightbox("/artworks/collections/iii-materia/materia-04.jpg", "W poszukiwaniu III materii, cz. IV")} />
+
             </div>
 
             <div className="flex px-0 justify-between items-center self-stretch">
@@ -331,7 +331,7 @@ const Home = () => {
             dragFree: true
           }} className="w-full">
                 <CarouselContent className="gap-1">
-                  {[...rysunki, ...artworksData.artefakty, ...artworksData.instalacje].slice(0, 8).map(artwork => <CarouselItem key={artwork.id} className="basis-auto pl-0">
+                  {[...rysunki, ...artworksData.artefakty, ...artworksData.instalacje].slice(0, 8).map((artwork) => <CarouselItem key={artwork.id} className="basis-auto pl-0">
                       <div className="relative cursor-pointer" onClick={() => openLightbox(artwork.image, artwork.title)}>
                         <img src={artwork.image} alt={artwork.title} className="h-[400px] w-auto md:w-[404px] md:h-[539px] object-cover hover:opacity-90 transition-opacity" draggable={false} />
                         <div className="absolute bottom-4 left-4 text-white/80 text-sm">{artwork.title}</div>
@@ -357,12 +357,12 @@ const Home = () => {
 
             <div className="flex flex-col md:flex-row px-0 items-start gap-[42px] self-stretch">
               <div className="flex flex-col items-start gap-6 flex-1">
-                <img 
-                  src="/artworks/collections/iii-materia/materia-05.jpg" 
-                  alt="W poszukiwaniu III materii, cz. V" 
-                  className="w-full h-auto md:h-[832px] self-stretch object-cover cursor-pointer hover:opacity-90 transition-opacity" 
-                  onClick={() => openLightbox("/artworks/collections/iii-materia/materia-05.jpg", "W poszukiwaniu III materii, cz. V")}
-                />
+                <img
+              src="/artworks/collections/iii-materia/materia-05.jpg"
+              alt="W poszukiwaniu III materii, cz. V"
+              className="w-full h-auto md:h-[832px] self-stretch object-cover cursor-pointer hover:opacity-90 transition-opacity"
+              onClick={() => openLightbox("/artworks/collections/iii-materia/materia-05.jpg", "W poszukiwaniu III materii, cz. V")} />
+
                 <div className="flex items-center gap-3">
                   <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
                     [cz. V | 2023]
@@ -371,12 +371,12 @@ const Home = () => {
               </div>
 
               <div className="flex flex-col justify-center items-start gap-6 flex-1">
-                <img 
-                  src="/artworks/collections/iii-materia/materia-06.jpg" 
-                  alt="W poszukiwaniu III materii, cz. VI" 
-                  className="w-full h-auto md:h-[907px] self-stretch object-cover cursor-pointer hover:opacity-90 transition-opacity" 
-                  onClick={() => openLightbox("/artworks/collections/iii-materia/materia-06.jpg", "W poszukiwaniu III materii, cz. VI")}
-                />
+                <img
+              src="/artworks/collections/iii-materia/materia-06.jpg"
+              alt="W poszukiwaniu III materii, cz. VI"
+              className="w-full h-auto md:h-[907px] self-stretch object-cover cursor-pointer hover:opacity-90 transition-opacity"
+              onClick={() => openLightbox("/artworks/collections/iii-materia/materia-06.jpg", "W poszukiwaniu III materii, cz. VI")} />
+
                 <div className="flex items-center gap-3">
                   <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
                     [cz. VI | 2023]
@@ -414,12 +414,12 @@ const Home = () => {
             </div>
 
             <div className="flex px-9 flex-col justify-end items-start gap-16 self-stretch">
-              <img 
-                src="/artworks/collections/iii-materia/materia-07.jpg" 
-                alt="W poszukiwaniu III materii, cz. VII" 
-                className="w-full h-auto md:h-[788px] md:aspect-[2/1] object-cover cursor-pointer hover:opacity-90 transition-opacity" 
-                onClick={() => openLightbox("/artworks/collections/iii-materia/materia-07.jpg", "W poszukiwaniu III materii, cz. VII")}
-              />
+              <img
+            src="/artworks/collections/iii-materia/materia-07.jpg"
+            alt="W poszukiwaniu III materii, cz. VII"
+            className="w-full h-auto md:h-[788px] md:aspect-[2/1] object-cover cursor-pointer hover:opacity-90 transition-opacity"
+            onClick={() => openLightbox("/artworks/collections/iii-materia/materia-07.jpg", "W poszukiwaniu III materii, cz. VII")} />
+
             </div>
 
             <div className="flex px-9 justify-between items-end self-stretch">
@@ -467,12 +467,12 @@ const Home = () => {
             </div>
 
             <div className="flex px-9 flex-col justify-center items-center gap-16 self-stretch">
-              <img 
-                src="/artworks/collections/iii-materia/materia-08.jpg" 
-                alt="W poszukiwaniu III materii, cz. VIII" 
-                className="w-full h-auto aspect-[1051/788] object-cover cursor-pointer hover:opacity-90 transition-opacity" 
-                onClick={() => openLightbox("/artworks/collections/iii-materia/materia-08.jpg", "W poszukiwaniu III materii, cz. VIII")}
-              />
+              <img
+            src="/artworks/collections/iii-materia/materia-08.jpg"
+            alt="W poszukiwaniu III materii, cz. VIII"
+            className="w-full h-auto aspect-[1051/788] object-cover cursor-pointer hover:opacity-90 transition-opacity"
+            onClick={() => openLightbox("/artworks/collections/iii-materia/materia-08.jpg", "W poszukiwaniu III materii, cz. VIII")} />
+
             </div>
 
             <div className="flex px-9 items-center self-stretch">
@@ -524,12 +524,12 @@ const Home = () => {
 
             <div className="px-9 items-start gap-[42px] self-stretch flex flex-col md:flex-row">
               <div className="flex flex-col justify-center items-start gap-6 flex-1">
-                <img 
-                  src="/artworks/collections/iii-materia/materia-09.jpg" 
-                  alt="W poszukiwaniu III materii, cz. IX" 
-                  className="w-full h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity" 
-                  onClick={() => openLightbox("/artworks/collections/iii-materia/materia-09.jpg", "W poszukiwaniu III materii, cz. IX")}
-                />
+                <img
+              src="/artworks/collections/iii-materia/materia-09.jpg"
+              alt="W poszukiwaniu III materii, cz. IX"
+              className="w-full h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity"
+              onClick={() => openLightbox("/artworks/collections/iii-materia/materia-09.jpg", "W poszukiwaniu III materii, cz. IX")} />
+
                 <div className="flex items-center gap-3">
                   <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
                     [cz. IX | 2023]
@@ -538,12 +538,12 @@ const Home = () => {
               </div>
 
               <div className="flex flex-col items-start gap-6 flex-1">
-                <img 
-                  src="/artworks/collections/iii-materia/materia-10.jpg" 
-                  alt="W poszukiwaniu III materii, cz. X" 
-                  className="w-full h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity" 
-                  onClick={() => openLightbox("/artworks/collections/iii-materia/materia-10.jpg", "W poszukiwaniu III materii, cz. X")}
-                />
+                <img
+              src="/artworks/collections/iii-materia/materia-10.jpg"
+              alt="W poszukiwaniu III materii, cz. X"
+              className="w-full h-auto object-contain cursor-pointer hover:opacity-90 transition-opacity"
+              onClick={() => openLightbox("/artworks/collections/iii-materia/materia-10.jpg", "W poszukiwaniu III materii, cz. X")} />
+
                 <div className="flex items-center gap-3">
                   <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
                     [cz. x | 2023]
@@ -564,13 +564,13 @@ const Home = () => {
         </>}
 
       {/* Lightbox */}
-      {lightboxImage && (
-        <ImageLightbox
-          image={lightboxImage.src}
-          title={lightboxImage.title}
-          onClose={() => setLightboxImage(null)}
-        />
-      )}
+      {lightboxImage &&
+    <ImageLightbox
+      image={lightboxImage.src}
+      title={lightboxImage.title}
+      onClose={() => setLightboxImage(null)} />
+
+    }
     </div>;
 };
 export default Home;
