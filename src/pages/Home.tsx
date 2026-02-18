@@ -393,7 +393,7 @@ const Home = () => {
               <img
                 src="/artworks/collections/iii-materia/materia-04.jpg"
                 alt="W poszukiwaniu III materii, cz. IV"
-                className="w-full md:w-[640px] aspect-square md:aspect-auto md:h-[698px] object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                className="w-full md:w-[640px] h-auto md:h-[698px] object-contain md:object-cover cursor-pointer hover:opacity-90 transition-opacity"
                 onClick={() =>
                   openLightbox("/artworks/collections/iii-materia/materia-04.jpg", "W poszukiwaniu III materii, cz. IV")
                 }
