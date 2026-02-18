@@ -76,6 +76,7 @@ const Home = () => {
             >
               {noOrphans("Jestem absolwentką Akademii Sztuk Pięknych w Katowicach oraz lekarzem.")}
               <br />
+              <br />
               {noOrphans(
                 "W swojej twórczości badam niewidzialne warstwy istnienia, łącząc doświadczenia medyczne z artystyczną intuicją.",
               )}
