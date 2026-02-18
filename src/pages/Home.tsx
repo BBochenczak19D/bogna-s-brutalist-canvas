@@ -49,17 +49,18 @@ const Home = () => {
       {/* Hero Bio Section */}
       <section className={`max-w-[1648px] mx-auto px-9 py-0 pt-32 transition-opacity duration-700 ${typingComplete ? "opacity-100" : "opacity-0"}`}>
         <div className="items-start gap-6 max-w-[724px] flex flex-col md:flex-row">
-          <button
-          onClick={() => setBioExpanded(!bioExpanded)}
-          className="hidden md:flex items-center justify-center flex-shrink-0 transition-transform duration-300 hover:scale-110"
-          aria-label={bioExpanded ? "Zwiń" : "Rozwiń"}>
-
-            {bioExpanded ? <Minus size={20} /> : <Plus size={20} />}
-          </button>
-          <img
-          alt="Bogna Bartkowiak"
-          className={`object-cover flex-shrink-0 transition-all duration-500 ${bioExpanded ? "w-[114px] h-[174px]" : "w-[80px] h-[120px]"}`}
-          src="/lovable-uploads/3f96b157-ec5e-4b05-b37f-0b44e7dfd18e.jpg" />
+          <div className="flex items-start gap-2 flex-shrink-0">
+            <button
+            onClick={() => setBioExpanded(!bioExpanded)}
+            className="hidden md:flex items-start justify-center pt-1 flex-shrink-0 transition-transform duration-300 hover:scale-110"
+            aria-label={bioExpanded ? "Zwiń" : "Rozwiń"}>
+              {bioExpanded ? <Minus size={20} /> : <Plus size={20} />}
+            </button>
+            <img
+            alt="Bogna Bartkowiak"
+            className={`object-cover flex-shrink-0 transition-all duration-500 ${bioExpanded ? "w-[114px] h-[174px]" : "w-[80px] h-[120px]"}`}
+            src="/lovable-uploads/3f96b157-ec5e-4b05-b37f-0b44e7dfd18e.jpg" />
+          </div>
 
           <div className={`overflow-hidden transition-all duration-500 max-h-[300px] opacity-100 ${bioExpanded ? "md:max-h-[300px] md:opacity-100" : "md:max-h-0 md:opacity-0"}`}>
             <p className="flex-1 text-sm font-normal leading-[125%] uppercase animate-fade-in italic" style={{
