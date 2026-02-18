@@ -61,7 +61,7 @@ const Home = () => {
           className={`object-cover flex-shrink-0 transition-all duration-500 ${bioExpanded ? "w-[114px] h-[174px]" : "w-[80px] h-[120px]"}`}
           src="/lovable-uploads/3f96b157-ec5e-4b05-b37f-0b44e7dfd18e.jpg" />
 
-          <div className={`overflow-hidden transition-all duration-500 ${bioExpanded ? "max-h-[300px] opacity-100" : "max-h-0 opacity-0"}`}>
+          <div className={`overflow-hidden transition-all duration-500 max-h-[300px] opacity-100 ${bioExpanded ? "md:max-h-[300px] md:opacity-100" : "md:max-h-0 md:opacity-0"}`}>
             <p className="flex-1 text-sm font-normal leading-[125%] uppercase animate-fade-in italic" style={{
             animationDelay: "0.2s"
           }}>
