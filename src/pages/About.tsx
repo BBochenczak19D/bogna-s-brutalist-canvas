@@ -89,7 +89,7 @@ Bartkowiak-Trepka
 
             <div className="flex items-center gap-4 mt-4">
               <div className="w-12 h-px bg-foreground/30" />
-              <span className="text-xs uppercase tracking-[0.15em] text-muted-foreground">Bogna Bartkowiak</span>
+              <span className="text-xs uppercase tracking-[0.15em] text-muted-foreground">BOGNA BARTKOWIAK-TREPKA</span>
             </div>
           </div>
 
