@@ -79,8 +79,6 @@ const Home = () => {
               {noOrphans(
                 "W swojej twórczości badam niewidzialne warstwy istnienia, łącząc doświadczenia medyczne z artystyczną intuicją.",
               )}
-              <br />
-              {noOrphans("Tworzenie jest dla mnie sposobem zbliżania się do Niewiadomej.")}
             </p>
           </div>
         </div>
