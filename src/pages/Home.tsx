@@ -58,7 +58,7 @@ const Home = () => {
             </button>
             <img
             alt="Bogna Bartkowiak"
-            className={`object-cover flex-shrink-0 transition-all duration-500 ${bioExpanded ? "w-[114px] h-[174px]" : "w-[80px] h-[120px]"}`}
+            className={`object-cover flex-shrink-0 transition-all duration-500 ${bioExpanded ? "w-[160px] h-[240px] md:w-[114px] md:h-[174px]" : "w-[120px] h-[180px] md:w-[80px] md:h-[120px]"}`}
             src="/lovable-uploads/3f96b157-ec5e-4b05-b37f-0b44e7dfd18e.jpg" />
           </div>
 
