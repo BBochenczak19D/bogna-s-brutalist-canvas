@@ -74,8 +74,10 @@ const Home = () => {
                 animationDelay: "0.2s",
               }}
             >
+              {noOrphans("Jestem absolwentką Akademii Sztuk Pięknych w Katowicach oraz lekarzem.")}
+              <br />
               {noOrphans(
-                "Jestem absolwentką Akademii Sztuk Pięknych w Katowicach oraz lekarzem. W swojej twórczości badam niewidzialne warstwy istnienia, łącząc doświadczenia medyczne z artystyczną intuicją.",
+                "W swojej twórczości badam niewidzialne warstwy istnienia, łącząc doświadczenia medyczne z artystyczną intuicją.",
               )}
               <br />
               {noOrphans("Tworzenie jest dla mnie sposobem zbliżania się do Niewiadomej.")}
