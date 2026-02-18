@@ -133,7 +133,7 @@ Bartkowiak-Trepka
       </section>
 
       {/* Joy of Creation Section */}
-      <section className="max-w-[1648px] mx-auto px-9 py-[100px]">
+      <section className="max-w-[1648px] mx-auto py-[100px] px-[128px]">
         <div className="flex flex-col md:flex-row gap-12 lg:gap-20 items-center">
           {/* Text on left */}
           <div className="flex-1 flex flex-col gap-8 order-2 md:order-1">
