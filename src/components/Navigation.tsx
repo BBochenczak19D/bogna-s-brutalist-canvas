@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { NavLink } from "./NavLink";
@@ -15,10 +15,14 @@ const Navigation = () => {
   const [clickedItem, setClickedItem] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(true);
   const [hasScrolled, setHasScrolled] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const lastScrollYRef = useRef(0);
+  const justNavigatedRef = useRef(false);
+
   useEffect(() => {
     let ticking = false;
     const handleScroll = () => {
+      // Block scroll-hide logic briefly after navigation to avoid flicker
+      if (justNavigatedRef.current) return;
       if (!ticking) {
         window.requestAnimationFrame(() => {
           const currentScrollY = window.scrollY;
@@ -30,14 +34,14 @@ const Navigation = () => {
           if (scrollableHeight > 200) {
             // Track if user has scrolled past threshold (to hide subcategories)
             setHasScrolled(currentScrollY > 50);
-            if (currentScrollY < lastScrollY) {
+            if (currentScrollY < lastScrollYRef.current) {
               // Scrolling up
               setIsVisible(true);
-            } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+            } else if (currentScrollY > lastScrollYRef.current && currentScrollY > 100) {
               // Scrolling down and past 100px
               setIsVisible(false);
             }
-            setLastScrollY(currentScrollY);
+            lastScrollYRef.current = currentScrollY;
           } else {
             // Not enough content, always show navigation
             setIsVisible(true);
@@ -54,7 +58,7 @@ const Navigation = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [lastScrollY]);
+  }, []);
   const navItems = [{
     path: "/collections",
     label: "Kolekcje",
@@ -102,12 +106,18 @@ const Navigation = () => {
 
   // Close dropdowns and reset visibility on route change
   useEffect(() => {
+    // Block scroll events briefly to prevent flicker after navigation
+    justNavigatedRef.current = true;
+    lastScrollYRef.current = 0;
     setHoveredItem(null);
     setClickedItem(null);
     setIsOpen(false);
-    setIsVisible(true); // Always show navigation on route change
-    setHasScrolled(false); // Reset scroll state
-    setLastScrollY(0); // Reset scroll position tracking
+    setIsVisible(true);
+    setHasScrolled(false);
+    const timer = setTimeout(() => {
+      justNavigatedRef.current = false;
+    }, 500);
+    return () => clearTimeout(timer);
   }, [location.pathname]);
   return <nav className={`w-full px-8 py-4 bg-white fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${isVisible ? 'translate-y-0' : '-translate-y-full'} ${shouldShowNav ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
       <div className="flex justify-between items-start max-w-[1920px] mx-auto">
