@@ -463,7 +463,7 @@ const Home = () => {
                           className="h-[400px] w-auto md:w-[404px] md:h-[539px] object-cover hover:opacity-90 transition-opacity"
                           draggable={false}
                         />
-                        <div className="absolute bottom-4 left-4 text-white/80 text-sm">{artwork.title}</div>
+                        
                       </div>
                     </CarouselItem>
                   ))}
