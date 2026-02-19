@@ -822,7 +822,7 @@ const Home = () => {
               {/* Preview strip of 3 images */}
               <div className="relative z-10 flex gap-4 w-full">
                 {[
-                  "/artworks/seans-artystyczny/seans-01.jpg",
+                  "/artworks/seans-artystyczny/mandorla-2.png",
                   "/artworks/seans-artystyczny/seans-06.jpg",
                   "/artworks/seans-artystyczny/seans-09.jpg",
                 ].map((src, i) => (
