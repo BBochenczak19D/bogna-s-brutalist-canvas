@@ -6,7 +6,8 @@ const categoryTitles: Record<string, string> = {
   "obrazy": "OBRAZY",
   "artefakty": "ARTEFAKTY",
   "rysunki": "RYSUNKI",
-  "grafiki": "GRAFIKI"
+  "grafiki": "GRAFIKI",
+  "instalacje": "INSTALACJE"
 };
 
 const CategoryPage = () => {
@@ -22,7 +23,8 @@ const CategoryPage = () => {
     "obrazy": "Kilka słów o malarstwie",
     "artefakty": "Kilka słów o artefaktach",
     "rysunki": "Kilka słów o rysunkach",
-    "grafiki": "Kilka słów o grafikach"
+    "grafiki": "Kilka słów o grafikach",
+    "instalacje": "Instalacje przestrzenne"
   };
 
   return (

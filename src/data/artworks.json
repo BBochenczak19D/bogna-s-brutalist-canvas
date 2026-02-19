@@ -856,11 +856,75 @@
   "instalacje": [
     {
       "id": "instalacja-01",
-      "title": "Przestrzeń I",
+      "title": "Instalacja",
       "medium": "Instalacja przestrzenna",
       "dimensions": "Wymiary zmienne",
       "year": "2023",
       "image": "/artworks/instalacje/instalacja-01.jpg"
+    },
+    {
+      "id": "instalacja-02",
+      "title": "Instalacja",
+      "medium": "Instalacja przestrzenna",
+      "dimensions": "Wymiary zmienne",
+      "year": "2023",
+      "image": "/artworks/instalacje/instalacja-02.jpg"
+    },
+    {
+      "id": "instalacja-03",
+      "title": "Instalacja",
+      "medium": "Instalacja przestrzenna",
+      "dimensions": "Wymiary zmienne",
+      "year": "2023",
+      "image": "/artworks/instalacje/instalacja-03.jpg"
+    },
+    {
+      "id": "instalacja-04",
+      "title": "Instalacja",
+      "medium": "Instalacja przestrzenna",
+      "dimensions": "Wymiary zmienne",
+      "year": "2023",
+      "image": "/artworks/instalacje/instalacja-04.jpg"
+    },
+    {
+      "id": "instalacja-05",
+      "title": "Instalacja",
+      "medium": "Instalacja przestrzenna",
+      "dimensions": "Wymiary zmienne",
+      "year": "2023",
+      "image": "/artworks/instalacje/instalacja-05.jpg"
+    },
+    {
+      "id": "instalacja-06",
+      "title": "Instalacja",
+      "medium": "Instalacja przestrzenna",
+      "dimensions": "Wymiary zmienne",
+      "year": "2023",
+      "image": "/artworks/instalacje/instalacja-06.jpg"
+    },
+    {
+      "id": "instalacja-07",
+      "title": "Instalacja",
+      "medium": "Instalacja przestrzenna",
+      "dimensions": "Wymiary zmienne",
+      "year": "2023",
+      "image": "/artworks/instalacje/instalacja-07.jpg"
+    },
+    {
+      "id": "instalacja-08",
+      "title": "Instalacja",
+      "medium": "Instalacja przestrzenna",
+      "dimensions": "Wymiary zmienne",
+      "year": "2023",
+      "image": "/artworks/instalacje/instalacja-08.jpg"
+    },
+    {
+      "id": "instalacja-09",
+      "title": "Instalacja",
+      "medium": "Instalacja przestrzenna",
+      "dimensions": "Wymiary zmienne",
+      "year": "2023",
+      "image": "/artworks/instalacje/instalacja-09.jpg"
     }
   ]
 }
