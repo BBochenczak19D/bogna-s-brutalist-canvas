@@ -87,6 +87,9 @@ const Navigation = () => {
     }, {
       path: "/tworczość/instalacje",
       label: "instalacje"
+    }, {
+      path: "/tworczość/seans-artystyczny",
+      label: "seans artystyczny"
     }]
   }, {
     path: "/about",

@@ -10,6 +10,7 @@ import CollectionDetail from "./pages/CollectionDetail";
 import Tworczość from "./pages/Tworczość";
 import CategoryPage from "./pages/CategoryPage";
 import About from "./pages/About";
+import SeansArtystyczny from "./pages/SeansArtystyczny";
 
 import NotFound from "./pages/NotFound";
 
@@ -29,6 +30,7 @@ const App = () => (
             <Route path="/tworczość" element={<Tworczość />} />
             <Route path="/tworczość/:category" element={<CategoryPage />} />
             <Route path="/about" element={<About />} />
+            <Route path="/tworczość/seans-artystyczny" element={<SeansArtystyczny />} />
             
           </Route>
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
