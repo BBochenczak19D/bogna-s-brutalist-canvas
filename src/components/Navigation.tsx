@@ -60,16 +60,6 @@ const Navigation = () => {
     };
   }, []);
   const navItems = [{
-    path: "/collections",
-    label: "Kolekcje",
-    subItems: [{
-      path: "/collections/iii-materia",
-      label: "III Materia"
-    }, {
-      path: "/collections/w-kolekcji-prywatnej",
-      label: "W kolekcji prywatnej"
-    }]
-  }, {
     path: "/tworczość",
     label: "Twórczość",
     subItems: [{
@@ -90,6 +80,16 @@ const Navigation = () => {
     }, {
       path: "/tworczość/seans-artystyczny",
       label: "seans artystyczny"
+    }]
+  }, {
+    path: "/collections",
+    label: "Kolekcje",
+    subItems: [{
+      path: "/collections/iii-materia",
+      label: "III Materia"
+    }, {
+      path: "/collections/w-kolekcji-prywatnej",
+      label: "W kolekcji prywatnej"
     }]
   }, {
     path: "/about",

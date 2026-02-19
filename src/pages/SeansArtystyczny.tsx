@@ -13,12 +13,11 @@ const images = [
   { src: "/artworks/seans-artystyczny/seans-05.png", title: "Seans artystyczny" },
 ];
 
-// 4 video placeholders — will be replaced with actual video files
 const videos = [
-  { id: 1, label: "I" },
-  { id: 2, label: "II" },
-  { id: 3, label: "III" },
-  { id: 4, label: "IV" },
+  { id: 1, label: "I", src: "/artworks/seans-artystyczny/seans-video-1.mp4" },
+  { id: 2, label: "II", src: "/artworks/seans-artystyczny/seans-video-2.mp4" },
+  { id: 3, label: "III", src: "/artworks/seans-artystyczny/seans-video-3.mp4" },
+  { id: 4, label: "IV", src: "/artworks/seans-artystyczny/seans-video-4.mp4" },
 ];
 
 const SeansArtystyczny = () => {
@@ -51,17 +50,16 @@ const SeansArtystyczny = () => {
         <p className="text-xs tracking-[0.4em] text-white/20 uppercase mb-10">Wideo</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {videos.map((video) => (
-            <div key={video.id} className="group relative aspect-video bg-white/[0.02] border border-white/[0.06] overflow-hidden flex items-center justify-center">
-              {/* Subtle noise texture overlay */}
-              <div className="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E')]" />
-              {/* Play icon */}
-              <div className="relative flex flex-col items-center gap-4">
-                <div className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center group-hover:border-white/40 transition-colors duration-500">
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" className="ml-1">
-                    <path d="M5 3.5L14 9L5 14.5V3.5Z" fill="white" fillOpacity="0.4" />
-                  </svg>
-                </div>
-                <span className="text-xs tracking-[0.3em] text-white/20 uppercase">
+            <div key={video.id} className="group relative aspect-video bg-black border border-white/[0.06] overflow-hidden">
+              <video
+                src={video.src}
+                controls
+                preload="metadata"
+                className="w-full h-full object-cover"
+                style={{ colorScheme: 'dark' }}
+              />
+              <div className="absolute bottom-3 left-4 pointer-events-none">
+                <span className="text-xs tracking-[0.3em] text-white/30 uppercase">
                   Wideo {video.label}
                 </span>
               </div>
