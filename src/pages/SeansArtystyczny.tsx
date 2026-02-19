@@ -48,9 +48,9 @@ const SeansArtystyczny = () => {
       {/* Videos section */}
       <section className="px-8 md:px-16 mb-24 max-w-[1400px] mx-auto">
         <p className="text-xs tracking-[0.4em] text-white/20 uppercase mb-10">Wideo</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {videos.map((video) => (
-            <div key={video.id} className="group relative aspect-video bg-black border border-white/[0.06] overflow-hidden">
+            <div key={video.id} className="group relative aspect-[9/16] bg-black border border-white/[0.06] overflow-hidden">
               <video
                 src={video.src}
                 controls
