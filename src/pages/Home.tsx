@@ -777,6 +777,67 @@ const Home = () => {
               </svg>
             </div>
           </section>
+
+          {/* Seans Artystyczny Section */}
+          <section className="max-w-[1648px] mx-auto">
+            <div className="relative bg-[#050505] overflow-hidden px-9 py-[100px] flex flex-col items-start gap-12">
+              {/* Background image */}
+              <img
+                src="/artworks/seans-artystyczny/seans-08.jpg"
+                alt=""
+                aria-hidden="true"
+                className="absolute inset-0 w-full h-full object-cover opacity-10 pointer-events-none select-none"
+              />
+
+              {/* Content */}
+              <div className="relative z-10 flex flex-col items-start gap-8 w-full">
+                <p className="text-xs tracking-[0.4em] text-white/30 uppercase">Twórczość</p>
+
+                <div className="flex flex-col md:flex-row justify-between items-end gap-8 w-full">
+                  <h2 className="text-[32px] md:text-[64px] font-normal leading-[100%] tracking-[-0.02em] uppercase text-white/90">
+                    Seans<br />Artystyczny
+                  </h2>
+
+                  <Link
+                    to="/tworczość/seans-artystyczny"
+                    className="group flex items-center gap-3 text-white/50 hover:text-white/90 transition-colors duration-300 uppercase tracking-widest text-sm flex-shrink-0"
+                  >
+                    <span>Przejdź do sekcji</span>
+                    <svg
+                      width="40" height="12" viewBox="0 0 40 12" fill="none"
+                      className="transition-transform duration-300 group-hover:translate-x-1"
+                    >
+                      <path d="M0 6H38M38 6L33 1M38 6L33 11" stroke="currentColor" strokeWidth="1"/>
+                    </svg>
+                  </Link>
+                </div>
+
+                <div className="w-8 h-px bg-white/20" />
+
+                <p className="text-sm md:text-base font-light text-white/40 max-w-[500px] leading-relaxed tracking-wide uppercase">
+                  Performatywne spotkanie z materią,<br />dźwiękiem i obrazem.
+                </p>
+              </div>
+
+              {/* Preview strip of 3 images */}
+              <div className="relative z-10 flex gap-4 w-full">
+                {[
+                  "/artworks/seans-artystyczny/seans-01.jpg",
+                  "/artworks/seans-artystyczny/seans-06.jpg",
+                  "/artworks/seans-artystyczny/seans-09.jpg",
+                ].map((src, i) => (
+                  <div key={i} className="flex-1 aspect-square overflow-hidden border border-white/[0.06]">
+                    <img
+                      src={src}
+                      alt="Seans artystyczny"
+                      className="w-full h-full object-cover opacity-70 hover:opacity-100 transition-opacity duration-500"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
         </>
       )}
 
