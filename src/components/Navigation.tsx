@@ -138,14 +138,11 @@ const Navigation = () => {
           // Show subcategories only on hover - consistent behavior across all sections
           const shouldShowSubItems = isHovered;
           return <div key={item.path} className="flex flex-col items-end gap-2.5" onMouseEnter={() => setHoveredItem(item.path)} onMouseLeave={() => setHoveredItem(null)}>
-                {hasSubItems ? <button onClick={e => {
-              e.preventDefault();
-              setClickedItem(clickedItem === item.path ? null : item.path);
-            }} className={`px-[5px] py-[3px] transition-all duration-300 hover:opacity-70`}>
+                {hasSubItems ? <NavLink to={item.path} className="px-[5px] py-[3px] transition-all duration-300 hover:opacity-70" activeClassName="underline decoration-solid" onMouseEnter={() => setHoveredItem(item.path)}>
                     <span className={`text-xl font-normal uppercase leading-[100%] tracking-normal transition-all duration-300 ${isActive ? 'underline decoration-solid' : ''}`}>
                       {item.label}
                     </span>
-                  </button> : <NavLink to={item.path} className="px-[5px] py-[3px] transition-all duration-300 hover:opacity-70" activeClassName="underline decoration-solid">
+                  </NavLink> : <NavLink to={item.path} className="px-[5px] py-[3px] transition-all duration-300 hover:opacity-70" activeClassName="underline decoration-solid">
                     <span className="text-xl font-normal uppercase leading-[100%] tracking-normal">
                       {item.label}
                     </span>
