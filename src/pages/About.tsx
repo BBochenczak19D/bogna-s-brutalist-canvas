@@ -44,7 +44,7 @@ Bartkowiak-Trepka
             <Instagram size={18} className="text-foreground/60 group-hover:text-foreground transition-colors" />
             <span>Instagram</span>
           </a>
-          <a href="https://www.youtube.com/watch?v=UKljf1XDh0k&list=PLjiSr4QYw7PzFWYJYW5cQstY7DQJzxyXG" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm hover:text-foreground/70 transition-colors group">
+          <a href="https://www.youtube.com/@bognabartkowiak5925/videos" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm hover:text-foreground/70 transition-colors group">
             <Youtube size={18} className="text-foreground/60 group-hover:text-foreground transition-colors" />
             <span>YouTube</span>
           </a>
