@@ -158,7 +158,7 @@ const Navigation = () => {
                           <line x1="6" y1="2" x2="6" y2="10" />
                           <line x1="2" y1="6" x2="10" y2="6" />
                         </svg>
-                        <span className="text-lg font-normal uppercase leading-[100%] tracking-normal">
+                        <span className="text-lg font-normal uppercase leading-[100%] tracking-normal whitespace-pre-line">
                           {subItem.label}
                         </span>
                       </NavLink>)}
