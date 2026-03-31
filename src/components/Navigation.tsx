@@ -89,7 +89,7 @@ const Navigation = () => {
       label: "III Materia"
     }, {
       path: "/collections/w-kolekcji-prywatnej",
-      label: "W kolekcji prywatnej"
+      label: "W kolekcji \nprywatnej"
     }]
   }, {
     path: "/about",
