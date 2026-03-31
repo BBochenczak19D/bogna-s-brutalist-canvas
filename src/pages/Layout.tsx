@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Instagram, Youtube, Mail } from "lucide-react";
 import { Outlet, Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import { AnimationProvider } from "@/contexts/AnimationContext";
