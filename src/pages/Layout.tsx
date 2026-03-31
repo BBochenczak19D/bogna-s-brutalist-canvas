@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Instagram, Youtube, Mail } from "lucide-react";
 import { Outlet, Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import { AnimationProvider } from "@/contexts/AnimationContext";
@@ -96,7 +97,17 @@ const Layout = () => {
               <p className="text-background/60 text-sm">
                 © {new Date().getFullYear()} Bogna Bartkowiak. Wszelkie prawa zastrzeżone.
               </p>
-              
+              <div className="flex items-center gap-5">
+                <a href="mailto:bogna.bartkowiak@gmail.com" className="text-background/60 hover:text-background transition-colors">
+                  <Mail size={18} />
+                </a>
+                <a href="https://www.instagram.com/bogna_bartkowiak/" target="_blank" rel="noopener noreferrer" className="text-background/60 hover:text-background transition-colors">
+                  <Instagram size={18} />
+                </a>
+                <a href="https://www.youtube.com/@bognabartkowiak5925/videos" target="_blank" rel="noopener noreferrer" className="text-background/60 hover:text-background transition-colors">
+                  <Youtube size={18} />
+                </a>
+              </div>
             </div>
           </div>
         </footer>
