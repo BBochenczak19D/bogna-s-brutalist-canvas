@@ -157,6 +157,38 @@
           "dimensions": "",
           "year": "",
           "image": "/artworks/grafiki/grafika-09.jpg"
+        },
+        {
+          "id": "grafika-10",
+          "title": "Grafika",
+          "medium": "",
+          "dimensions": "",
+          "year": "",
+          "image": "/artworks/grafiki/grafika-10.png"
+        },
+        {
+          "id": "grafika-11",
+          "title": "Grafika",
+          "medium": "",
+          "dimensions": "",
+          "year": "",
+          "image": "/artworks/grafiki/grafika-11.png"
+        },
+        {
+          "id": "grafika-12",
+          "title": "Grafika",
+          "medium": "",
+          "dimensions": "",
+          "year": "",
+          "image": "/artworks/grafiki/grafika-12.png"
+        },
+        {
+          "id": "grafika-13",
+          "title": "Grafika",
+          "medium": "",
+          "dimensions": "",
+          "year": "",
+          "image": "/artworks/grafiki/grafika-13.png"
         }
       ]
     },
