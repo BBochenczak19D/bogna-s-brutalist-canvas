@@ -46,7 +46,7 @@ const Layout = () => {
               {/* Kolekcje Column */}
               <div className="flex flex-col gap-3">
                 <span className="text-background/50 text-xs uppercase tracking-widest mb-2">Kolekcje</span>
-                <a href="/collections" className="text-background hover:text-background/70 transition-colors uppercase text-sm">
+                <a href="/collections" className="hidden text-background hover:text-background/70 transition-colors uppercase text-sm">
                   Wszystkie kolekcje
                 </a>
                 <a href="/collections/iii-materia" className="text-background hover:text-background/70 transition-colors uppercase text-sm">
