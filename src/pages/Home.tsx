@@ -448,10 +448,21 @@ const Home = () => {
               >
                 <CarouselContent className="gap-1">
                   {[
-                    ...rysunki,
-                    ...artworksData.grafiki.slice(0, 3),
-                    ...artworksData.artefakty.slice(-5),
-                  ].map((artwork) => (
+                    rysunki[0],
+                    artworksData.grafiki[9],
+                    artworksData.artefakty.slice(-5)[0],
+                    artworksData.grafiki[10],
+                    rysunki[1],
+                    artworksData.artefakty.slice(-5)[1],
+                    artworksData.grafiki[0],
+                    artworksData.grafiki[11],
+                    artworksData.artefakty.slice(-5)[2],
+                    artworksData.grafiki[1],
+                    artworksData.grafiki[12],
+                    artworksData.artefakty.slice(-5)[3],
+                    artworksData.grafiki[2],
+                    artworksData.artefakty.slice(-5)[4],
+                  ].filter(Boolean).map((artwork) => (
                     <CarouselItem key={artwork.id} className="basis-auto pl-0">
                       <div
                         className="relative cursor-pointer"
