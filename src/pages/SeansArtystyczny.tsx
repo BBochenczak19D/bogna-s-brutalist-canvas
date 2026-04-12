@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ImageLightbox from "@/components/ImageLightbox";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 
 const images = [
   { src: "/artworks/seans-artystyczny/seans-08.jpg", title: "Seans artystyczny" },
@@ -34,7 +35,10 @@ const SeansArtystyczny = () => {
     <div className="min-h-screen bg-[#050505] text-white/80">
       {/* Hero */}
       <section className="pt-32 pb-16 px-8 md:px-16 max-w-[1400px] mx-auto">
-        <p className="text-xs tracking-[0.4em] text-white/30 uppercase mb-6">Twórczość</p>
+        <PageBreadcrumb light items={[
+          { label: "Twórczość", path: "/tworczość" },
+          { label: "Seans Artystyczny" }
+        ]} />
         <h1 className="text-4xl md:text-6xl font-normal uppercase tracking-tight text-white/90 leading-[1.05] mb-8">
           Seans<br />Artystyczny
         </h1>

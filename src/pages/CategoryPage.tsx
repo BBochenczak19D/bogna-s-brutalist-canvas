@@ -1,6 +1,7 @@
 import { useParams, Navigate } from "react-router-dom";
 import artworksData from "@/data/artworks.json";
 import MasonryArtworkGrid from "@/components/MasonryArtworkGrid";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 
 const categoryTitles: Record<string, string> = {
   "obrazy": "OBRAZY",
@@ -30,13 +31,10 @@ const CategoryPage = () => {
   return (
     <div className="min-h-screen">
       <section className="container mx-auto px-4 md:px-9 py-20">
-        {/* Breadcrumb */}
-        <div className="flex items-center gap-3 text-sm mb-16 uppercase py-[24px] pb-0">
-          <span className="text-foreground">twórczość</span>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="flex-shrink-0">
-            <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </div>
+        <PageBreadcrumb items={[
+          { label: "Twórczość", path: "/tworczość" },
+          { label: categoryTitles[category] }
+        ]} />
 
         {/* Page Title */}
         <h1 className="text-5xl md:text-6xl font-medium tracking-tight mb-24">
