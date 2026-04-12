@@ -8,7 +8,7 @@ import ImageLightbox from "@/components/ImageLightbox";
 import { useAnimation } from "@/contexts/AnimationContext";
 import artworksData from "@/data/artworks.json";
 import { Carousel, CarouselContent, CarouselItem, CarouselApi } from "@/components/ui/carousel";
-import { useParallaxCarousel } from "@/hooks/useParallaxCarousel";
+
 import { noOrphans } from "@/lib/typography";
 
 const Home = () => {
