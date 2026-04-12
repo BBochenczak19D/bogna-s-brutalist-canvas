@@ -1,6 +1,7 @@
 import { useParams, Navigate } from "react-router-dom";
 import artworksData from "@/data/artworks.json";
 import MasonryArtworkGrid from "@/components/MasonryArtworkGrid";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 
 const CollectionDetail = () => {
   const { id } = useParams();
@@ -18,6 +19,10 @@ const CollectionDetail = () => {
   return (
     <div className="min-h-screen">
       <section className="container mx-auto px-4 md:px-9 py-20">
+        <PageBreadcrumb items={[
+          { label: "Kolekcje", path: "/collections" },
+          { label: collection.title }
+        ]} />
         <h1 className="mb-16">{collection.title}</h1>
         
         {/* Paintings */}
