@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Plus, Minus } from "lucide-react";
+import { Plus, Minus, ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import CornerBracket from "@/components/CornerBracket";
 import ArrowLink from "@/components/ArrowLink";
@@ -8,7 +8,7 @@ import ImageLightbox from "@/components/ImageLightbox";
 import { useAnimation } from "@/contexts/AnimationContext";
 import artworksData from "@/data/artworks.json";
 import { Carousel, CarouselContent, CarouselItem, CarouselApi } from "@/components/ui/carousel";
-import { useParallaxCarousel } from "@/hooks/useParallaxCarousel";
+
 import { noOrphans } from "@/lib/typography";
 
 const Home = () => {
@@ -18,8 +18,6 @@ const Home = () => {
   const { setHeroTypingComplete } = useAnimation();
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
   const [darkCarouselApi, setDarkCarouselApi] = useState<CarouselApi>();
-  const carouselRef = useParallaxCarousel(carouselApi);
-  const darkCarouselRef = useParallaxCarousel(darkCarouselApi);
   const iiiMateriaCollection = artworksData.collections.find((c) => c.id === "iii-materia");
   const artworks = iiiMateriaCollection?.artworks || [];
   const rysunki = artworksData.rysunki || [];
@@ -110,7 +108,7 @@ const Home = () => {
       {/* Gallery Section */}
       {typingComplete && (
         <>
-          <section ref={carouselRef} className="max-w-[1648px] mx-auto mt-[100px] mb-8 animate-fade-in">
+          <section className="max-w-[1648px] mx-auto mt-[100px] mb-8 animate-fade-in">
             <div className="flex justify-end px-9 mb-6">
               <ArrowLink to="/collections/iii-materia">{noOrphans("Przejdź do pełnej kolekcji")}</ArrowLink>
             </div>
@@ -141,6 +139,20 @@ const Home = () => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
+              <div className="flex justify-end gap-2 px-9 mt-4">
+                <button
+                  onClick={() => carouselApi?.scrollPrev()}
+                  className="p-2 text-foreground hover:text-foreground/70 transition-colors"
+                >
+                  <ArrowLeft size={20} />
+                </button>
+                <button
+                  onClick={() => carouselApi?.scrollNext()}
+                  className="p-2 text-foreground hover:text-foreground/70 transition-colors"
+                >
+                  <ArrowRight size={20} />
+                </button>
+              </div>
             </Carousel>
 
             {/* Description Section */}
@@ -407,7 +419,7 @@ const Home = () => {
           </section>
 
           {/* Dark Section - Other Works */}
-          <section ref={darkCarouselRef} className="max-w-[1648px] mx-auto">
+          <section className="max-w-[1648px] mx-auto">
             <div className="bg-secondary px-9 pt-[30px] pb-9 flex flex-col gap-16">
               <div className="flex flex-col gap-3">
                 <div className="flex">
@@ -479,6 +491,20 @@ const Home = () => {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
+                <div className="flex justify-end gap-2 mt-4">
+                  <button
+                    onClick={() => darkCarouselApi?.scrollPrev()}
+                    className="p-2 text-white hover:text-white/70 transition-colors"
+                  >
+                    <ArrowLeft size={20} />
+                  </button>
+                  <button
+                    onClick={() => darkCarouselApi?.scrollNext()}
+                    className="p-2 text-white hover:text-white/70 transition-colors"
+                  >
+                    <ArrowRight size={20} />
+                  </button>
+                </div>
               </Carousel>
             </div>
           </section>
