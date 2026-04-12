@@ -139,18 +139,18 @@ const Home = () => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <div className="flex justify-end gap-2 px-9 mt-4">
+              <div className="flex justify-center md:justify-end gap-3 px-9 mt-4">
                 <button
                   onClick={() => carouselApi?.scrollPrev()}
                   className="p-2 text-foreground hover:text-foreground/70 transition-colors"
                 >
-                  <ArrowLeft size={20} />
+                  <ArrowLeft size={28} />
                 </button>
                 <button
                   onClick={() => carouselApi?.scrollNext()}
                   className="p-2 text-foreground hover:text-foreground/70 transition-colors"
                 >
-                  <ArrowRight size={20} />
+                  <ArrowRight size={28} />
                 </button>
               </div>
             </Carousel>
@@ -491,18 +491,18 @@ const Home = () => {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <div className="flex justify-end gap-2 mt-4">
+                <div className="flex justify-center md:justify-end gap-3 mt-4">
                   <button
                     onClick={() => darkCarouselApi?.scrollPrev()}
                     className="p-2 text-white hover:text-white/70 transition-colors"
                   >
-                    <ArrowLeft size={20} />
+                    <ArrowLeft size={28} />
                   </button>
                   <button
                     onClick={() => darkCarouselApi?.scrollNext()}
                     className="p-2 text-white hover:text-white/70 transition-colors"
                   >
-                    <ArrowRight size={20} />
+                    <ArrowRight size={28} />
                   </button>
                 </div>
               </Carousel>
