@@ -419,7 +419,7 @@ const Home = () => {
           </section>
 
           {/* Dark Section - Other Works */}
-          <section ref={darkCarouselRef} className="max-w-[1648px] mx-auto">
+          <section className="max-w-[1648px] mx-auto">
             <div className="bg-secondary px-9 pt-[30px] pb-9 flex flex-col gap-16">
               <div className="flex flex-col gap-3">
                 <div className="flex">
@@ -491,6 +491,20 @@ const Home = () => {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
+                <div className="flex justify-end gap-2 mt-4">
+                  <button
+                    onClick={() => darkCarouselApi?.scrollPrev()}
+                    className="p-2 text-white hover:text-white/70 transition-colors"
+                  >
+                    <ArrowLeft size={20} />
+                  </button>
+                  <button
+                    onClick={() => darkCarouselApi?.scrollNext()}
+                    className="p-2 text-white hover:text-white/70 transition-colors"
+                  >
+                    <ArrowRight size={20} />
+                  </button>
+                </div>
               </Carousel>
             </div>
           </section>
