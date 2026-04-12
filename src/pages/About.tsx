@@ -6,7 +6,7 @@ import { noOrphans } from "@/lib/typography";
 const About = () => {
   return <div className="min-h-screen bg-background">
       {/* Hero Section - Inspired by reference layout */}
-      <section className="max-w-[1648px] mx-auto px-4 md:px-9 pt-24 md:pt-32 mt-0 md:mt-[256px]">
+      <section className="max-w-[1648px] mx-auto px-4 md:px-9 pt-24 md:pt-32 mt-0 md:mt-[128px]">
         {/* Name - Large uppercase */}
         <h1 className="text-6xl md:text-8xl font-bold uppercase leading-[0.9] tracking-[-0.03em] mb-4 lg:text-7xl">
           Bogna
@@ -14,8 +14,11 @@ Bartkowiak-Trepka
         </h1>
         
         {/* Subtitle - Small text below name */}
-        <p className="text-base md:text-lg text-foreground/70 mb-12 w-full">
+        <p className="text-base md:text-lg text-foreground/70 mb-4 w-full">
           {noOrphans("Jestem artystką poruszającą się w przestrzeni wspólnej dla nauki, duchowości i sztuki. Moja twórczość wyrasta z potrzeby poszukiwania odpowiedzi na pytania o przyczynę i sens istnienia.")}
+        </p>
+        <p className="text-base md:text-lg text-foreground/70 mb-12">
+          {noOrphans("Jestem również praktykującą lekarką. To właśnie w przestrzeni pomiędzy naukową precyzją a tajemnicą zakorzeniła się moja praktyka artystyczna.")}
         </p>
 
         {/* 4 Photos in a row */}
