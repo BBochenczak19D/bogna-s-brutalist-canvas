@@ -18,8 +18,6 @@ const Home = () => {
   const { setHeroTypingComplete } = useAnimation();
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
   const [darkCarouselApi, setDarkCarouselApi] = useState<CarouselApi>();
-  const carouselRef = useParallaxCarousel(carouselApi);
-  const darkCarouselRef = useParallaxCarousel(darkCarouselApi);
   const iiiMateriaCollection = artworksData.collections.find((c) => c.id === "iii-materia");
   const artworks = iiiMateriaCollection?.artworks || [];
   const rysunki = artworksData.rysunki || [];
