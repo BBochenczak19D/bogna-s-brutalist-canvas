@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Plus, Minus } from "lucide-react";
+import { Plus, Minus, ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import CornerBracket from "@/components/CornerBracket";
 import ArrowLink from "@/components/ArrowLink";
