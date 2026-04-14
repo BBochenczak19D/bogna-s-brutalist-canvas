@@ -47,39 +47,36 @@ const Home = () => {
       <section
         className={`max-w-[1648px] mx-auto px-9 py-0 pt-32 transition-opacity duration-700 ${typingComplete ? "opacity-100" : "opacity-0"}`}
       >
-        <div className="items-start gap-6 max-w-[724px] flex flex-col md:flex-row">
-          <div className="flex items-start gap-2 flex-shrink-0">
-            <button
-              onClick={() => setBioExpanded(!bioExpanded)}
-              className="hidden md:flex items-start justify-center pt-1 flex-shrink-0 transition-transform duration-300 hover:scale-110"
-              aria-label={bioExpanded ? "Zwiń" : "Rozwiń"}
-            >
-              {bioExpanded ? <Minus size={20} /> : <Plus size={20} />}
-            </button>
+        <div className="max-w-[800px] mx-auto text-center flex flex-col items-center gap-8">
+          <div className="relative">
             <img
               alt="Bogna Bartkowiak"
-              className={`object-cover flex-shrink-0 transition-all duration-500 ${bioExpanded ? "w-[200px] h-[300px] md:w-[114px] md:h-[174px]" : "w-[160px] h-[240px] md:w-[80px] md:h-[120px]"}`}
+              className="w-[120px] h-[180px] md:w-[140px] md:h-[210px] object-cover animate-fade-in"
               src="/lovable-uploads/3f96b157-ec5e-4b05-b37f-0b44e7dfd18e.jpg"
             />
           </div>
 
-          <div
-            className={`overflow-hidden transition-all duration-500 max-h-[300px] opacity-100 ${bioExpanded ? "md:max-h-[300px] md:opacity-100" : "md:max-h-0 md:opacity-0"}`}
+          <blockquote
+            className="relative px-6 md:px-12 animate-fade-in"
+            style={{ animationDelay: "0.3s", animationFillMode: "both" }}
           >
-            <p
-              className="flex-1 text-m font-normal leading-[125%] uppercase animate-fade-in italic"
-              style={{
-                animationDelay: "0.2s",
-              }}
-            >
+            <span className="block text-[40px] md:text-[64px] leading-none text-foreground/20 font-serif">&ldquo;</span>
+            <p className="text-base md:text-lg font-normal leading-[160%] tracking-wide italic text-foreground/80 -mt-6 md:-mt-8">
               {noOrphans("Jestem absolwentką Akademii Sztuk Pięknych w Katowicach oraz lekarzem.")}
-              <br />
-              <br />
+            </p>
+            <p className="text-base md:text-lg font-normal leading-[160%] tracking-wide italic text-foreground/80 mt-4">
               {noOrphans(
                 "W swojej twórczości badam niewidzialne warstwy istnienia, łącząc doświadczenia medyczne z artystyczną intuicją.",
               )}
             </p>
-          </div>
+            <span className="block text-[40px] md:text-[64px] leading-none text-foreground/20 font-serif text-right -mt-2">&rdquo;</span>
+            <cite
+              className="block mt-4 text-xs md:text-sm uppercase tracking-[0.2em] text-foreground/50 not-italic animate-fade-in"
+              style={{ animationDelay: "0.6s", animationFillMode: "both" }}
+            >
+              — Bogna Bartkowiak
+            </cite>
+          </blockquote>
         </div>
       </section>
 
