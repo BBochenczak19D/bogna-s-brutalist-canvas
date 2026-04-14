@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Plus, Minus, ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import ArrowLink from "@/components/ArrowLink";
@@ -13,7 +13,7 @@ import { noOrphans } from "@/lib/typography";
 
 const Home = () => {
   const [typingComplete, setTypingComplete] = useState(false);
-  const [bioExpanded, setBioExpanded] = useState(false);
+  
   const [lightboxImage, setLightboxImage] = useState<{ src: string; title?: string } | null>(null);
   const { setHeroTypingComplete } = useAnimation();
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
