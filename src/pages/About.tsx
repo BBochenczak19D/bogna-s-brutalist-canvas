@@ -49,7 +49,7 @@ Bartkowiak-Trepka
           </a>
           <a href="mailto:bogna.bartkowiak@gmail.com" className="inline-flex items-center gap-2 text-sm hover:text-foreground/70 transition-colors group">
             <Mail size={18} className="text-foreground/60 group-hover:text-foreground transition-colors" />
-            <span>bartkowiakbogna@gmail.com</span>
+            <span>bogna.bartkowiak@gmail.com</span>
           </a>
         </div>
       </section>
@@ -62,10 +62,6 @@ Bartkowiak-Trepka
       {/* Process & Manifesto Section - Redesigned */}
       <section className="max-w-[1648px] mx-auto px-4 md:px-9 py-16 md:py-24">
         <div className="flex flex-col lg:flex-row gap-8 justify-center items-center">
-          {/* Left - Large Image */}
-          <div className="w-full lg:w-[55%]">
-            <img src="/about/bogna-09.jpg" alt="Bogna Bartkowiak z obrazem i rzeźbami" className="w-full max-h-[514px] h-auto object-contain" />
-          </div>
 
           {/* Center - Text Content */}
           <div className="w-full lg:w-1/2 flex flex-col justify-center gap-[48px]">
