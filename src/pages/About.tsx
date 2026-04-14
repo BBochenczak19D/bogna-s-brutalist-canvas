@@ -1,4 +1,4 @@
-import CornerBracket from "@/components/CornerBracket";
+
 import ArrowLink from "@/components/ArrowLink";
 import { Instagram, Youtube, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -94,11 +94,6 @@ Bartkowiak-Trepka
 
         </div>
 
-        {/* Decorative Elements */}
-        <div className="flex justify-between mt-8">
-          <CornerBracket />
-          <CornerBracket />
-        </div>
       </section>
 
       {/* III Materia Project Section */}
@@ -137,7 +132,6 @@ Bartkowiak-Trepka
           {/* Text on left */}
           <div className="flex-1 flex flex-col gap-8 order-2 md:order-1">
             <div className="flex items-start gap-6">
-              <CornerBracket className="hidden md:block flex-shrink-0" />
               <blockquote>
                 <p className="text-[22px] font-light leading-[140%] tracking-[-0.02em] italic md:text-4xl">
                   {noOrphans("Tworzenie jest dla mnie źródłem radości i głębokiej satysfakcji. Obcowanie ze sztuką — zarówno w procesie twórczym, jak i w jego kontemplacji — daje mi poczucie spełnienia i wewnętrznej harmonii.")}
@@ -165,7 +159,7 @@ Bartkowiak-Trepka
           {/* Text on right */}
           <div className="flex-1 flex flex-col gap-8 order-2">
             <div className="flex items-start gap-6">
-              <CornerBracket className="hidden md:block flex-shrink-0" />
+              
               <blockquote>
                 <p className="text-[22px] font-light leading-[140%] tracking-[-0.02em] italic md:text-4xl">
                   {noOrphans("Pracuję głównie z farbą olejną, lecz sięgam również po instalacje, grafikę, rzeźbę oraz nowe media.")}

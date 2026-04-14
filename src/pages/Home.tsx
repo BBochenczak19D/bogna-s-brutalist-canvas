@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Plus, Minus, ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import CornerBracket from "@/components/CornerBracket";
+
 import ArrowLink from "@/components/ArrowLink";
 import TypingText from "@/components/TypingText";
 import ImageLightbox from "@/components/ImageLightbox";
@@ -157,7 +157,6 @@ const Home = () => {
 
             {/* Description Section */}
             <div className="px-9 pt-9 pb-[78px] items-start flex flex-col md:flex-row py-[24px] gap-[32px]">
-              <CornerBracket />
               <p
                 className="flex-1 text-base font-light leading-[125%] tracking-[-0.02em] text-foreground/90 animate-fade-in"
                 style={{
@@ -168,7 +167,6 @@ const Home = () => {
                   "Moja praca zaczyna się tam, gdzie kończy się język. Od zawsze fascynowało mnie to, czego nie da się nazwać: momenty pomiędzy oddechami, przestrzenie wewnątrz ciała, ciche impulsy świadomości. Jako lekarka przez lata uczyłam się patrzeć na człowieka przez pryzmat anatomii i nauki. Jako malarka — przez pryzmat intuicji, symbolu i doświadczenia.",
                 )}
               </p>
-              <CornerBracket />
               <p
                 className="flex-1 text-base font-light leading-[125%] tracking-[-0.02em] text-foreground/90 animate-fade-in"
                 style={{
@@ -289,11 +287,6 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Decorative Brackets */}
-            <div className="flex justify-between">
-              <CornerBracket />
-              <CornerBracket />
-            </div>
           </section>
 
           {/* Section III - cz3 */}
@@ -369,10 +362,6 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="flex px-0 justify-between items-center self-stretch py-[24px]">
-              <CornerBracket />
-              <CornerBracket />
-            </div>
           </section>
 
           {/* Section IV */}
@@ -412,10 +401,6 @@ const Home = () => {
               />
             </div>
 
-            <div className="flex px-0 justify-between items-center self-stretch">
-              <CornerBracket />
-              <CornerBracket />
-            </div>
           </section>
 
           {/* Dark Section - Other Works */}
@@ -513,7 +498,6 @@ const Home = () => {
           <section className="max-w-[1648px] mx-auto px-9 py-[100px] flex flex-col items-start gap-9">
             <div className="flex px-0 items-center self-stretch">
               <div className="flex flex-col md:flex-row justify-between items-start flex-1">
-                <CornerBracket />
                 <p
                   style={{
                     animationDelay: "0.2s",
@@ -569,12 +553,6 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="flex px-0 items-center self-stretch">
-              <div className="flex w-[1208px] justify-between items-start self-stretch">
-                <CornerBracket />
-                <CornerBracket />
-              </div>
-            </div>
           </section>
 
           {/* CZ VII Section */}
@@ -752,7 +730,7 @@ const Home = () => {
                     {noOrphans("Mostem między światłem a ciemnością. Naszą własną, ukrytą nieskończonością.")}
                   </span>
                 </p>
-                <CornerBracket />
+                
               </div>
             </div>
 
