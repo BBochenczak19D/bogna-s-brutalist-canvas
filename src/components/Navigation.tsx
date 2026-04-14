@@ -60,6 +60,16 @@ const Navigation = () => {
     };
   }, []);
   const navItems = [{
+    path: "/collections",
+    label: "Kolekcje",
+    subItems: [{
+      path: "/collections/iii-materia",
+      label: "W poszukiwaniu \nTrzeciej Materii"
+    }, {
+      path: "/collections/w-kolekcji-prywatnej",
+      label: "Wcześniejsze \nobrazy"
+    }]
+  }, {
     path: "/tworczość",
     label: "Twórczość",
     subItems: [{
@@ -79,17 +89,7 @@ const Navigation = () => {
       label: "Instalacje"
     }, {
       path: "/tworczość/seans-artystyczny",
-      label: "Seans artystyczny"
-    }]
-  }, {
-    path: "/collections",
-    label: "Kolekcje",
-    subItems: [{
-      path: "/collections/iii-materia",
-      label: "W poszukiwaniu \nTrzeciej Materii"
-    }, {
-      path: "/collections/w-kolekcji-prywatnej",
-      label: "Wcześniejsze \nobrazy"
+      label: "Seans \nartystyczny"
     }]
   }, {
     path: "/about",
@@ -158,7 +158,7 @@ const Navigation = () => {
                           <line x1="6" y1="2" x2="6" y2="10" />
                           <line x1="2" y1="6" x2="10" y2="6" />
                         </svg>
-                        <span className="text-lg font-normal uppercase leading-[100%] tracking-normal whitespace-pre-line">
+                        <span className="text-lg font-normal uppercase leading-[100%] tracking-normal whitespace-pre-line text-right">
                           {subItem.label}
                         </span>
                       </NavLink>)}
@@ -191,7 +191,7 @@ const Navigation = () => {
                               <line x1="6" y1="2" x2="6" y2="10" />
                               <line x1="2" y1="6" x2="10" y2="6" />
                             </svg>
-                            <span className="text-lg font-normal uppercase leading-[100%]">
+                            <span className="text-lg font-normal uppercase leading-[100%] whitespace-pre-line text-right">
                               {subItem.label}
                             </span>
                           </NavLink>)}
