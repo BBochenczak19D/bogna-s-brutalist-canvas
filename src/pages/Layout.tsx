@@ -50,10 +50,10 @@ const Layout = () => {
                   Wszystkie kolekcje
                 </a>
                 <a href="/collections/iii-materia" className="text-background hover:text-background/70 transition-colors uppercase text-sm">
-                  III Materia
+                  W poszukiwaniu Trzeciej Materii
                 </a>
                 <a href="/collections/w-kolekcji-prywatnej" className="text-background hover:text-background/70 transition-colors uppercase text-sm">
-                  W kolekcji prywatnej
+                  Wcześniejsze obrazy
                 </a>
               </div>
               
