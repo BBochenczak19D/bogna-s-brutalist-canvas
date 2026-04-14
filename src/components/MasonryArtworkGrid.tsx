@@ -44,13 +44,16 @@ const MasonryArtworkGrid = ({ artworks, categoryDescription, category }: Masonry
           {artworks.map((artwork, index) => {
             const isWideImage = artwork.id === "obraz-07";
             const isCenteredImage = artwork.id === "obraz-08";
-            const isArtefaktOrGrafiki = category === "artefakty" || category === "grafiki";
+            const isGrafiki = category === "grafiki";
+            const isArtefakt = category === "artefakty";
             
             return (
               <div
                 key={artwork.id}
                 className={`cursor-pointer group ${
-                  isWideImage 
+                  isGrafiki
+                    ? "flex-grow flex-shrink basis-[300px] max-w-[400px]"
+                    : isWideImage 
                     ? "w-full" 
                     : isCenteredImage
                     ? "w-full max-w-[640px] mx-auto"
@@ -58,19 +61,31 @@ const MasonryArtworkGrid = ({ artworks, categoryDescription, category }: Masonry
                 }`}
                 onClick={() => setSelectedIndex(index)}
               >
-                <div className={`w-full bg-muted relative overflow-hidden ${
-                  isArtefaktOrGrafiki ? "h-[336px]" :
-                  isWideImage ? "aspect-[2/1]" : isCenteredImage ? "aspect-[4/5]" : "aspect-[3/4]"
-                }`}>
-                {artwork.image ? (
-                  <img
-                    src={artwork.image}
-                    alt={artwork.title}
-                    className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                  />
+                {isGrafiki ? (
+                  <div className="w-full bg-muted relative overflow-hidden">
+                    <img
+                      src={artwork.image}
+                      alt={artwork.title}
+                      className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                  </div>
                 ) : (
-                  <Skeleton className="w-full h-full" />
+                  <div className={`w-full bg-muted relative overflow-hidden ${
+                    isArtefakt ? "h-[336px]" :
+                    isWideImage ? "aspect-[2/1]" : isCenteredImage ? "aspect-[4/5]" : "aspect-[3/4]"
+                  }`}>
+                    {artwork.image ? (
+                      <img
+                        src={artwork.image}
+                        alt={artwork.title}
+                        className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <Skeleton className="w-full h-full" />
+                    )}
+                  </div>
                 )}
               </div>
               {category !== "grafiki" && category !== "artefakty" && (
