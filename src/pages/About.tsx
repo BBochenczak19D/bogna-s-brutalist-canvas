@@ -47,7 +47,7 @@ Bartkowiak-Trepka
             <Youtube size={18} className="text-foreground/60 group-hover:text-foreground transition-colors" />
             <span>YouTube</span>
           </a>
-          <a href="mailto:bartkowiakbogna@gmail.com" className="inline-flex items-center gap-2 text-sm hover:text-foreground/70 transition-colors group">
+          <a href="mailto:bogna.bartkowiak@gmail.com" className="inline-flex items-center gap-2 text-sm hover:text-foreground/70 transition-colors group">
             <Mail size={18} className="text-foreground/60 group-hover:text-foreground transition-colors" />
             <span>bartkowiakbogna@gmail.com</span>
           </a>
@@ -120,7 +120,7 @@ Bartkowiak-Trepka
               {noOrphans("Kolejne projekty stanowią kontynuację tych poszukiwań — są ich rozwinięciem, nawarstwieniem i dalszym eksplorowaniem idei Trzeciej Materii.")}
             </p>
             <ArrowLink to="/collections/iii-materia" className="text-white hover:text-white/70">
-              {noOrphans("Zobacz kolekcję III Materia")}
+              {noOrphans("Zobacz kolekcję W poszukiwaniu Trzeciej Materii")}
             </ArrowLink>
           </div>
         </div>
