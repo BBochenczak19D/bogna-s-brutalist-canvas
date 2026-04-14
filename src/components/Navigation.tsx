@@ -67,29 +67,29 @@ const Navigation = () => {
       label: "Obrazy"
     }, {
       path: "/tworczość/grafiki",
-      label: "grafiki"
+      label: "Grafiki"
     }, {
       path: "/tworczość/artefakty",
-      label: "artefakty"
+      label: "Artefakty"
     }, {
       path: "/tworczość/rysunki",
-      label: "rysunki"
+      label: "Rysunki"
     }, {
       path: "/tworczość/instalacje",
-      label: "instalacje"
+      label: "Instalacje"
     }, {
       path: "/tworczość/seans-artystyczny",
-      label: "seans artystyczny"
+      label: "Seans artystyczny"
     }]
   }, {
     path: "/collections",
     label: "Kolekcje",
     subItems: [{
       path: "/collections/iii-materia",
-      label: "III Materia"
+      label: "W poszukiwaniu \nTrzeciej Materii"
     }, {
       path: "/collections/w-kolekcji-prywatnej",
-      label: "W kolekcji \nprywatnej"
+      label: "Wcześniejsze \nobrazy"
     }]
   }, {
     path: "/about",
