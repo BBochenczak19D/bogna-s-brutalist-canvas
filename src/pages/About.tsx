@@ -123,18 +123,18 @@ Bartkowiak-Trepka
       </section>
 
       {/* Joy of Creation Section */}
-      <section className="max-w-[1648px] mx-auto py-[100px] px-[128px]">
+      <section className="max-w-[1648px] mx-auto py-12 px-5 md:py-[100px] md:px-[128px]">
         <div className="flex flex-col md:flex-row gap-12 lg:gap-20 items-center">
           {/* Text on left */}
           <div className="flex-1 flex flex-col gap-8 order-2 md:order-1">
             <div className="flex items-start gap-6">
               <blockquote>
-                <p className="text-[22px] font-light leading-[140%] tracking-[-0.02em] italic md:text-4xl">
+                <p className="text-lg font-light leading-[140%] tracking-[-0.02em] italic md:text-4xl">
                   {noOrphans("Tworzenie jest dla mnie źródłem radości i głębokiej satysfakcji. Obcowanie ze sztuką — zarówno w procesie twórczym, jak i w jego kontemplacji — daje mi poczucie spełnienia i wewnętrznej harmonii.")}
                 </p>
               </blockquote>
             </div>
-            <p className="text-lg font-medium text-foreground">
+            <p className="text-base md:text-lg font-medium text-foreground">
               {noOrphans("To przestrzeń, w której czuję się najbardziej obecna i prawdziwa.")}
             </p>
           </div>
@@ -146,7 +146,7 @@ Bartkowiak-Trepka
       </section>
 
       {/* Art & Reflection Section */}
-      <section className="max-w-[1648px] mx-auto py-[100px] px-[128px]">
+      <section className="max-w-[1648px] mx-auto py-12 px-5 md:py-[100px] md:px-[128px]">
         <div className="flex flex-col md:flex-row gap-12 lg:gap-20 items-center">
           {/* Image on left */}
           <div className="order-1 flex-shrink-0">
@@ -157,12 +157,12 @@ Bartkowiak-Trepka
             <div className="flex items-start gap-6">
               
               <blockquote>
-                <p className="text-[22px] font-light leading-[140%] tracking-[-0.02em] italic md:text-4xl">
+                <p className="text-lg font-light leading-[140%] tracking-[-0.02em] italic md:text-4xl">
                   {noOrphans("Pracuję głównie z farbą olejną, lecz sięgam również po instalacje, grafikę, rzeźbę oraz nowe media.")}
                 </p>
               </blockquote>
             </div>
-            <p className="text-lg font-medium text-foreground">
+            <p className="text-base md:text-lg font-medium text-foreground">
               {noOrphans("Tworzę sztukę, która nie tylko oddziałuje wizualnie, ale także zaprasza do pogłębionej refleksji nad naturą rzeczywistości, świadomości i istnienia.")}
             </p>
           </div>
