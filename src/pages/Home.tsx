@@ -48,31 +48,28 @@ const Home = () => {
         className={`max-w-[1648px] mx-auto px-9 py-0 pt-32 transition-opacity duration-700 ${typingComplete ? "opacity-100" : "opacity-0"}`}
       >
         <div className="max-w-[800px] mx-auto text-center flex flex-col items-center gap-6 md:max-w-none md:flex-row md:items-start md:text-left md:gap-10">
-          <div className="relative flex-shrink-0">
+          <div className="relative flex-shrink-0 animate-fade-in" style={{ animationDuration: "1s", animationDelay: "0.4s", animationFillMode: "both" }}>
             <img
               alt="Bogna Bartkowiak"
-              className="w-[100px] h-[150px] md:w-[120px] md:h-[180px] object-cover animate-fade-in"
+              className="w-[100px] h-[150px] md:w-[120px] md:h-[180px] object-cover"
               src="/lovable-uploads/3f96b157-ec5e-4b05-b37f-0b44e7dfd18e.jpg"
             />
           </div>
 
-          <blockquote
-            className="relative px-6 md:px-0 animate-fade-in"
-            style={{ animationDelay: "0.3s", animationFillMode: "both" }}
-          >
-            <span className="block text-[32px] md:text-[48px] leading-none text-foreground/20 font-serif">&ldquo;</span>
-            <p className="text-sm md:text-base font-normal leading-[160%] tracking-wide italic text-foreground/80 -mt-4 md:-mt-6">
+          <blockquote className="relative px-6 md:px-0">
+            <span className="block text-[32px] md:text-[48px] leading-none text-foreground/20 font-serif animate-fade-in" style={{ animationDuration: "0.8s", animationDelay: "0.7s", animationFillMode: "both" }}>&ldquo;</span>
+            <p className="text-sm md:text-base font-normal leading-[160%] tracking-wide italic text-foreground/80 -mt-4 md:-mt-6 animate-fade-in" style={{ animationDuration: "1s", animationDelay: "1s", animationFillMode: "both" }}>
               {noOrphans("Jestem absolwentką Akademii Sztuk Pięknych w Katowicach oraz lekarzem.")}
             </p>
-            <p className="text-sm md:text-base font-normal leading-[160%] tracking-wide italic text-foreground/80 mt-3">
+            <p className="text-sm md:text-base font-normal leading-[160%] tracking-wide italic text-foreground/80 mt-3 animate-fade-in" style={{ animationDuration: "1s", animationDelay: "1.4s", animationFillMode: "both" }}>
               {noOrphans(
                 "W swojej twórczości badam niewidzialne warstwy istnienia, łącząc doświadczenia medyczne z artystyczną intuicją.",
               )}
             </p>
-            <span className="block text-[32px] md:text-[48px] leading-none text-foreground/20 font-serif text-right -mt-2">&rdquo;</span>
+            <span className="block text-[32px] md:text-[48px] leading-none text-foreground/20 font-serif text-right -mt-2 animate-fade-in" style={{ animationDuration: "0.8s", animationDelay: "1.8s", animationFillMode: "both" }}>&rdquo;</span>
             <cite
               className="block mt-3 text-xs uppercase tracking-[0.2em] text-foreground/50 not-italic animate-fade-in"
-              style={{ animationDelay: "0.6s", animationFillMode: "both" }}
+              style={{ animationDuration: "1s", animationDelay: "2.1s", animationFillMode: "both" }}
             >
               — Bogna Bartkowiak
             </cite>
