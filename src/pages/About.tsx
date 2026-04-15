@@ -157,12 +157,12 @@ Bartkowiak-Trepka
             <div className="flex items-start gap-6">
               
               <blockquote>
-                <p className="text-[22px] font-light leading-[140%] tracking-[-0.02em] italic md:text-4xl">
+                <p className="text-lg font-light leading-[140%] tracking-[-0.02em] italic md:text-4xl">
                   {noOrphans("Pracuję głównie z farbą olejną, lecz sięgam również po instalacje, grafikę, rzeźbę oraz nowe media.")}
                 </p>
               </blockquote>
             </div>
-            <p className="text-lg font-medium text-foreground">
+            <p className="text-base md:text-lg font-medium text-foreground">
               {noOrphans("Tworzę sztukę, która nie tylko oddziałuje wizualnie, ale także zaprasza do pogłębionej refleksji nad naturą rzeczywistości, świadomości i istnienia.")}
             </p>
           </div>
