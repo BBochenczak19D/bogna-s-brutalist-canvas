@@ -129,12 +129,12 @@ Bartkowiak-Trepka
           <div className="flex-1 flex flex-col gap-8 order-2 md:order-1">
             <div className="flex items-start gap-6">
               <blockquote>
-                <p className="text-[22px] font-light leading-[140%] tracking-[-0.02em] italic md:text-4xl">
+                <p className="text-lg font-light leading-[140%] tracking-[-0.02em] italic md:text-4xl">
                   {noOrphans("Tworzenie jest dla mnie źródłem radości i głębokiej satysfakcji. Obcowanie ze sztuką — zarówno w procesie twórczym, jak i w jego kontemplacji — daje mi poczucie spełnienia i wewnętrznej harmonii.")}
                 </p>
               </blockquote>
             </div>
-            <p className="text-lg font-medium text-foreground">
+            <p className="text-base md:text-lg font-medium text-foreground">
               {noOrphans("To przestrzeń, w której czuję się najbardziej obecna i prawdziwa.")}
             </p>
           </div>
