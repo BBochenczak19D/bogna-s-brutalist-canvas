@@ -168,11 +168,11 @@ const Home = () => {
           </section>
 
           {/* Collection Title */}
-          <section className="max-w-[1648px] mx-auto px-9">
+          <section className="max-w-[1648px] mx-auto px-4 md:px-9">
             <div className="flex items-start gap-2 justify-between">
               <div>
                 <h2
-                  className="text-[32px] font-normal leading-[110%] tracking-[-0.02em] uppercase animate-fade-in"
+                  className="text-2xl md:text-[32px] font-normal leading-[110%] tracking-[-0.02em] uppercase animate-fade-in"
                   style={{
                     animationDelay: "0.2s",
                   }}
@@ -180,7 +180,7 @@ const Home = () => {
                   III MATERIA
                 </h2>
               </div>
-              <p className="text-2xl font-light leading-[110%] tracking-[-0.04em] uppercase">2023</p>
+              <p className="text-2xl md:text-[32px] font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground">2023</p>
             </div>
           </section>
 
@@ -188,9 +188,9 @@ const Home = () => {
           <section className="max-w-[1648px] mx-auto px-4 md:px-9 py-12 md:py-[100px]">
             <div className="flex justify-end items-center self-stretch py-4 md:py-[24px]">
               <div className="flex justify-between items-start flex-1 gap-4">
-                <div className="flex w-full max-w-[565px] flex-col items-start gap-0.5">
+                <div className="flex w-full max-w-[565px] flex-col items-start gap-1">
                   <div
-                    className="w-full text-foreground font-medium text-lg md:text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in"
+                    className="w-full text-foreground font-medium text-lg md:text-2xl leading-[120%] tracking-[-0.02em] uppercase animate-fade-in"
                     style={{
                       animationDelay: "0.1s",
                     }}
@@ -198,7 +198,7 @@ const Home = () => {
                     {noOrphans("Trzecia Materia istnieje.")}
                   </div>
                   <div
-                    className="text-muted-foreground font-normal text-lg md:text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in"
+                    className="text-muted-foreground font-light text-lg md:text-2xl leading-[120%] tracking-[-0.02em] uppercase animate-fade-in"
                     style={{
                       animationDelay: "0.3s",
                     }}
@@ -206,7 +206,7 @@ const Home = () => {
                     {noOrphans("Nie jest ciałem.")}
                   </div>
                   <div
-                    className="text-muted-foreground font-normal text-lg md:text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in"
+                    className="text-muted-foreground font-light text-lg md:text-2xl leading-[120%] tracking-[-0.02em] uppercase animate-fade-in"
                     style={{
                       animationDelay: "0.5s",
                     }}
@@ -214,7 +214,7 @@ const Home = () => {
                     {noOrphans("Nie jest myślą.")}
                   </div>
                   <div
-                    className="text-foreground font-medium text-lg md:text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in"
+                    className="text-foreground font-medium text-lg md:text-2xl leading-[120%] tracking-[-0.02em] uppercase animate-fade-in"
                     style={{
                       animationDelay: "0.7s",
                     }}
