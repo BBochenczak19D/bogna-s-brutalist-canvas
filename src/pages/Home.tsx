@@ -269,9 +269,9 @@ const Home = () => {
           <section className="max-w-[1648px] mx-auto px-4 md:px-9 py-12 md:py-[100px]">
             <div className="flex justify-end items-center self-stretch py-4 md:py-[24px]">
               <div className="flex justify-between items-start flex-1 gap-4">
-                <div className="flex w-full max-w-[565px] flex-col items-start gap-0.5">
+                <div className="flex w-full max-w-[565px] flex-col items-start gap-1">
                   <div
-                    className="w-full text-foreground font-medium text-lg md:text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in"
+                    className="w-full text-foreground font-medium text-lg md:text-2xl leading-[120%] tracking-[-0.02em] uppercase animate-fade-in"
                     style={{
                       animationDelay: "0.1s",
                     }}
@@ -279,7 +279,7 @@ const Home = () => {
                     {noOrphans("Pojawia się w momentach, których nie potrafimy uchwycić")}
                   </div>
                   <div
-                    className="text-muted-foreground font-normal text-lg md:text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in"
+                    className="text-muted-foreground font-light text-lg md:text-2xl leading-[120%] tracking-[-0.02em] uppercase animate-fade-in"
                     style={{
                       animationDelay: "0.3s",
                     }}
@@ -287,7 +287,7 @@ const Home = () => {
                     {noOrphans("w bezdechu między jednym a drugim impulsem.")}
                   </div>
                   <div
-                    className="text-muted-foreground font-normal text-lg md:text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in"
+                    className="text-muted-foreground font-light text-lg md:text-2xl leading-[120%] tracking-[-0.02em] uppercase animate-fade-in"
                     style={{
                       animationDelay: "0.5s",
                     }}
@@ -295,7 +295,7 @@ const Home = () => {
                     {noOrphans("W cichym pulsie, który nie należy do fizjologii.")}
                   </div>
                   <div
-                    className="text-foreground font-medium text-lg md:text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in"
+                    className="text-foreground font-medium text-lg md:text-2xl leading-[120%] tracking-[-0.02em] uppercase animate-fade-in"
                     style={{
                       animationDelay: "0.7s",
                     }}
@@ -320,8 +320,8 @@ const Home = () => {
               />
 
               <div className="flex flex-col justify-center items-start gap-3">
-                <p className="text-lg md:text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-muted-foreground">
-                  [cz. III]
+                <p className="text-sm md:text-base font-light tracking-[0.15em] uppercase text-muted-foreground">
+                  [cz. III | 2022]
                 </p>
                 <ArrowLink to="/collections/iii-materia">{noOrphans("Przejdź do pełnej kolekcji")}</ArrowLink>
               </div>
