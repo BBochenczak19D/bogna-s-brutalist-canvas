@@ -168,11 +168,11 @@ const Home = () => {
           </section>
 
           {/* Collection Title */}
-          <section className="max-w-[1648px] mx-auto px-9">
+          <section className="max-w-[1648px] mx-auto px-4 md:px-9">
             <div className="flex items-start gap-2 justify-between">
               <div>
                 <h2
-                  className="text-[32px] font-normal leading-[110%] tracking-[-0.02em] uppercase animate-fade-in"
+                  className="text-2xl md:text-[32px] font-normal leading-[110%] tracking-[-0.02em] uppercase animate-fade-in"
                   style={{
                     animationDelay: "0.2s",
                   }}
@@ -180,7 +180,7 @@ const Home = () => {
                   III MATERIA
                 </h2>
               </div>
-              <p className="text-2xl font-light leading-[110%] tracking-[-0.04em] uppercase">2023</p>
+              <p className="text-2xl md:text-[32px] font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground">2023</p>
             </div>
           </section>
 
@@ -188,9 +188,9 @@ const Home = () => {
           <section className="max-w-[1648px] mx-auto px-4 md:px-9 py-12 md:py-[100px]">
             <div className="flex justify-end items-center self-stretch py-4 md:py-[24px]">
               <div className="flex justify-between items-start flex-1 gap-4">
-                <div className="flex w-full max-w-[565px] flex-col items-start gap-0.5">
+                <div className="flex w-full max-w-[565px] flex-col items-start gap-1">
                   <div
-                    className="w-full text-foreground font-medium text-lg md:text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in"
+                    className="w-full text-foreground font-medium text-lg md:text-2xl leading-[120%] tracking-[-0.02em] uppercase animate-fade-in"
                     style={{
                       animationDelay: "0.1s",
                     }}
@@ -198,7 +198,7 @@ const Home = () => {
                     {noOrphans("Trzecia Materia istnieje.")}
                   </div>
                   <div
-                    className="text-muted-foreground font-normal text-lg md:text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in"
+                    className="text-muted-foreground font-light text-lg md:text-2xl leading-[120%] tracking-[-0.02em] uppercase animate-fade-in"
                     style={{
                       animationDelay: "0.3s",
                     }}
@@ -206,7 +206,7 @@ const Home = () => {
                     {noOrphans("Nie jest ciałem.")}
                   </div>
                   <div
-                    className="text-muted-foreground font-normal text-lg md:text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in"
+                    className="text-muted-foreground font-light text-lg md:text-2xl leading-[120%] tracking-[-0.02em] uppercase animate-fade-in"
                     style={{
                       animationDelay: "0.5s",
                     }}
@@ -214,7 +214,7 @@ const Home = () => {
                     {noOrphans("Nie jest myślą.")}
                   </div>
                   <div
-                    className="text-foreground font-medium text-lg md:text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in"
+                    className="text-foreground font-medium text-lg md:text-2xl leading-[120%] tracking-[-0.02em] uppercase animate-fade-in"
                     style={{
                       animationDelay: "0.7s",
                     }}
@@ -240,7 +240,7 @@ const Home = () => {
                   }
                 />
 
-                <p className="text-2xl font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground text-center">
+                <p className="text-sm md:text-base font-light tracking-[0.15em] uppercase text-muted-foreground text-center">
                   [cz. I | 2023]
                 </p>
               </div>
@@ -257,7 +257,7 @@ const Home = () => {
                   }
                 />
 
-                <p className="text-2xl font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground text-center">
+                <p className="text-sm md:text-base font-light tracking-[0.15em] uppercase text-muted-foreground text-center">
                   [cz. II | 2023]
                 </p>
               </div>
@@ -269,9 +269,9 @@ const Home = () => {
           <section className="max-w-[1648px] mx-auto px-4 md:px-9 py-12 md:py-[100px]">
             <div className="flex justify-end items-center self-stretch py-4 md:py-[24px]">
               <div className="flex justify-between items-start flex-1 gap-4">
-                <div className="flex w-full max-w-[565px] flex-col items-start gap-0.5">
+                <div className="flex w-full max-w-[565px] flex-col items-start gap-1">
                   <div
-                    className="w-full text-foreground font-medium text-lg md:text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in"
+                    className="w-full text-foreground font-medium text-lg md:text-2xl leading-[120%] tracking-[-0.02em] uppercase animate-fade-in"
                     style={{
                       animationDelay: "0.1s",
                     }}
@@ -279,7 +279,7 @@ const Home = () => {
                     {noOrphans("Pojawia się w momentach, których nie potrafimy uchwycić")}
                   </div>
                   <div
-                    className="text-muted-foreground font-normal text-lg md:text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in"
+                    className="text-muted-foreground font-light text-lg md:text-2xl leading-[120%] tracking-[-0.02em] uppercase animate-fade-in"
                     style={{
                       animationDelay: "0.3s",
                     }}
@@ -287,7 +287,7 @@ const Home = () => {
                     {noOrphans("w bezdechu między jednym a drugim impulsem.")}
                   </div>
                   <div
-                    className="text-muted-foreground font-normal text-lg md:text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in"
+                    className="text-muted-foreground font-light text-lg md:text-2xl leading-[120%] tracking-[-0.02em] uppercase animate-fade-in"
                     style={{
                       animationDelay: "0.5s",
                     }}
@@ -295,7 +295,7 @@ const Home = () => {
                     {noOrphans("W cichym pulsie, który nie należy do fizjologii.")}
                   </div>
                   <div
-                    className="text-foreground font-medium text-lg md:text-2xl leading-[110%] tracking-[-0.96px] uppercase animate-fade-in"
+                    className="text-foreground font-medium text-lg md:text-2xl leading-[120%] tracking-[-0.02em] uppercase animate-fade-in"
                     style={{
                       animationDelay: "0.7s",
                     }}
@@ -320,8 +320,8 @@ const Home = () => {
               />
 
               <div className="flex flex-col justify-center items-start gap-3">
-                <p className="text-lg md:text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-muted-foreground">
-                  [cz. III]
+                <p className="text-sm md:text-base font-light tracking-[0.15em] uppercase text-muted-foreground">
+                  [cz. III | 2022]
                 </p>
                 <ArrowLink to="/collections/iii-materia">{noOrphans("Przejdź do pełnej kolekcji")}</ArrowLink>
               </div>
@@ -333,7 +333,7 @@ const Home = () => {
           <section className="max-w-[1648px] mx-auto px-4 md:px-9 py-12 md:py-[100px] flex flex-col items-start gap-6">
             <div className="flex px-0 items-center self-stretch">
               <div className="flex flex-col justify-center items-start md:items-end gap-8 flex-1">
-                <p className="w-full max-w-[599px] text-lg md:text-2xl font-normal leading-[110%] tracking-[-0.48px] uppercase">
+                <p className="w-full max-w-[599px] text-lg md:text-2xl font-medium leading-[120%] tracking-[-0.02em] uppercase">
                   <span className="text-foreground">
                     {noOrphans("Wejście w Trzecią Materię nie wymaga wiary. Wymaga uważności.")}{" "}
                   </span>
@@ -351,7 +351,7 @@ const Home = () => {
 
             <div className="flex flex-col-reverse md:flex-row px-0 justify-end items-start md:items-center gap-6 md:gap-16 self-stretch">
               <div className="flex flex-col justify-center items-start gap-3">
-                <p className="text-lg md:text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-muted-foreground">
+                <p className="text-sm md:text-base font-light tracking-[0.15em] uppercase text-muted-foreground">
                   [cz. IV | 2023]
                 </p>
                 <ArrowLink to="/collections/iii-materia">{noOrphans("Przejdź do pełnej kolekcji")}</ArrowLink>
@@ -467,7 +467,7 @@ const Home = () => {
                   style={{
                     animationDelay: "0.2s",
                   }}
-                  className="w-full max-w-[579px] text-lg md:text-2xl font-medium leading-[110%] tracking-[-0.48px] uppercase animate-fade-in py-4 md:py-[24px]"
+                  className="w-full max-w-[579px] text-lg md:text-2xl font-medium leading-[120%] tracking-[-0.02em] uppercase animate-fade-in py-4 md:py-[24px]"
                 >
                   {noOrphans(
                     "To nie jest opowieść o mistyce. To opowieść o strukturze istnienia, która nie mieści się w ciele ani w myśli, a mimo to kieruje jednym i drugim.",
@@ -491,7 +491,7 @@ const Home = () => {
                 />
 
                 <div className="flex items-center gap-3">
-                  <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
+                  <p className="text-sm md:text-base font-light tracking-[0.15em] uppercase text-center text-muted-foreground">
                     [cz. V | 2023]
                   </p>
                 </div>
@@ -511,7 +511,7 @@ const Home = () => {
                 />
 
                 <div className="flex items-center gap-3">
-                  <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
+                  <p className="text-sm md:text-base font-light tracking-[0.15em] uppercase text-center text-muted-foreground">
                     [cz. VI | 2023]
                   </p>
                 </div>
@@ -525,7 +525,7 @@ const Home = () => {
             <div className="flex px-9 flex-col items-start gap-6 self-stretch">
               <div className="flex flex-col justify-center items-start gap-8 self-stretch">
                 <p
-                  className="self-stretch text-lg md:text-2xl font-medium leading-[110%] tracking-[-0.96px] uppercase animate-fade-in"
+                  className="self-stretch text-lg md:text-2xl font-medium leading-[120%] tracking-[-0.02em] uppercase animate-fade-in"
                   style={{
                     animationDelay: "0.2s",
                   }}
@@ -537,7 +537,7 @@ const Home = () => {
               </div>
               <div className="flex justify-between items-center self-stretch">
                 <div className="flex items-center gap-3">
-                  <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
+                  <p className="text-sm md:text-base font-light tracking-[0.15em] uppercase text-center text-muted-foreground">
                     [cz. VII | 2023]
                   </p>
                 </div>
@@ -561,7 +561,7 @@ const Home = () => {
 
             <div className="flex px-9 justify-between items-end self-stretch">
               <div className="flex flex-col justify-center items-start gap-8 flex-1">
-                <p className="self-stretch text-2xl font-medium leading-[110%] tracking-[-0.96px] uppercase">
+                <p className="self-stretch text-lg md:text-2xl font-medium leading-[120%] tracking-[-0.02em] uppercase">
                   {noOrphans(
                     "Jesteśmy zbudowani z tkanek, emocji i wspomnień, a jednak każdy z nas nosi w sobie coś, czego nie da się nazwać.",
                   )}
@@ -591,17 +591,15 @@ const Home = () => {
             <div className="flex px-9 items-center self-stretch">
               <div className="flex flex-col justify-center items-center gap-8 flex-1">
                 <p
-                  className="self-stretch text-2xl font-medium leading-[110%] tracking-[-0.96px] uppercase text-center animate-fade-in"
+                  className="self-stretch text-lg md:text-2xl font-medium leading-[140%] tracking-[-0.02em] uppercase text-center animate-fade-in"
                   style={{
                     animationDelay: "0.2s",
                   }}
                 >
                   {noOrphans("Pod skórą miesza się kosmos.")}
-                  {"\n"}
-                  {"\n"}
+                  <br />
                   {noOrphans("W strukturze komórek drga echo tego,")}
-                  {"\n"}
-                  {"\n"}
+                  <br />
                   {noOrphans("co tworzy galaktyki i zapadające się gwiazdy.")}
                 </p>
               </div>
@@ -610,7 +608,7 @@ const Home = () => {
             <div className="flex px-9 items-center self-stretch">
               <div className="flex justify-center items-center flex-1">
                 <div className="flex items-center gap-3">
-                  <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
+                  <p className="text-sm md:text-base font-light tracking-[0.15em] uppercase text-center text-muted-foreground">
                     [cz. VIII | 2023]
                   </p>
                 </div>
@@ -634,7 +632,7 @@ const Home = () => {
             <div className="flex px-9 items-center self-stretch">
               <div className="flex flex-col justify-center items-center gap-8 flex-1">
                 <p
-                  className="text-base font-normal leading-[110%] tracking-[-0.32px] uppercase text-center animate-fade-in"
+                  className="text-sm md:text-base font-normal leading-[140%] tracking-[0.05em] uppercase text-center text-muted-foreground animate-fade-in"
                   style={{
                     animationDelay: "0.4s",
                   }}
@@ -667,27 +665,25 @@ const Home = () => {
           <section className="max-w-[1648px] mx-auto py-[100px] flex flex-col items-start gap-9">
             <div className="flex px-9 justify-end items-center self-stretch">
               <div className="flex justify-between items-start flex-1">
-                <p className="w-full max-w-[579px] text-lg md:text-2xl font-normal leading-[110%] tracking-[-0.48px] uppercase">
+                <p className="w-full max-w-[579px] text-lg md:text-2xl font-light leading-[120%] tracking-[-0.02em] uppercase">
                   <span
-                    className="font-medium animate-fade-in"
+                    className="font-medium text-foreground animate-fade-in"
                     style={{
                       animationDelay: "0.1s",
                     }}
                   >
-                    {noOrphans("Trzecia Materia jest w każdym z nas. Pulsuje, porusza, prowadzi.")}
-                    {"\n"}
+                    {noOrphans("Trzecia Materia jest w każdym z nas. Pulsuje, porusza, prowadzi.")}{" "}
                   </span>
                   <span
-                    className="opacity-50 animate-fade-in"
+                    className="text-muted-foreground animate-fade-in"
                     style={{
                       animationDelay: "0.3s",
                     }}
                   >
-                    {noOrphans("Jest początkiem i echem.")}
-                    {"\n"}
+                    {noOrphans("Jest początkiem i echem.")}{" "}
                   </span>
                   <span
-                    className="font-medium animate-fade-in"
+                    className="font-medium text-foreground animate-fade-in"
                     style={{
                       animationDelay: "0.5s",
                     }}
@@ -714,7 +710,7 @@ const Home = () => {
                 />
 
                 <div className="flex items-center gap-3">
-                  <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
+                  <p className="text-sm md:text-base font-light tracking-[0.15em] uppercase text-center text-muted-foreground">
                     [cz. IX | 2023]
                   </p>
                 </div>
@@ -734,8 +730,8 @@ const Home = () => {
                 />
 
                 <div className="flex items-center gap-3">
-                  <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
-                    [cz. x | 2023]
+                  <p className="text-sm md:text-base font-light tracking-[0.15em] uppercase text-center text-muted-foreground">
+                    [cz. X | 2023]
                   </p>
                 </div>
               </div>
