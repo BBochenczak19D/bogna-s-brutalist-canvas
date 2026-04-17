@@ -467,7 +467,7 @@ const Home = () => {
                   style={{
                     animationDelay: "0.2s",
                   }}
-                  className="w-full max-w-[579px] text-lg md:text-2xl font-medium leading-[110%] tracking-[-0.48px] uppercase animate-fade-in py-4 md:py-[24px]"
+                  className="w-full max-w-[579px] text-lg md:text-2xl font-medium leading-[120%] tracking-[-0.02em] uppercase animate-fade-in py-4 md:py-[24px]"
                 >
                   {noOrphans(
                     "To nie jest opowieść o mistyce. To opowieść o strukturze istnienia, która nie mieści się w ciele ani w myśli, a mimo to kieruje jednym i drugim.",
