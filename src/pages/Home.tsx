@@ -240,7 +240,7 @@ const Home = () => {
                   }
                 />
 
-                <p className="text-2xl font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground text-center">
+                <p className="text-sm md:text-base font-light tracking-[0.15em] uppercase text-muted-foreground text-center">
                   [cz. I | 2023]
                 </p>
               </div>
@@ -257,7 +257,7 @@ const Home = () => {
                   }
                 />
 
-                <p className="text-2xl font-light leading-[110%] tracking-[-0.02em] uppercase text-muted-foreground text-center">
+                <p className="text-sm md:text-base font-light tracking-[0.15em] uppercase text-muted-foreground text-center">
                   [cz. II | 2023]
                 </p>
               </div>
