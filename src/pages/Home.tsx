@@ -525,7 +525,7 @@ const Home = () => {
             <div className="flex px-9 flex-col items-start gap-6 self-stretch">
               <div className="flex flex-col justify-center items-start gap-8 self-stretch">
                 <p
-                  className="self-stretch text-lg md:text-2xl font-medium leading-[110%] tracking-[-0.96px] uppercase animate-fade-in"
+                  className="self-stretch text-lg md:text-2xl font-medium leading-[120%] tracking-[-0.02em] uppercase animate-fade-in"
                   style={{
                     animationDelay: "0.2s",
                   }}
@@ -537,7 +537,7 @@ const Home = () => {
               </div>
               <div className="flex justify-between items-center self-stretch">
                 <div className="flex items-center gap-3">
-                  <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
+                  <p className="text-sm md:text-base font-light tracking-[0.15em] uppercase text-center text-muted-foreground">
                     [cz. VII | 2023]
                   </p>
                 </div>
