@@ -491,7 +491,7 @@ const Home = () => {
                 />
 
                 <div className="flex items-center gap-3">
-                  <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
+                  <p className="text-sm md:text-base font-light tracking-[0.15em] uppercase text-center text-muted-foreground">
                     [cz. V | 2023]
                   </p>
                 </div>
