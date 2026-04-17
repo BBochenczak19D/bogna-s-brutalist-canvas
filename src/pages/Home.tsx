@@ -561,7 +561,7 @@ const Home = () => {
 
             <div className="flex px-9 justify-between items-end self-stretch">
               <div className="flex flex-col justify-center items-start gap-8 flex-1">
-                <p className="self-stretch text-2xl font-medium leading-[110%] tracking-[-0.96px] uppercase">
+                <p className="self-stretch text-lg md:text-2xl font-medium leading-[120%] tracking-[-0.02em] uppercase">
                   {noOrphans(
                     "Jesteśmy zbudowani z tkanek, emocji i wspomnień, a jednak każdy z nas nosi w sobie coś, czego nie da się nazwać.",
                   )}
