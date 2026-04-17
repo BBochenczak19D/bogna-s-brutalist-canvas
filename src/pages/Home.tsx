@@ -333,7 +333,7 @@ const Home = () => {
           <section className="max-w-[1648px] mx-auto px-4 md:px-9 py-12 md:py-[100px] flex flex-col items-start gap-6">
             <div className="flex px-0 items-center self-stretch">
               <div className="flex flex-col justify-center items-start md:items-end gap-8 flex-1">
-                <p className="w-full max-w-[599px] text-lg md:text-2xl font-normal leading-[110%] tracking-[-0.48px] uppercase">
+                <p className="w-full max-w-[599px] text-lg md:text-2xl font-medium leading-[120%] tracking-[-0.02em] uppercase">
                   <span className="text-foreground">
                     {noOrphans("Wejście w Trzecią Materię nie wymaga wiary. Wymaga uważności.")}{" "}
                   </span>
@@ -351,7 +351,7 @@ const Home = () => {
 
             <div className="flex flex-col-reverse md:flex-row px-0 justify-end items-start md:items-center gap-6 md:gap-16 self-stretch">
               <div className="flex flex-col justify-center items-start gap-3">
-                <p className="text-lg md:text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-muted-foreground">
+                <p className="text-sm md:text-base font-light tracking-[0.15em] uppercase text-muted-foreground">
                   [cz. IV | 2023]
                 </p>
                 <ArrowLink to="/collections/iii-materia">{noOrphans("Przejdź do pełnej kolekcji")}</ArrowLink>
