@@ -665,27 +665,25 @@ const Home = () => {
           <section className="max-w-[1648px] mx-auto py-[100px] flex flex-col items-start gap-9">
             <div className="flex px-9 justify-end items-center self-stretch">
               <div className="flex justify-between items-start flex-1">
-                <p className="w-full max-w-[579px] text-lg md:text-2xl font-normal leading-[110%] tracking-[-0.48px] uppercase">
+                <p className="w-full max-w-[579px] text-lg md:text-2xl font-light leading-[120%] tracking-[-0.02em] uppercase">
                   <span
-                    className="font-medium animate-fade-in"
+                    className="font-medium text-foreground animate-fade-in"
                     style={{
                       animationDelay: "0.1s",
                     }}
                   >
-                    {noOrphans("Trzecia Materia jest w każdym z nas. Pulsuje, porusza, prowadzi.")}
-                    {"\n"}
+                    {noOrphans("Trzecia Materia jest w każdym z nas. Pulsuje, porusza, prowadzi.")}{" "}
                   </span>
                   <span
-                    className="opacity-50 animate-fade-in"
+                    className="text-muted-foreground animate-fade-in"
                     style={{
                       animationDelay: "0.3s",
                     }}
                   >
-                    {noOrphans("Jest początkiem i echem.")}
-                    {"\n"}
+                    {noOrphans("Jest początkiem i echem.")}{" "}
                   </span>
                   <span
-                    className="font-medium animate-fade-in"
+                    className="font-medium text-foreground animate-fade-in"
                     style={{
                       animationDelay: "0.5s",
                     }}
