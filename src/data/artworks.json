@@ -258,7 +258,7 @@
   "obrazy": [
     {
       "id": "obraz-01",
-      "title": "W poszukiwaniu III materii, cz. I",
+      "title": "W poszukiwaniu Trzeciej Materii cz. I",
       "medium": "Olej na płótnie",
       "dimensions": "180 x 135 cm",
       "year": "2023",
@@ -266,7 +266,7 @@
     },
     {
       "id": "obraz-02",
-      "title": "W poszukiwaniu III materii, cz. II",
+      "title": "W poszukiwaniu Trzeciej Materii cz. II",
       "medium": "Olej na płótnie",
       "dimensions": "180 x 135 cm",
       "year": "2023",
@@ -274,15 +274,15 @@
     },
     {
       "id": "obraz-03",
-      "title": "W poszukiwaniu III materii, cz. III",
+      "title": "W poszukiwaniu Trzeciej Materii cz. III",
       "medium": "Olej na płótnie",
-      "dimensions": "100 x 120 cm",
-      "year": "2024",
+      "dimensions": "80 x 80 cm",
+      "year": "2022",
       "image": "/artworks/collections/iii-materia/materia-03.jpg"
     },
     {
       "id": "obraz-04",
-      "title": "W poszukiwaniu III materii, cz. IV",
+      "title": "W poszukiwaniu Trzeciej Materii cz. IV",
       "medium": "Olej na płótnie",
       "dimensions": "120 x 110 cm",
       "year": "2023",
@@ -290,7 +290,7 @@
     },
     {
       "id": "obraz-05",
-      "title": "W poszukiwaniu III materii, cz. V",
+      "title": "W poszukiwaniu Trzeciej Materii cz. V",
       "medium": "Olej na płótnie",
       "dimensions": "140 x 130 cm",
       "year": "2023",
@@ -298,7 +298,7 @@
     },
     {
       "id": "obraz-06",
-      "title": "W poszukiwaniu III materii, cz. VI",
+      "title": "W poszukiwaniu Trzeciej Materii cz. VI",
       "medium": "Olej na płótnie",
       "dimensions": "130 x 110 cm",
       "year": "2023",
@@ -306,7 +306,7 @@
     },
     {
       "id": "obraz-07",
-      "title": "W poszukiwaniu III materii, cz. VII",
+      "title": "W poszukiwaniu Trzeciej Materii cz. VII",
       "medium": "Olej na płótnie",
       "dimensions": "220 x 110 cm",
       "year": "2023",
@@ -314,7 +314,7 @@
     },
     {
       "id": "obraz-08",
-      "title": "W poszukiwaniu III materii, cz. VIII",
+      "title": "W poszukiwaniu Trzeciej Materii cz. VIII",
       "medium": "Olej na płótnie",
       "dimensions": "165 x 220 cm",
       "year": "2023",
@@ -322,7 +322,7 @@
     },
     {
       "id": "obraz-09",
-      "title": "W poszukiwaniu III materii, cz. IX",
+      "title": "W poszukiwaniu Trzeciej Materii cz. IX",
       "medium": "Olej na płótnie",
       "dimensions": "180 x 135 cm",
       "year": "2023",
@@ -330,10 +330,10 @@
     },
     {
       "id": "obraz-10",
-      "title": "W poszukiwaniu III materii, cz. X",
+      "title": "W poszukiwaniu Trzeciej Materii cz. X",
       "medium": "Olej na płótnie",
-      "dimensions": "100 x 120 cm",
-      "year": "2024",
+      "dimensions": "150 x 120 cm",
+      "year": "2023",
       "image": "/artworks/collections/iii-materia/materia-10.jpg"
     },
     {
