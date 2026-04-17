@@ -632,7 +632,7 @@ const Home = () => {
             <div className="flex px-9 items-center self-stretch">
               <div className="flex flex-col justify-center items-center gap-8 flex-1">
                 <p
-                  className="text-base font-normal leading-[110%] tracking-[-0.32px] uppercase text-center animate-fade-in"
+                  className="text-sm md:text-base font-normal leading-[140%] tracking-[0.05em] uppercase text-center text-muted-foreground animate-fade-in"
                   style={{
                     animationDelay: "0.4s",
                   }}
