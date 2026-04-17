@@ -591,17 +591,15 @@ const Home = () => {
             <div className="flex px-9 items-center self-stretch">
               <div className="flex flex-col justify-center items-center gap-8 flex-1">
                 <p
-                  className="self-stretch text-2xl font-medium leading-[110%] tracking-[-0.96px] uppercase text-center animate-fade-in"
+                  className="self-stretch text-lg md:text-2xl font-medium leading-[140%] tracking-[-0.02em] uppercase text-center animate-fade-in"
                   style={{
                     animationDelay: "0.2s",
                   }}
                 >
                   {noOrphans("Pod skórą miesza się kosmos.")}
-                  {"\n"}
-                  {"\n"}
+                  <br />
                   {noOrphans("W strukturze komórek drga echo tego,")}
-                  {"\n"}
-                  {"\n"}
+                  <br />
                   {noOrphans("co tworzy galaktyki i zapadające się gwiazdy.")}
                 </p>
               </div>
@@ -610,7 +608,7 @@ const Home = () => {
             <div className="flex px-9 items-center self-stretch">
               <div className="flex justify-center items-center flex-1">
                 <div className="flex items-center gap-3">
-                  <p className="text-2xl font-light leading-[110%] tracking-[-0.48px] uppercase text-center text-muted-foreground">
+                  <p className="text-sm md:text-base font-light tracking-[0.15em] uppercase text-center text-muted-foreground">
                     [cz. VIII | 2023]
                   </p>
                 </div>
